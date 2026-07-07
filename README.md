@@ -39,6 +39,7 @@ Toda a documentação vive em [`docs/`](docs/):
 7. [Roadmap e cronograma](docs/07-roadmap-e-cronograma.md)
 8. [Riscos](docs/08-riscos.md)
 9. [Registro de decisões (ADR)](docs/09-decisoes.md)
+10. [Identidade visual](docs/10-identidade-visual.md)
 
 > ⭐ O **guia de assets** é o documento mais urgente: ele precisa ser combinado com a ilustradora **antes** de ela produzir a arte em volume, porque define tamanho de canvas, ancoragem e ordem das camadas.
 
