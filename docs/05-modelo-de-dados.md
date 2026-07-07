@@ -58,10 +58,11 @@ interface EstadoPersonagem {
     acessorio2: string | null;
   };
   ficha: {
-    nome: string;
-    titulo?: string;
-    bio?: string;
-    // outros campos a definir
+    nomePersonagem: string;      // aparece na carta
+    // classe e animal vêm de cima (não duplicar)
+    status?: string;             // A DEFINIR (ex.: atributos/estado do personagem)
+    habilidade?: string;         // A DEFINIR (campo de "habilidade" do personagem)
+    // outros campos podem entrar conforme a organização definir
   };
   desbloqueios: GrupoDesbloqueio[]; // grupos já liberados, ex.: ['inicial','dia1']
 }
@@ -123,6 +124,26 @@ function restaurarDeCodigo(codigo: string): EstadoPersonagem {
 - O estado é pequeno (ids curtos), então a string de backup é curta.
 - Prefixar com um marcador de versão (ex.: `UAI1.`) para validar/migrar formatos futuros.
 - Opcional: mostrar como **QR Code** para facilitar transferir entre celulares.
+
+## Envio da carta para coleta (upload)
+
+Payload enviado ao endpoint `POST /api/enviar-carta` no momento do export (ver [06](06-exportacao-carta.md)):
+
+```ts
+interface EnvioCarta {
+  imagem: Blob;              // PNG alta-res com sangria
+  nomePersonagem: string;
+  classe: Classe;
+  animal: Animal;
+  status?: string;           // a definir
+  habilidade?: string;       // a definir
+  enviadoEm: string;         // ISO timestamp (gerado no cliente)
+}
+```
+
+- **Sem dados pessoais** (nome real/contato): a carta é identificada pelos campos do personagem. Privacidade baixa por design.
+- O servidor guarda a imagem no storage e os metadados numa tabela, para os organizadores montarem o PDF.
+- Idealmente **1 envio final por participante** (limitar para controlar armazenamento) — decisão em aberto.
 
 ## Migração de versão
 

@@ -12,9 +12,15 @@
 | R8 | **Alguém "trapaceia"** editando localStorage para liberar itens | Baixo | Baixa | Aceitável — é app de evento, sem competição real (decisão consciente) |
 | R9 | **Campos da ficha / regras de conteúdo mudam tarde** | Médio | Média | Manifesto e ficha desacoplados do código; definir cedo com a organização |
 | R10 | **Design da moldura da carta atrasa** | Médio | Média | Export funciona com moldura placeholder; janela da arte parametrizável |
+| R11 | **Envio da carta falha por wi-fi do evento** (upload precisa de internet) | Alto | Média | Salvar imagem/estado localmente e reenviar depois; re-tentativa automática; código de backup preserva tudo |
+| R12 | **Storage estoura** (muitos envios em alta-res) | Médio | Média | Limitar a 1 envio final/pessoa; estimar headcount; otimizar PNG; monitorar cota |
+| R13 | **Endpoint de upload sofre abuso/spam** | Médio | Baixa | Segredo no endpoint, rate limit, validação de tipo/tamanho |
+| R14 | **Impressão sai errada** (sem sangria, cor/corte fora) | Alto | Média | Export com sangria 3mm + marcas de corte; **testar amostra com a gráfica cedo**; validar perfil de cor |
+| R15 | **Perda de dados pessoais / privacidade** | Baixo | Baixa | Por design não coletamos nome real/contato, só dados do personagem |
 
 ## Riscos que exigem ação cedo (não esperar)
 
 1. **R2 (encaixe universal)** — rodar o teste de validação de arte assim que houver 1 item por categoria. É o que pode obrigar a refazer arte se descoberto tarde.
-2. **R3 (export no iPhone)** — validar o mecanismo de download em iPhone real antes de investir no resto do export.
+2. **R3 (export no iPhone)** — validar o mecanismo de download/compartilhamento em iPhone real antes de investir no resto do export.
 3. **R1 (volume de arte)** — alinhar cronograma de entrega da arte com a ilustradora já na aprovação do guia.
+4. **R14 (impressão)** — rodar uma **amostra impressa** com a gráfica cedo, para travar sangria, corte e cor antes de coletar centenas de cartas.

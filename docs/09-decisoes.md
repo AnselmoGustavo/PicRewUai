@@ -44,18 +44,35 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ---
 
-### ADR-006 — Exportação como carta TCG 63 × 88 mm
+### ADR-006 — Exportação como carta TCG 63 × 88 mm, com impressão física
 **Data:** 07/2026 · **Status:** Aceito
-**Contexto:** O resultado final deve ser uma carta colecionável no tamanho padrão.
-**Decisão:** Compor o personagem numa moldura de carta e exportar PNG em 63 × 88 mm, mirando ≥300 DPI.
-**Consequências:** Precisamos do design da moldura com janela de arte definida; tratar download no iOS; possível sangria se houver impressão física. Ver [06](06-exportacao-carta.md).
+**Contexto:** O resultado final é uma carta colecionável **impressa fisicamente**. Os organizadores montam um PDF com todas as cartas.
+**Decisão:** Compor o personagem numa moldura de carta e exportar PNG em 63 × 88 mm **com sangria de 3 mm**, mirando **600 DPI** (mínimo 300). No export, salvar a imagem no aparelho **e** enviá-la aos organizadores.
+**Consequências:** Precisamos do design da moldura com sangria e janela de arte definida; tratar download no iOS; export em alta-res consome memória (testar). Introduz a necessidade de coleta (ADR-007) e de uma ferramenta de montagem de PDF. Ver [06](06-exportacao-carta.md).
+
+---
+
+### ADR-007 — Coleta das cartas via upload (mini-backend)
+**Data:** 07/2026 · **Status:** Aceito
+**Contexto:** As cartas precisam chegar aos organizadores em alta qualidade para impressão. WhatsApp comprime e coletar por e-mail é trabalhoso.
+**Decisão:** O app envia a carta para um **endpoint serverless** (`/api/enviar-carta`) que grava em **storage** (Supabase ou Vercel Blob). Identificação apenas por dados do personagem (nome do personagem, classe, status, habilidade) — **sem dados pessoais**.
+**Consequências:** Introduz o único componente de servidor do projeto (o resto segue estático/offline). Montar o personagem funciona offline; só o envio precisa de internet (com re-tentativa). Exige gerir cota de storage, proteger o endpoint e construir a ferramenta de PDF. Ver [06](06-exportacao-carta.md).
+
+---
+
+### ADR-008 — Tema visual único + paleta + tipografia
+**Data:** 07/2026 · **Status:** Aceito
+**Decisão:** **Tema único** (sem modo claro/escuro). Cor **primária = verde `#45754a`**; secundária âmbar `#f4ab20`; acento coral `#f46364`. Fontes **Poppins** (texto) e **Arcane Fable** (display/temático), ambas auto-hospedadas para funcionar offline.
+**Consequências:** Simplifica o design. Arcane Fable precisa virar `.woff2`. Ver [10](10-identidade-visual.md).
 
 ---
 
 ## Decisões ainda em aberto
 
-- [ ] Campos exatos da **ficha** de personagem (nome, título, bio, atributos?).
+- [ ] Definição de **status** e **habilidade** da ficha (o que são, formato).
 - [ ] Quais infos aparecem na **arte da carta** e se são texto do app ou embutidas.
-- [ ] Haverá **impressão física** das cartas? (define sangria e DPI-alvo).
 - [ ] Tratamento definitivo de **carpa e coruja** no gabarito universal.
-- [ ] Estilo/tamanho final exato do **canvas mestre** (travar com a moldura).
+- [ ] Estilo/tamanho final exato do **canvas mestre** (travar com a moldura + sangria).
+- [ ] Escolha do storage (**Supabase** vs Vercel Blob) e **limite de envios** por pessoa.
+- [ ] Layout do **PDF de impressão** (cartas por folha, tamanho da folha, marcas de corte).
+- [ ] **Neutros** da paleta (fundo, texto, bordas) e confirmação do uso das fontes.

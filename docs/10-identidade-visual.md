@@ -1,30 +1,30 @@
 # 10 — Identidade Visual
 
-Cores da marca do app e como aplicá-las na interface. Estas viram os *design tokens* (variáveis CSS / tema Tailwind) no código.
+Cores, tipografia e tema do app. Viram os *design tokens* (variáveis CSS / tema Tailwind) no código.
 
-## Paleta principal
+> **Tema único** (sem modo claro/escuro).
 
-| Cor | Hex | Sugestão de papel |
-|-----|-----|-------------------|
-| 🟡 Âmbar/dourado | `#f4ab20` | **Primária** — destaques, botões principais, seleção ativa |
-| 🔴 Coral | `#f46364` | **Secundária/ação** — acentos, avisos, elementos de destaque |
-| 🟢 Verde-floresta | `#45754a` | **Apoio/tema** — fundos temáticos, cabeçalhos, estados "confirmado" |
+## Paleta
 
-> Os papéis acima são uma **proposta**. Podemos trocar qual cor é primária/secundária conforme o design das telas evoluir.
+| Cor | Hex | Papel |
+|-----|-----|-------|
+| 🟢 Verde-floresta | `#45754a` | **Primária** — botões principais, cabeçalhos, seleção ativa, tema |
+| 🟡 Âmbar/dourado | `#f4ab20` | **Secundária** — destaques, chamadas, elementos de atenção |
+| 🔴 Coral | `#f46364` | **Acento/ação** — avisos, erros, elementos pontuais de destaque |
 
-## Design tokens (proposta)
+## Design tokens
 
 ```css
 :root {
   /* Marca */
+  --cor-verde:  #45754a;
   --cor-ambar:  #f4ab20;
   --cor-coral:  #f46364;
-  --cor-verde:  #45754a;
 
-  /* Papéis semânticos (ajustar conforme o design) */
-  --cor-primaria:   var(--cor-ambar);
-  --cor-secundaria: var(--cor-coral);
-  --cor-acento:     var(--cor-verde);
+  /* Papéis semânticos */
+  --cor-primaria:   var(--cor-verde);
+  --cor-secundaria: var(--cor-ambar);
+  --cor-acento:     var(--cor-coral);
 
   /* Neutros — A DEFINIR (fundo, texto, bordas) */
   --cor-fundo:  #ffffff;   /* placeholder */
@@ -38,27 +38,59 @@ Equivalente para tema Tailwind (`tailwind.config`):
 theme: {
   extend: {
     colors: {
-      ambar: '#f4ab20',
-      coral: '#f46364',
-      verde: '#45754a',
+      verde: '#45754a',   // primária
+      ambar: '#f4ab20',   // secundária
+      coral: '#f46364',   // acento
+    },
+    fontFamily: {
+      sans: ['Poppins', 'system-ui', 'sans-serif'],
+      display: ['ArcaneFable', 'Poppins', 'serif'],
     },
   },
 }
 ```
 
+## Tipografia
+
+| Fonte | Uso | Origem |
+|-------|-----|--------|
+| **Poppins** (family) | Texto de interface e leitura (corpo, botões, labels, ficha) | Google Fonts, **auto-hospedada** via `next/font` |
+| **Arcane Fable** | Títulos e elementos temáticos de destaque (logo, nome do personagem, cabeçalhos, nome na carta) | Arquivo local `font/arcane-fable.otf` |
+
+> Interpretação de uso a confirmar: Poppins = texto legível/corpo; Arcane Fable = display/temático. Ajustar se for o contrário.
+
+### Notas técnicas de fontes
+- **Auto-hospedar as duas** (não usar CDN do Google Fonts) porque o app é **offline-first/PWA** — precisa funcionar sem internet no evento.
+- Converter `arcane-fable.otf` → **`.woff2`** para carregar mais rápido no celular; manter o `.otf` como arquivo de origem em `font/`.
+- Declarar a Arcane Fable via `@font-face` (ou `next/font/local`) apontando para o `.woff2` servido de `/public/font/`.
+
+```css
+@font-face {
+  font-family: 'ArcaneFable';
+  src: url('/font/arcane-fable.woff2') format('woff2'),
+       url('/font/arcane-fable.otf') format('opentype');
+  font-display: swap;
+}
+```
+
 ## Contraste e acessibilidade
 
-A especificação funcional pede contraste adequado (mobile, ao sol, telas variadas). Observações:
+App usado no celular, possivelmente ao sol. Observações da paleta:
 
+- **Verde `#45754a`** é escuro → **texto branco** funciona bem sobre ele. ✅
 - **Âmbar `#f4ab20`** é claro → use **texto escuro** sobre ele (não branco).
-- **Coral `#f46364`** é tom médio → texto branco tende a ficar no limite; validar antes de usar em botão com texto.
-- **Verde `#45754a`** é escuro o suficiente → **texto branco** funciona bem sobre ele.
-- Validar todas as combinações texto/fundo no padrão **WCAG AA** (contraste ≥ 4,5:1 para texto normal) antes de fechar.
+- **Coral `#f46364`** é tom médio → texto branco fica no limite; validar antes de usar em botão com texto.
+- Validar todas as combinações texto/fundo no padrão **WCAG AA** (contraste ≥ 4,5:1 para texto normal).
 
 ## Pendências
 
 - [ ] Definir **neutros**: cor de fundo, cor de texto, bordas, estados desabilitados.
-- [ ] Definir se há **modo claro/escuro** ou só um tema.
-- [ ] Confirmar os papéis (qual cor é primária) com o design das telas.
-- [ ] Fonte(s)/tipografia da marca — ainda não definida.
+- [ ] Confirmar interpretação de uso das fontes (qual é display / qual é corpo).
+- [ ] Converter Arcane Fable para `.woff2`.
 - [ ] Validar contraste WCAG AA de todas as combinações.
+
+## Resolvido
+
+- ✅ Tema único (sem modo claro/escuro).
+- ✅ Cor primária: **verde `#45754a`**.
+- ✅ Fontes: **Poppins** (texto) + **Arcane Fable** (display/temático).

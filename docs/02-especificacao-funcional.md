@@ -49,14 +49,13 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 
 ### 6. Ficha de personagem
 - Formulário com os dados do personagem.
-- **Campos a definir com a organização** — proposta inicial:
-  - Nome do personagem (texto)
-  - Animal (preenchido automaticamente)
-  - Classe (preenchida automaticamente)
-  - Título/epíteto (texto curto, opcional)
-  - Bio / história (texto, opcional)
-  - Campos de atributo/RPG? (a decidir — ex.: força, magia, agilidade)
-- Os campos da ficha entram (parcialmente) na carta exportada — definir quais aparecem na arte da carta.
+- Campos definidos até agora:
+  - **Nome do personagem** (texto) — aparece na carta
+  - **Animal** (preenchido automaticamente)
+  - **Classe** (preenchida automaticamente)
+  - **Status** (a definir com a organização — ex.: atributos/estado do personagem)
+  - **Habilidade** (a definir — campo de "habilidade" do personagem)
+- Nome do personagem, classe, status e habilidade **entram na carta exportada** — definir com o design da carta onde/como cada um aparece.
 
 ### 7. Salvar / Código de backup
 - O save é **automático** no `localStorage` a cada mudança.

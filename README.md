@@ -13,14 +13,16 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 |------|---------|
 | Plataforma | Web app (PWA), roda no navegador de qualquer celular |
 | Stack | Next.js + React + TypeScript + Canvas API |
-| Persistência | `localStorage` + **código de backup** exportável (sem backend) |
-| Hospedagem | Site estático (Vercel free tier) |
+| Persistência | `localStorage` + **código de backup** exportável (montagem funciona offline) |
+| Backend | Só um endpoint de upload para coletar as cartas (Vercel Function + storage) |
+| Hospedagem | Vercel free tier |
+| Identidade | Tema único · primária verde `#45754a` · Poppins + Arcane Fable |
 | Assets | **Universais** — o mesmo item serve para os 8 animais |
 | Animais | 8: sapo, macaco, raposa, gato, veado, carpa, coruja, cachorro |
 | Classes | 5: guerreiro, arqueiro, mago, bardo, ninja |
 | Categorias de item | vestimenta, arma, item de cabeça, acessório 1, acessório 2 |
 | Desbloqueio | Códigos diários iguais para todos, validados no app |
-| Exportação | Imagem em moldura de carta TCG, 63 × 88 mm |
+| Exportação | Carta TCG 63 × 88 mm (com sangria, 600 DPI) → salva no aparelho **e** enviada para impressão física |
 
 **Prazo de entrega:** app pronto até **31/10/2026**.
 

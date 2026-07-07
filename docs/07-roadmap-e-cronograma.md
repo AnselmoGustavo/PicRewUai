@@ -36,11 +36,18 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 - [ ] Formulário da ficha.
 - [ ] Código de backup: gerar e restaurar (+ QR opcional).
 
-### Fase 4 — Exportação da carta (Set, ~1–2 semanas)
-- [ ] Integrar moldura da carta (quando o design estiver pronto).
-- [ ] Export em alta resolução no tamanho 63 × 88 mm.
-- [ ] Tratamento de download/compartilhamento no iPhone.
-- [ ] **Teste em iPhone e Android reais.**
+### Fase 4 — Exportação da carta + coleta (Set, ~2 semanas)
+- [ ] Integrar moldura da carta **com sangria** (quando o design estiver pronto).
+- [ ] Export em alta resolução (600 DPI + sangria 3mm) no tamanho 63 × 88 mm.
+- [ ] Salvar/compartilhar a imagem no aparelho (lembrança) + tratamento iPhone.
+- [ ] **Endpoint serverless `/api/enviar-carta`** + storage (Supabase/Vercel Blob) + segredo/rate-limit.
+- [ ] Envio com re-tentativa quando offline; feedback de sucesso/erro.
+- [ ] **Teste em iPhone e Android reais** (export + upload).
+
+### Fase 4b — Ferramenta de PDF de impressão (Set–Out, ~1 semana)
+- [ ] Script/página admin que baixa as cartas coletadas e monta o **PDF** (tamanho real + marcas de corte).
+- [ ] Definir layout (cartas por folha, tamanho da folha da gráfica).
+- [ ] Testar um PDF de amostra com a gráfica cedo (validar sangria/corte/cor).
 
 ### Fase 5 — Integração de arte + polish (Out, ~2 semanas)
 - [ ] Substituir placeholders pela arte final (em lotes).
@@ -72,6 +79,8 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 
 ## Dependências externas (não são código)
 
-- 🎨 **Arte** (ilustradora): bases dos 8 animais, ~150 itens, moldura da carta.
-- 🗂️ **Conteúdo**: definição de quais itens desbloqueiam em cada dia; campos da ficha.
+- 🎨 **Arte** (ilustradora): bases dos 8 animais, ~150 itens, moldura da carta **com sangria**.
+- 🗂️ **Conteúdo**: itens que desbloqueiam em cada dia; definição de **status** e **habilidade** da ficha.
 - 🔑 **Códigos**: os 4 textos dos códigos diários (definir perto do evento).
+- 🖨️ **Gráfica**: especificação de impressão (tamanho da folha, sangria, perfil de cor); rodar uma amostra cedo.
+- 🔤 **Fontes**: converter `arcane-fable.otf` → `.woff2` (auto-hospedar Poppins + Arcane Fable).

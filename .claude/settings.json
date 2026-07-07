@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -type f \\\\\\( -iname \"*.ttf\" -o -iname \"*.otf\" -o -iname \"*.woff*\" -o -iname \"*arcane*\" -o -iname \"*fable*\" \\\\\\) -not -path \"./.git/*\")",
+      "Bash(find . -type d -not -path \"./.git/*\" -not -path \"./docs*\")"
+    ]
+  }
+}

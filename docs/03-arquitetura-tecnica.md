@@ -10,9 +10,10 @@
 | Renderização do personagem | **HTML Canvas 2D** | Compõe camadas de PNG e exporta imagem |
 | Estado | **Zustand** (store leve) + persistência em `localStorage` | Simples, sem boilerplate |
 | Cache offline | **Service Worker (PWA)** via `next-pwa` ou manual | Funcionar offline no evento |
-| Hospedagem | **Vercel** (free) ou qualquer host estático | Sem backend, custo zero |
+| Coleta de cartas | **Serverless (Vercel Function)** + **storage** (Supabase/Vercel Blob) | Receber uploads das cartas para impressão |
+| Hospedagem | **Vercel** (free) | App estático + uma função de upload |
 
-> Sem backend nesta versão. Toda a lógica (códigos, save, export) roda no navegador.
+> **Quase sem backend.** Toda a lógica do app (montar personagem, códigos, save local, gerar imagem) roda no navegador e funciona offline. O **único componente de servidor** é um endpoint de upload que recebe a carta final para os organizadores imprimirem (ver [06](06-exportacao-carta.md)). Montar o personagem funciona offline; só o **envio** precisa de internet.
 
 ## Princípios de arquitetura
 
@@ -35,8 +36,13 @@
 │       │   └── ...
 │       ├── molduras/          # carta_frente.png, (verso?)
 │       └── ui/                # ícones, placeholders
+├── public/font/               # fontes auto-hospedadas (arcane-fable .woff2/.otf)
 ├── src/
-│   ├── app/                   # rotas Next.js (App Router)
+│   ├── app/
+│   │   ├── (telas)/           # rotas Next.js (App Router)
+│   │   └── api/
+│   │       └── enviar-carta/  # endpoint serverless de upload da carta
+│   ├── admin/                 # ferramenta de montagem do PDF de impressão
 │   ├── components/            # Editor, PainelCategoria, PreviewCanvas, FichaForm, ...
 │   ├── lib/
 │   │   ├── manifest.ts        # manifesto de itens (fonte da verdade)
@@ -83,4 +89,6 @@ ordem de desenho (fundo → frente):
 
 - Push no repositório → Vercel faz build e publica automaticamente.
 - Domínio: subdomínio Vercel gratuito ou domínio próprio do evento.
-- Como é estático, aguenta picos de acesso sem custo/servidor.
+- O app (parte estática) aguenta picos de acesso sem custo/servidor.
+- A função de upload (`/api/enviar-carta`) roda serverless; configurar as **variáveis de ambiente** do storage (chaves Supabase/Vercel Blob) e um **segredo** do endpoint no painel da Vercel.
+- A carga real no servidor é baixa: cada participante faz poucos uploads (idealmente só a carta final).
