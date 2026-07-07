@@ -12,15 +12,21 @@ Assim, montar o personagem no app é só **empilhar as imagens** na ordem certa.
 
 ## Especificação técnica dos arquivos
 
-| Propriedade | Valor (proposto — a confirmar) |
-|-------------|-------------------------------|
-| Tamanho do canvas | **1000 × 1400 px** (proporção ~5:7, próxima da carta) |
-| Formato | **PNG com transparência** (fundo 100% transparente) |
-| Resolução | Desenhar em alta qualidade; export final da carta em até 600 DPI |
-| Área de segurança | Manter o personagem dentro de uma margem de ~8% das bordas |
+Alinhado aos designs de carta já produzidos (`Assets Finais/`), que estão em **744 × 1039 px a 300 DPI**:
+
+| Propriedade | Valor |
+|-------------|-------|
+| Tamanho do canvas | **744 × 1039 px @ 300 DPI** (igual à carta — o personagem preenche a carta) |
+| Formato | **PNG com transparência** (fundo 100% transparente; exceto cenários, que são opacos) |
+| Resolução | Se quisermos impressão a 600 DPI no futuro, **tudo** (personagem + frames) é re-exportado a 2× (1488 × 2078) |
 | Nomeação | `categoria_classe_nome.png` (ex.: `arma_mago_cajado-cristal.png`) |
 
-> ⚠️ Esses números são a **proposta inicial**. Vamos travá-los juntos antes de escalar a produção. O tamanho pode mudar quando o design da moldura da carta estiver pronto (ver [06](06-exportacao-carta.md)).
+### Zonas cobertas pela moldura (evitar detalhes importantes aqui)
+A moldura da carta cobre partes da imagem. Evite posicionar o rosto/detalhe-chave do personagem sob:
+- **Faixa do nome** — topo, ~0 a 285 px de altura (banner ornamentado no canto superior-esquerdo).
+- **Coluna de status** — canto inferior-direito, a partir de ~(514, 758) px.
+
+Ver posições exatas em [11-carta-composicao](11-carta-composicao.md).
 
 ## O template do corpo (o mais importante!)
 
@@ -50,6 +56,7 @@ Sapo, macaco, raposa, gato, veado, cachorro têm corpos "humanóides/quadrúpede
 O app empilha as imagens nesta ordem padrão (fundo → frente):
 
 ```
+0. cenário (fundo)  ← imagem OPACA que preenche a carta e define o tema dia/noite
 1. base do animal
 2. vestimenta
 3. acessório 1     (coisas atrás: capa, asas, mochila)
@@ -57,6 +64,8 @@ O app empilha as imagens nesta ordem padrão (fundo → frente):
 5. arma
 6. acessório 2     (coisas na frente: item na mão, colar, óculos)
 ```
+
+Depois dessas camadas, o app coloca a **moldura da carta** (frames + textos) por cima — ver [11-carta-composicao](11-carta-composicao.md).
 
 - Desenhe cada item pensando em **qual camada ele ocupa**.
 - Se um item precisar furar essa ordem (ex.: uma arma nas costas, atrás do corpo), me avise — damos um **z-index especial** a ele no app.
@@ -78,17 +87,22 @@ O app empilha as imagens nesta ordem padrão (fundo → frente):
 | Bardo | 5–6 | 5–6 | 5–6 | 5–6 | 5–6 |
 | Ninja | 5–6 | 5–6 | 5–6 | 5–6 | 5–6 |
 
-### Moldura da carta — 1+ arquivo
-- Frente da carta com uma **janela transparente** onde o personagem aparece (ver [06](06-exportacao-carta.md)).
-- Definir tamanho, área da arte, e onde entram nome/classe.
+### Cenários (fundos) — N arquivos (a definir quantos)
+- Imagens **opacas** de 744 × 1039 que preenchem a carta atrás do personagem.
+- Cada cenário é **claro** ou **escuro** → define se a carta usa a moldura **dia** ou **noite**.
+- Idealmente equilibrar a quantidade de claros e escuros.
+- Nomeação sugerida: `cenario_nome_claro.png` / `cenario_nome_escuro.png`.
+
+### Moldura da carta — ✅ já entregue
+Em `Assets Finais/`: bordas (dia/noite/corte), name frame (dia/noite + preenchimento), status (dia/noite + preenchimento). Composição documentada em [11](11-carta-composicao.md). **Nada a produzir aqui** (gráfica aceita sem sangria).
 
 ### UI (opcional)
-- Ícones das classes, ícone de cadeado 🔒, logo do evento.
+- Ícones das classes, ícone de cadeado 🔒, logo do evento. (Os ícones de status já existem em `Assets Finais/Status/`.)
 
 ## Checklist de entrega de cada asset
 
-- [ ] Canvas no tamanho combinado (ex.: 1000 × 1400 px)
-- [ ] Fundo 100% transparente
+- [ ] Canvas **744 × 1039 px @ 300 DPI**
+- [ ] Fundo 100% transparente (cenários são opacos)
 - [ ] Elemento na posição final (não centralizado "solto")
 - [ ] Nomeado no padrão `categoria_classe_nome.png`
 - [ ] Dentro da camada/z-index correto

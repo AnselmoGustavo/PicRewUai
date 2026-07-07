@@ -23,6 +23,22 @@ interface ItemDef {
 }
 ```
 
+### Cenários (fundos)
+
+Os cenários são uma categoria à parte (não pertencem a uma classe) e cada um carrega o **tema** que define a moldura dia/noite da carta:
+
+```ts
+interface CenarioDef {
+  id: string;
+  nome: string;
+  arquivo: string;            // /public/assets/cenarios/...
+  tema: 'claro' | 'escuro';   // claro → moldura "dia" · escuro → moldura "noite"
+  grupo: GrupoDesbloqueio;    // dia1..dia4 — cada dia libera 1 cenário
+}
+```
+
+> **3 a 4 cenários no total, liberados 1 por dia** — o mesmo código do dia libera os itens **e** o cenário daquele dia.
+
 Exemplo:
 
 ```ts
@@ -50,6 +66,7 @@ interface EstadoPersonagem {
   versao: number;                 // versão do formato do save (para migração)
   animal: Animal | null;
   classe: Classe | null;
+  cenario: string | null;         // fundo escolhido; define o tema dia/noite
   selecao: {                      // item escolhido por categoria (id ou null)
     vestimenta: string | null;
     arma: string | null;
@@ -58,11 +75,14 @@ interface EstadoPersonagem {
     acessorio2: string | null;
   };
   ficha: {
-    nomePersonagem: string;      // aparece na carta
-    // classe e animal vêm de cima (não duplicar)
-    status?: string;             // A DEFINIR (ex.: atributos/estado do personagem)
-    habilidade?: string;         // A DEFINIR (campo de "habilidade" do personagem)
-    // outros campos podem entrar conforme a organização definir
+    nomePersonagem: string;       // aparece na carta (fonte Adam Script)
+    status: {                     // 4 valores que aparecem na carta
+      vida: number;
+      forca: number;
+      intelecto: number;
+      velocidade: number;
+    };
+    habilidade?: string;          // campo de "habilidade" (uso na ficha; não vai na carta)
   };
   desbloqueios: GrupoDesbloqueio[]; // grupos já liberados, ex.: ['inicial','dia1']
 }
@@ -99,6 +119,7 @@ async function validarCodigo(input: string): Promise<GrupoDesbloqueio | null> {
 
 > Nota de segurança honesta: hash **não** impede um atacante determinado (ele pode desbloquear editando o próprio `localStorage`). Mas as apostas são baixas — é um app de evento — e o hash já barra o compartilhamento casual do código lido no fonte. Isso está alinhado à decisão "códigos iguais para todos" (ver [09](09-decisoes.md)).
 
+- Ao liberar um grupo (`diaN`), ficam disponíveis **todos os itens e o cenário** marcados com aquele grupo.
 - Um **código mestre/staff** extra pode liberar tudo, para testes e suporte no evento.
 
 ## Código de backup (save/restore)
@@ -131,12 +152,13 @@ Payload enviado ao endpoint `POST /api/enviar-carta` no momento do export (ver [
 
 ```ts
 interface EnvioCarta {
-  imagem: Blob;              // PNG alta-res com sangria
+  imagem: Blob;              // PNG 744 × 1039 (carta completa)
   nomePersonagem: string;
   classe: Classe;
   animal: Animal;
-  status?: string;           // a definir
-  habilidade?: string;       // a definir
+  cenario: string;
+  status: { vida: number; forca: number; intelecto: number; velocidade: number };
+  habilidade?: string;
   enviadoEm: string;         // ISO timestamp (gerado no cliente)
 }
 ```

@@ -21,8 +21,10 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 | Animais | 8: sapo, macaco, raposa, gato, veado, carpa, coruja, cachorro |
 | Classes | 5: guerreiro, arqueiro, mago, bardo, ninja |
 | Categorias de item | vestimenta, arma, item de cabeça, acessório 1, acessório 2 |
+| Cenário | fundo selecionável (define moldura dia/noite da carta) |
+| Status | 4 atributos na carta: Vida, Força, Intelecto, Velocidade |
 | Desbloqueio | Códigos diários iguais para todos, validados no app |
-| Exportação | Carta TCG 63 × 88 mm (com sangria, 600 DPI) → salva no aparelho **e** enviada para impressão física |
+| Carta (surpresa) | Participante "envia o personagem" → carta TCG 63 × 88 mm (744×1039, 300 DPI) gerada **por trás** e enviada para impressão. O participante nunca vê a carta |
 
 **Prazo de entrega:** app pronto até **31/10/2026**.
 
@@ -42,6 +44,7 @@ Toda a documentação vive em [`docs/`](docs/):
 8. [Riscos](docs/08-riscos.md)
 9. [Registro de decisões (ADR)](docs/09-decisoes.md)
 10. [Identidade visual](docs/10-identidade-visual.md)
+11. [Composição da carta (assets e posições)](docs/11-carta-composicao.md)
 
 > ⭐ O **guia de assets** é o documento mais urgente: ele precisa ser combinado com a ilustradora **antes** de ela produzir a arte em volume, porque define tamanho de canvas, ancoragem e ordem das camadas.
 

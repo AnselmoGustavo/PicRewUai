@@ -25,29 +25,29 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 - [ ] **Teste de validação de arte** com a ilustradora (item real nos 8 animais).
 
 ### Fase 2 — Editor + classes + códigos (Ago, ~2–3 semanas)
-- [ ] Manifesto de itens (com dados placeholder).
-- [ ] Telas: escolher animal, escolher classe, editor com abas de categoria.
+- [ ] Manifesto de itens + **cenários** (com dados placeholder).
+- [ ] Telas: escolher animal, escolher classe, editor com abas de categoria (incl. **cenário**).
 - [ ] Filtro de itens por classe; estado "Nenhum".
-- [ ] Sistema de códigos: bloqueado/desbloqueado, validação por hash.
+- [ ] Sistema de códigos: cada código do dia libera itens **e** o cenário do dia; validação por hash.
 - [ ] Persistência em `localStorage`.
 
 ### Fase 3 — Ficha + backup (Set, ~1–2 semanas)
-- [ ] Definir campos da ficha com a organização.
-- [ ] Formulário da ficha.
+- [ ] Formulário da ficha: nome + 4 status (digitados pelo participante) + habilidade; validação de entrada.
 - [ ] Código de backup: gerar e restaurar (+ QR opcional).
 
-### Fase 4 — Exportação da carta + coleta (Set, ~2 semanas)
-- [ ] Integrar moldura da carta **com sangria** (quando o design estiver pronto).
-- [ ] Export em alta resolução (600 DPI + sangria 3mm) no tamanho 63 × 88 mm.
-- [ ] Salvar/compartilhar a imagem no aparelho (lembrança) + tratamento iPhone.
+### Fase 4 — Geração (surpresa) + coleta (Set, ~2 semanas)
+- [x] Molduras da carta prontas (`Assets Finais/`) → integrar conforme [11](11-carta-composicao.md).
+- [x] Gráfica aceita **sem sangria**; fonte Adam Script no projeto.
+- [ ] **Composição offscreen** da carta 744 × 1039 (moldura dia/noite pelo cenário + nome + status, Adam Script).
+- [ ] Fluxo **surpresa**: botão "Enviar personagem" → confirmação → **sucesso imediato** → montar+enviar por trás. **Sem prévia/menção de carta na UI.**
 - [ ] **Endpoint serverless `/api/enviar-carta`** + storage (Supabase/Vercel Blob) + segredo/rate-limit.
-- [ ] Envio com re-tentativa quando offline; feedback de sucesso/erro.
-- [ ] **Teste em iPhone e Android reais** (export + upload).
+- [ ] Fila de reenvio quando offline (envio transparente após o sucesso).
+- [ ] **Teste em iPhone e Android reais** (composição + upload).
 
 ### Fase 4b — Ferramenta de PDF de impressão (Set–Out, ~1 semana)
-- [ ] Script/página admin que baixa as cartas coletadas e monta o **PDF** (tamanho real + marcas de corte).
+- [ ] Script/página admin que baixa as cartas coletadas e monta o **PDF** (tamanho real + guias de corte).
 - [ ] Definir layout (cartas por folha, tamanho da folha da gráfica).
-- [ ] Testar um PDF de amostra com a gráfica cedo (validar sangria/corte/cor).
+- [ ] Testar um PDF de amostra impresso com a gráfica cedo (validar corte/cor).
 
 ### Fase 5 — Integração de arte + polish (Out, ~2 semanas)
 - [ ] Substituir placeholders pela arte final (em lotes).
@@ -79,8 +79,8 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 
 ## Dependências externas (não são código)
 
-- 🎨 **Arte** (ilustradora): bases dos 8 animais, ~150 itens, moldura da carta **com sangria**.
-- 🗂️ **Conteúdo**: itens que desbloqueiam em cada dia; definição de **status** e **habilidade** da ficha.
+- 🎨 **Arte** (ilustradora): bases dos 8 animais, ~150 itens, **3–4 cenários** (claros/escuros). ✅ **Molduras da carta já entregues** (`Assets Finais/`).
+- 🗂️ **Conteúdo**: itens (e cenário) que desbloqueiam em cada dia.
 - 🔑 **Códigos**: os 4 textos dos códigos diários (definir perto do evento).
-- 🖨️ **Gráfica**: especificação de impressão (tamanho da folha, sangria, perfil de cor); rodar uma amostra cedo.
-- 🔤 **Fontes**: converter `arcane-fable.otf` → `.woff2` (auto-hospedar Poppins + Arcane Fable).
+- 🖨️ **Gráfica**: ✅ aceita sem sangria; definir tamanho da folha e perfil de cor; rodar uma amostra cedo.
+- 🔤 **Fontes**: ✅ Poppins, Arcane Fable e Adam Script no projeto; converter as locais → `.woff2`.

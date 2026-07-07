@@ -12,11 +12,12 @@
 | R8 | **Alguém "trapaceia"** editando localStorage para liberar itens | Baixo | Baixa | Aceitável — é app de evento, sem competição real (decisão consciente) |
 | R9 | **Campos da ficha / regras de conteúdo mudam tarde** | Médio | Média | Manifesto e ficha desacoplados do código; definir cedo com a organização |
 | R10 | **Design da moldura da carta atrasa** | Médio | Média | Export funciona com moldura placeholder; janela da arte parametrizável |
-| R11 | **Envio da carta falha por wi-fi do evento** (upload precisa de internet) | Alto | Média | Salvar imagem/estado localmente e reenviar depois; re-tentativa automática; código de backup preserva tudo |
+| R11 | **Envio falha e se perde silenciosamente** (sucesso é mostrado antes do upload confirmar, por causa da surpresa) | Alto | Média | Fila local de reenvio + re-tentativa automática; persistir no `localStorage` até confirmar; painel dos organizadores para conferir quem enviou; código de backup preserva o estado |
 | R12 | **Storage estoura** (muitos envios em alta-res) | Médio | Média | Limitar a 1 envio final/pessoa; estimar headcount; otimizar PNG; monitorar cota |
 | R13 | **Endpoint de upload sofre abuso/spam** | Médio | Baixa | Segredo no endpoint, rate limit, validação de tipo/tamanho |
-| R14 | **Impressão sai errada** (sem sangria, cor/corte fora) | Alto | Média | Export com sangria 3mm + marcas de corte; **testar amostra com a gráfica cedo**; validar perfil de cor |
+| R14 | **Impressão sai errada** (cor/corte fora) | Médio | Baixa | Gráfica **aceita sem sangria**; usar `Borda pra corte.png` como guia; **testar amostra impressa cedo**; validar perfil de cor |
 | R15 | **Perda de dados pessoais / privacidade** | Baixo | Baixa | Por design não coletamos nome real/contato, só dados do personagem |
+| R16 | **A surpresa vaza** (participante descobre a carta pela UI, cache, DevTools ou imagem salva) | Médio | Média | UI nunca mostra a moldura/prévia nem a palavra "carta"; composição só offscreen; não salvar carta no aparelho; nome de assets/endpoint discreto; revisar textos antes do congelamento |
 
 ## Riscos que exigem ação cedo (não esperar)
 

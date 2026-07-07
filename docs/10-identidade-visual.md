@@ -55,9 +55,11 @@ theme: {
 | Fonte | Uso | Origem |
 |-------|-----|--------|
 | **Poppins** (family) | Texto de interface e leitura (corpo, botões, labels, ficha) | Google Fonts, **auto-hospedada** via `next/font` |
-| **Arcane Fable** | Títulos e elementos temáticos de destaque (logo, nome do personagem, cabeçalhos, nome na carta) | Arquivo local `font/arcane-fable.otf` |
+| **Arcane Fable** | Títulos e elementos temáticos de destaque na **interface do app** (logo, cabeçalhos) | Arquivo local `font/arcane-fable.otf` |
+| **Adam Script** | Textos **na carta**: nome do personagem e os 4 valores de status | Arquivo local `font/RTL-AdamScript-Regular.ttf` |
 
-> Interpretação de uso a confirmar: Poppins = texto legível/corpo; Arcane Fable = display/temático. Ajustar se for o contrário.
+> Interpretação de uso a confirmar: Poppins = texto legível/corpo; Arcane Fable = display/temático da UI. Ajustar se for o contrário.
+> A carta usa **Adam Script** (ver [11-carta-composicao](11-carta-composicao.md)); ela é montada por trás, sem UI (a carta é surpresa).
 
 ### Notas técnicas de fontes
 - **Auto-hospedar as duas** (não usar CDN do Google Fonts) porque o app é **offline-first/PWA** — precisa funcionar sem internet no evento.
@@ -86,7 +88,7 @@ App usado no celular, possivelmente ao sol. Observações da paleta:
 
 - [ ] Definir **neutros**: cor de fundo, cor de texto, bordas, estados desabilitados.
 - [ ] Confirmar interpretação de uso das fontes (qual é display / qual é corpo).
-- [ ] Converter Arcane Fable para `.woff2`.
+- [ ] Converter Arcane Fable e Adam Script para `.woff2` (Adam Script só é usada no canvas de export, então o `.ttf` já serve).
 - [ ] Validar contraste WCAG AA de todas as combinações.
 
 ## Resolvido

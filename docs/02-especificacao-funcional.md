@@ -7,9 +7,9 @@ Descreve **o que** o app faz, tela a tela e fluxo a fluxo. (O **como** técnico 
 ```
 Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
                                                   │
-                                                  ├── Inserir código (desbloquear itens)
+                                                  ├── Inserir código (desbloquear itens/cenários)
                                                   ├── Salvar / código de backup
-                                                  └── Exportar carta
+                                                  └── Enviar personagem  → (carta gerada por trás)
 ```
 
 ## Telas / seções
@@ -29,14 +29,15 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 - **Aviso importante:** trocar de classe **pode remover itens já escolhidos** que não pertencem à nova classe (confirmar com o usuário antes de trocar).
 
 ### 4. Editor (picrew) — tela principal
-- **Área de preview**: o personagem renderizado em tempo real (camadas empilhadas).
-- **Abas de categoria**: vestimenta, arma, item de cabeça, acessório 1, acessório 2.
-- Ao abrir uma categoria, mostra os itens **daquela classe**:
+- **Área de preview**: a carta renderizada em tempo real (cenário + personagem + moldura).
+- **Abas de categoria**: **cenário**, vestimenta, arma, item de cabeça, acessório 1, acessório 2.
+- **Cenário**: escolha do fundo (não depende de classe). **3 a 4 cenários**, liberados **1 por dia** via código. O cenário define se a moldura fica dia/noite (ver [11](11-carta-composicao.md)) — mas isso é interno; o participante só escolhe o fundo.
+- Ao abrir uma categoria de item, mostra os itens **daquela classe**:
   - Itens **desbloqueados**: selecionáveis.
   - Itens **bloqueados**: aparecem esmaecidos com um cadeado 🔒 (mostrar que existem, mas indisponíveis — cria expectativa/coleção).
   - Opção **"Nenhum"** para não usar item naquela categoria.
 - Botão para **trocar animal** e **trocar classe**.
-- Ações: **Inserir código**, **Ficha**, **Salvar/Backup**, **Exportar**.
+- Ações: **Inserir código**, **Ficha**, **Salvar/Backup**, **Enviar** (personagem).
 
 ### 5. Inserir código
 - Campo de texto para o código do dia.
@@ -50,12 +51,12 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 ### 6. Ficha de personagem
 - Formulário com os dados do personagem.
 - Campos definidos até agora:
-  - **Nome do personagem** (texto) — aparece na carta
-  - **Animal** (preenchido automaticamente)
-  - **Classe** (preenchida automaticamente)
-  - **Status** (a definir com a organização — ex.: atributos/estado do personagem)
-  - **Habilidade** (a definir — campo de "habilidade" do personagem)
-- Nome do personagem, classe, status e habilidade **entram na carta exportada** — definir com o design da carta onde/como cada um aparece.
+  - **Nome do personagem** (texto, escrito pelo participante) — vai na carta (fonte Adam Script)
+  - **Animal** e **Classe** (preenchidos automaticamente)
+  - **Status** — 4 valores **escritos pelo participante**: **Vida ❤️, Força ⚔️, Intelecto 📖, Velocidade ⚡** — vão na carta
+  - **Habilidade** (opcional) — campo de texto; **não** vai na carta
+- Nome e os 4 status são **digitados pelo participante** e enviados junto com a imagem (JSON) — ver [05](05-modelo-de-dados.md) e posições na carta em [11](11-carta-composicao.md).
+- Validar entrada dos status (ex.: numéricos, faixa/limite de dígitos — a caixa na carta comporta ~1–2 dígitos, ver [11](11-carta-composicao.md)).
 
 ### 7. Salvar / Código de backup
 - O save é **automático** no `localStorage` a cada mudança.
@@ -63,11 +64,13 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 - O usuário pode copiar esse código e colar em outro dispositivo (tela inicial → restaurar).
 - Ver formato em [05-modelo-de-dados](05-modelo-de-dados.md).
 
-### 8. Exportar carta
-- Compõe o personagem dentro da moldura de carta TCG.
-- Gera imagem PNG no tamanho 63 × 88 mm (ver [06-exportacao-carta](06-exportacao-carta.md)).
-- Em Android: download direto.
-- Em iPhone/Safari: pode exigir abrir a imagem e usar "compartilhar/salvar" — tratado no código.
+### 8. Enviar personagem 🎁 (a carta é surpresa)
+- Botão **Enviar** — do ponto de vista do participante, ele está enviando **o personagem** (a palavra "carta" **não aparece**).
+- Pede uma **confirmação** ("Deseja enviar seu personagem? Não dá pra editar depois." — ou similar).
+- Ao confirmar, mostra **sucesso** imediatamente.
+- **Por trás, sem UI:** o app monta a carta de TCG (personagem + moldura + nome + status) e envia a **imagem + JSON** para os organizadores (ver [06](06-exportacao-carta.md)).
+- **Nada da carta é exibido ou baixado** no aparelho do participante — a carta impressa é a surpresa entregue depois.
+- Se o envio falhar (sem internet), o app **reenvia depois** de forma transparente (o sucesso já foi mostrado).
 
 ## Regras de negócio
 
@@ -76,8 +79,10 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 | Item bloqueado | Visível mas não selecionável até desbloqueio por código |
 | Troca de classe | Confirma antes; remove itens incompatíveis da seleção |
 | Troca de animal | Livre; mantém itens (são universais) |
-| Código correto | Desbloqueia grupo de itens; idempotente |
-| Código do último dia | Após todos os códigos, 100% dos itens da classe liberados |
+| Cenário | 3–4 no total; **1 liberado por dia** via código; troca livre entre os já liberados |
+| Código correto | Desbloqueia o grupo do dia: itens **e** o cenário daquele dia; idempotente |
+| Código do último dia | Após todos os códigos, 100% dos itens da classe + todos os cenários liberados |
+| Envio | Participante "envia o personagem"; carta gerada e enviada por trás (surpresa) |
 | Categoria vazia | Sempre permitido ("Nenhum") |
 | Sem conexão | App funciona offline após primeiro carregamento (PWA) |
 

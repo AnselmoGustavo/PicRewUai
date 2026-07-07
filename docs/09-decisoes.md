@@ -47,8 +47,8 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 ### ADR-006 — Exportação como carta TCG 63 × 88 mm, com impressão física
 **Data:** 07/2026 · **Status:** Aceito
 **Contexto:** O resultado final é uma carta colecionável **impressa fisicamente**. Os organizadores montam um PDF com todas as cartas.
-**Decisão:** Compor o personagem numa moldura de carta e exportar PNG em 63 × 88 mm **com sangria de 3 mm**, mirando **600 DPI** (mínimo 300). No export, salvar a imagem no aparelho **e** enviá-la aos organizadores.
-**Consequências:** Precisamos do design da moldura com sangria e janela de arte definida; tratar download no iOS; export em alta-res consome memória (testar). Introduz a necessidade de coleta (ADR-007) e de uma ferramenta de montagem de PDF. Ver [06](06-exportacao-carta.md).
+**Decisão:** Compor o personagem numa moldura de carta e exportar PNG em 63 × 88 mm. No export, salvar a imagem no aparelho **e** enviá-la aos organizadores.
+**Consequências:** Tratar download no iOS; introduz a necessidade de coleta (ADR-007) e de uma ferramenta de montagem de PDF. Formato/resolução definidos em **ADR-010** (300 DPI, sem sangria). Ver [06](06-exportacao-carta.md), [11](11-carta-composicao.md).
 
 ---
 
@@ -62,17 +62,46 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ### ADR-008 — Tema visual único + paleta + tipografia
 **Data:** 07/2026 · **Status:** Aceito
-**Decisão:** **Tema único** (sem modo claro/escuro). Cor **primária = verde `#45754a`**; secundária âmbar `#f4ab20`; acento coral `#f46364`. Fontes **Poppins** (texto) e **Arcane Fable** (display/temático), ambas auto-hospedadas para funcionar offline.
-**Consequências:** Simplifica o design. Arcane Fable precisa virar `.woff2`. Ver [10](10-identidade-visual.md).
+**Decisão:** **Tema único** (sem modo claro/escuro). Cor **primária = verde `#45754a`**; secundária âmbar `#f4ab20`; acento coral `#f46364`. Fontes: **Poppins** (texto), **Arcane Fable** (display/temático da UI) e **Adam Script** (textos da carta), auto-hospedadas para funcionar offline.
+**Consequências:** Simplifica o design. Arcane Fable e Adam Script precisam virar `.woff2`; **falta o arquivo da Adam Script**. Ver [10](10-identidade-visual.md).
+
+---
+
+### ADR-009 — Cenários selecionáveis e dia/noite pelo cenário
+**Data:** 07/2026 · **Status:** Aceito
+**Contexto:** As cartas têm fundos ilustrados; a moldura tem versões dia (tinta escura) e noite (tinta branca).
+**Decisão:** O picrew inclui uma categoria de **cenário** (fundo opaco que preenche a carta). **3 a 4 cenários no total, liberados 1 por dia** (mesmo código do dia). Cada cenário é marcado `claro`/`escuro`, e isso **decide automaticamente** a moldura dia/noite — sem toggle manual nem detecção de brilho.
+**Consequências:** Adiciona uma categoria de arte (3–4 cenários, equilibrar claros/escuros). Simplifica a lógica de dia/noite (determinística). Ver [11](11-carta-composicao.md).
+
+---
+
+### ADR-010 — Formato da carta: 744 × 1039 px @ 300 DPI, sem sangria
+**Data:** 07/2026 · **Status:** Aceito
+**Contexto:** Os designs finais foram entregues nesse formato (`Assets Finais/`) e **a gráfica aceita sem sangria**.
+**Decisão:** Montar a carta em **744 × 1039 px (300 DPI)**, o mesmo tamanho da imagem gerada pelo participante, **sem sangria**. `Borda pra corte.png` como guia de corte no PDF.
+**Consequências:** Alinha o canvas do personagem à carta. 600 DPI exigiria re-export a 2× (não planejado). Ver [11](11-carta-composicao.md).
+
+---
+
+### ADR-011 — Status = 4 atributos digitados pelo participante
+**Data:** 07/2026 · **Status:** Aceito
+**Decisão:** "Status" são **4 valores** exibidos na carta: **Vida, Força, Intelecto, Velocidade** (ícones já embutidos no frame). O **nome e os 4 status são escritos pelo participante** e enviados em **JSON junto com a imagem**. "Habilidade" é campo da ficha e **não** vai na carta.
+**Consequências:** Define os campos da ficha e o payload de envio. Validar entrada (a caixa de status comporta ~1–2 dígitos). Ver [05](05-modelo-de-dados.md), [11](11-carta-composicao.md).
+
+---
+
+### ADR-012 — Carta é surpresa: gerada e enviada silenciosamente
+**Data:** 07/2026 · **Status:** Aceito
+**Contexto:** A carta de TCG impressa deve ser uma surpresa; o participante não deve saber que ela existe.
+**Decisão:** Não há "exportar carta" na UI. O participante **envia o personagem**, vê **sucesso**, e o app **monta a carta offscreen e a envia por trás**. A palavra "carta", qualquer prévia da moldura e download da carta **não aparecem** para o participante.
+**Consequências:** Composição da carta acontece sem UI; nada da carta é salvo no aparelho; feedback de sucesso é imediato e o upload pode ser reenviado depois. Exige cuidado para a UI **não vazar** a existência da carta. Ver [06](06-exportacao-carta.md).
 
 ---
 
 ## Decisões ainda em aberto
 
-- [ ] Definição de **status** e **habilidade** da ficha (o que são, formato).
-- [ ] Quais infos aparecem na **arte da carta** e se são texto do app ou embutidas.
 - [ ] Tratamento definitivo de **carpa e coruja** no gabarito universal.
-- [ ] Estilo/tamanho final exato do **canvas mestre** (travar com a moldura + sangria).
 - [ ] Escolha do storage (**Supabase** vs Vercel Blob) e **limite de envios** por pessoa.
-- [ ] Layout do **PDF de impressão** (cartas por folha, tamanho da folha, marcas de corte).
+- [ ] Layout do **PDF de impressão** (cartas por folha, tamanho da folha).
 - [ ] **Neutros** da paleta (fundo, texto, bordas) e confirmação do uso das fontes.
+- [ ] Validação de entrada dos **status** (faixa/limite de dígitos).
