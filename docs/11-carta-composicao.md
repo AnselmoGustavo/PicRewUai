@@ -58,7 +58,9 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 | Name Frame (Dia/Noite) | 0,63 | 0,16 | 74 | 19 |
 | Name Frame Preenchimento | 0,81 | 0,63 | 96 | 74 |
 | Status Frame (Dia/Noite) | 4,35 | 6,42 | 514 | 758 |
-| Status Preenchimento | 4,35 | 6,42 | 514 | 758 |
+| Status Preenchimento | — | — | *centralizado* | *no frame* |
+
+> ⚠️ **Preenchimento de status:** o asset (160 × 231) é **menor** que a moldura de status (169 × 240). Ele deve ser **centralizado dentro da moldura** (offset de +4,5 px em X e Y a partir de 514, 758), e **não** colado no mesmo canto (514, 758) — senão fica desalinhado (sobra ~9 px embaixo/à direita). No código isso é calculado a partir dos tamanhos reais das imagens. A moldura de status contém só os ornamentos das quinas + ícones; a "borda retangular" visível é do próprio preenchimento.
 
 ### Textos (caixa de texto: X, Y, largura, altura) · fonte **Adam Script**
 
@@ -71,6 +73,8 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 | Status 4 (Velocidade ⚡) | 5,14 | 7,84 | 0,30 | 0,38 | 607 | 926 | 35 | 45 |
 
 > Mapeamento Status 1–4 → Vida / Força / Intelecto / Velocidade (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita** nome e status na ficha, e o **app os desenha na carta** nestas posições (fonte Adam Script). A caixa de status comporta ~1–2 dígitos — validar a entrada.
+
+> 🎨 **Pendente (calibrar com cenários reais):** a cor do texto (`corTexto`) e a opacidade do preenchimento (`preenchOpacidade`) foram definidas sobre um fundo placeholder. Ao integrar os cenários reais, revisar o **contraste dos números de status** (especialmente em cenários noite) e ajustar cor/opacidade — possivelmente cor de texto diferente por tema dia/noite.
 
 ## Preenchimentos (transparência)
 

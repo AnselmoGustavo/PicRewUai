@@ -50,6 +50,31 @@ Toda a documentação vive em [`docs/`](docs/):
 
 ---
 
+## Como rodar localmente
+
+Pré-requisitos: **Node.js 18+** (testado no 24).
+
+```bash
+npm install          # instala dependências (só na 1ª vez)
+npm run dev          # sobe o app em http://localhost:3000
+```
+
+- Página inicial: `/` — logo sobre o fundo texturizado.
+- Protótipo da carta: `/poc-carta` — monta a carta com os assets reais; dá pra editar nome/status e alternar dia/noite.
+
+Outros comandos:
+
+```bash
+npm run build            # build de produção
+npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação headless)
+```
+
 ## Status do projeto
 
-🟡 **Fase de planejamento** — documentação inicial criada. Próximo passo: scaffold do projeto Next.js + prova de conceito de renderização em camadas.
+🟢 **Scaffold + prova de conceito prontos.**
+
+- ✅ Documentação completa ([`docs/`](docs/)).
+- ✅ App Next.js rodando (paleta creme + verde, fundo texturizado, 3 fontes, logo).
+- ✅ Composição da carta validada com os assets reais — ver exemplos em [`docs/exemplos/`](docs/exemplos/) (dia e noite). Coordenadas do [doc 11](docs/11-carta-composicao.md) confirmadas.
+
+**Próximos passos:** telas de seleção (animal / classe / cenário), sistema de itens por classe + códigos, ficha, e o envio (surpresa) com upload para o Supabase.

@@ -51,6 +51,7 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 
 ### Fase 5 — Integração de arte + polish (Out, ~2 semanas)
 - [ ] Substituir placeholders pela arte final (em lotes).
+- [ ] **Calibrar contraste dos números de status** (cor/opacidade) sobre os cenários reais — ver [11](11-carta-composicao.md).
 - [ ] PWA/offline (service worker, ícone na tela inicial).
 - [ ] Ajuste fino de layout mobile, contraste, alvos de toque.
 - [ ] Otimização de carregamento (assets sob demanda).

@@ -1,0 +1,21 @@
+{
+  "_fonte": "Coordenadas do doc 11-carta-composicao.md. Card 744x1039 px @300 DPI (1cm = 118,11px).",
+  "card": { "w": 744, "h": 1039 },
+  "assets": {
+    "nameFrame":   { "x": 74,  "y": 19 },
+    "namePreench": { "x": 96,  "y": 74 },
+    "statusFrame": { "x": 514, "y": 758 }
+  },
+  "_nota_statusPreench": "O preenchimento de status é CENTRALIZADO dentro da moldura de status (o asset é menor que o frame), calculado no código a partir dos tamanhos reais. Não usar coordenada fixa.",
+  "textos": {
+    "nome": { "x": 190, "y": 112, "w": 432, "h": 53, "fontePx": 44 },
+    "status": [
+      { "key": "vida",       "x": 607, "y": 781, "w": 35, "h": 45, "fontePx": 34 },
+      { "key": "forca",      "x": 607, "y": 829, "w": 35, "h": 45, "fontePx": 34 },
+      { "key": "intelecto",  "x": 607, "y": 880, "w": 35, "h": 45, "fontePx": 34 },
+      { "key": "velocidade", "x": 607, "y": 926, "w": 35, "h": 45, "fontePx": 34 }
+    ]
+  },
+  "preenchOpacidade": 0.72,
+  "corTexto": "#3a2f28"
+}

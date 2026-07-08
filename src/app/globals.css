@@ -1,0 +1,95 @@
+/* ===== Fontes locais ===== */
+@font-face {
+  font-family: "ArcaneFable";
+  src: url("/font/ArcaneFable.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AdamScript";
+  src: url("/font/AdamScript.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* ===== Design tokens (ver docs/10-identidade-visual.md) ===== */
+:root {
+  /* Marca */
+  --cor-verde: #45754a;
+  --cor-ambar: #f4ab20;
+  --cor-coral: #f46364;
+
+  /* Papéis semânticos */
+  --cor-primaria: var(--cor-verde);
+  --cor-secundaria: var(--cor-ambar);
+  --cor-acento: var(--cor-coral);
+
+  /* Neutros — tema claro/creme */
+  --cor-fundo: #f7f0e0;
+  --cor-superficie: #fbf7ec;
+  --cor-texto: #2b2620;
+  --cor-texto-suave: #6b6152;
+  --cor-borda: #e3d6bc;
+  --cor-desabilitado: #cdbfa4;
+
+  --fonte-corpo: var(--font-poppins), system-ui, sans-serif;
+  --fonte-display: "ArcaneFable", var(--font-poppins), serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  /* Fundo texturizado da marca, com o creme como fallback */
+  background-color: var(--cor-fundo);
+  background-image: url("/identidade/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Painel de superfície (creme mais liso) para dar legibilidade sobre a textura */
+.superficie {
+  background: color-mix(in srgb, var(--cor-superficie) 92%, transparent);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(43, 38, 32, 0.12);
+  backdrop-filter: blur(2px);
+}
+
+.botao {
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--cor-primaria);
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+.botao:hover {
+  filter: brightness(1.08);
+}
+.botao--secundario {
+  background: var(--cor-secundaria);
+  color: var(--cor-texto);
+}

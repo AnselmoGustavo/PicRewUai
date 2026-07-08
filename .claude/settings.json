@@ -4,7 +4,18 @@
       "Bash(find . -type f \\\\\\( -iname \"*.ttf\" -o -iname \"*.otf\" -o -iname \"*.woff*\" -o -iname \"*arcane*\" -o -iname \"*fable*\" \\\\\\) -not -path \"./.git/*\")",
       "Bash(find . -type d -not -path \"./.git/*\" -not -path \"./docs*\")",
       "Bash(npm --version)",
-      "Bash(git --version)"
+      "Bash(git --version)",
+      "Bash(mkdir -p public/assets/carta public/identidade public/font src/app/poc-carta src/components src/lib scripts docs/exemplos)",
+      "Bash(cp \"Assets Finais/Bordas/Borda dia.png\"                     public/assets/carta/borda-dia.png)",
+      "Bash(cp \"Assets Finais/Bordas/Borda noite.png\"                   public/assets/carta/borda-noite.png)",
+      "Bash(cp \"Assets Finais/Bordas/Borda pra corte.png\"               public/assets/carta/borda-corte.png)",
+      "Bash(cp \"Assets Finais/Name Frame/Name Frame Dia.png\"            public/assets/carta/name-dia.png)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(node \"C:/Users/Usuario/AppData/Local/Temp/claude/c--Users-Usuario-Desktop-UAI-2026-PicRewUai/d2078378-f755-4323-91ab-79e5213a4d3d/scratchpad/analisar-assets.mjs\")",
+      "Bash(cp \"C:/Users/Usuario/AppData/Local/Temp/claude/c--Users-Usuario-Desktop-UAI-2026-PicRewUai/d2078378-f755-4323-91ab-79e5213a4d3d/scratchpad/analisar-assets.mjs\" scripts/_analisar.mjs)",
+      "Bash(node scripts/_analisar.mjs)",
+      "Bash(rm -f scripts/_analisar.mjs)"
     ]
   }
 }
