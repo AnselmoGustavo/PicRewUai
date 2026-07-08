@@ -15,7 +15,7 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 ## Telas / seções
 
 ### 1. Tela inicial
-- Logo/tema do evento.
+- **Logo "uai"** (`identidade/Logo uai - sem fundo.png`) sobre o fundo texturizado (`identidade/Fundo.png`) — ver [10](10-identidade-visual.md).
 - Botão **Criar personagem** (novo) e **Continuar** (se já existe save local).
 - Campo **Restaurar por código de backup**.
 

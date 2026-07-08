@@ -54,6 +54,23 @@ theme: {
 }
 ```
 
+## Assets de marca (pasta `identidade/`)
+
+| Asset | Arquivo | Tamanho | Uso |
+|-------|---------|:-------:|-----|
+| Fundo texturizado | `identidade/Fundo.png` | 1080 × 1080 | **Fundo do app** — papel envelhecido (florais + caligrafia + vinheta) |
+| Logo (transparente) | `identidade/Logo uai - sem fundo.png` | 746 × 528 | Logotipo "uai" para cabeçalho, splash, tela inicial |
+| Logo composto | `identidade/Logo final.png` | 1080 × 1080 | Logo sobre o fundo — ícone PWA, imagem de compartilhamento |
+
+### Direção visual
+Estética de **pergaminho / livro antigo de RPG**: papel envelhecido, tinta verde, ornamentos. Combina com as molduras ornamentadas das cartas ([11](11-carta-composicao.md)). As superfícies da UI (painéis, cartões, botões) devem seguir esse clima — verde primário sobre creme, cantos/bordas com um toque ornamental quando fizer sentido.
+
+### Notas de uso do fundo
+- Usar `Fundo.png` como **fundo fixo cobrindo a tela** (`background-size: cover`, centralizado), com o creme `--cor-fundo` (#f7f0e0) como **cor de fallback** enquanto a imagem carrega.
+- A imagem tem **vinheta e florais** → não é 100% ladrilhável. Para telas muito altas, ou usa-se fundo fixo (`background-attachment: fixed`) ou geramos uma variante mais neutra/ladrilhável depois.
+- **Otimizar** (comprimir / gerar `.webp`) para carregar rápido no celular.
+- Garantir **legibilidade do texto** sobre a textura: onde houver bastante texto, usar um painel de `--cor-superficie` (creme mais liso) por cima do fundo.
+
 ## Tipografia
 
 | Fonte | Uso | Origem |
@@ -99,3 +116,4 @@ App usado no celular, possivelmente ao sol. Observações da paleta:
 - ✅ Tema **único, claro/creme** (sem modo escuro).
 - ✅ Cor primária: **verde `#45754a`**; neutros creme + texto escuro definidos (proposta).
 - ✅ Fontes: **Poppins** (texto), **Arcane Fable** (display UI), **Adam Script** (carta).
+- ✅ Assets de marca disponíveis em `identidade/` (logo + fundo texturizado).
