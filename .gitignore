@@ -9,6 +9,9 @@
 .env
 .env.local
 
+# envios recebidos (mock de dev)
+/envios
+
 # sistema
 .DS_Store
 *.log

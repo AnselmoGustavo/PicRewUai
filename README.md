@@ -60,7 +60,10 @@ npm run dev          # sobe o app em http://localhost:3000
 ```
 
 - Página inicial: `/` — logo sobre o fundo texturizado.
-- Protótipo da carta: `/poc-carta` — monta a carta com os assets reais; dá pra editar nome/status e alternar dia/noite.
+- **Criar personagem: `/criar`** — fluxo animal → classe → editor (cenário, itens por categoria filtrados por classe, códigos de desbloqueio, ficha). Estado persiste no navegador.
+- Protótipo da carta (dev): `/poc-carta` — monta a carta com moldura + nome/status e alterna dia/noite.
+
+> Códigos de teste: `UAI-DIA1` … `UAI-DIA4` (liberam itens + cenário do dia) e `UAI-MESTRE` (libera tudo).
 
 Outros comandos:
 
@@ -71,10 +74,16 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 
 ## Status do projeto
 
-🟢 **Scaffold + prova de conceito prontos.**
+🟢 **Fluxo de criação funcional (com placeholders).**
 
 - ✅ Documentação completa ([`docs/`](docs/)).
 - ✅ App Next.js rodando (paleta creme + verde, fundo texturizado, 3 fontes, logo).
-- ✅ Composição da carta validada com os assets reais — ver exemplos em [`docs/exemplos/`](docs/exemplos/) (dia e noite). Coordenadas do [doc 11](docs/11-carta-composicao.md) confirmadas.
+- ✅ Composição da carta validada com os assets reais — exemplos em [`docs/exemplos/`](docs/exemplos/). Coordenadas do [doc 11](docs/11-carta-composicao.md) confirmadas.
+- ✅ Estado global (Zustand) + persistência no `localStorage`; manifesto de itens/cenários ([`src/lib/`](src/lib/)).
+- ✅ Fluxo `/criar`: seleção de animal → classe → editor com abas (cenário + 5 categorias + ficha), itens filtrados por classe, bloqueio/desbloqueio por código, preview ao vivo (sem moldura — a carta é surpresa).
+- ✅ **Envio surpresa**: botão "Enviar personagem" → confirmação de que é definitivo → a carta completa (moldura + nome + status) é composta **offscreen** e enviada; editor trava (`enviado`) com tela de agradecimento. A palavra "carta" e a moldura nunca aparecem para o participante.
+- ✅ Endpoint `POST /api/enviar-carta` — **mock de dev** que salva em `./envios` (verificado de ponta a ponta).
 
-**Próximos passos:** telas de seleção (animal / classe / cenário), sistema de itens por classe + códigos, ficha, e o envio (surpresa) com upload para o Supabase.
+> ⚠️ **Personagem e itens usam placeholders** (cores/silhuetas) até a arte da Ana Beatriz chegar. A lógica do fluxo, filtros, códigos e envio já está pronta.
+
+**Próximos passos:** trocar o mock de envio pelo **upload real ao Supabase** (precisa das chaves/conta); polir a ficha; integrar a arte final quando chegar.

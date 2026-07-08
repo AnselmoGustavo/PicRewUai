@@ -28,14 +28,14 @@ export default function Home() {
         <p style={{ margin: "0 0 1.25rem", color: "var(--cor-texto-suave)" }}>
           Monte seu herói para o evento UAI 2026.
         </p>
-        <Link href="/poc-carta" className="botao">
-          Ver protótipo da carta
+        <Link href="/criar" className="botao">
+          Criar personagem
         </Link>
       </div>
 
-      <p style={{ fontSize: "0.8rem", color: "var(--cor-texto-suave)" }}>
-        Protótipo · scaffold inicial
-      </p>
+      <Link href="/poc-carta" style={{ fontSize: "0.8rem", color: "var(--cor-texto-suave)" }}>
+        (protótipo da carta · dev)
+      </Link>
     </main>
   );
 }

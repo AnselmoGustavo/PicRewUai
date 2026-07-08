@@ -15,7 +15,14 @@
       "Bash(node \"C:/Users/Usuario/AppData/Local/Temp/claude/c--Users-Usuario-Desktop-UAI-2026-PicRewUai/d2078378-f755-4323-91ab-79e5213a4d3d/scratchpad/analisar-assets.mjs\")",
       "Bash(cp \"C:/Users/Usuario/AppData/Local/Temp/claude/c--Users-Usuario-Desktop-UAI-2026-PicRewUai/d2078378-f755-4323-91ab-79e5213a4d3d/scratchpad/analisar-assets.mjs\" scripts/_analisar.mjs)",
       "Bash(node scripts/_analisar.mjs)",
-      "Bash(rm -f scripts/_analisar.mjs)"
+      "Bash(rm -f scripts/_analisar.mjs)",
+      "Bash(curl -s --retry 8 --retry-delay 1 --retry-connrefused -o /dev/null -w \"home: %{http_code}\\\\n\" http://localhost:3210/)",
+      "Bash(curl -s -o /dev/null -w \"criar: %{http_code}\\\\n\" http://localhost:3210/criar)",
+      "Bash(curl -s -o /dev/null -w \"poc: %{http_code}\\\\n\" http://localhost:3210/poc-carta)",
+      "Bash(curl -s http://localhost:3210/)",
+      "Bash(curl -s http://localhost:3210/criar)",
+      "Bash(rm -f docs/exemplos/_e2e-*.png)",
+      "Bash(npm uninstall *)"
     ]
   }
 }
