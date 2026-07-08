@@ -13,8 +13,8 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 |------|---------|
 | Plataforma | Web app (PWA), roda no navegador de qualquer celular |
 | Stack | Next.js + React + TypeScript + Canvas API |
-| Persistência | `localStorage` + **código de backup** exportável (montagem funciona offline) |
-| Backend | Só um endpoint de upload para coletar as cartas (Vercel Function + storage) |
+| Persistência | `localStorage` (offline) + **sincronização no Supabase** via código pessoal (cross-device) |
+| Backend | Vercel Functions + Supabase: sincronizar progresso + coletar as cartas |
 | Hospedagem | Vercel free tier |
 | Identidade | Tema único · primária verde `#45754a` · Poppins + Arcane Fable |
 | Assets | **Universais** — o mesmo item serve para os 8 animais |
@@ -83,7 +83,8 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 - ✅ Fluxo `/criar`: seleção de animal → classe → editor com abas (cenário + 5 categorias + ficha), itens filtrados por classe, bloqueio/desbloqueio por código, preview ao vivo (sem moldura — a carta é surpresa).
 - ✅ **Envio surpresa**: botão "Enviar personagem" → confirmação de que é definitivo → a carta completa (moldura + nome + status) é composta **offscreen** e enviada; editor trava (`enviado`) com tela de agradecimento. A palavra "carta" e a moldura nunca aparecem para o participante.
 - ✅ Endpoint `POST /api/enviar-carta` — **mock de dev** que salva em `./envios` (verificado de ponta a ponta).
+- ✅ **Sincronização cross-device** (ADR-015): código pessoal gerado pelo app, auto-save com debounce e recuperação por código na tela inicial. Endpoint `/api/progresso` com **mock de dev** em `.dev-data/` (verificado); troca para Supabase via env vars.
 
-> ⚠️ **Personagem e itens usam placeholders** (cores/silhuetas) até a arte da Ana Beatriz chegar. A lógica do fluxo, filtros, códigos e envio já está pronta.
+> ⚠️ **Personagem e itens usam placeholders** (cores/silhuetas) até a arte da Ana Beatriz chegar. A lógica do fluxo, filtros, códigos, envio e sincronização já está pronta.
 
-**Próximos passos:** trocar o mock de envio pelo **upload real ao Supabase** (precisa das chaves/conta); polir a ficha; integrar a arte final quando chegar.
+**Próximos passos:** configurar o **Supabase** (env vars) para ligar o backend real de progresso e envio; polir a ficha; integrar a arte final quando chegar.
