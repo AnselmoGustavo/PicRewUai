@@ -12,6 +12,9 @@
 # envios recebidos (mock de dev)
 /envios
 
+# progresso salvo pelo mock de dev
+/.dev-data
+
 # sistema
 .DS_Store
 *.log

@@ -53,6 +53,7 @@ export default function Editor({
   const enviado = usePersonagem((s) => s.enviado);
   const marcarEnviado = usePersonagem((s) => s.marcarEnviado);
   const resetar = usePersonagem((s) => s.resetar);
+  const codigoPessoal = usePersonagem((s) => s.codigoPessoal);
 
   const [aba, setAba] = useState<Aba>("cenario");
   const [codigo, setCodigo] = useState("");
@@ -142,9 +143,19 @@ export default function Editor({
         </span>
       </div>
 
+      {/* código pessoal (sincronização entre aparelhos) */}
+      {codigoPessoal && (
+        <div className="superficie" style={{ padding: "0.5rem 0.9rem", width: "min(92vw, 420px)", fontSize: "0.8rem", textAlign: "center" }}>
+          🔑 Seu código: <strong style={{ letterSpacing: "0.05em" }}>{codigoPessoal}</strong>
+          <div style={{ color: "var(--cor-texto-suave)", fontSize: "0.72rem" }}>
+            Guarde este código para acessar seu personagem em outro aparelho.
+          </div>
+        </div>
+      )}
+
       <PreviewCarta />
 
-      {/* código */}
+      {/* código do dia */}
       <div className="superficie" style={{ padding: "0.75rem", width: "min(92vw, 420px)" }}>
         <div style={{ display: "flex", gap: "0.5rem" }}>
           <input

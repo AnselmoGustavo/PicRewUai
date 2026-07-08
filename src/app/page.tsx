@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RecuperarCodigo from "@/components/RecuperarCodigo";
 
 export default function Home() {
   return (
@@ -31,6 +32,9 @@ export default function Home() {
         <Link href="/criar" className="botao">
           Criar personagem
         </Link>
+        <div style={{ marginTop: "1rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
+          <RecuperarCodigo />
+        </div>
       </div>
 
       <Link href="/poc-carta" style={{ fontSize: "0.8rem", color: "var(--cor-texto-suave)" }}>

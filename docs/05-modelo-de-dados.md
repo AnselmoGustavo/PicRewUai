@@ -86,12 +86,31 @@ interface EstadoPersonagem {
   };
   desbloqueios: GrupoDesbloqueio[]; // grupos já liberados, ex.: ['inicial','dia1']
   enviado: boolean;                 // true após o envio final → trava o editor
+  codigoPessoal: string | null;     // chave de sincronização (ex.: "raposa-4827")
+  atualizadoEm: number;             // epoch ms da última mudança (last-write-wins)
 }
 ```
 
-- Persistido automaticamente em `localStorage` a cada mudança.
+- Persistido automaticamente em `localStorage` a cada mudança (cache rápido/offline).
 - `inicial` está sempre desbloqueado.
 - Quando `enviado === true`, o editor entra em modo somente-leitura (envio é único e definitivo).
+
+## Sincronização de progresso (cross-device) — ADR-015
+
+Além do `localStorage`, o progresso sincroniza no **Supabase** para sobreviver a troca de aparelho / limpeza de dados ao longo dos 4 dias.
+
+- **Código pessoal:** na 1ª vez, o app gera um código legível (`codigoPessoal`, ex.: `raposa-4827`), o mostra em destaque (+ QR) e o usa como chave. Alta entropia o suficiente para dificultar sobrescrever o de outra pessoa.
+- **Salvar:** a cada mudança, `POST /api/progresso { codigo, estado }` (com **debounce** ~1–2 s). Upsert por `codigo`.
+- **Carregar:** ao abrir, `GET /api/progresso?codigo=…`; se o servidor tiver `atualizadoEm` mais recente que o local, adota o do servidor (**last-write-wins**). Em outro aparelho, digitar o código recupera tudo.
+- **Offline:** edita a partir do `localStorage`; sincroniza quando a conexão voltar.
+
+```ts
+// tabela Supabase: progresso
+// codigo (text, PK) · estado (jsonb) · atualizado_em (timestamptz) · enviado (bool)
+```
+
+> Endpoint via **API route** (chave de serviço do Supabase fica no servidor, não no cliente). Sem dado pessoal — só o personagem.
+> Em dev, sem chaves configuradas, o endpoint cai num **mock em arquivo** (`.dev-data/progresso/`) para dá pra testar localmente.
 
 ## Sistema de códigos de desbloqueio
 

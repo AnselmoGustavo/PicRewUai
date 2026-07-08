@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Editor from "@/components/Editor";
 import { usePersonagem } from "@/lib/store";
+import { useSyncProgresso } from "@/lib/sync";
 import { ANIMAIS, CLASSES } from "@/lib/tipos";
 
 type Etapa = "animal" | "classe" | "editor";
@@ -16,6 +17,9 @@ export default function CriarPage() {
   const classe = usePersonagem((s) => s.classe);
   const setAnimal = usePersonagem((s) => s.setAnimal);
   const setClasse = usePersonagem((s) => s.setClasse);
+
+  // sincronização de progresso (código pessoal + servidor)
+  useSyncProgresso();
 
   // guarda de hidratação (o estado vem do localStorage no cliente)
   useEffect(() => {

@@ -20,11 +20,11 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ---
 
-### ADR-003 — Persistência local + código de backup (sem backend)
-**Data:** 07/2026 · **Status:** Aceito
-**Contexto:** Precisamos salvar personagem e progresso; backend traria custo, complexidade e risco de prazo.
-**Decisão:** Salvar em `localStorage` e oferecer um **código de backup** exportável para recuperar em outro dispositivo.
-**Consequências:** Custo zero de infraestrutura; app estático e offline-first; aguenta picos sem servidor. Risco de perda de dados se o usuário não fizer backup — mitigado pelo código de backup (+ QR).
+### ADR-003 — Persistência local (base) — ~~sem backend~~
+**Data:** 07/2026 · **Status:** Parcialmente substituído por **ADR-015**
+**Contexto:** Precisamos salvar personagem e progresso.
+**Decisão:** Salvar em `localStorage` (cache rápido/offline). *(Originalmente: só local + código de backup, sem backend.)*
+**Atualização:** Como os participantes abrem o app poucas vezes ao longo de 4 dias e podem trocar de aparelho, decidimos **sincronizar o progresso no servidor** — ver **ADR-015**. O `localStorage` continua como cache offline.
 
 ---
 
@@ -109,6 +109,14 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 **Data:** 07/2026 · **Status:** Aceito
 **Decisão:** Interface em **tema claro/creme** (fundo `#f7f0e0`, texto `#2b2620`, etc. — ver [10](10-identidade-visual.md)). Toda a arte dos personagens é da **Ana Beatriz**; carpa e coruja provavelmente em **pose antropomórfica** para caber no gabarito universal, confirmado no teste de validação de arte.
 **Consequências:** Define os neutros da UI. O encaixe universal fica sob controle da ilustradora + teste. Ver [04](04-guia-de-assets.md), [10](10-identidade-visual.md).
+
+---
+
+### ADR-015 — Sincronização do progresso no Supabase com código pessoal
+**Data:** 07/2026 · **Status:** Aceito (substitui a parte "sem backend" da ADR-003)
+**Contexto:** Participantes abrem o app poucas vezes ao longo de 4 dias, desbloqueiam itens por código diário e podem trocar de aparelho — não podem perder o personagem nem refazer tudo.
+**Decisão:** Além do `localStorage` (cache offline), o **progresso é sincronizado no Supabase**. Na 1ª vez, o app **gera um código pessoal legível** (ex.: `raposa-4827`), mostra em destaque (+ QR) e usa como chave do registro. A cada mudança, faz upsert (com debounce); ao abrir, busca a versão mais recente (last-write-wins por `atualizadoEm`). Em outro aparelho, digitar o código recupera tudo.
+**Consequências:** Cross-device sem login/senha. O participante precisa **guardar o código** (se perder o código E o localStorage, não recupera). Requer projeto Supabase + chaves; o progresso não tem dado pessoal (só o personagem). Endpoint via API route (chave de serviço no servidor) com código de alta entropia para dificultar sobrescrita alheia. Ver [05](05-modelo-de-dados.md), [03](03-arquitetura-tecnica.md).
 
 ---
 

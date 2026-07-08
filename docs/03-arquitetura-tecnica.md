@@ -10,10 +10,10 @@
 | Renderização do personagem | **HTML Canvas 2D** | Compõe camadas de PNG e exporta imagem |
 | Estado | **Zustand** (store leve) + persistência em `localStorage` | Simples, sem boilerplate |
 | Cache offline | **Service Worker (PWA)** via `next-pwa` ou manual | Funcionar offline no evento |
-| Coleta de cartas | **Serverless (Vercel Function)** + **Supabase** (Storage + Postgres) | Receber uploads das cartas + painel para os organizadores |
-| Hospedagem | **Vercel** (free) | App estático + uma função de upload |
+| Backend | **Serverless (Vercel Functions)** + **Supabase** (Storage + Postgres) | (1) sincronizar progresso cross-device; (2) receber as cartas para impressão + painel |
+| Hospedagem | **Vercel** (free) | App estático + funções serverless |
 
-> **Quase sem backend.** Toda a lógica do app (montar personagem, códigos, save local, gerar imagem) roda no navegador e funciona offline. O **único componente de servidor** é um endpoint de upload que recebe a carta final para os organizadores imprimirem (ver [06](06-exportacao-carta.md)). Montar o personagem funciona offline; só o **envio** precisa de internet.
+> **Backend enxuto.** A lógica do app (montar personagem, códigos, gerar imagem) roda no navegador e funciona offline via `localStorage`. O Supabase entra em dois pontos: **sincronizar o progresso** entre aparelhos sob um código pessoal (ADR-015, ver [05](05-modelo-de-dados.md)) e **receber a carta final** para impressão (ver [06](06-exportacao-carta.md)). Editar funciona offline; sincronizar/enviar precisa de internet.
 
 ## Princípios de arquitetura
 
@@ -41,7 +41,8 @@
 │   ├── app/
 │   │   ├── (telas)/           # rotas Next.js (App Router)
 │   │   └── api/
-│   │       └── enviar-carta/  # endpoint serverless de upload da carta
+│   │       ├── progresso/     # sync do progresso (GET/POST) — Supabase
+│   │       └── enviar-carta/  # upload da carta final — Supabase
 │   ├── admin/                 # ferramenta de montagem do PDF de impressão
 │   ├── components/            # Editor, PainelCategoria, PreviewCanvas, FichaForm, ...
 │   ├── lib/

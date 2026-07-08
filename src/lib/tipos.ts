@@ -73,6 +73,8 @@ export interface EstadoPersonagem {
   ficha: Ficha;
   desbloqueios: GrupoDesbloqueio[];
   enviado: boolean;
+  codigoPessoal: string | null; // chave de sincronização (ADR-015)
+  atualizadoEm: number; // epoch ms da última mudança (last-write-wins)
 }
 
 export const CATEGORIAS: { id: Categoria; nome: string }[] = [
