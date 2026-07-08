@@ -13,7 +13,7 @@
 | R9 | **Campos da ficha / regras de conteúdo mudam tarde** | Médio | Média | Manifesto e ficha desacoplados do código; definir cedo com a organização |
 | R10 | **Design da moldura da carta atrasa** | Médio | Média | Export funciona com moldura placeholder; janela da arte parametrizável |
 | R11 | **Envio falha e se perde silenciosamente** (sucesso é mostrado antes do upload confirmar, por causa da surpresa) | Alto | Média | Fila local de reenvio + re-tentativa automática; persistir no `localStorage` até confirmar; painel dos organizadores para conferir quem enviou; código de backup preserva o estado |
-| R12 | **Storage estoura** (muitos envios em alta-res) | Médio | Média | Limitar a 1 envio final/pessoa; estimar headcount; otimizar PNG; monitorar cota |
+| R12 | **Storage estoura** | Baixo | Baixa | **1 envio final/pessoa** torna o volume previsível (~2 MB × headcount); Supabase free ~1 GB; otimizar PNG se aproximar do limite |
 | R13 | **Endpoint de upload sofre abuso/spam** | Médio | Baixa | Segredo no endpoint, rate limit, validação de tipo/tamanho |
 | R14 | **Impressão sai errada** (cor/corte fora) | Médio | Baixa | Gráfica **aceita sem sangria**; usar `Borda pra corte.png` como guia; **testar amostra impressa cedo**; validar perfil de cor |
 | R15 | **Perda de dados pessoais / privacidade** | Baixo | Baixa | Por design não coletamos nome real/contato, só dados do personagem |

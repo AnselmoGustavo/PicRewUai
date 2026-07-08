@@ -55,7 +55,7 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 ### ADR-007 — Coleta das cartas via upload (mini-backend)
 **Data:** 07/2026 · **Status:** Aceito
 **Contexto:** As cartas precisam chegar aos organizadores em alta qualidade para impressão. WhatsApp comprime e coletar por e-mail é trabalhoso.
-**Decisão:** O app envia a carta para um **endpoint serverless** (`/api/enviar-carta`) que grava em **storage** (Supabase ou Vercel Blob). Identificação apenas por dados do personagem (nome do personagem, classe, status, habilidade) — **sem dados pessoais**.
+**Decisão:** O app envia a carta para um **endpoint serverless** (`/api/enviar-carta`) que grava no **Supabase** (Storage + Postgres — ver ADR-013). Identificação apenas por dados do personagem — **sem dados pessoais**.
 **Consequências:** Introduz o único componente de servidor do projeto (o resto segue estático/offline). Montar o personagem funciona offline; só o envio precisa de internet (com re-tentativa). Exige gerir cota de storage, proteger o endpoint e construir a ferramenta de PDF. Ver [06](06-exportacao-carta.md).
 
 ---
@@ -85,8 +85,8 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ### ADR-011 — Status = 4 atributos digitados pelo participante
 **Data:** 07/2026 · **Status:** Aceito
-**Decisão:** "Status" são **4 valores** exibidos na carta: **Vida, Força, Intelecto, Velocidade** (ícones já embutidos no frame). O **nome e os 4 status são escritos pelo participante** e enviados em **JSON junto com a imagem**. "Habilidade" é campo da ficha e **não** vai na carta.
-**Consequências:** Define os campos da ficha e o payload de envio. Validar entrada (a caixa de status comporta ~1–2 dígitos). Ver [05](05-modelo-de-dados.md), [11](11-carta-composicao.md).
+**Decisão:** "Status" são **4 valores** exibidos na carta: **Vida, Força, Intelecto, Velocidade** (ícones já embutidos no frame). O **nome e os 4 status são digitados pelo participante**, e o **app os desenha diretamente na carta** nas posições definidas ([11](11-carta-composicao.md)) — ficam "queimados" na imagem, não são enviados como dado à parte (JSON só opcional para o painel). "Habilidade" é campo da ficha e **não** vai na carta.
+**Consequências:** Define os campos da ficha. O render precisa carregar a fonte Adam Script antes de desenhar. Validar entrada (caixa de status ~1–2 dígitos). Ver [05](05-modelo-de-dados.md), [11](11-carta-composicao.md).
 
 ---
 
@@ -98,10 +98,26 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ---
 
+### ADR-013 — Envio único e definitivo + Supabase
+**Data:** 07/2026 · **Status:** Aceito
+**Decisão:** Cada participante faz **1 envio final** — depois disso o editor **trava** (somente-leitura, flag `enviado`). As cartas são armazenadas no **Supabase** (Storage + Postgres, free tier), que também dá o painel para os organizadores.
+**Consequências:** 1 imagem por pessoa → armazenamento previsível (ex.: 300 × ~2 MB ≈ 600 MB, cabe no free tier). A confirmação de envio precisa deixar claro que é definitivo. Ver [05](05-modelo-de-dados.md), [06](06-exportacao-carta.md).
+
+---
+
+### ADR-014 — Tema claro/creme + neutros + carpa/coruja
+**Data:** 07/2026 · **Status:** Aceito
+**Decisão:** Interface em **tema claro/creme** (fundo `#f7f0e0`, texto `#2b2620`, etc. — ver [10](10-identidade-visual.md)). Toda a arte dos personagens é da **Ana Beatriz**; carpa e coruja provavelmente em **pose antropomórfica** para caber no gabarito universal, confirmado no teste de validação de arte.
+**Consequências:** Define os neutros da UI. O encaixe universal fica sob controle da ilustradora + teste. Ver [04](04-guia-de-assets.md), [10](10-identidade-visual.md).
+
+---
+
+## Decisões (resolvidas com padrão, ajustável)
+
+- **Validação dos status:** inteiros de **0 a 99** (até 2 dígitos, cabe na caixa da carta). Ajustar se a organização definir outra faixa.
+- **Layout do PDF de impressão:** proposta inicial **A4 retrato**, cartas 63 × 88 mm em grade com guias de corte (`Borda pra corte.png`). Detalhar na Fase 4b com a gráfica.
+
 ## Decisões ainda em aberto
 
-- [ ] Tratamento definitivo de **carpa e coruja** no gabarito universal.
-- [ ] Escolha do storage (**Supabase** vs Vercel Blob) e **limite de envios** por pessoa.
-- [ ] Layout do **PDF de impressão** (cartas por folha, tamanho da folha).
-- [ ] **Neutros** da paleta (fundo, texto, bordas) e confirmação do uso das fontes.
-- [ ] Validação de entrada dos **status** (faixa/limite de dígitos).
+- [ ] Confirmar interpretação de uso das fontes Poppins/Arcane Fable (qual corpo / qual display).
+- [ ] Textos dos 4 **códigos diários** (definir perto do evento).

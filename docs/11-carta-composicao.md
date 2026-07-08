@@ -70,7 +70,7 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 | Status 3 (Intelecto 📖) | 5,14 | 7,45 | 0,30 | 0,38 | 607 | 880 | 35 | 45 |
 | Status 4 (Velocidade ⚡) | 5,14 | 7,84 | 0,30 | 0,38 | 607 | 926 | 35 | 45 |
 
-> Mapeamento Status 1–4 → Vida / Força / Intelecto / Velocidade (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. Os 4 valores e o nome são **digitados pelo participante** e enviados em JSON (ver [05](05-modelo-de-dados.md)). A caixa de status comporta ~1–2 dígitos — validar a entrada.
+> Mapeamento Status 1–4 → Vida / Força / Intelecto / Velocidade (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita** nome e status na ficha, e o **app os desenha na carta** nestas posições (fonte Adam Script). A caixa de status comporta ~1–2 dígitos — validar a entrada.
 
 ## Preenchimentos (transparência)
 

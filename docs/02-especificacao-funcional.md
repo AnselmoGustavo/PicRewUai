@@ -55,7 +55,7 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
   - **Animal** e **Classe** (preenchidos automaticamente)
   - **Status** — 4 valores **escritos pelo participante**: **Vida ❤️, Força ⚔️, Intelecto 📖, Velocidade ⚡** — vão na carta
   - **Habilidade** (opcional) — campo de texto; **não** vai na carta
-- Nome e os 4 status são **digitados pelo participante** e enviados junto com a imagem (JSON) — ver [05](05-modelo-de-dados.md) e posições na carta em [11](11-carta-composicao.md).
+- Nome e os 4 status são **digitados pelo participante**; o **app os desenha na carta** nas posições definidas ([11](11-carta-composicao.md)). Não são enviados à parte — ficam na imagem.
 - Validar entrada dos status (ex.: numéricos, faixa/limite de dígitos — a caixa na carta comporta ~1–2 dígitos, ver [11](11-carta-composicao.md)).
 
 ### 7. Salvar / Código de backup
@@ -66,11 +66,11 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 
 ### 8. Enviar personagem 🎁 (a carta é surpresa)
 - Botão **Enviar** — do ponto de vista do participante, ele está enviando **o personagem** (a palavra "carta" **não aparece**).
-- Pede uma **confirmação** ("Deseja enviar seu personagem? Não dá pra editar depois." — ou similar).
-- Ao confirmar, mostra **sucesso** imediatamente.
-- **Por trás, sem UI:** o app monta a carta de TCG (personagem + moldura + nome + status) e envia a **imagem + JSON** para os organizadores (ver [06](06-exportacao-carta.md)).
+- **Envio é único e definitivo.** A confirmação deixa isso claro ("Este é o envio final do seu personagem e **não poderá ser alterado**. Deseja continuar?").
+- Ao confirmar, mostra **sucesso** imediatamente e o editor **trava** (estado somente-leitura / tela de agradecimento). Não é possível reenviar.
+- **Por trás, sem UI:** o app monta a carta de TCG (personagem + moldura + nome + status desenhados) e envia a **imagem** para os organizadores (ver [06](06-exportacao-carta.md)).
 - **Nada da carta é exibido ou baixado** no aparelho do participante — a carta impressa é a surpresa entregue depois.
-- Se o envio falhar (sem internet), o app **reenvia depois** de forma transparente (o sucesso já foi mostrado).
+- Se o envio falhar (sem internet), o app **reenvia depois** de forma transparente (o sucesso já foi mostrado e o estado fica travado + persistido).
 
 ## Regras de negócio
 
@@ -82,7 +82,7 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 | Cenário | 3–4 no total; **1 liberado por dia** via código; troca livre entre os já liberados |
 | Código correto | Desbloqueia o grupo do dia: itens **e** o cenário daquele dia; idempotente |
 | Código do último dia | Após todos os códigos, 100% dos itens da classe + todos os cenários liberados |
-| Envio | Participante "envia o personagem"; carta gerada e enviada por trás (surpresa) |
+| Envio | **Único e definitivo**: participante "envia o personagem" (1 vez), editor trava; carta gerada e enviada por trás (surpresa) |
 | Categoria vazia | Sempre permitido ("Nenhum") |
 | Sem conexão | App funciona offline após primeiro carregamento (PWA) |
 

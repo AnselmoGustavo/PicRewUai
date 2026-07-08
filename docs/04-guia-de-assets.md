@@ -1,5 +1,7 @@
 # 04 — Guia de Assets (para a ilustradora) ⭐
 
+> **Ilustradora:** Ana Beatriz — responsável por todos os assets dos personagens (corpo, vestimenta, acessórios, equipamentos) e possivelmente os cenários.
+
 > **Documento mais importante para começar a arte.** Ele precisa ser combinado e aprovado **antes** de produzir os itens em volume. Se o padrão de canvas/ancoragem mudar depois, boa parte da arte precisa ser refeita.
 
 ## Conceito central: canvas fixo, tudo pré-posicionado
@@ -48,8 +50,8 @@ Antes de produzir tudo: desenhe **1 item de cada categoria** e teste nos **8 ani
 
 Sapo, macaco, raposa, gato, veado, cachorro têm corpos "humanóides/quadrúpedes" relativamente parecidos. Mas:
 - **Carpa** (peixe) e **coruja** (ave) têm anatomia bem diferente.
-- Possíveis saídas: dar a esses animais uma pose antropomórfica (em pé, com "braços") para caber no mesmo gabarito, **ou** aceitar que alguns itens específicos não se apliquem a eles.
-- Decidir isso no teste de validação acima.
+- A **Ana Beatriz** desenha todos os animais, então o encaixe fica sob controle dela — a tendência é dar a esses dois uma **pose antropomórfica coerente** (em pé, com "braços") para caber no mesmo gabarito dos demais.
+- Ainda assim, **fazer o teste de validação acima** (1 item por categoria nos 8 animais) para confirmar o encaixe antes de escalar.
 
 ## Camadas e ordem (z-index)
 

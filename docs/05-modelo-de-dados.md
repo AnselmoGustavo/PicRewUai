@@ -85,11 +85,13 @@ interface EstadoPersonagem {
     habilidade?: string;          // campo de "habilidade" (uso na ficha; não vai na carta)
   };
   desbloqueios: GrupoDesbloqueio[]; // grupos já liberados, ex.: ['inicial','dia1']
+  enviado: boolean;                 // true após o envio final → trava o editor
 }
 ```
 
 - Persistido automaticamente em `localStorage` a cada mudança.
 - `inicial` está sempre desbloqueado.
+- Quando `enviado === true`, o editor entra em modo somente-leitura (envio é único e definitivo).
 
 ## Sistema de códigos de desbloqueio
 
@@ -148,24 +150,26 @@ function restaurarDeCodigo(codigo: string): EstadoPersonagem {
 
 ## Envio da carta para coleta (upload)
 
-Payload enviado ao endpoint `POST /api/enviar-carta` no momento do export (ver [06](06-exportacao-carta.md)):
+No envio, o app **desenha nome e status na própria carta** (posições em [11](11-carta-composicao.md)) e sobe a **imagem pronta**. Um JSON de metadados é **opcional** (só para organizar o painel).
 
 ```ts
 interface EnvioCarta {
-  imagem: Blob;              // PNG 744 × 1039 (carta completa)
-  nomePersonagem: string;
-  classe: Classe;
-  animal: Animal;
-  cenario: string;
-  status: { vida: number; forca: number; intelecto: number; velocidade: number };
-  habilidade?: string;
-  enviadoEm: string;         // ISO timestamp (gerado no cliente)
+  imagem: Blob;              // PNG 744 × 1039 — carta com nome e status JÁ DESENHADOS
+  // metadados OPCIONAIS (apenas para filtrar/organizar no painel dos organizadores):
+  meta?: {
+    nomePersonagem: string;
+    classe: Classe;
+    animal: Animal;
+    cenario: string;
+    status: { vida: number; forca: number; intelecto: number; velocidade: number };
+    enviadoEm: string;       // ISO timestamp (gerado no cliente)
+  };
 }
 ```
 
-- **Sem dados pessoais** (nome real/contato): a carta é identificada pelos campos do personagem. Privacidade baixa por design.
-- O servidor guarda a imagem no storage e os metadados numa tabela, para os organizadores montarem o PDF.
-- Idealmente **1 envio final por participante** (limitar para controlar armazenamento) — decisão em aberto.
+- Os dados do personagem estão **queimados na imagem** — o JSON não é necessário para a carta, só conveniência.
+- **Sem dados pessoais** (nome real/contato): privacidade baixa por design.
+- **1 envio final por participante** (definitivo): 1 imagem por pessoa, o que mantém o armazenamento previsível.
 
 ## Migração de versão
 

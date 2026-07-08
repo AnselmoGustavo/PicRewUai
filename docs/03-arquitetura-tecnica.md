@@ -10,7 +10,7 @@
 | Renderização do personagem | **HTML Canvas 2D** | Compõe camadas de PNG e exporta imagem |
 | Estado | **Zustand** (store leve) + persistência em `localStorage` | Simples, sem boilerplate |
 | Cache offline | **Service Worker (PWA)** via `next-pwa` ou manual | Funcionar offline no evento |
-| Coleta de cartas | **Serverless (Vercel Function)** + **storage** (Supabase/Vercel Blob) | Receber uploads das cartas para impressão |
+| Coleta de cartas | **Serverless (Vercel Function)** + **Supabase** (Storage + Postgres) | Receber uploads das cartas + painel para os organizadores |
 | Hospedagem | **Vercel** (free) | App estático + uma função de upload |
 
 > **Quase sem backend.** Toda a lógica do app (montar personagem, códigos, save local, gerar imagem) roda no navegador e funciona offline. O **único componente de servidor** é um endpoint de upload que recebe a carta final para os organizadores imprimirem (ver [06](06-exportacao-carta.md)). Montar o personagem funciona offline; só o **envio** precisa de internet.
@@ -90,5 +90,5 @@ ordem de desenho (fundo → frente):
 - Push no repositório → Vercel faz build e publica automaticamente.
 - Domínio: subdomínio Vercel gratuito ou domínio próprio do evento.
 - O app (parte estática) aguenta picos de acesso sem custo/servidor.
-- A função de upload (`/api/enviar-carta`) roda serverless; configurar as **variáveis de ambiente** do storage (chaves Supabase/Vercel Blob) e um **segredo** do endpoint no painel da Vercel.
+- A função de upload (`/api/enviar-carta`) roda serverless; configurar as **variáveis de ambiente** do Supabase (URL + chave de serviço) e um **segredo** do endpoint no painel da Vercel.
 - A carga real no servidor é baixa: cada participante faz poucos uploads (idealmente só a carta final).

@@ -40,7 +40,7 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 - [x] Gráfica aceita **sem sangria**; fonte Adam Script no projeto.
 - [ ] **Composição offscreen** da carta 744 × 1039 (moldura dia/noite pelo cenário + nome + status, Adam Script).
 - [ ] Fluxo **surpresa**: botão "Enviar personagem" → confirmação → **sucesso imediato** → montar+enviar por trás. **Sem prévia/menção de carta na UI.**
-- [ ] **Endpoint serverless `/api/enviar-carta`** + storage (Supabase/Vercel Blob) + segredo/rate-limit.
+- [ ] **Endpoint serverless `/api/enviar-carta`** + **Supabase** (Storage + Postgres) + segredo/rate-limit.
 - [ ] Fila de reenvio quando offline (envio transparente após o sucesso).
 - [ ] **Teste em iPhone e Android reais** (composição + upload).
 

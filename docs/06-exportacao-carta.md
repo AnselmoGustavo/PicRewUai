@@ -40,8 +40,9 @@ Carta = **imagem do participante** (cenário + animal + itens, 744 × 1039) + **
    │
    └── (por trás, sem UI de carta)
         1. compõe a carta 744×1039 num canvas OFFSCREEN
+           (o app DESENHA o nome e os 4 status na própria carta, nas posições de [11])
         2. canvas.toBlob('image/png')
-        3. POST /api/enviar-carta  → imagem da carta + JSON (nome, status, classe, animal, cenário)
+        3. POST /api/enviar-carta  → imagem da carta (nome e status já desenhados)
              ├── sucesso → nada muda para o participante (já viu o sucesso)
              └── falha (sem internet) → guarda na fila local e reenvia depois
 ```
@@ -62,25 +63,24 @@ Carta = **imagem do participante** (cenário + animal + itens, 744 × 1039) + **
 
 ## Dados enviados
 
-O participante **escreve** o nome e os 4 status; eles vão como **JSON junto com a imagem** da carta:
+O participante **escreve** o nome e os 4 status na ficha; o **app desenha esses valores na própria carta** (nas posições da tabela em [11](11-carta-composicao.md), fonte Adam Script). O que sobe para o servidor é a **imagem da carta já pronta** — os dados estão "queimados" na imagem.
 
-- **Imagem**: PNG da carta montada (744 × 1039).
-- **JSON**: `nomePersonagem`, `status` (vida/força/intelecto/velocidade), `classe`, `animal`, `cenario`, `enviadoEm`.
-- O JSON dá aos organizadores dados estruturados (para registro/organização) além da imagem já pronta. Ver [05](05-modelo-de-dados.md).
+- **Imagem**: PNG da carta montada (744 × 1039), com nome e status já desenhados.
+- **Metadados (opcional):** podemos enviar também um pequeno JSON (`nomePersonagem`, `status`, `classe`, `animal`, `cenario`, `enviadoEm`) **apenas** para ajudar os organizadores a filtrar/organizar no painel. Não é necessário para a carta em si. Ver [05](05-modelo-de-dados.md).
 
 ## Backend de coleta (mini-backend)
 
 Único componente de servidor do projeto. Recebe as cartas e guarda para os organizadores.
 
 - **Endpoint**: `POST /api/enviar-carta` (Vercel Route Handler / função serverless).
-- **Recebe**: imagem PNG da carta + JSON (ver acima).
+- **Recebe**: imagem PNG da carta (nome e status já desenhados) + metadados JSON opcionais.
 - **Armazena**: imagem em object storage + metadados em tabela.
-- **Stack sugerida**: **Supabase** (Storage + Postgres, free tier) — painel pronto para os organizadores verem/baixarem os envios. Alternativa: **Vercel Blob**.
+- **Stack escolhida**: **Supabase** (Storage + Postgres, free tier) — painel pronto para os organizadores verem/baixarem os envios e os metadados.
 - **Sem dados pessoais**: identificamos pelo **nome do personagem**, não pelo nome real/contato → privacidade baixa por design.
 
 ### Dimensionamento de armazenamento
-- PNG 744×1039 costuma ter ~1–3 MB. Estimar nº de participantes × envios.
-- Supabase free = ~1 GB. Se estourar: otimizar PNG, limitar a **1 envio final por pessoa**, ou avaliar JPEG de alta qualidade (pode criar artefatos em arte de traço).
+- **1 envio final por pessoa** → 1 imagem por participante (~1–3 MB). Armazenamento previsível.
+- Ex.: 300 participantes × ~2 MB ≈ 600 MB — cabe no free tier (~1 GB) do Supabase. Se aproximar do limite, otimizar PNG.
 
 ### Proteção do endpoint (anti-abuso)
 - Endpoint aberto pode receber spam. Mitigações: **segredo/chave** embutido, **rate limit** básico, validação de tamanho/tipo. Apostas baixas, mas não deixar totalmente aberto.
@@ -105,6 +105,6 @@ Não se aplica ao participante nesta versão (a carta é surpresa e não é expo
 - [x] Fonte **Adam Script** no projeto (`font/RTL-AdamScript-Regular.ttf`).
 - [x] Mapeamento Status 1–4 (Vida/Força/Intelecto/Velocidade) confirmado.
 - [x] Nome e status são **escritos pelo participante** e enviados em JSON com a imagem.
-- [ ] Layout do PDF de impressão (cartas por folha, tamanho da folha).
-- [ ] Escolha final do storage (Supabase vs Vercel Blob) e limite de envios por pessoa.
+- [x] Storage: **Supabase**. Limite: **1 envio final** por pessoa.
+- [ ] Layout do PDF de impressão (proposta: A4 com guias de corte — detalhar na Fase 4b).
 - [ ] Garantir que a UI **não vaza** a existência da carta (revisar textos/telas).

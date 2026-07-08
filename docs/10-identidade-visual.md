@@ -2,7 +2,7 @@
 
 Cores, tipografia e tema do app. Viram os *design tokens* (variáveis CSS / tema Tailwind) no código.
 
-> **Tema único** (sem modo claro/escuro).
+> **Tema único, claro/creme** (sem modo escuro). Fundo creme + texto escuro, combinando com o verde-floresta primário e a temática de fantasia.
 
 ## Paleta
 
@@ -26,9 +26,13 @@ Cores, tipografia e tema do app. Viram os *design tokens* (variáveis CSS / tema
   --cor-secundaria: var(--cor-ambar);
   --cor-acento:     var(--cor-coral);
 
-  /* Neutros — A DEFINIR (fundo, texto, bordas) */
-  --cor-fundo:  #ffffff;   /* placeholder */
-  --cor-texto:  #1e1b16;   /* placeholder */
+  /* Neutros — tema claro/creme (proposta, a refinar) */
+  --cor-fundo:        #f7f0e0;  /* creme (fundo da página) */
+  --cor-superficie:   #fbf7ec;  /* cartões/painéis, levemente mais claro */
+  --cor-texto:        #2b2620;  /* marrom quase preto (texto principal) */
+  --cor-texto-suave:  #6b6152;  /* texto secundário */
+  --cor-borda:        #e3d6bc;  /* bordas/divisórias */
+  --cor-desabilitado: #cdbfa4;  /* estados inativos */
 }
 ```
 
@@ -86,13 +90,12 @@ App usado no celular, possivelmente ao sol. Observações da paleta:
 
 ## Pendências
 
-- [ ] Definir **neutros**: cor de fundo, cor de texto, bordas, estados desabilitados.
 - [ ] Confirmar interpretação de uso das fontes (qual é display / qual é corpo).
-- [ ] Converter Arcane Fable e Adam Script para `.woff2` (Adam Script só é usada no canvas de export, então o `.ttf` já serve).
-- [ ] Validar contraste WCAG AA de todas as combinações.
+- [ ] Converter Arcane Fable para `.woff2` (Adam Script só é usada no canvas de export, então o `.ttf` já serve).
+- [ ] Refinar/validar os **neutros** e o contraste WCAG AA de todas as combinações na prática.
 
 ## Resolvido
 
-- ✅ Tema único (sem modo claro/escuro).
-- ✅ Cor primária: **verde `#45754a`**.
-- ✅ Fontes: **Poppins** (texto) + **Arcane Fable** (display/temático).
+- ✅ Tema **único, claro/creme** (sem modo escuro).
+- ✅ Cor primária: **verde `#45754a`**; neutros creme + texto escuro definidos (proposta).
+- ✅ Fontes: **Poppins** (texto), **Arcane Fable** (display UI), **Adam Script** (carta).
