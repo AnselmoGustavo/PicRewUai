@@ -76,6 +76,7 @@ interface EstadoPersonagem {
   };
   ficha: {
     nomePersonagem: string;       // aparece na carta (fonte Adam Script)
+    titulo?: string;              // epíteto/título — aparece na carta, abaixo do nome
     status: {                     // 4 valores que aparecem na carta
       vida: number;
       forca: number;

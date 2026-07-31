@@ -60,6 +60,7 @@ export interface Status {
 
 export interface Ficha {
   nomePersonagem: string;
+  titulo?: string; // epíteto/título do personagem (texto livre) — vai na carta
   status: Status;
   habilidade?: string;
 }

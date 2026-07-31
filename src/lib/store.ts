@@ -27,6 +27,7 @@ const estadoInicial: EstadoPersonagem = {
   },
   ficha: {
     nomePersonagem: "",
+    titulo: "",
     status: { vida: 0, forca: 0, intelecto: 0, velocidade: 0 },
     habilidade: "",
   },
@@ -44,6 +45,7 @@ interface Acoes {
   setCenario: (id: string) => void;
   selecionarItem: (cat: Categoria, id: string | null) => void;
   setNome: (nome: string) => void;
+  setTitulo: (titulo: string) => void;
   setStatus: (chave: keyof Status, valor: number) => void;
   setHabilidade: (texto: string) => void;
   aplicarCodigo: (input: string) => ReturnType<typeof validarCodigo>;
@@ -81,6 +83,12 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
       setNome: (nome) =>
         set((s) => ({
           ficha: { ...s.ficha, nomePersonagem: nome },
+          atualizadoEm: agora(),
+        })),
+
+      setTitulo: (titulo) =>
+        set((s) => ({
+          ficha: { ...s.ficha, titulo },
           atualizadoEm: agora(),
         })),
 

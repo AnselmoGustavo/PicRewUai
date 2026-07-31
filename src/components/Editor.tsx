@@ -48,6 +48,7 @@ export default function Editor({
   const setCenario = usePersonagem((s) => s.setCenario);
   const selecionarItem = usePersonagem((s) => s.selecionarItem);
   const setNome = usePersonagem((s) => s.setNome);
+  const setTitulo = usePersonagem((s) => s.setTitulo);
   const setStatus = usePersonagem((s) => s.setStatus);
   const aplicarCodigo = usePersonagem((s) => s.aplicarCodigo);
   const enviado = usePersonagem((s) => s.enviado);
@@ -105,6 +106,7 @@ export default function Editor({
         cenario,
         selecao,
         nome: ficha.nomePersonagem,
+        titulo: ficha.titulo ?? "",
         status: ficha.status as unknown as Record<string, number>,
       });
       const fd = new FormData();
@@ -231,6 +233,10 @@ export default function Editor({
             <label style={lbl}>
               Nome do personagem
               <input value={ficha.nomePersonagem} maxLength={22} onChange={(e) => setNome(e.target.value)} style={inp} />
+            </label>
+            <label style={lbl}>
+              Título (ex.: o Bravo)
+              <input value={ficha.titulo ?? ""} maxLength={28} onChange={(e) => setTitulo(e.target.value)} style={inp} />
             </label>
             <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
               {STATUS_CAMPOS.map((c) => (

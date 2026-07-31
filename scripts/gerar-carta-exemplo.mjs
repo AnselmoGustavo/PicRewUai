@@ -51,26 +51,23 @@ function desenharPlaceholder(ctx, tema) {
   ctx.fillText("personagem (placeholder)", cx, 900);
 }
 
-async function gerar(tema, nome, status) {
-  const { assets, textos, preenchOpacidade, corTexto, card } = layout;
+async function gerar(tema, nome, titulo, status) {
+  const { assets, textos, preenchOpacidade, corTexto, corTextoClaro, card } =
+    layout;
   const canvas = createCanvas(card.w, card.h);
   const ctx = canvas.getContext("2d");
 
-  const [namePreench, nameFrame, statusPreench, statusFrame, borda] =
-    await Promise.all([
-      loadImage(p("public/assets/carta/name-preench.png")),
-      loadImage(p(`public/assets/carta/name-${tema}.png`)),
-      loadImage(p("public/assets/carta/status-preench.png")),
-      loadImage(p(`public/assets/carta/status-${tema}.png`)),
-      loadImage(p(`public/assets/carta/borda-${tema}.png`)),
-    ]);
+  const [nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+    loadImage(p(`public/assets/carta/name-${tema}.png`)),
+    loadImage(p("public/assets/carta/status-preench.png")),
+    loadImage(p(`public/assets/carta/status-${tema}.png`)),
+    loadImage(p(`public/assets/carta/borda-${tema}.png`)),
+  ]);
 
   desenharPlaceholder(ctx, tema);
 
-  ctx.globalAlpha = preenchOpacidade;
-  ctx.drawImage(namePreench, assets.namePreench.x, assets.namePreench.y);
-  ctx.globalAlpha = 1;
-  ctx.drawImage(nameFrame, assets.nameFrame.x, assets.nameFrame.y);
+  // banner + linha de título (full-canvas)
+  ctx.drawImage(nameFrame, 0, 0, card.w, card.h);
 
   const spX =
     assets.statusFrame.x + (statusFrame.width - statusPreench.width) / 2;
@@ -83,14 +80,24 @@ async function gerar(tema, nome, status) {
 
   ctx.drawImage(borda, 0, 0, card.w, card.h);
 
-  ctx.fillStyle = corTexto;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 
+  const corAdapt = tema === "noite" ? corTextoClaro : corTexto;
+
   const n = textos.nome;
+  ctx.fillStyle = corAdapt;
   ctx.font = `${n.fontePx}px AdamScript`;
   ctx.fillText(nome, n.x + n.w / 2, n.y + n.h / 2);
 
+  if (titulo) {
+    const t = textos.titulo;
+    ctx.fillStyle = corAdapt;
+    ctx.font = `${t.fontePx}px AdamScript`;
+    ctx.fillText(titulo, t.x + t.w / 2, t.y + t.h / 2);
+  }
+
+  ctx.fillStyle = corTexto;
   for (const s of textos.status) {
     ctx.font = `${s.fontePx}px AdamScript`;
     ctx.fillText(String(status[s.key]), s.x + s.w / 2, s.y + s.h / 2);
@@ -102,6 +109,6 @@ async function gerar(tema, nome, status) {
 }
 
 const status = { vida: 9, forca: 7, intelecto: 5, velocidade: 8 };
-await gerar("dia", "Fulano, o Bravo", status);
-await gerar("noite", "Dama da Lua", status);
+await gerar("dia", "Fulano", "o Bravo", status);
+await gerar("noite", "Dama da Lua", "Guardiã da Noite", status);
 console.log("pronto.");

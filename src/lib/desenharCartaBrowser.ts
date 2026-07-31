@@ -8,6 +8,7 @@ export interface DadosCarta {
   cenario: string | null;
   selecao: Selecao;
   nome: string;
+  titulo: string;
   status: Record<string, number>;
 }
 
@@ -101,23 +102,19 @@ export async function desenharCarta(
   // No editor do participante NÃO é mostrada — a carta é surpresa.
   if (!mostrarMoldura) return;
 
-  const [namePreench, nameFrame, statusPreench, statusFrame, borda] =
-    await Promise.all([
-      carregarImagem("/assets/carta/name-preench.png"),
-      carregarImagem(`/assets/carta/name-${tema}.png`),
-      carregarImagem("/assets/carta/status-preench.png"),
-      carregarImagem(`/assets/carta/status-${tema}.png`),
-      carregarImagem(`/assets/carta/borda-${tema}.png`),
-    ]);
+  const [nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+    carregarImagem(`/assets/carta/name-${tema}.png`),
+    carregarImagem("/assets/carta/status-preench.png"),
+    carregarImagem(`/assets/carta/status-${tema}.png`),
+    carregarImagem(`/assets/carta/borda-${tema}.png`),
+  ]);
 
-  const { assets, textos, preenchOpacidade, corTexto } = layout;
+  const { assets, textos, preenchOpacidade, corTexto, corTextoClaro } = layout;
 
-  ctx.globalAlpha = preenchOpacidade;
-  ctx.drawImage(namePreench, assets.namePreench.x, assets.namePreench.y);
-  ctx.globalAlpha = 1;
-  ctx.drawImage(nameFrame, assets.nameFrame.x, assets.nameFrame.y);
+  // banner + linha de título (full-canvas, em 0,0)
+  ctx.drawImage(nameFrame, 0, 0, w, h);
 
-  // preenchimento de status CENTRALIZADO na moldura (asset menor que o frame)
+  // status: preenchimento CENTRALIZADO na moldura + moldura
   const spX =
     assets.statusFrame.x + (statusFrame.width - statusPreench.width) / 2;
   const spY =
@@ -129,12 +126,27 @@ export async function desenharCarta(
 
   ctx.drawImage(borda, 0, 0, w, h);
 
-  ctx.fillStyle = corTexto;
+  // textos
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
+
+  // nome e título ficam sobre a ribbon/cenário (sem preenchimento) → cor acompanha o tema
+  const corAdapt = tema === "noite" ? corTextoClaro : corTexto;
+
   const n = textos.nome;
+  ctx.fillStyle = corAdapt;
   ctx.font = `${n.fontePx}px "AdamScript"`;
   ctx.fillText(dados.nome || "Nome", n.x + n.w / 2, n.y + n.h / 2, n.w);
+
+  if (dados.titulo) {
+    const t = textos.titulo;
+    ctx.fillStyle = corAdapt;
+    ctx.font = `${t.fontePx}px "AdamScript"`;
+    ctx.fillText(dados.titulo, t.x + t.w / 2, t.y + t.h / 2, t.w);
+  }
+
+  // status ficam sobre o frame de status (claro) → cor escura
+  ctx.fillStyle = corTexto;
   for (const s of textos.status) {
     ctx.font = `${s.fontePx}px "AdamScript"`;
     ctx.fillText(String(dados.status[s.key] ?? ""), s.x + s.w / 2, s.y + s.h / 2);

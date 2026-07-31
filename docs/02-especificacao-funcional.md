@@ -52,6 +52,7 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 - Formulário com os dados do personagem.
 - Campos definidos até agora:
   - **Nome do personagem** (texto, escrito pelo participante) — vai na carta (fonte Adam Script)
+  - **Título** (texto livre, ex.: "o Bravo") — vai na carta, abaixo do nome
   - **Animal** e **Classe** (preenchidos automaticamente)
   - **Status** — 4 valores **escritos pelo participante**: **Vida ❤️, Força ⚔️, Intelecto 📖, Velocidade ⚡** — vão na carta
   - **Habilidade** (opcional) — campo de texto; **não** vai na carta

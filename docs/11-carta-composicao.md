@@ -14,8 +14,8 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 |-------|---------|:------------:|-----------|
 | Borda | `Bordas/Borda dia.png` · `Borda noite.png` | 744 × 1039 | dia / noite |
 | Borda p/ corte | `Bordas/Borda pra corte.png` | 744 × 1039 | guia de corte (só no PDF) |
-| Name Frame | `Name Frame/Name Frame Dia.png` · `Noite.png` | 604 × 267 | dia / noite |
-| Name Frame Preench. | `Name Frame/Name Frame Preenchimento.png` | 545 × 172 | semitransparente |
+| Name Frame | `Name Frame/Frames novos/Name Frame {Dia,Noite} Title 1.png` | **744 × 1039** | dia / noite · **full-canvas** (banner + linha de título), traço escuro/claro |
+| Name Frame Preench. | — (removido) | — | agora o preenchimento do nome é **gerado por código** (ver abaixo) |
 | Status Frame | `Status Completo/Status dia.png` · `noite.png` | 169 × 240 | dia / noite (ícones embutidos) |
 | Status Preench. | `Status Completo/Preenchimento Status.png` | 160 × 231 | semitransparente |
 | Ícones de status | `Status/{Vida,Força,Intelecto,Velocidade}.png` | 125 × 125 | uso na UI do app (na carta já vêm no frame) |
@@ -38,12 +38,12 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 
 ### Parte B — moldura da carta (overlay) · aplicada no preview e no export
 ```
-7.  Name Frame Preenchimento      (semitransparente)
-8.  Name Frame [Dia|Noite]
-9.  Status Preenchimento          (semitransparente)
-10. Status [Dia|Noite]
-11. Borda [Dia|Noite]
-12. Texto: Nome do personagem
+7.  Name Frame [Dia|Noite]   ← full-canvas em (0,0): banner + linha de título
+8.  Status Preenchimento     (semitransparente, centralizado no frame)
+9.  Status [Dia|Noite]
+10. Borda [Dia|Noite]
+11. Texto: Nome do personagem  (no banner; SEM preenchimento; cor acompanha o tema)
+12. Texto: Título             (acima da linha de título; cor acompanha o tema)
 13. Textos: Status 1–4
 ```
 
@@ -53,28 +53,31 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 
 ### Assets (canto superior-esquerdo)
 
-| Elemento | X (cm) | Y (cm) | X (px) | Y (px) |
-|----------|:------:|:------:|:------:|:------:|
-| Name Frame (Dia/Noite) | 0,63 | 0,16 | 74 | 19 |
-| Name Frame Preenchimento | 0,81 | 0,63 | 96 | 74 |
-| Status Frame (Dia/Noite) | 4,35 | 6,42 | 514 | 758 |
-| Status Preenchimento | — | — | *centralizado* | *no frame* |
+Fonte da verdade das coordenadas: `src/lib/cartaLayout.json`.
+
+| Elemento | X (px) | Y (px) | Obs. |
+|----------|:------:|:------:|------|
+| Name Frame (Dia/Noite) | 0 | 0 | full-canvas 744 × 1039 |
+| Status Frame (Dia/Noite) | 514 | 758 | |
+| Status Preenchimento | *centralizado* | *no frame* | ver aviso abaixo |
 
 > ⚠️ **Preenchimento de status:** o asset (160 × 231) é **menor** que a moldura de status (169 × 240). Ele deve ser **centralizado dentro da moldura** (offset de +4,5 px em X e Y a partir de 514, 758), e **não** colado no mesmo canto (514, 758) — senão fica desalinhado (sobra ~9 px embaixo/à direita). No código isso é calculado a partir dos tamanhos reais das imagens. A moldura de status contém só os ornamentos das quinas + ícones; a "borda retangular" visível é do próprio preenchimento.
 
-### Textos (caixa de texto: X, Y, largura, altura) · fonte **Adam Script**
+### Textos (caixa X, Y, largura, altura em px) · fonte **Adam Script**
 
-| Texto | X (cm) | Y (cm) | L (cm) | A (cm) | X px | Y px | L px | A px |
-|-------|:------:|:------:|:------:|:------:|:----:|:----:|:----:|:----:|
-| Nome do personagem | 1,61 | 0,95 | 3,66 | 0,45 | 190 | 112 | 432 | 53 |
-| Status 1 (Vida ❤️) | 5,14 | 6,61 | 0,30 | 0,38 | 607 | 781 | 35 | 45 |
-| Status 2 (Força ⚔️) | 5,14 | 7,02 | 0,30 | 0,38 | 607 | 829 | 35 | 45 |
-| Status 3 (Intelecto 📖) | 5,14 | 7,45 | 0,30 | 0,38 | 607 | 880 | 35 | 45 |
-| Status 4 (Velocidade ⚡) | 5,14 | 7,84 | 0,30 | 0,38 | 607 | 926 | 35 | 45 |
+| Texto | X | Y | L | A | fontePx | cor |
+|-------|:-:|:-:|:-:|:-:|:-------:|-----|
+| Nome do personagem | 224 | 158 | 414 | 60 | 44 | **acompanha o tema** (escura no dia, clara na noite) |
+| Título | 205 | 246 | 330 | 34 | 26 | **acompanha o tema** (escura no dia, clara na noite) |
+| Status 1 (Vida ❤️) | 607 | 781 | 35 | 45 | 34 | escura |
+| Status 2 (Força ⚔️) | 607 | 829 | 35 | 45 | 34 | escura |
+| Status 3 (Intelecto 📖) | 607 | 880 | 35 | 45 | 34 | escura |
+| Status 4 (Velocidade ⚡) | 607 | 926 | 35 | 45 | 34 | escura |
 
-> Mapeamento Status 1–4 → Vida / Força / Intelecto / Velocidade (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita** nome e status na ficha, e o **app os desenha na carta** nestas posições (fonte Adam Script). A caixa de status comporta ~1–2 dígitos — validar a entrada.
+> Mapeamento Status 1–4 → Vida / Força / Intelecto / Velocidade (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita** nome, **título** e status na ficha; o **app os desenha na carta** nestas posições (fonte Adam Script). A caixa de status comporta ~1–2 dígitos — validar a entrada.
+> **Sem preenchimento** atrás do nome nem do título (decisão de design). Ambos ficam direto sobre a ribbon/cenário, então a **cor acompanha o tema** (`corTexto` no dia, `corTextoClaro` na noite) para manter a legibilidade.
 
-> 🎨 **Pendente (calibrar com cenários reais):** a cor do texto (`corTexto`) e a opacidade do preenchimento (`preenchOpacidade`) foram definidas sobre um fundo placeholder. Ao integrar os cenários reais, revisar o **contraste dos números de status** (especialmente em cenários noite) e ajustar cor/opacidade — possivelmente cor de texto diferente por tema dia/noite.
+> 🎨 **Pendente (calibrar com cenários reais):** cores/opacidades foram definidas sobre fundo placeholder. Ao integrar os cenários reais, revisar o **contraste dos números de status** (e do título) — ajustar cor/opacidade se necessário.
 
 ## Preenchimentos (transparência)
 

@@ -5,7 +5,8 @@ import Link from "next/link";
 import CartaCanvas, { type Tema } from "@/components/CartaCanvas";
 
 export default function PocCartaPage() {
-  const [nome, setNome] = useState("Fulano, o Bravo");
+  const [nome, setNome] = useState("Fulano");
+  const [titulo, setTitulo] = useState("o Bravo");
   const [tema, setTema] = useState<Tema>("dia");
   const [vida, setVida] = useState(9);
   const [forca, setForca] = useState(7);
@@ -28,6 +29,7 @@ export default function PocCartaPage() {
 
       <CartaCanvas
         nome={nome}
+        titulo={titulo}
         tema={tema}
         status={{ vida, forca, intelecto, velocidade }}
       />
@@ -36,6 +38,10 @@ export default function PocCartaPage() {
         <label style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: "0.85rem" }}>
           Nome do personagem
           <input value={nome} onChange={(e) => setNome(e.target.value)} maxLength={22} style={inp} />
+        </label>
+        <label style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: "0.85rem" }}>
+          Título
+          <input value={titulo} onChange={(e) => setTitulo(e.target.value)} maxLength={28} style={inp} />
         </label>
 
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
