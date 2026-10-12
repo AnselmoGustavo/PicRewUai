@@ -12,11 +12,10 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ---
 
-### ADR-002 — Assets universais (não por animal)
-**Data:** 07/2026 · **Status:** Aceito
-**Contexto:** Itens poderiam ser desenhados por animal (~1200 arquivos) ou universais (~150).
-**Decisão:** Assets **universais** — o mesmo item serve para os 8 animais.
-**Consequências:** Reduz o volume de arte de ~1200 para ~150. Em troca, exige que os corpos dos animais sigam um gabarito comum (zonas de cabeça/tronco/mãos alinhadas) e um teste de validação cedo. Ver [04](04-guia-de-assets.md).
+### ADR-002 — ~~Assets universais (não por animal)~~ — SUBSTITUÍDO por ADR-016
+**Data:** 07/2026 · **Status:** ❌ Substituído
+**Decisão original:** Assets universais (o mesmo item nos 8 animais) para reduzir ~1200 → ~150 arquivos.
+**Por que mudou:** A arte real está sendo feita **por animal+classe** (peças posicionadas para cada corpo — ex.: chapéu que encaixa nos chifres do veado). Ver **ADR-016**.
 
 ---
 
@@ -117,6 +116,16 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 **Contexto:** Participantes abrem o app poucas vezes ao longo de 4 dias, desbloqueiam itens por código diário e podem trocar de aparelho — não podem perder o personagem nem refazer tudo.
 **Decisão:** Além do `localStorage` (cache offline), o **progresso é sincronizado no Supabase**. Na 1ª vez, o app **gera um código pessoal legível** (ex.: `raposa-4827`), mostra em destaque (+ QR) e usa como chave do registro. A cada mudança, faz upsert (com debounce); ao abrir, busca a versão mais recente (last-write-wins por `atualizadoEm`). Em outro aparelho, digitar o código recupera tudo.
 **Consequências:** Cross-device sem login/senha. O participante precisa **guardar o código** (se perder o código E o localStorage, não recupera). Requer projeto Supabase + chaves; o progresso não tem dado pessoal (só o personagem). Endpoint via API route (chave de serviço no servidor) com código de alta entropia para dificultar sobrescrita alheia. Ver [05](05-modelo-de-dados.md), [03](03-arquitetura-tecnica.md).
+
+---
+
+### ADR-016 — Itens por animal+classe, mix-and-match, multi-camada com z-index
+**Data:** 08/2026 · **Status:** Aceito (substitui ADR-002)
+**Contexto:** Teste de posicionamento com arte real (Veado-Mago) confirmou que as peças são **específicas por animal+classe**, desenhadas full-canvas (3150×4400) já posicionadas.
+**Decisão:** Itens são **por animal+classe** (não universais), montados **peça a peça (mix-and-match)** nas categorias (cabeça, arma, vestimenta, acessórios). Cada item é um ou mais PNGs full-canvas pré-posicionados; o app só **empilha por z-index**. Um item pode ter **várias camadas** (ex.: capa = frente + atrás; vestimenta = cima + baixo) porque peças envolvem o corpo. A ordem de z vem do número no nome do arquivo (0 = frente … maior = fundo).
+**Consequências:** Encaixe perfeito e customização máxima. **Custo de arte muito maior** que o universal (volta a tendência de centenas/milhares de arquivos — ver flag de escopo abaixo). O modelo de dados muda: `ItemDef` passa a ter uma lista de camadas `{arquivo, z}`. Ver [04](04-guia-de-assets.md), [05](05-modelo-de-dados.md).
+
+> ⚠️ **Escopo de arte em aberto:** por animal+classe com mix-and-match pode gerar MUITOS assets (8 animais × 5 classes × itens × camadas). Definir com a ilustradora quantos itens por categoria por combinação e se **todas as 40 combinações** terão arte completa até 31/10 — isso é crítico para o prazo.
 
 ---
 

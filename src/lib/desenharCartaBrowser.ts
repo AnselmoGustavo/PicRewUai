@@ -1,10 +1,12 @@
 // Composição da carta no canvas (browser). Usado pelo preview do editor
 // (sem moldura) e pelo envio (com moldura, offscreen). Ver docs/11-carta-composicao.md.
 import layout from "./cartaLayout.json";
-import { cenarioPorId, itemPorId } from "./manifesto";
-import type { Categoria, Selecao } from "./tipos";
+import { baseDoPersonagem, cenarioPorId, itemPorId } from "./manifesto";
+import type { Animal, Categoria, Classe, Selecao } from "./tipos";
 
 export interface DadosCarta {
+  animal: Animal | null;
+  classe: Classe | null;
   cenario: string | null;
   selecao: Selecao;
   nome: string;
@@ -12,13 +14,22 @@ export interface DadosCarta {
   status: Record<string, number>;
 }
 
-const ORDEM: Categoria[] = [
+const CATEGORIAS_ITEM: Categoria[] = [
   "vestimenta",
-  "acessorio1",
-  "cabeca",
   "arma",
+  "cabeca",
+  "acessorio1",
   "acessorio2",
 ];
+
+// z global dos placeholders (quando não há camadas reais). Ver tipos.ts.
+const Z_PLACEHOLDER: Record<Categoria, number> = {
+  acessorio1: 35,
+  acessorio2: 30,
+  vestimenta: 45,
+  arma: 70,
+  cabeca: 80,
+};
 
 export function carregarImagem(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -67,6 +78,70 @@ function desenharItemPlaceholder(
   ctx.fill();
 }
 
+// silhueta do corpo (quando o animal ainda não tem base real)
+function desenharSilhueta(ctx: CanvasRenderingContext2D) {
+  const cx = layout.card.w * 0.4;
+  ctx.fillStyle = "rgba(60,55,48,0.35)";
+  ctx.beginPath();
+  ctx.roundRect(cx - 90, 560, 180, 300, 60);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(cx, 520, 90, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+// Desenha o personagem: base (imagem real ou silhueta) + camadas dos itens,
+// tudo empilhado por z-index (ADR-016).
+async function desenharPersonagem(
+  ctx: CanvasRenderingContext2D,
+  dados: DadosCarta,
+) {
+  const { w, h } = layout.card;
+  type Camada = { z: number; render: () => void };
+  const camadas: Camada[] = [];
+  const cargas: Promise<void>[] = [];
+
+  // base do animal+classe
+  const baseArq = baseDoPersonagem(dados.animal, dados.classe);
+  if (baseArq) {
+    cargas.push(
+      carregarImagem(baseArq)
+        .then((img) => {
+          camadas.push({ z: 20, render: () => ctx.drawImage(img, 0, 0, w, h) });
+        })
+        .catch(() => {
+          camadas.push({ z: 20, render: () => desenharSilhueta(ctx) });
+        }),
+    );
+  } else {
+    camadas.push({ z: 20, render: () => desenharSilhueta(ctx) });
+  }
+
+  // itens selecionados
+  for (const cat of CATEGORIAS_ITEM) {
+    const item = itemPorId(dados.selecao[cat]);
+    if (!item) continue;
+    if (item.camadas?.length) {
+      for (const cam of item.camadas) {
+        cargas.push(
+          carregarImagem(cam.arquivo)
+            .then((img) => {
+              camadas.push({ z: cam.z, render: () => ctx.drawImage(img, 0, 0, w, h) });
+            })
+            .catch(() => {}),
+        );
+      }
+    } else if (item.cor) {
+      const cor = item.cor;
+      camadas.push({ z: Z_PLACEHOLDER[cat], render: () => desenharItemPlaceholder(ctx, cat, cor) });
+    }
+  }
+
+  await Promise.all(cargas);
+  camadas.sort((a, b) => a.z - b.z);
+  for (const c of camadas) c.render();
+}
+
 export async function desenharCarta(
   ctx: CanvasRenderingContext2D,
   dados: DadosCarta,
@@ -78,25 +153,22 @@ export async function desenharCarta(
 
   ctx.clearRect(0, 0, w, h);
 
-  // 0. cenário (placeholder = cor sólida)
-  ctx.fillStyle = cen?.cor ?? (tema === "noite" ? "#26304a" : "#dce6cf");
-  ctx.fillRect(0, 0, w, h);
-
-  // 1. base do animal (silhueta placeholder)
-  const cx = w * 0.4;
-  ctx.fillStyle = "rgba(60,55,48,0.35)";
-  ctx.beginPath();
-  ctx.roundRect(cx - 90, 560, 180, 300, 60);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.arc(cx, 520, 90, 0, Math.PI * 2);
-  ctx.fill();
-
-  // 2..6. itens selecionados, em ordem de camada
-  for (const cat of ORDEM) {
-    const item = itemPorId(dados.selecao[cat]);
-    if (item?.cor) desenharItemPlaceholder(ctx, cat, item.cor);
+  // 0. cenário — imagem real (se houver arquivo) ou cor placeholder
+  if (cen?.arquivo) {
+    try {
+      const bg = await carregarImagem(cen.arquivo);
+      ctx.drawImage(bg, 0, 0, w, h);
+    } catch {
+      ctx.fillStyle = cen.cor ?? "#dce6cf";
+      ctx.fillRect(0, 0, w, h);
+    }
+  } else {
+    ctx.fillStyle = cen?.cor ?? (tema === "noite" ? "#26304a" : "#dce6cf");
+    ctx.fillRect(0, 0, w, h);
   }
+
+  // 1. personagem: base + itens, empilhados por z-index
+  await desenharPersonagem(ctx, dados);
 
   // A moldura da carta só é desenhada quando pedida (envio / telas de dev).
   // No editor do participante NÃO é mostrada — a carta é surpresa.

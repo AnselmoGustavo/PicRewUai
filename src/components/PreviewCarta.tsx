@@ -11,6 +11,8 @@ export default function PreviewCarta({
   mostrarMoldura?: boolean;
 }) {
   const ref = useRef<HTMLCanvasElement>(null);
+  const animal = usePersonagem((s) => s.animal);
+  const classe = usePersonagem((s) => s.classe);
   const cenario = usePersonagem((s) => s.cenario);
   const selecao = usePersonagem((s) => s.selecao);
   const ficha = usePersonagem((s) => s.ficha);
@@ -26,6 +28,8 @@ export default function PreviewCarta({
       await desenharCarta(
         ctx,
         {
+          animal,
+          classe,
           cenario,
           selecao,
           nome: ficha.nomePersonagem,
@@ -38,7 +42,7 @@ export default function PreviewCarta({
     return () => {
       cancelado = true;
     };
-  }, [cenario, selecao, ficha, mostrarMoldura]);
+  }, [animal, classe, cenario, selecao, ficha, mostrarMoldura]);
 
   return (
     <canvas

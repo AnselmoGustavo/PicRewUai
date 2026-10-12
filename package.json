@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "assets": "node scripts/gerar-assets.mjs",
+    "cenarios": "node scripts/otimizar-cenarios.mjs",
     "carta:exemplo": "node scripts/gerar-carta-exemplo.mjs"
   },
   "dependencies": {

@@ -4,9 +4,46 @@
 
 > **Documento mais importante para começar a arte.** Ele precisa ser combinado e aprovado **antes** de produzir os itens em volume. Se o padrão de canvas/ancoragem mudar depois, boa parte da arte precisa ser refeita.
 
+> 🔄 **ATUALIZAÇÃO (ADR-016):** o modelo mudou de "itens universais" para **itens por animal+classe** — cada peça é desenhada já encaixada no corpo daquele animal (ex.: chapéu que respeita os chifres do veado). Validado com o Veado-Mago. Ver detalhes abaixo em **"Estrutura confirmada (Veado-Mago)"**. As partes sobre canvas fixo/transparência/nomenclatura seguem valendo; o que mudou é que a arte é **específica por combinação**, não compartilhada entre animais.
+
+## Estrutura confirmada + convenção de nomes (final)
+
+Teste real (Veado-Mago) validou o pipeline. Padrões:
+- **Canvas 3150×4400** (aspecto da carta), **PNG transparente**, cada peça **pré-posicionada**. O app reduz para 744×1039 automaticamente.
+- **Uma peça pode ter várias camadas** (capa = frente + atrás; vestimenta = cima + baixo).
+- **Base muda por classe** → um corpo por **animal+classe**.
+- **z-index global** (menor = mais atrás):
+
+> capa-atrás **10** · corpo **20** · sapato **30** · vest-baixo **40** · vest-cima **50** · capa-frente **60** · arma **70** · cabeça **80**
+
+### Nomenclatura dos arquivos
+**Personagem pelado:** `animal-classe.png` (em `personages-pelados/<animal>/`). Ex.: `veado-mago.png`.
+
+**Itens:** `animal-classe-tipo-nome-grupo-zNN.png`
+- `tipo` = `vestimenta` · `arma` · `cabeca` · `acessorio1` · `acessorio2`
+- `nome` = slug, `_` entre palavras (ex.: `cajado_de_cristal`)
+- `grupo` = `inicial` · `dia1` · `dia2` · `dia3` · `dia4` (código do dia que libera). *Itens com código especial/à parte: a definir depois.*
+- `zNN` = z-index da camada (z10…z80)
+
+**Regras:** só `-` separa campos; dentro de um campo use `_`. Tudo **minúsculo, sem acento/espaço**. Arquivos iguais em tudo menos no `zNN` = **a mesma peça** (várias camadas).
+
+Ex. (set Veado-Mago):
+```
+veado-mago.png
+veado-mago-cabeca-chapeu_de_mago-dia1-z80.png
+veado-mago-arma-cajado_de_cristal-dia1-z70.png
+veado-mago-vestimenta-vestes_de_mago-dia1-z40.png   (baixo)
+veado-mago-vestimenta-vestes_de_mago-dia1-z50.png   (cima)
+veado-mago-acessorio1-capa_verde-dia1-z10.png       (atrás)
+veado-mago-acessorio1-capa_verde-dia1-z60.png       (frente)
+veado-mago-acessorio2-botas_de_couro-dia1-z30.png
+```
+
+> O gerador (`scripts/gerar-assets.mjs`) lê a pasta `Assets Prontos/`, agrupa as camadas, otimiza para `public/` e **monta o manifesto automaticamente**. Adicionar item = soltar arquivo(s) + rodar o script.
+
 ## Conceito central: canvas fixo, tudo pré-posicionado
 
-Como escolhemos **itens universais** (o mesmo item serve para os 8 animais), a técnica mais segura é:
+A técnica (mantida):
 
 > **Toda arte — a base de cada animal e cada item — é desenhada em uma tela (canvas) do mesmo tamanho, com fundo transparente, já na posição final onde ela aparece no personagem.**
 

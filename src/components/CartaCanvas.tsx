@@ -35,6 +35,8 @@ export default function CartaCanvas({ nome, titulo, status, tema }: Props) {
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
       const dados: DadosCarta = {
+        animal: "veado",
+        classe: "mago",
         cenario: CENARIO_POR_TEMA[tema],
         selecao: {
           vestimenta: null,

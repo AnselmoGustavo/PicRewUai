@@ -24,13 +24,23 @@ export type GrupoDesbloqueio = "inicial" | "dia1" | "dia2" | "dia3" | "dia4";
 
 export type Tema = "claro" | "escuro"; // claro → moldura dia · escuro → moldura noite
 
+// Uma camada de um item: PNG full-canvas pré-posicionado + z-index global.
+// z menor = mais atrás. Referência (global): capa-atrás 10, corpo 20, sapato 30,
+// vestimenta-baixo 40, vestimenta-cima 50, capa-frente 60, arma 70, cabeça 80.
+export interface CamadaItem {
+  arquivo: string;
+  z: number;
+}
+
 export interface ItemDef {
   id: string;
   nome: string;
   categoria: Categoria;
   classe: Classe;
+  animal?: Animal; // item específico deste animal (ADR-016); ausente = placeholder genérico
   grupo: GrupoDesbloqueio;
-  arquivo?: string; // caminho do PNG (ainda placeholder)
+  camadas?: CamadaItem[]; // camadas reais (uma peça pode ter várias)
+  thumb?: string; // miniatura recortada para a UI de seleção
   cor?: string; // cor do placeholder enquanto não há arte
 }
 

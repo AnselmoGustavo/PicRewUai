@@ -103,6 +103,8 @@ export default function Editor({
     try {
       // por trás: compõe a carta COMPLETA (moldura + nome + status) — surpresa
       const blob = await comporCartaBlob({
+        animal,
+        classe,
         cenario,
         selecao,
         nome: ficha.nomePersonagem,
@@ -200,6 +202,7 @@ export default function Editor({
                   key={c.id}
                   nome={`${c.tema === "escuro" ? "🌙" : "☀️"} ${c.nome}`}
                   cor={c.cor}
+                  img={c.arquivo}
                   selecionado={cenario === c.id}
                   bloqueado={lock}
                   onClick={() => !lock && setCenario(c.id)}
@@ -212,13 +215,15 @@ export default function Editor({
         {aba !== "cenario" && aba !== "ficha" && (
           <Grade>
             <Tile nome="Nenhum" selecionado={selecao[aba] === null} onClick={() => selecionarItem(aba, null)} />
-            {itensDe(classe, aba).map((it) => {
+            {itensDe(animal, classe, aba).map((it) => {
               const lock = !estaDesbloqueado(it.grupo, desbloqueios);
               return (
                 <Tile
                   key={it.id}
                   nome={it.nome}
                   cor={it.cor}
+                  img={it.thumb}
+                  imgContain
                   selecionado={selecao[aba] === it.id}
                   bloqueado={lock}
                   onClick={() => !lock && selecionarItem(aba, it.id)}
@@ -294,12 +299,16 @@ function Grade({ children }: { children: React.ReactNode }) {
 function Tile({
   nome,
   cor,
+  img,
+  imgContain,
   selecionado,
   bloqueado,
   onClick,
 }: {
   nome: string;
   cor?: string;
+  img?: string;
+  imgContain?: boolean;
   selecionado?: boolean;
   bloqueado?: boolean;
   onClick?: () => void;
@@ -329,7 +338,13 @@ function Tile({
           width: "100%",
           height: 44,
           borderRadius: 8,
-          background: cor ?? "repeating-linear-gradient(45deg,#eee,#eee 6px,#e0e0e0 6px,#e0e0e0 12px)",
+          background: imgContain
+            ? "#f3ecdb"
+            : cor ?? "repeating-linear-gradient(45deg,#eee,#eee 6px,#e0e0e0 6px,#e0e0e0 12px)",
+          backgroundImage: img ? `url(${img})` : undefined,
+          backgroundSize: imgContain ? "contain" : "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

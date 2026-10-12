@@ -85,6 +85,10 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 - ✅ Endpoint `POST /api/enviar-carta` — **mock de dev** que salva em `./envios` (verificado de ponta a ponta).
 - ✅ **Sincronização cross-device** (ADR-015): código pessoal gerado pelo app, auto-save com debounce e recuperação por código na tela inicial. Endpoint `/api/progresso` com **mock de dev** em `.dev-data/` (verificado); troca para Supabase via env vars.
 
-> ⚠️ **Personagem e itens usam placeholders** (cores/silhuetas) até a arte da Ana Beatriz chegar. A lógica do fluxo, filtros, códigos, envio e sincronização já está pronta.
+- ✅ **Cenários reais**: 2 de 5 integrados (Floresta=dia1, Montanhas=dia2, ambos claros) — otimizados para 744×1039 em `public/assets/cenarios/` (`scripts/otimizar-cenarios.mjs`); demais são placeholders coloridos.
+- ✅ **Itens reais por animal+classe** (ADR-016): **Veado-Mago** integrado (roupa básica + avançada), itens **multi-camada** empilhados por z-index, com miniaturas. Base do corpo por animal+classe.
+- ✅ **Pipeline automático de assets**: arquivos nomeados na convenção (`animal-classe-tipo-nome-grupo-zNN.png`) em `Assets Prontos/` → `npm run assets` otimiza, recorta miniaturas e **gera o manifesto** (`src/lib/itens-gerados.json`). Adicionar item = soltar arquivo + rodar o script. Convenção no [doc 04](docs/04-guia-de-assets.md).
+
+> ⚠️ **Demais animais/classes usam placeholders** (cores/silhuetas) até a arte chegar. A lógica (multi-camada, filtro por animal+classe, render por z-index, gerador) já está pronta e validada.
 
 **Próximos passos:** configurar o **Supabase** (env vars) para ligar o backend real de progresso e envio; polir a ficha; integrar a arte final quando chegar.

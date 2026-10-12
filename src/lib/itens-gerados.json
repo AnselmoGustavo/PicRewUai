@@ -1,0 +1,124 @@
+{
+  "bases": {
+    "veado-mago": "/assets/itens/bases/veado-mago.png"
+  },
+  "itens": [
+    {
+      "id": "veado-mago-acessorio1-capa_verde-dia1",
+      "nome": "Capa Verde",
+      "categoria": "acessorio1",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia1",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio1-capa_verde-dia1-z10.png",
+          "z": 10
+        },
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio1-capa_verde-dia1-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio1-capa_verde-dia1.png"
+    },
+    {
+      "id": "veado-mago-acessorio2-botas_de_couro-dia1",
+      "nome": "Botas de Couro",
+      "categoria": "acessorio2",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia1",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio2-botas_de_couro-dia1-z30.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio2-botas_de_couro-dia1.png"
+    },
+    {
+      "id": "veado-mago-arma-cajado_de_cristal-dia1",
+      "nome": "Cajado de Cristal",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia1",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-arma-cajado_de_cristal-dia1-z70.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-arma-cajado_de_cristal-dia1.png"
+    },
+    {
+      "id": "veado-mago-arma-varinha-inicial",
+      "nome": "Varinha",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-arma-varinha-inicial-z70.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-arma-varinha-inicial.png"
+    },
+    {
+      "id": "veado-mago-cabeca-chapeu_de_mago-dia1",
+      "nome": "Chapeu de Mago",
+      "categoria": "cabeca",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia1",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-cabeca-chapeu_de_mago-dia1-z80.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-cabeca-chapeu_de_mago-dia1.png"
+    },
+    {
+      "id": "veado-mago-vestimenta-tunica_simples-inicial",
+      "nome": "Tunica Simples",
+      "categoria": "vestimenta",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-vestimenta-tunica_simples-inicial-z40.png",
+          "z": 40
+        },
+        {
+          "arquivo": "/assets/itens/veado-mago-vestimenta-tunica_simples-inicial-z50.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-vestimenta-tunica_simples-inicial.png"
+    },
+    {
+      "id": "veado-mago-vestimenta-vestes_de_mago-dia1",
+      "nome": "Vestes de Mago",
+      "categoria": "vestimenta",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia1",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-vestimenta-vestes_de_mago-dia1-z40.png",
+          "z": 40
+        },
+        {
+          "arquivo": "/assets/itens/veado-mago-vestimenta-vestes_de_mago-dia1-z50.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-vestimenta-vestes_de_mago-dia1.png"
+    }
+  ]
+}

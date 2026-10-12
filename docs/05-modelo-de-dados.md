@@ -12,16 +12,27 @@ type Animal = 'sapo' | 'macaco' | 'raposa' | 'gato' | 'veado' | 'carpa' | 'coruj
 // Grupo de desbloqueio: itens iniciais + um grupo por dia do evento
 type GrupoDesbloqueio = 'inicial' | 'dia1' | 'dia2' | 'dia3' | 'dia4';
 
+// Itens são POR ANIMAL+CLASSE e MULTI-CAMADA (ADR-016).
+interface CamadaItem {
+  arquivo: string;         // PNG full-canvas pré-posicionado
+  z: number;               // z-index global (menor = mais atrás)
+}
+
 interface ItemDef {
-  id: string;              // único e estável, ex.: "arma_mago_cajado-cristal"
+  id: string;              // único e estável, ex.: "vm_arma_cajado"
   nome: string;            // rótulo exibido no app
   categoria: Categoria;
   classe: Classe;
+  animal?: Animal;         // item específico deste animal; ausente = placeholder genérico
   grupo: GrupoDesbloqueio; // define por qual código é liberado
-  arquivo: string;         // caminho em /public/assets/...
-  zIndex?: number;         // opcional: sobrescreve a ordem padrão da categoria
+  camadas?: CamadaItem[];  // camadas reais (uma peça pode ter várias: ex. capa frente+atrás)
+  cor?: string;            // cor do placeholder enquanto não há arte
 }
 ```
+
+> **Z-index global** (referência): capa-atrás 10, corpo (base) 20, sapato 30, vestimenta-baixo 40, vestimenta-cima 50, capa-frente 60, arma 70, cabeça 80. O app coleta a base + as camadas dos itens escolhidos e **desenha tudo ordenado por z**. Uma peça com partes na frente e atrás do corpo (capa) tem duas camadas com z diferentes.
+
+> **Base (corpo) por animal:** `BASES_POR_ANIMAL[animal]` → PNG do corpo (desenhado em z=20). Hoje só o Veado tem base real; os demais usam a silhueta placeholder.
 
 ### Cenários (fundos)
 

@@ -22,19 +22,25 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-function desenharPlaceholder(ctx, tema) {
+async function desenharFundo(ctx, tema, cenarioArquivo) {
   const { w, h } = layout.card;
-  const g = ctx.createLinearGradient(0, 0, 0, h);
-  if (tema === "dia") {
-    g.addColorStop(0, "#cfe3f0");
-    g.addColorStop(1, "#e9dcc0");
+  if (cenarioArquivo) {
+    const bg = await loadImage(p(cenarioArquivo));
+    ctx.drawImage(bg, 0, 0, w, h);
   } else {
-    g.addColorStop(0, "#26304a");
-    g.addColorStop(1, "#3a2f4a");
+    const g = ctx.createLinearGradient(0, 0, 0, h);
+    if (tema === "dia") {
+      g.addColorStop(0, "#cfe3f0");
+      g.addColorStop(1, "#e9dcc0");
+    } else {
+      g.addColorStop(0, "#26304a");
+      g.addColorStop(1, "#3a2f4a");
+    }
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, h);
   }
-  ctx.fillStyle = g;
-  ctx.fillRect(0, 0, w, h);
 
+  // silhueta placeholder do personagem
   ctx.fillStyle =
     tema === "dia" ? "rgba(69,117,74,0.55)" : "rgba(220,220,230,0.35)";
   const cx = w * 0.4;
@@ -51,7 +57,7 @@ function desenharPlaceholder(ctx, tema) {
   ctx.fillText("personagem (placeholder)", cx, 900);
 }
 
-async function gerar(tema, nome, titulo, status) {
+async function gerar(slug, tema, nome, titulo, status, cenarioArquivo) {
   const { assets, textos, preenchOpacidade, corTexto, corTextoClaro, card } =
     layout;
   const canvas = createCanvas(card.w, card.h);
@@ -64,7 +70,7 @@ async function gerar(tema, nome, titulo, status) {
     loadImage(p(`public/assets/carta/borda-${tema}.png`)),
   ]);
 
-  desenharPlaceholder(ctx, tema);
+  await desenharFundo(ctx, tema, cenarioArquivo);
 
   // banner + linha de título (full-canvas)
   ctx.drawImage(nameFrame, 0, 0, card.w, card.h);
@@ -103,12 +109,14 @@ async function gerar(tema, nome, titulo, status) {
     ctx.fillText(String(status[s.key]), s.x + s.w / 2, s.y + s.h / 2);
   }
 
-  const saida = p(`docs/exemplos/carta-exemplo-${tema}.png`);
+  const saida = p(`docs/exemplos/carta-exemplo-${slug}.png`);
   writeFileSync(saida, canvas.toBuffer("image/png"));
   console.log("gerado:", saida);
 }
 
 const status = { vida: 9, forca: 7, intelecto: 5, velocidade: 8 };
-await gerar("dia", "Fulano", "o Bravo", status);
-await gerar("noite", "Dama da Lua", "Guardiã da Noite", status);
+// cenários reais (claros) + um exemplo noite com placeholder (sem cenário escuro ainda)
+await gerar("floresta", "dia", "Fulano", "o Bravo", status, "public/assets/cenarios/floresta.jpg");
+await gerar("montanhas", "dia", "Selena", "a Montanhesa", status, "public/assets/cenarios/montanhas.jpg");
+await gerar("noite", "noite", "Dama da Lua", "Guardiã da Noite", status, null);
 console.log("pronto.");
