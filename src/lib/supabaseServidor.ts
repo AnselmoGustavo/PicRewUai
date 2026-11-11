@@ -2,7 +2,7 @@
 // Usa a chave de serviço (service_role): NUNCA importar isto em componente do navegador.
 // Sem SUPABASE_URL/SUPABASE_SERVICE_KEY, as API routes caem no mock em arquivo (.dev-data/, envios/).
 
-const URL_SUPA = process.env.SUPABASE_URL?.replace(/\/+$/, "");
+const URL_SUPA = process.env.SUPABASE_URL?.replace(/\/+$/, "").replace(/\/rest\/v1$/, "");
 const CHAVE = process.env.SUPABASE_SERVICE_KEY;
 
 export const usandoSupabase = Boolean(URL_SUPA && CHAVE);

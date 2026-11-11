@@ -14,7 +14,7 @@ if (existsSync(".env.local")) {
     if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
   }
 }
-const URL_SUPA = process.env.SUPABASE_URL?.replace(/\/+$/, "");
+const URL_SUPA = process.env.SUPABASE_URL?.replace(/\/+$/, "").replace(/\/rest\/v1$/, "");
 const CHAVE = process.env.SUPABASE_SERVICE_KEY;
 if (!URL_SUPA || !CHAVE) {
   console.error("Faltam SUPABASE_URL e SUPABASE_SERVICE_KEY no .env.local.");
