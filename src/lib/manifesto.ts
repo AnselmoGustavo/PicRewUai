@@ -30,7 +30,7 @@ export function baseDoPersonagem(
 
 // 3 cenários no total (arte da Ana Beatriz).
 export const CENARIOS: CenarioDef[] = [
-  { id: "cen_floresta", nome: "Floresta", tema: "claro", grupo: "dia1", arquivo: "/assets/cenarios/floresta.jpg" },
+  { id: "cen_floresta", nome: "Floresta", tema: "escuro", grupo: "dia1", arquivo: "/assets/cenarios/floresta.jpg" },
   { id: "cen_montanhas", nome: "Montanhas", tema: "claro", grupo: "dia2", arquivo: "/assets/cenarios/montanhas.jpg" },
   // PLACEHOLDER (aguardando arte) — ajustar nome/tema/dia quando chegar:
   { id: "cen_dia3", nome: "Cenário (dia 3)", tema: "claro", grupo: "dia3", cor: "#efe3c8" },

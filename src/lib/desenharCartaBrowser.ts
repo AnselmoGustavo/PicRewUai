@@ -175,7 +175,7 @@ export async function desenharCarta(
     carregarImagem(`/assets/carta/borda-${tema}.png`),
   ]);
 
-  const { assets, textos, preenchOpacidade, corTexto, corTextoClaro } = layout;
+  const { assets, textos, preenchOpacidade, corTexto, corTextoClaro, sombraNoite } = layout;
 
   // banner + linha de título (full-canvas, em 0,0)
   ctx.drawImage(nameFrame, 0, 0, w, h);
@@ -196,8 +196,14 @@ export async function desenharCarta(
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 
-  // nome e título ficam sobre a ribbon/cenário (sem preenchimento) → cor acompanha o tema
-  const corAdapt = tema === "noite" ? corTextoClaro : corTexto;
+  // nome e título ficam sobre a ribbon/cenário (sem preenchimento) → cor acompanha o tema.
+  // Na noite o texto é claro + sombra escura, para ler tanto sobre partes claras quanto escuras.
+  const noite = tema === "noite";
+  const corAdapt = noite ? corTextoClaro : corTexto;
+  if (noite) {
+    ctx.shadowColor = sombraNoite.cor;
+    ctx.shadowBlur = sombraNoite.blur;
+  }
 
   const n = textos.nome;
   ctx.fillStyle = corAdapt;
@@ -211,13 +217,15 @@ export async function desenharCarta(
     ctx.fillText(dados.titulo, t.x + t.w / 2, t.y + t.h / 2, t.w);
   }
 
-  // status ficam sobre o frame de status (claro) → cor escura
-  ctx.fillStyle = corTexto;
+  // status: escuros no dia; claros (com a mesma sombra) na noite
+  ctx.fillStyle = noite ? corTextoClaro : corTexto;
   const status = statusDe(dados.animal, dados.classe);
   for (const s of textos.status) {
     ctx.font = `${s.fontePx}px "AdamScript"`;
     ctx.fillText(String(status[s.key as keyof Status]), s.x + s.w / 2, s.y + s.h / 2);
   }
+  ctx.shadowColor = "transparent";
+  ctx.shadowBlur = 0;
 }
 
 /** Compõe a carta COMPLETA (com moldura) num canvas offscreen e devolve o PNG. */

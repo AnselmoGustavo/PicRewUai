@@ -10,7 +10,8 @@
     "organizar": "node scripts/organizar-itens.mjs",
     "cenarios": "node scripts/otimizar-cenarios.mjs",
     "carta:exemplo": "node scripts/gerar-carta-exemplo.mjs",
-    "baixar-cartas": "node scripts/baixar-cartas.mjs"
+    "baixar-cartas": "node scripts/baixar-cartas.mjs",
+    "regerar-cartas": "node scripts/regerar-cartas.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",

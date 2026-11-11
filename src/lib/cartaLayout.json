@@ -20,5 +20,7 @@
   "_nota_titulo": "Título centralizado acima da linha decorativa (linha em y~284, x 202..534).",
   "preenchOpacidade": 0.72,
   "corTexto": "#3a2f28",
-  "corTextoClaro": "#f4eeda"
+  "corTextoClaro": "#f4eeda",
+  "_nota_sombraNoite": "Na moldura de noite, nome/título/status são claros com sombra escura (legíveis sobre partes claras e escuras do cenário).",
+  "sombraNoite": { "cor": "rgba(0,0,0,0.9)", "blur": 8 }
 }
