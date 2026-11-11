@@ -1,27 +1,29 @@
-// Cliente de sincronização de progresso (ADR-015).
+// Sincronização de progresso do personagem, por usuário logado (useSessao).
 import { useEffect } from "react";
 import { usePersonagem } from "./store";
-import { normalizarCodigo } from "./codigoPessoal";
+import { useSessao } from "./sessao";
 import type { EstadoPersonagem } from "./tipos";
 
 export async function salvarProgressoRemoto(estado: EstadoPersonagem): Promise<void> {
-  if (!estado.codigoPessoal) return;
+  const { usuario, token } = useSessao.getState();
+  if (!usuario || !token) return;
   try {
     await fetch("/api/progresso", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ codigo: estado.codigoPessoal, estado }),
+      body: JSON.stringify({ usuario, token, estado }),
     });
   } catch {
     /* offline — o localStorage mantém o estado; sincroniza na próxima mudança */
   }
 }
 
-export async function carregarProgressoRemoto(
-  codigo: string,
-): Promise<EstadoPersonagem | null> {
+export async function carregarProgressoRemoto(): Promise<EstadoPersonagem | null> {
+  const { usuario, token } = useSessao.getState();
+  if (!usuario || !token) return null;
   try {
-    const res = await fetch(`/api/progresso?codigo=${encodeURIComponent(codigo)}`);
+    const q = `usuario=${encodeURIComponent(usuario)}&token=${encodeURIComponent(token)}`;
+    const res = await fetch(`/api/progresso?${q}`);
     if (!res.ok) return null;
     const j = await res.json();
     return (j.estado as EstadoPersonagem) ?? null;
@@ -30,38 +32,24 @@ export async function carregarProgressoRemoto(
   }
 }
 
-/** Recupera um personagem por código (usado na tela inicial). */
-export async function recuperarPorCodigo(codigo: string): Promise<boolean> {
-  const c = normalizarCodigo(codigo);
-  const remoto = await carregarProgressoRemoto(c);
-  if (!remoto) return false;
-  usePersonagem.getState().carregarEstado({ ...remoto, codigoPessoal: c });
-  return true;
-}
-
-/**
- * Liga a sincronização: garante o código pessoal, adota a versão do servidor se
- * for mais recente e salva (com debounce) a cada mudança. Usar em /criar.
- */
+/** Liga a sincronização para o usuário logado: pull inicial (last-write-wins) + push com debounce. */
 export function useSyncProgresso() {
   const carregarEstado = usePersonagem((s) => s.carregarEstado);
-  const garantirCodigoPessoal = usePersonagem((s) => s.garantirCodigoPessoal);
+  const usuario = useSessao((s) => s.usuario);
 
   useEffect(() => {
+    if (!usuario) return;
     let vivo = true;
-    const codigo = garantirCodigoPessoal();
 
-    // pull inicial: adota o servidor se estiver mais recente (last-write-wins)
     (async () => {
-      const remoto = await carregarProgressoRemoto(codigo);
+      const remoto = await carregarProgressoRemoto();
       if (!vivo || !remoto) return;
       const local = usePersonagem.getState();
       if ((remoto.atualizadoEm ?? 0) > (local.atualizadoEm ?? 0)) {
-        carregarEstado({ ...remoto, codigoPessoal: codigo });
+        carregarEstado(remoto);
       }
     })();
 
-    // push com debounce a cada mudança
     let t: ReturnType<typeof setTimeout>;
     const unsub = usePersonagem.subscribe(() => {
       clearTimeout(t);
@@ -73,5 +61,5 @@ export function useSyncProgresso() {
       clearTimeout(t);
       unsub();
     };
-  }, [carregarEstado, garantirCodigoPessoal]);
+  }, [usuario, carregarEstado]);
 }

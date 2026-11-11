@@ -13,17 +13,10 @@ export type Tema = "dia" | "noite";
 interface Props {
   nome: string;
   titulo?: string;
-  status: { vida: number; forca: number; intelecto: number; velocidade: number };
   tema: Tema;
 }
 
-// Página de dev: usa cenários existentes só para forçar o tema dia/noite.
-const CENARIO_POR_TEMA: Record<Tema, string> = {
-  dia: "cen_castelo_dia",
-  noite: "cen_ruinas_noite",
-};
-
-export default function CartaCanvas({ nome, titulo, status, tema }: Props) {
+export default function CartaCanvas({ nome, titulo, tema }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -37,24 +30,26 @@ export default function CartaCanvas({ nome, titulo, status, tema }: Props) {
       const dados: DadosCarta = {
         animal: "veado",
         classe: "mago",
-        cenario: CENARIO_POR_TEMA[tema],
+        cenario: "cen_floresta",
+        temaForcado: tema, // página de dev: força dia/noite
         selecao: {
-          vestimenta: null,
+          camisa: null,
+          calca: null,
           arma: null,
-          cabeca: null,
-          acessorio1: null,
-          acessorio2: null,
+          calcado: null,
+          capa: null,
+          chapeu: null,
+          acessorio: null,
         },
         nome,
         titulo: titulo ?? "",
-        status,
       };
       await desenharCarta(ctx, dados, true);
     })();
     return () => {
       cancelado = true;
     };
-  }, [nome, titulo, status, tema]);
+  }, [nome, titulo, tema]);
 
   return (
     <canvas

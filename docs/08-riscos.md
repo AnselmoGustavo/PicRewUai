@@ -3,7 +3,7 @@
 | # | Risco | Impacto | Prob. | Mitigação |
 |---|-------|:-------:|:-----:|-----------|
 | R1 | **Atraso na entrega da arte** (150 itens é bastante) | Alto | Média | Desenvolver com placeholders; congelar o guia de assets cedo; integrar arte em lotes; priorizar itens do "dia 1" primeiro |
-| R2 | **Itens universais não encaixam em todos os animais** (ex.: carpa/coruja) | Alto | Média | Gabarito mestre com zonas alinhadas; **teste de validação** (1 item por categoria nos 8 animais) antes de escalar; aceitar exceções pontuais |
+| R2 | ~~**Itens universais não encaixam em todos os animais**~~ *(obsoleto: itens agora são por animal+classe, ADR-016)* | Alto | Média | Gabarito mestre com zonas alinhadas; **teste de validação** (1 item por categoria nos 8 animais) antes de escalar; aceitar exceções pontuais |
 | R3 | **Exportação/download falha no iPhone Safari** | Alto | Média | Testar em iPhone real cedo (Fase 4); usar Web Share API + fallback de "abrir imagem e salvar" |
 | R4 | **Usuário perde o personagem** (limpou navegador / trocou de aparelho) | Médio | Média | Código de backup exportável (+ QR); salvar automático; avisar sobre backup |
 | R5 | **Memória insuficiente em celular antigo** ao exportar em alta resolução | Médio | Baixa | Carregar assets sob demanda; oferecer resolução padrão/alta; testar limites |

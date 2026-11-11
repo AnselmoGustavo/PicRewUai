@@ -34,7 +34,6 @@ export default function PreviewCarta({
           selecao,
           nome: ficha.nomePersonagem,
           titulo: ficha.titulo ?? "",
-          status: ficha.status as unknown as Record<string, number>,
         },
         mostrarMoldura,
       );

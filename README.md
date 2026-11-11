@@ -13,16 +13,17 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 |------|---------|
 | Plataforma | Web app (PWA), roda no navegador de qualquer celular |
 | Stack | Next.js + React + TypeScript + Canvas API |
-| Persistência | `localStorage` (offline) + **sincronização no Supabase** via código pessoal (cross-device) |
-| Backend | Vercel Functions + Supabase: sincronizar progresso + coletar as cartas |
+| Conta | **Usuário + senha** na tela inicial (identidade + progresso por pessoa) |
+| Persistência | `localStorage` (offline) + sincronização por usuário (cross-device) |
+| Backend | Vercel Functions + Supabase: auth, progresso por usuário, coleta das cartas |
 | Hospedagem | Vercel free tier |
 | Identidade | Tema único · primária verde `#45754a` · Poppins + Arcane Fable |
-| Assets | **Universais** — o mesmo item serve para os 8 animais |
-| Animais | 8: sapo, macaco, raposa, gato, veado, carpa, coruja, cachorro |
+| Assets | **Por animal+classe** — cada peça desenhada para o corpo daquela combinação |
+| Animais | 5: macaco, raposa, gato, veado, cachorro |
 | Classes | 5: guerreiro, arqueiro, mago, bardo, ninja |
-| Categorias de item | vestimenta, arma, item de cabeça, acessório 1, acessório 2 |
+| Tipos de item | camisa, calça, arma, calçado, capa, chapéu, acessório |
 | Cenário | fundo selecionável (define moldura dia/noite da carta) |
-| Status | 4 atributos na carta: Vida, Força, Intelecto, Velocidade |
+| Status | 4 atributos na carta: Vida, Força, Intelecto, Destreza |
 | Desbloqueio | Códigos diários iguais para todos, validados no app |
 | Carta (surpresa) | Participante "envia o personagem" → carta TCG 63 × 88 mm (744×1039, 300 DPI) gerada **por trás** e enviada para impressão. O participante nunca vê a carta |
 
@@ -45,6 +46,7 @@ Toda a documentação vive em [`docs/`](docs/):
 9. [Registro de decisões (ADR)](docs/09-decisoes.md)
 10. [Identidade visual](docs/10-identidade-visual.md)
 11. [Composição da carta (assets e posições)](docs/11-carta-composicao.md)
+12. [Deploy (Vercel + Supabase)](docs/12-deploy.md)
 
 > ⭐ O **guia de assets** é o documento mais urgente: ele precisa ser combinado com a ilustradora **antes** de ela produzir a arte em volume, porque define tamanho de canvas, ancoragem e ordem das camadas.
 
@@ -80,10 +82,10 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 - ✅ App Next.js rodando (paleta creme + verde, fundo texturizado, 3 fontes, logo).
 - ✅ Composição da carta validada com os assets reais — exemplos em [`docs/exemplos/`](docs/exemplos/). Coordenadas do [doc 11](docs/11-carta-composicao.md) confirmadas.
 - ✅ Estado global (Zustand) + persistência no `localStorage`; manifesto de itens/cenários ([`src/lib/`](src/lib/)).
-- ✅ Fluxo `/criar`: seleção de animal → classe → editor com abas (cenário + 5 categorias + ficha), itens filtrados por classe, bloqueio/desbloqueio por código, preview ao vivo (sem moldura — a carta é surpresa).
+- ✅ Fluxo `/criar`: seleção de animal → classe → editor com abas (cenário + 7 tipos de item + ficha), itens filtrados por classe, bloqueio/desbloqueio por código, preview ao vivo (sem moldura — a carta é surpresa).
 - ✅ **Envio surpresa**: botão "Enviar personagem" → confirmação de que é definitivo → a carta completa (moldura + nome + status) é composta **offscreen** e enviada; editor trava (`enviado`) com tela de agradecimento. A palavra "carta" e a moldura nunca aparecem para o participante.
 - ✅ Endpoint `POST /api/enviar-carta` — **mock de dev** que salva em `./envios` (verificado de ponta a ponta).
-- ✅ **Sincronização cross-device** (ADR-015): código pessoal gerado pelo app, auto-save com debounce e recuperação por código na tela inicial. Endpoint `/api/progresso` com **mock de dev** em `.dev-data/` (verificado); troca para Supabase via env vars.
+- ✅ **Conta (usuário + senha)** na tela inicial (ADR-015): cadastro/login com senha em **hash (pbkdf2)**, sessão com token, e **sincronização do progresso por usuário** (auto-save com debounce, cross-device). Endpoints `/api/auth` e `/api/progresso` com **mock de dev** em `.dev-data/` (verificado end-to-end). Produção: tabelas no Supabase (`supabase/schema.sql`).
 
 - ✅ **Cenários reais**: 2 de 5 integrados (Floresta=dia1, Montanhas=dia2, ambos claros) — otimizados para 744×1039 em `public/assets/cenarios/` (`scripts/otimizar-cenarios.mjs`); demais são placeholders coloridos.
 - ✅ **Itens reais por animal+classe** (ADR-016): **Veado-Mago** integrado (roupa básica + avançada), itens **multi-camada** empilhados por z-index, com miniaturas. Base do corpo por animal+classe.
@@ -91,4 +93,4 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 
 > ⚠️ **Demais animais/classes usam placeholders** (cores/silhuetas) até a arte chegar. A lógica (multi-camada, filtro por animal+classe, render por z-index, gerador) já está pronta e validada.
 
-**Próximos passos:** configurar o **Supabase** (env vars) para ligar o backend real de progresso e envio; polir a ficha; integrar a arte final quando chegar.
+**Próximos passos:** criar os projetos Supabase + Vercel seguindo o [doc 12](docs/12-deploy.md) (o código já está pronto: contas, progresso e cartas no Supabase; `npm run baixar-cartas` para a gráfica); polir a ficha; integrar a arte final quando chegar.

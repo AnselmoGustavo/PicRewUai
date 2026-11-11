@@ -114,7 +114,7 @@ async function gerar(slug, tema, nome, titulo, status, cenarioArquivo) {
   console.log("gerado:", saida);
 }
 
-const status = { vida: 9, forca: 7, intelecto: 5, velocidade: 8 };
+const status = { vida: 9, forca: 7, intelecto: 5, destreza: 8 };
 // cenários reais (claros) + um exemplo noite com placeholder (sem cenário escuro ainda)
 await gerar("floresta", "dia", "Fulano", "o Bravo", status, "public/assets/cenarios/floresta.jpg");
 await gerar("montanhas", "dia", "Selena", "a Montanhesa", status, "public/assets/cenarios/montanhas.jpg");

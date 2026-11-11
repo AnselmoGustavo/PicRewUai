@@ -1,32 +1,37 @@
 // Tipos centrais do domínio. Ver docs/05-modelo-de-dados.md.
 
-export type Animal =
-  | "sapo"
-  | "macaco"
-  | "raposa"
-  | "gato"
-  | "veado"
-  | "carpa"
-  | "coruja"
-  | "cachorro";
+export type Animal = "macaco" | "raposa" | "gato" | "veado" | "cachorro";
 
 export type Classe = "guerreiro" | "arqueiro" | "mago" | "bardo" | "ninja";
 
 export type Categoria =
-  | "vestimenta"
+  | "camisa"
+  | "calca"
   | "arma"
-  | "cabeca"
-  | "acessorio1"
-  | "acessorio2";
+  | "calcado"
+  | "capa"
+  | "chapeu"
+  | "acessorio";
 
 // 'inicial' sempre liberado; um grupo por dia do evento.
 export type GrupoDesbloqueio = "inicial" | "dia1" | "dia2" | "dia3" | "dia4";
 
 export type Tema = "claro" | "escuro"; // claro → moldura dia · escuro → moldura noite
 
+// z-index padrão de cada tipo (menor = mais atrás). O corpo fica em 20.
+// Peças de várias camadas (ex.: capa frente z60 + atrás z10) informam o z no nome do arquivo.
+// Manter em sincronia com scripts/gerar-assets.mjs.
+export const Z_POR_TIPO: Record<Categoria, number> = {
+  capa: 10,
+  calcado: 30,
+  calca: 40,
+  camisa: 50,
+  arma: 70,
+  acessorio: 75,
+  chapeu: 80,
+};
+
 // Uma camada de um item: PNG full-canvas pré-posicionado + z-index global.
-// z menor = mais atrás. Referência (global): capa-atrás 10, corpo 20, sapato 30,
-// vestimenta-baixo 40, vestimenta-cima 50, capa-frente 60, arma 70, cabeça 80.
 export interface CamadaItem {
   arquivo: string;
   z: number;
@@ -53,26 +58,20 @@ export interface CenarioDef {
   cor?: string;
 }
 
-export interface Selecao {
-  vestimenta: string | null;
-  arma: string | null;
-  cabeca: string | null;
-  acessorio1: string | null;
-  acessorio2: string | null;
-}
+export type Selecao = Record<Categoria, string | null>;
 
 export interface Status {
   vida: number;
   forca: number;
   intelecto: number;
-  velocidade: number;
+  destreza: number;
 }
 
 export interface Ficha {
   nomePersonagem: string;
   titulo?: string; // epíteto/título do personagem (texto livre) — vai na carta
-  status: Status;
   habilidade?: string;
+  // status NÃO fica aqui: é calculado de animal+classe (ver lib/status.ts)
 }
 
 export interface EstadoPersonagem {
@@ -84,26 +83,24 @@ export interface EstadoPersonagem {
   ficha: Ficha;
   desbloqueios: GrupoDesbloqueio[];
   enviado: boolean;
-  codigoPessoal: string | null; // chave de sincronização (ADR-015)
   atualizadoEm: number; // epoch ms da última mudança (last-write-wins)
 }
 
 export const CATEGORIAS: { id: Categoria; nome: string }[] = [
-  { id: "vestimenta", nome: "Vestimenta" },
+  { id: "camisa", nome: "Camisa" },
+  { id: "calca", nome: "Calça" },
   { id: "arma", nome: "Arma" },
-  { id: "cabeca", nome: "Item de cabeça" },
-  { id: "acessorio1", nome: "Acessório 1" },
-  { id: "acessorio2", nome: "Acessório 2" },
+  { id: "calcado", nome: "Calçado" },
+  { id: "capa", nome: "Capa" },
+  { id: "chapeu", nome: "Chapéu" },
+  { id: "acessorio", nome: "Acessório" },
 ];
 
 export const ANIMAIS: { id: Animal; nome: string; emoji: string }[] = [
-  { id: "sapo", nome: "Sapo", emoji: "🐸" },
   { id: "macaco", nome: "Macaco", emoji: "🐵" },
   { id: "raposa", nome: "Raposa", emoji: "🦊" },
   { id: "gato", nome: "Gato", emoji: "🐱" },
   { id: "veado", nome: "Veado", emoji: "🦌" },
-  { id: "carpa", nome: "Carpa", emoji: "🐟" },
-  { id: "coruja", nome: "Coruja", emoji: "🦉" },
   { id: "cachorro", nome: "Cachorro", emoji: "🐶" },
 ];
 

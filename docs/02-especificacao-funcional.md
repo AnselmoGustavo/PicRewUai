@@ -20,9 +20,9 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 - Campo **Restaurar por código de backup**.
 
 ### 2. Escolha de animal
-- Grade com os 8 animais (sapo, macaco, raposa, gato, veado, carpa, coruja, cachorro).
+- Grade com os 5 animais (macaco, raposa, gato, veado, cachorro).
 - Prévia do corpo base ao selecionar.
-- O animal pode ser trocado depois sem perder itens escolhidos (itens são universais).
+- Trocar o animal depois **zera os itens** escolhidos (a arte é específica por animal+classe).
 
 ### 3. Escolha de classe
 - 5 classes (guerreiro, arqueiro, mago, bardo, ninja), cada uma com ícone/descrição curta.
@@ -30,8 +30,8 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 
 ### 4. Editor (picrew) — tela principal
 - **Área de preview**: a carta renderizada em tempo real (cenário + personagem + moldura).
-- **Abas de categoria**: **cenário**, vestimenta, arma, item de cabeça, acessório 1, acessório 2.
-- **Cenário**: escolha do fundo (não depende de classe). **3 a 4 cenários**, liberados **1 por dia** via código. O cenário define se a moldura fica dia/noite (ver [11](11-carta-composicao.md)) — mas isso é interno; o participante só escolhe o fundo.
+- **Abas**: **cenário**, camisa, calça, arma, calçado, capa, chapéu, acessório, ficha.
+- **Cenário**: escolha do fundo (não depende de classe). **3 cenários** (Floresta dia 1, Montanhas dia 2, 3º a definir no dia 3), liberados **1 por dia** via código. O cenário define se a moldura fica dia/noite (ver [11](11-carta-composicao.md)) — mas isso é interno; o participante só escolhe o fundo.
 - Ao abrir uma categoria de item, mostra os itens **daquela classe**:
   - Itens **desbloqueados**: selecionáveis.
   - Itens **bloqueados**: aparecem esmaecidos com um cadeado 🔒 (mostrar que existem, mas indisponíveis — cria expectativa/coleção).
@@ -49,15 +49,12 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 - Código já usado → informar que já está ativo (idempotente).
 
 ### 6. Ficha de personagem
-- Formulário com os dados do personagem.
-- Campos definidos até agora:
+- A aba **Ficha** tem só os campos **editáveis** + o status **exibido** (não editável):
   - **Nome do personagem** (texto, escrito pelo participante) — vai na carta (fonte Adam Script)
   - **Título** (texto livre, ex.: "o Bravo") — vai na carta, abaixo do nome
-  - **Animal** e **Classe** (preenchidos automaticamente)
-  - **Status** — 4 valores **escritos pelo participante**: **Vida ❤️, Força ⚔️, Intelecto 📖, Velocidade ⚡** — vão na carta
-  - **Habilidade** (opcional) — campo de texto; **não** vai na carta
-- Nome e os 4 status são **digitados pelo participante**; o **app os desenha na carta** nas posições definidas ([11](11-carta-composicao.md)). Não são enviados à parte — ficam na imagem.
-- Validar entrada dos status (ex.: numéricos, faixa/limite de dígitos — a caixa na carta comporta ~1–2 dígitos, ver [11](11-carta-composicao.md)).
+  - **Status** (somente leitura): **Vida ❤️, Força ⚔️, Intelecto 📖, Destreza ⚡** — **calculados** de `base 2 + classe + raça (animal)`, não digitados. Ver `src/lib/status.ts` (tabelas de bônus) e [09](09-decisoes.md).
+- O app **desenha nome, título e status (calculado) na carta** nas posições de [11](11-carta-composicao.md).
+- Status fica entre **2 e 5** (1 dígito), cabe na caixa da carta.
 
 ### 7. Salvar / Código de backup
 - O save é **automático** no `localStorage` a cada mudança.
@@ -79,7 +76,7 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 |-------|---------------|
 | Item bloqueado | Visível mas não selecionável até desbloqueio por código |
 | Troca de classe | Confirma antes; remove itens incompatíveis da seleção |
-| Troca de animal | Livre; mantém itens (são universais) |
+| Troca de animal | **Zera a seleção de itens** (itens são por animal+classe) |
 | Cenário | 3–4 no total; **1 liberado por dia** via código; troca livre entre os já liberados |
 | Código correto | Desbloqueia o grupo do dia: itens **e** o cenário daquele dia; idempotente |
 | Código do último dia | Após todos os códigos, 100% dos itens da classe + todos os cenários liberados |

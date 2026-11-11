@@ -2,7 +2,9 @@
 // (sem moldura) e pelo envio (com moldura, offscreen). Ver docs/11-carta-composicao.md.
 import layout from "./cartaLayout.json";
 import { baseDoPersonagem, cenarioPorId, itemPorId } from "./manifesto";
-import type { Animal, Categoria, Classe, Selecao } from "./tipos";
+import { statusDe } from "./status";
+import { CATEGORIAS, Z_POR_TIPO } from "./tipos";
+import type { Animal, Categoria, Classe, Selecao, Status } from "./tipos";
 
 export interface DadosCarta {
   animal: Animal | null;
@@ -11,25 +13,11 @@ export interface DadosCarta {
   selecao: Selecao;
   nome: string;
   titulo: string;
-  status: Record<string, number>;
+  /** só p/ a página de dev: força dia/noite independente do cenário */
+  temaForcado?: "dia" | "noite";
 }
 
-const CATEGORIAS_ITEM: Categoria[] = [
-  "vestimenta",
-  "arma",
-  "cabeca",
-  "acessorio1",
-  "acessorio2",
-];
-
-// z global dos placeholders (quando não há camadas reais). Ver tipos.ts.
-const Z_PLACEHOLDER: Record<Categoria, number> = {
-  acessorio1: 35,
-  acessorio2: 30,
-  vestimenta: 45,
-  arma: 70,
-  cabeca: 80,
-};
+const CATEGORIAS_ITEM: Categoria[] = CATEGORIAS.map((c) => c.id);
 
 export function carregarImagem(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -59,19 +47,25 @@ function desenharItemPlaceholder(
   ctx.fillStyle = cor;
   ctx.beginPath();
   switch (cat) {
-    case "vestimenta":
-      ctx.roundRect(cx - 70, 630, 140, 165, 22);
+    case "camisa":
+      ctx.roundRect(cx - 70, 630, 140, 100, 22);
       break;
-    case "acessorio1":
+    case "calca":
+      ctx.roundRect(cx - 70, 730, 140, 90, 18);
+      break;
+    case "calcado":
+      ctx.roundRect(cx - 75, 830, 150, 30, 12);
+      break;
+    case "capa":
       ctx.roundRect(cx - 100, 650, 32, 150, 14);
       break;
-    case "cabeca":
+    case "chapeu":
       ctx.roundRect(cx - 72, 448, 144, 58, 20);
       break;
     case "arma":
       ctx.roundRect(cx + 82, 540, 28, 300, 14);
       break;
-    case "acessorio2":
+    case "acessorio":
       ctx.arc(cx + 32, 705, 20, 0, Math.PI * 2);
       break;
   }
@@ -133,7 +127,7 @@ async function desenharPersonagem(
       }
     } else if (item.cor) {
       const cor = item.cor;
-      camadas.push({ z: Z_PLACEHOLDER[cat], render: () => desenharItemPlaceholder(ctx, cat, cor) });
+      camadas.push({ z: Z_POR_TIPO[cat], render: () => desenharItemPlaceholder(ctx, cat, cor) });
     }
   }
 
@@ -149,7 +143,7 @@ export async function desenharCarta(
 ) {
   const { w, h } = layout.card;
   const cen = cenarioPorId(dados.cenario);
-  const tema = cen?.tema === "escuro" ? "noite" : "dia";
+  const tema = dados.temaForcado ?? (cen?.tema === "escuro" ? "noite" : "dia");
 
   ctx.clearRect(0, 0, w, h);
 
@@ -219,9 +213,10 @@ export async function desenharCarta(
 
   // status ficam sobre o frame de status (claro) → cor escura
   ctx.fillStyle = corTexto;
+  const status = statusDe(dados.animal, dados.classe);
   for (const s of textos.status) {
     ctx.font = `${s.fontePx}px "AdamScript"`;
-    ctx.fillText(String(dados.status[s.key] ?? ""), s.x + s.w / 2, s.y + s.h / 2);
+    ctx.fillText(String(status[s.key as keyof Status]), s.x + s.w / 2, s.y + s.h / 2);
   }
 }
 

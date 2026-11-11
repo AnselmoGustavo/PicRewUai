@@ -6,34 +6,60 @@ import type {
   Classe,
   EstadoPersonagem,
   GrupoDesbloqueio,
-  Status,
+  Selecao,
 } from "./tipos";
+import { ANIMAIS } from "./tipos";
 import { validarCodigo } from "./codigos";
-import { gerarCodigoPessoal } from "./codigoPessoal";
+import { CENARIOS } from "./manifesto";
 
-const VERSAO = 1;
+// v2: categorias passaram de 5 (vestimenta, acessorio1...) para 7 tipos (camisa, calca...)
+// v3: saíram os animais sapo, coruja e carpa
+// v4: saíram os cenários Padrão e dia 4 (3 cenários no total)
+const VERSAO = 4;
+
+const SELECAO_VAZIA: Selecao = {
+  camisa: null,
+  calca: null,
+  arma: null,
+  calcado: null,
+  capa: null,
+  chapeu: null,
+  acessorio: null,
+};
+
+// Saves antigos (ou vindos do servidor) podem ter chaves de categorias que não existem mais:
+// reconstrói a seleção só com os 7 tipos atuais.
+function normalizarSelecao(s: Partial<Record<string, string | null>> | undefined): Selecao {
+  const out = { ...SELECAO_VAZIA };
+  for (const k of Object.keys(out) as Categoria[]) out[k] = s?.[k] ?? null;
+  return out;
+}
+
+// Também descarta animais que saíram do jogo (sapo, coruja, carpa): a pessoa escolhe de novo.
+function normalizarEstado(e: EstadoPersonagem): EstadoPersonagem {
+  const animalValido = ANIMAIS.some((a) => a.id === e?.animal);
+  return {
+    ...e,
+    animal: animalValido ? e.animal : null,
+    selecao: animalValido ? normalizarSelecao(e?.selecao) : { ...SELECAO_VAZIA },
+    // cenários que saíram (Padrão, dia 4) → escolhe de novo
+    cenario: CENARIOS.some((c) => c.id === e?.cenario) ? e.cenario : null,
+  };
+}
 
 const estadoInicial: EstadoPersonagem = {
   versao: VERSAO,
   animal: null,
   classe: null,
   cenario: null,
-  selecao: {
-    vestimenta: null,
-    arma: null,
-    cabeca: null,
-    acessorio1: null,
-    acessorio2: null,
-  },
+  selecao: { ...SELECAO_VAZIA },
   ficha: {
     nomePersonagem: "",
     titulo: "",
-    status: { vida: 0, forca: 0, intelecto: 0, velocidade: 0 },
     habilidade: "",
   },
   desbloqueios: ["inicial"],
   enviado: false,
-  codigoPessoal: null,
   atualizadoEm: 0,
 };
 
@@ -46,14 +72,11 @@ interface Acoes {
   selecionarItem: (cat: Categoria, id: string | null) => void;
   setNome: (nome: string) => void;
   setTitulo: (titulo: string) => void;
-  setStatus: (chave: keyof Status, valor: number) => void;
   setHabilidade: (texto: string) => void;
   aplicarCodigo: (input: string) => ReturnType<typeof validarCodigo>;
   marcarEnviado: () => void;
   resetar: () => void;
-  /** Garante que exista um código pessoal (gera na 1ª vez). Retorna o código. */
-  garantirCodigoPessoal: () => string;
-  /** Substitui o estado inteiro (recuperação por código / carga do servidor). */
+  /** Substitui o estado inteiro (carga do servidor). */
   carregarEstado: (e: EstadoPersonagem) => void;
 }
 
@@ -62,9 +85,14 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
     (set, get) => ({
       ...estadoInicial,
 
-      setAnimal: (a) => set({ animal: a, atualizadoEm: agora() }),
+      // itens são específicos por animal+classe → trocar qualquer um zera a seleção
+      setAnimal: (a) =>
+        set({
+          animal: a,
+          selecao: { ...estadoInicial.selecao },
+          atualizadoEm: agora(),
+        }),
 
-      // itens são específicos por classe → trocar de classe zera a seleção de itens
       setClasse: (c) =>
         set({
           classe: c,
@@ -89,12 +117,6 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
       setTitulo: (titulo) =>
         set((s) => ({
           ficha: { ...s.ficha, titulo },
-          atualizadoEm: agora(),
-        })),
-
-      setStatus: (chave, valor) =>
-        set((s) => ({
-          ficha: { ...s.ficha, status: { ...s.ficha.status, [chave]: valor } },
           atualizadoEm: agora(),
         })),
 
@@ -124,19 +146,15 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
 
       resetar: () => set({ ...estadoInicial }),
 
-      garantirCodigoPessoal: () => {
-        const atual = get().codigoPessoal;
-        if (atual) return atual;
-        const novo = gerarCodigoPessoal();
-        set({ codigoPessoal: novo });
-        return novo;
-      },
-
-      carregarEstado: (e) => set({ ...e }),
+      carregarEstado: (e) => set(normalizarEstado(e)),
     }),
     {
       name: "picrewuai:personagem",
       version: VERSAO,
+      migrate: (salvo) => {
+        const s = salvo as EstadoPersonagem;
+        return normalizarEstado(s) as EstadoPersonagem & Acoes;
+      },
     },
   ),
 );

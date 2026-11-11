@@ -5,9 +5,9 @@
 Um único arquivo TypeScript/JSON descreve todos os itens. Todas as telas, filtros e o sistema de códigos leem dele.
 
 ```ts
-type Categoria = 'vestimenta' | 'arma' | 'cabeca' | 'acessorio1' | 'acessorio2';
+type Categoria = 'camisa' | 'calca' | 'arma' | 'calcado' | 'capa' | 'chapeu' | 'acessorio';
 type Classe = 'guerreiro' | 'arqueiro' | 'mago' | 'bardo' | 'ninja';
-type Animal = 'sapo' | 'macaco' | 'raposa' | 'gato' | 'veado' | 'carpa' | 'coruja' | 'cachorro';
+type Animal = 'macaco' | 'raposa' | 'gato' | 'veado' | 'cachorro';
 
 // Grupo de desbloqueio: itens iniciais + um grupo por dia do evento
 type GrupoDesbloqueio = 'inicial' | 'dia1' | 'dia2' | 'dia3' | 'dia4';
@@ -30,7 +30,7 @@ interface ItemDef {
 }
 ```
 
-> **Z-index global** (referência): capa-atrás 10, corpo (base) 20, sapato 30, vestimenta-baixo 40, vestimenta-cima 50, capa-frente 60, arma 70, cabeça 80. O app coleta a base + as camadas dos itens escolhidos e **desenha tudo ordenado por z**. Uma peça com partes na frente e atrás do corpo (capa) tem duas camadas com z diferentes.
+> **Z-index padrão por tipo** (`Z_POR_TIPO` em `src/lib/tipos.ts`): capa 10, corpo (base) 20, calçado 30, calça 40, camisa 50, arma 70, acessório 75, chapéu 80. A frente da capa usa z60, informado no nome do arquivo. O app coleta a base + as camadas dos itens escolhidos e **desenha tudo ordenado por z**. Uma peça com partes na frente e atrás do corpo (capa) tem duas camadas com z diferentes.
 
 > **Base (corpo) por animal:** `BASES_POR_ANIMAL[animal]` → PNG do corpo (desenhado em z=20). Hoje só o Veado tem base real; os demais usam a silhueta placeholder.
 
@@ -48,7 +48,7 @@ interface CenarioDef {
 }
 ```
 
-> **3 a 4 cenários no total, liberados 1 por dia** — o mesmo código do dia libera os itens **e** o cenário daquele dia.
+> **3 cenários no total, liberados 1 por dia** — o mesmo código do dia libera os itens **e** o cenário daquele dia.
 
 Exemplo:
 
@@ -78,27 +78,15 @@ interface EstadoPersonagem {
   animal: Animal | null;
   classe: Classe | null;
   cenario: string | null;         // fundo escolhido; define o tema dia/noite
-  selecao: {                      // item escolhido por categoria (id ou null)
-    vestimenta: string | null;
-    arma: string | null;
-    cabeca: string | null;
-    acessorio1: string | null;
-    acessorio2: string | null;
-  };
+  selecao: Record<Categoria, string | null>; // item escolhido por tipo (id ou null)
   ficha: {
     nomePersonagem: string;       // aparece na carta (fonte Adam Script)
     titulo?: string;              // epíteto/título — aparece na carta, abaixo do nome
-    status: {                     // 4 valores que aparecem na carta
-      vida: number;
-      forca: number;
-      intelecto: number;
-      velocidade: number;
-    };
+    // status NÃO fica no estado: é CALCULADO de animal+classe (lib/status.ts)
     habilidade?: string;          // campo de "habilidade" (uso na ficha; não vai na carta)
   };
   desbloqueios: GrupoDesbloqueio[]; // grupos já liberados, ex.: ['inicial','dia1']
   enviado: boolean;                 // true após o envio final → trava o editor
-  codigoPessoal: string | null;     // chave de sincronização (ex.: "raposa-4827")
   atualizadoEm: number;             // epoch ms da última mudança (last-write-wins)
 }
 ```
@@ -106,23 +94,26 @@ interface EstadoPersonagem {
 - Persistido automaticamente em `localStorage` a cada mudança (cache rápido/offline).
 - `inicial` está sempre desbloqueado.
 - Quando `enviado === true`, o editor entra em modo somente-leitura (envio é único e definitivo).
+- **Status é derivado** de `animal + classe` (`src/lib/status.ts`: base 2 + bônus de classe + bônus de raça, aditivo), **não armazenado** nem editável. Exibido na ficha e desenhado na carta.
 
-## Sincronização de progresso (cross-device) — ADR-015
+## Conta (usuário + senha) e sincronização — ADR-015
 
-Além do `localStorage`, o progresso sincroniza no **Supabase** para sobreviver a troca de aparelho / limpeza de dados ao longo dos 4 dias.
+A tela inicial pede **criar conta / entrar** (usuário + senha). A conta é a identidade e a chave do progresso (cross-device).
 
-- **Código pessoal:** na 1ª vez, o app gera um código legível (`codigoPessoal`, ex.: `raposa-4827`), o mostra em destaque (+ QR) e o usa como chave. Alta entropia o suficiente para dificultar sobrescrever o de outra pessoa.
-- **Salvar:** a cada mudança, `POST /api/progresso { codigo, estado }` (com **debounce** ~1–2 s). Upsert por `codigo`.
-- **Carregar:** ao abrir, `GET /api/progresso?codigo=…`; se o servidor tiver `atualizadoEm` mais recente que o local, adota o do servidor (**last-write-wins**). Em outro aparelho, digitar o código recupera tudo.
-- **Offline:** edita a partir do `localStorage`; sincroniza quando a conexão voltar.
+- **Sessão (cliente):** `useSessao` guarda `{ usuario, token }` no `localStorage` (chave `picrewuai:sessao`), separado do personagem.
+- **Auth:** `POST /api/auth { acao: "registrar"|"entrar", usuario, senha }`. Senha com **hash pbkdf2 + salt** no servidor; devolve um **token** estável. Validações: usuário `[a-z0-9_]{3,20}`, senha ≥ 4.
+- **Salvar progresso:** a cada mudança, `POST /api/progresso { usuario, token, estado }` (debounce ~1,5 s). O servidor **valida o token** (senão 401) e grava por usuário.
+- **Carregar:** ao abrir (logado), `GET /api/progresso?usuario=&token=`; se o servidor tiver `atualizadoEm` mais recente, adota (**last-write-wins**).
+- **Offline:** edita a partir do `localStorage`; sincroniza quando logar/conectar.
 
 ```ts
-// tabela Supabase: progresso
-// codigo (text, PK) · estado (jsonb) · atualizado_em (timestamptz) · enviado (bool)
+// tabelas Supabase (produção):
+// usuarios:  usuario (text, PK) · hash · salt · token · criado_em
+// progresso: usuario (text, PK) · estado (jsonb) · atualizado_em (timestamptz)
 ```
 
-> Endpoint via **API route** (chave de serviço do Supabase fica no servidor, não no cliente). Sem dado pessoal — só o personagem.
-> Em dev, sem chaves configuradas, o endpoint cai num **mock em arquivo** (`.dev-data/progresso/`) para dá pra testar localmente.
+> **Dev:** sem chaves Supabase, auth e progresso usam **mock em arquivo** (`.dev-data/usuarios`, `.dev-data/progresso`). Senhas sempre com hash, nunca em texto puro.
+> **Produção:** recomendado **Supabase Auth** no lugar da auth caseira (ver ADR-015).
 
 ## Sistema de códigos de desbloqueio
 
@@ -192,7 +183,7 @@ interface EnvioCarta {
     classe: Classe;
     animal: Animal;
     cenario: string;
-    status: { vida: number; forca: number; intelecto: number; velocidade: number };
+    status: { vida: number; forca: number; intelecto: number; destreza: number };
     enviadoEm: string;       // ISO timestamp (gerado no cliente)
   };
 }

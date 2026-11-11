@@ -6,9 +6,12 @@ import { usePersonagem } from "@/lib/store";
 import { comporCartaBlob } from "@/lib/desenharCartaBrowser";
 import {
   CENARIOS,
+  categoriasDe,
   estaDesbloqueado,
   itensDe,
 } from "@/lib/manifesto";
+import { statusDe, ROTULO_STATUS } from "@/lib/status";
+import { useSessao } from "@/lib/sessao";
 import {
   ANIMAIS,
   CATEGORIAS,
@@ -19,18 +22,6 @@ import {
 
 type Aba = Categoria | "cenario" | "ficha";
 
-const ABAS: { id: Aba; label: string }[] = [
-  { id: "cenario", label: "Cenário" },
-  ...CATEGORIAS.map((c) => ({ id: c.id as Aba, label: c.nome })),
-  { id: "ficha", label: "Ficha" },
-];
-
-const STATUS_CAMPOS: { chave: keyof Status; label: string }[] = [
-  { chave: "vida", label: "❤️ Vida" },
-  { chave: "forca", label: "⚔️ Força" },
-  { chave: "intelecto", label: "📖 Intelecto" },
-  { chave: "velocidade", label: "⚡ Velocidade" },
-];
 
 export default function Editor({
   onTrocarAnimal,
@@ -49,14 +40,14 @@ export default function Editor({
   const selecionarItem = usePersonagem((s) => s.selecionarItem);
   const setNome = usePersonagem((s) => s.setNome);
   const setTitulo = usePersonagem((s) => s.setTitulo);
-  const setStatus = usePersonagem((s) => s.setStatus);
   const aplicarCodigo = usePersonagem((s) => s.aplicarCodigo);
   const enviado = usePersonagem((s) => s.enviado);
   const marcarEnviado = usePersonagem((s) => s.marcarEnviado);
   const resetar = usePersonagem((s) => s.resetar);
-  const codigoPessoal = usePersonagem((s) => s.codigoPessoal);
+  const usuario = useSessao((s) => s.usuario);
+  const token = useSessao((s) => s.token);
 
-  const [aba, setAba] = useState<Aba>("cenario");
+  const [abaEscolhida, setAba] = useState<Aba>("cenario");
   const [codigo, setCodigo] = useState("");
   const [msg, setMsg] = useState<{ ok: boolean; texto: string } | null>(null);
   const [enviando, setEnviando] = useState(false);
@@ -81,6 +72,17 @@ export default function Editor({
   }
   const animalInfo = ANIMAIS.find((a) => a.id === animal);
   const classeInfo = CLASSES.find((c) => c.id === classe);
+  const statusAtual = statusDe(animal, classe);
+
+  // só mostra as abas de categoria que têm itens para este animal+classe
+  const comItens = categoriasDe(animal, classe);
+  const ABAS: { id: Aba; label: string }[] = [
+    { id: "cenario", label: "Cenário" },
+    ...CATEGORIAS.filter((c) => comItens.includes(c.id)).map((c) => ({ id: c.id as Aba, label: c.nome })),
+    { id: "ficha", label: "Ficha" },
+  ];
+  // se a aba aberta sumiu (ex.: trocou de classe), volta para Cenário
+  const aba: Aba = ABAS.some((a) => a.id === abaEscolhida) ? abaEscolhida : "cenario";
 
   function enviarCodigo() {
     const r = aplicarCodigo(codigo);
@@ -109,21 +111,27 @@ export default function Editor({
         selecao,
         nome: ficha.nomePersonagem,
         titulo: ficha.titulo ?? "",
-        status: ficha.status as unknown as Record<string, number>,
       });
       const fd = new FormData();
       fd.append("imagem", blob, "carta.png");
       fd.append(
         "meta",
         JSON.stringify({
+          usuario,
           nomePersonagem: ficha.nomePersonagem,
+          titulo: ficha.titulo,
           classe,
           animal,
           cenario,
-          status: ficha.status,
+          status: statusDe(animal, classe),
         }),
       );
+      fd.append("token", token ?? "");
       const res = await fetch("/api/enviar-carta", { method: "POST", body: fd });
+      if (res.status === 401) {
+        setErroEnvio("Sua sessão não foi reconhecida. Saia e entre de novo com seu usuário e senha.");
+        return;
+      }
       if (!res.ok) throw new Error("falha no envio");
       marcarEnviado();
     } catch {
@@ -146,16 +154,6 @@ export default function Editor({
           <button onClick={onTrocarClasse} style={linkBtn}>trocar</button>
         </span>
       </div>
-
-      {/* código pessoal (sincronização entre aparelhos) */}
-      {codigoPessoal && (
-        <div className="superficie" style={{ padding: "0.5rem 0.9rem", width: "min(92vw, 420px)", fontSize: "0.8rem", textAlign: "center" }}>
-          🔑 Seu código: <strong style={{ letterSpacing: "0.05em" }}>{codigoPessoal}</strong>
-          <div style={{ color: "var(--cor-texto-suave)", fontSize: "0.72rem" }}>
-            Guarde este código para acessar seu personagem em outro aparelho.
-          </div>
-        </div>
-      )}
 
       <PreviewCarta />
 
@@ -243,20 +241,19 @@ export default function Editor({
               Título (ex.: o Bravo)
               <input value={ficha.titulo ?? ""} maxLength={28} onChange={(e) => setTitulo(e.target.value)} style={inp} />
             </label>
-            <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-              {STATUS_CAMPOS.map((c) => (
-                <label key={c.chave} style={{ ...lbl, flex: "1 1 45%" }}>
-                  {c.label}
-                  <input
-                    type="number"
-                    min={0}
-                    max={99}
-                    value={ficha.status[c.chave]}
-                    onChange={(e) => setStatus(c.chave, Math.max(0, Math.min(99, Number(e.target.value) || 0)))}
-                    style={inp}
-                  />
-                </label>
-              ))}
+
+            <div>
+              <div style={{ fontSize: "0.82rem", marginBottom: 6 }}>
+                Status <span style={{ color: "var(--cor-texto-suave)" }}>(definido pela raça + classe)</span>
+              </div>
+              <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                {(Object.keys(ROTULO_STATUS) as (keyof Status)[]).map((k) => (
+                  <div key={k} style={{ flex: "1 1 45%", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.45rem 0.6rem", borderRadius: 8, border: "1px solid var(--cor-borda)", background: "var(--cor-superficie)", fontSize: "0.85rem" }}>
+                    <span>{ROTULO_STATUS[k]}</span>
+                    <strong style={{ fontSize: "1.05rem", color: "var(--cor-primaria)" }}>{statusAtual[k]}</strong>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}

@@ -80,7 +80,7 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 
 ## Dependências externas (não são código)
 
-- 🎨 **Arte** (ilustradora): bases dos 8 animais, ~150 itens, **3–4 cenários** (claros/escuros). ✅ **Molduras da carta já entregues** (`Assets Finais/`).
+- 🎨 **Arte** (ilustradora): bases dos 8 animais, ~150 itens, **3 cenários**. ✅ **Molduras da carta já entregues** (`Assets Finais/`).
 - 🗂️ **Conteúdo**: itens (e cenário) que desbloqueiam em cada dia.
 - 🔑 **Códigos**: os 4 textos dos códigos diários (definir perto do evento).
 - 🖨️ **Gráfica**: ✅ aceita sem sangria; definir tamanho da folha e perfil de cor; rodar uma amostra cedo.

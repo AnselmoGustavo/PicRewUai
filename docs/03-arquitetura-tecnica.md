@@ -13,7 +13,7 @@
 | Backend | **Serverless (Vercel Functions)** + **Supabase** (Storage + Postgres) | (1) sincronizar progresso cross-device; (2) receber as cartas para impressão + painel |
 | Hospedagem | **Vercel** (free) | App estático + funções serverless |
 
-> **Backend enxuto.** A lógica do app (montar personagem, códigos, gerar imagem) roda no navegador e funciona offline via `localStorage`. O Supabase entra em dois pontos: **sincronizar o progresso** entre aparelhos sob um código pessoal (ADR-015, ver [05](05-modelo-de-dados.md)) e **receber a carta final** para impressão (ver [06](06-exportacao-carta.md)). Editar funciona offline; sincronizar/enviar precisa de internet.
+> **Backend enxuto.** A lógica do app (montar personagem, códigos, gerar imagem) roda no navegador e funciona offline via `localStorage`. O servidor entra em três pontos: **conta (usuário+senha)** e **sincronização do progresso por usuário** (ADR-015, ver [05](05-modelo-de-dados.md)) e **receber a carta final** para impressão (ver [06](06-exportacao-carta.md)). Editar funciona offline; logar/sincronizar/enviar precisa de internet. Em dev, auth/progresso usam mock em arquivo; em produção, Supabase (recomendado Supabase Auth).
 
 ## Princípios de arquitetura
 
@@ -29,7 +29,7 @@
 ├── docs/                      # esta documentação
 ├── public/
 │   └── assets/
-│       ├── animais/           # base_sapo.png, base_raposa.png, ...
+│       ├── animais/           # (bases geradas em public/assets/itens/bases/)
 │       ├── itens/             # organizados por classe/categoria
 │       │   ├── guerreiro/
 │       │   ├── mago/
@@ -41,8 +41,9 @@
 │   ├── app/
 │   │   ├── (telas)/           # rotas Next.js (App Router)
 │   │   └── api/
-│   │       ├── progresso/     # sync do progresso (GET/POST) — Supabase
-│   │       └── enviar-carta/  # upload da carta final — Supabase
+│   │       ├── auth/          # criar conta / entrar (usuário + senha)
+│   │       ├── progresso/     # sync do progresso por usuário (GET/POST)
+│   │       └── enviar-carta/  # upload da carta final
 │   ├── admin/                 # ferramenta de montagem do PDF de impressão
 │   ├── components/            # Editor, PainelCategoria, PreviewCanvas, FichaForm, ...
 │   ├── lib/

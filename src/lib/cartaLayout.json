@@ -14,7 +14,7 @@
       { "key": "vida",       "x": 607, "y": 781, "w": 35, "h": 45, "fontePx": 34 },
       { "key": "forca",      "x": 607, "y": 829, "w": 35, "h": 45, "fontePx": 34 },
       { "key": "intelecto",  "x": 607, "y": 880, "w": 35, "h": 45, "fontePx": 34 },
-      { "key": "velocidade", "x": 607, "y": 926, "w": 35, "h": 45, "fontePx": 34 }
+      { "key": "destreza", "x": 607, "y": 926, "w": 35, "h": 45, "fontePx": 34 }
     ]
   },
   "_nota_titulo": "Título centralizado acima da linha decorativa (linha em y~284, x 202..534).",

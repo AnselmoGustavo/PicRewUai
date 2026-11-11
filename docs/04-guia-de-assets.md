@@ -1,6 +1,6 @@
 # 04 — Guia de Assets (para a ilustradora) ⭐
 
-> **Ilustradora:** Ana Beatriz — responsável por todos os assets dos personagens (corpo, vestimenta, acessórios, equipamentos) e possivelmente os cenários.
+> **Ilustradora:** Ana Beatriz — responsável por todos os assets dos personagens (corpo, roupas, acessórios, equipamentos) e possivelmente os cenários.
 
 > **Documento mais importante para começar a arte.** Ele precisa ser combinado e aprovado **antes** de produzir os itens em volume. Se o padrão de canvas/ancoragem mudar depois, boa parte da arte precisa ser refeita.
 
@@ -10,33 +10,34 @@
 
 Teste real (Veado-Mago) validou o pipeline. Padrões:
 - **Canvas 3150×4400** (aspecto da carta), **PNG transparente**, cada peça **pré-posicionada**. O app reduz para 744×1039 automaticamente.
-- **Uma peça pode ter várias camadas** (capa = frente + atrás; vestimenta = cima + baixo).
+- **7 tipos de item:** camisa · calça · arma · calçado · capa · chapéu · acessório.
 - **Base muda por classe** → um corpo por **animal+classe**.
-- **z-index global** (menor = mais atrás):
+- **z-index padrão por tipo** (menor = mais atrás) — o gerador aplica sozinho:
 
-> capa-atrás **10** · corpo **20** · sapato **30** · vest-baixo **40** · vest-cima **50** · capa-frente **60** · arma **70** · cabeça **80**
+> capa **10** · corpo **20** · calçado **30** · calça **40** · camisa **50** · arma **70** · acessório **75** · chapéu **80**
+
+- Só peças com **várias camadas** precisam de z no nome. Hoje isso acontece com a **capa** (frente z60 + atrás z10).
 
 ### Nomenclatura dos arquivos
 **Personagem pelado:** `animal-classe.png` (em `personages-pelados/<animal>/`). Ex.: `veado-mago.png`.
 
-**Itens:** `animal-classe-tipo-nome-grupo-zNN.png`
-- `tipo` = `vestimenta` · `arma` · `cabeca` · `acessorio1` · `acessorio2`
-- `nome` = slug, `_` entre palavras (ex.: `cajado_de_cristal`)
-- `grupo` = `inicial` · `dia1` · `dia2` · `dia3` · `dia4` (código do dia que libera). *Itens com código especial/à parte: a definir depois.*
-- `zNN` = z-index da camada (z10…z80)
+**Itens:** `animal-classe-tipo-nome-dia.png` (em `itens/<tipo>/`)
+- `tipo` = `camisa` · `calca` · `arma` · `calcado` · `capa` · `chapeu` · `acessorio`
+- `nome` = slug, `_` entre palavras (ex.: `espada_madeira`)
+- `dia` = `inicial` · `dia1` · `dia2` · `dia3` · `dia4` (código do dia que libera). *Itens com código especial/à parte: a definir depois.*
+- **Peça com várias camadas:** acrescenta `-zNN` em cada arquivo (mesmo nome, z diferente).
 
-**Regras:** só `-` separa campos; dentro de um campo use `_`. Tudo **minúsculo, sem acento/espaço**. Arquivos iguais em tudo menos no `zNN` = **a mesma peça** (várias camadas).
+**Regras:** só `-` separa campos; dentro de um campo use `_`. Tudo **minúsculo, sem acento/espaço**.
 
-Ex. (set Veado-Mago):
+Ex.:
 ```
-veado-mago.png
-veado-mago-cabeca-chapeu_de_mago-dia1-z80.png
-veado-mago-arma-cajado_de_cristal-dia1-z70.png
-veado-mago-vestimenta-vestes_de_mago-dia1-z40.png   (baixo)
-veado-mago-vestimenta-vestes_de_mago-dia1-z50.png   (cima)
-veado-mago-acessorio1-capa_verde-dia1-z10.png       (atrás)
-veado-mago-acessorio1-capa_verde-dia1-z60.png       (frente)
-veado-mago-acessorio2-botas_de_couro-dia1-z30.png
+raposa-guerreiro-arma-espada_madeira-dia1.png
+raposa-guerreiro-camisa-tunica-dia1.png
+raposa-guerreiro-calca-short-dia1.png
+veado-mago-chapeu-chapeu-dia2.png
+veado-mago-calcado-botas-dia2.png
+veado-mago-capa-capa-dia2-z10.png          (capa, parte de trás)
+veado-mago-capa-capa-dia2-z60.png          (capa, parte da frente)
 ```
 
 > O gerador (`scripts/gerar-assets.mjs`) lê a pasta `Assets Prontos/`, agrupa as camadas, otimiza para `public/` e **monta o manifesto automaticamente**. Adicionar item = soltar arquivo(s) + rodar o script.
@@ -67,64 +68,42 @@ A moldura da carta cobre partes da imagem. Evite posicionar o rosto/detalhe-chav
 
 Ver posições exatas em [11-carta-composicao](11-carta-composicao.md).
 
-## O template do corpo (o mais importante!)
+## Encaixe das peças
 
-Para um item universal (ex.: um capacete) encaixar em **todos os 8 animais**, os corpos precisam estar **alinhados a um mesmo gabarito**:
+Como cada peça é desenhada **para o corpo daquele animal+classe** (ADR-016), não há gabarito comum entre animais: basta que todas as peças de uma combinação usem **o mesmo canvas e a mesma pose** do corpo pelado dela. Para conferir um conjunto novo, monte-o com `npm run assets` e veja no editor (ou peça uma carta de exemplo).
 
-- Todos os animais desenhados na **mesma pose base** (ex.: de frente, em pé/sentado, corpo inteiro).
-- **Regiões do corpo na mesma posição** entre os animais:
-  - **Zona da cabeça** — mesma altura/centro → onde chapéus/elmos/coroas se apoiam.
-  - **Zona do tronco** — mesma área → onde a vestimenta assenta.
-  - **Zona das mãos** — mesma posição → onde a arma/item é segurado.
-  - **Zona dos pés/base** — mesma linha do chão.
-- Recomendação: criar **1 gabarito (template) mestre** com essas zonas marcadas e desenhar os 8 animais por cima dele.
-
-### Teste de validação (fazer cedo!)
-
-Antes de produzir tudo: desenhe **1 item de cada categoria** e teste nos **8 animais**. Se um elmo encaixa bem no gato mas flutua acima da coruja, ajustamos o gabarito **agora**, não depois de 150 itens prontos.
-
-### Animais problemáticos
-
-Sapo, macaco, raposa, gato, veado, cachorro têm corpos "humanóides/quadrúpedes" relativamente parecidos. Mas:
-- **Carpa** (peixe) e **coruja** (ave) têm anatomia bem diferente.
-- A **Ana Beatriz** desenha todos os animais, então o encaixe fica sob controle dela — a tendência é dar a esses dois uma **pose antropomórfica coerente** (em pé, com "braços") para caber no mesmo gabarito dos demais.
-- Ainda assim, **fazer o teste de validação acima** (1 item por categoria nos 8 animais) para confirmar o encaixe antes de escalar.
+**Animais (5):** macaco, raposa, gato, veado, cachorro.
 
 ## Camadas e ordem (z-index)
 
 O app empilha as imagens nesta ordem padrão (fundo → frente):
 
 ```
-0. cenário (fundo)  ← imagem OPACA que preenche a carta e define o tema dia/noite
-1. base do animal
-2. vestimenta
-3. acessório 1     (coisas atrás: capa, asas, mochila)
-4. item de cabeça
-5. arma
-6. acessório 2     (coisas na frente: item na mão, colar, óculos)
+ 0  cenário (fundo)    ← imagem OPACA que preenche a carta e define o tema dia/noite
+10  capa (parte de trás)
+20  corpo (personagem pelado)
+30  calçado
+40  calça
+50  camisa
+60  capa (parte da frente)
+70  arma
+75  acessório
+80  chapéu
 ```
 
 Depois dessas camadas, o app coloca a **moldura da carta** (frames + textos) por cima — ver [11-carta-composicao](11-carta-composicao.md).
 
 - Desenhe cada item pensando em **qual camada ele ocupa**.
 - Se um item precisar furar essa ordem (ex.: uma arma nas costas, atrás do corpo), me avise — damos um **z-index especial** a ele no app.
-- Itens que se sobrepõem a partes do corpo (ex.: vestimenta cobrindo o tronco) devem ser desenhados **cobrindo** essa parte, já que ficam por cima da base.
+- Itens que se sobrepõem a partes do corpo (ex.: camisa cobrindo o tronco) devem ser desenhados **cobrindo** essa parte, já que ficam por cima da base.
 
 ## Inventário de arte a produzir
 
-### Bases de animais — 8 arquivos
-`base_sapo.png`, `base_macaco.png`, `base_raposa.png`, `base_gato.png`, `base_veado.png`, `base_carpa.png`, `base_coruja.png`, `base_cachorro.png`
+Por **animal+classe** (5 animais × 5 classes = 25 combinações):
+- **1 corpo** (personagem pelado): `animal-classe.png`
+- **Itens** nos 7 tipos (camisa, calça, arma, calçado, capa, chapéu, acessório). Nem todo tipo precisa existir em toda combinação; o editor mostra "Nenhum" quando não há.
 
-### Itens — ~150 arquivos
-5 classes × 5 categorias × ~5–6 itens = **~125 a 150 itens**.
-
-| Classe | vestimenta | arma | item de cabeça | acessório 1 | acessório 2 |
-|--------|:----------:|:----:|:--------------:|:-----------:|:-----------:|
-| Guerreiro | 5–6 | 5–6 | 5–6 | 5–6 | 5–6 |
-| Arqueiro | 5–6 | 5–6 | 5–6 | 5–6 | 5–6 |
-| Mago | 5–6 | 5–6 | 5–6 | 5–6 | 5–6 |
-| Bardo | 5–6 | 5–6 | 5–6 | 5–6 | 5–6 |
-| Ninja | 5–6 | 5–6 | 5–6 | 5–6 | 5–6 |
+Pronto hoje: **Veado-Mago** e **Raposa** (as 5 classes), com roupa básica (dia 1) e avançada (dia 2).
 
 ### Cenários (fundos) — N arquivos (a definir quantos)
 - Imagens **opacas** de 744 × 1039 que preenchem a carta atrás do personagem.

@@ -103,7 +103,7 @@ Não se aplica ao participante nesta versão (a carta é surpresa e não é expo
 - [x] Moldura, posições e camadas definidas → [11-carta-composicao](11-carta-composicao.md).
 - [x] Gráfica aceita **sem sangria**.
 - [x] Fonte **Adam Script** no projeto (`font/RTL-AdamScript-Regular.ttf`).
-- [x] Mapeamento Status 1–4 (Vida/Força/Intelecto/Velocidade) confirmado.
+- [x] Mapeamento Status 1–4 (Vida/Força/Intelecto/Destreza) confirmado.
 - [x] Nome e status são **escritos pelo participante** e enviados em JSON com a imagem.
 - [x] Storage: **Supabase**. Limite: **1 envio final** por pessoa.
 - [ ] Layout do PDF de impressão (proposta: A4 com guias de corte — detalhar na Fase 4b).

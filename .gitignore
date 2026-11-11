@@ -12,6 +12,9 @@
 # envios recebidos (mock de dev)
 /envios
 
+# cartas baixadas do Supabase (npm run baixar-cartas)
+/cartas-baixadas
+
 # progresso salvo pelo mock de dev
 /.dev-data
 

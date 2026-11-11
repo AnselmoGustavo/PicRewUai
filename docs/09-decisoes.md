@@ -69,8 +69,8 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 ### ADR-009 — Cenários selecionáveis e dia/noite pelo cenário
 **Data:** 07/2026 · **Status:** Aceito
 **Contexto:** As cartas têm fundos ilustrados; a moldura tem versões dia (tinta escura) e noite (tinta branca).
-**Decisão:** O picrew inclui uma categoria de **cenário** (fundo opaco que preenche a carta). **3 a 4 cenários no total, liberados 1 por dia** (mesmo código do dia). Cada cenário é marcado `claro`/`escuro`, e isso **decide automaticamente** a moldura dia/noite — sem toggle manual nem detecção de brilho.
-**Consequências:** Adiciona uma categoria de arte (3–4 cenários, equilibrar claros/escuros). Simplifica a lógica de dia/noite (determinística). Ver [11](11-carta-composicao.md).
+**Decisão:** O picrew inclui uma categoria de **cenário** (fundo opaco que preenche a carta). **3 cenários no total, liberados 1 por dia** (mesmo código do dia). Cada cenário é marcado `claro`/`escuro`, e isso **decide automaticamente** a moldura dia/noite — sem toggle manual nem detecção de brilho.
+**Consequências:** Adiciona uma categoria de arte (3 cenários). Simplifica a lógica de dia/noite (determinística). Ver [11](11-carta-composicao.md).
 
 ---
 
@@ -82,10 +82,10 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ---
 
-### ADR-011 — Status = 4 atributos digitados pelo participante
-**Data:** 07/2026 · **Status:** Aceito
-**Decisão:** "Status" são **4 valores** exibidos na carta: **Vida, Força, Intelecto, Velocidade** (ícones já embutidos no frame). O **nome e os 4 status são digitados pelo participante**, e o **app os desenha diretamente na carta** nas posições definidas ([11](11-carta-composicao.md)) — ficam "queimados" na imagem, não são enviados como dado à parte (JSON só opcional para o painel). "Habilidade" é campo da ficha e **não** vai na carta.
-**Consequências:** Define os campos da ficha. O render precisa carregar a fonte Adam Script antes de desenhar. Validar entrada (caixa de status ~1–2 dígitos). Ver [05](05-modelo-de-dados.md), [11](11-carta-composicao.md).
+### ADR-011 — Status = 4 atributos ~~digitados~~ CALCULADos (base 2 + classe + raça)
+**Data:** 07/2026 · **Atualizado:** 08/2026 · **Status:** Aceito
+**Decisão:** "Status" são **4 valores** na carta: **Vida, Força, Intelecto, Destreza** (ícones embutidos no frame). ~~Digitados pelo participante.~~ **Agora são CALCULADOS**: base **2** em cada + bônus de **classe** (+2 principal, +1 secundário) + bônus de **raça/animal** (+1), aditivo e sem penalidade (ficam entre 2 e 5). Tabelas em `src/lib/status.ts`. O participante digita só **nome e título**; a aba **Ficha** continua, mas o status é **somente leitura**.
+**Consequências:** Status deixa de ser estado armazenado (derivado de animal+classe). Cada combinação animal×classe tem um perfil próprio. Ver [02](02-especificacao-funcional.md), [05](05-modelo-de-dados.md).
 
 ---
 
@@ -111,21 +111,23 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ---
 
-### ADR-015 — Sincronização do progresso no Supabase com código pessoal
-**Data:** 07/2026 · **Status:** Aceito (substitui a parte "sem backend" da ADR-003)
-**Contexto:** Participantes abrem o app poucas vezes ao longo de 4 dias, desbloqueiam itens por código diário e podem trocar de aparelho — não podem perder o personagem nem refazer tudo.
-**Decisão:** Além do `localStorage` (cache offline), o **progresso é sincronizado no Supabase**. Na 1ª vez, o app **gera um código pessoal legível** (ex.: `raposa-4827`), mostra em destaque (+ QR) e usa como chave do registro. A cada mudança, faz upsert (com debounce); ao abrir, busca a versão mais recente (last-write-wins por `atualizadoEm`). Em outro aparelho, digitar o código recupera tudo.
-**Consequências:** Cross-device sem login/senha. O participante precisa **guardar o código** (se perder o código E o localStorage, não recupera). Requer projeto Supabase + chaves; o progresso não tem dado pessoal (só o personagem). Endpoint via API route (chave de serviço no servidor) com código de alta entropia para dificultar sobrescrita alheia. Ver [05](05-modelo-de-dados.md), [03](03-arquitetura-tecnica.md).
+### ADR-015 — Identidade por **conta (usuário + senha)**; progresso por usuário
+**Data:** 07/2026 · **Atualizado:** 08/2026 · **Status:** Aceito (substitui a parte "sem backend" da ADR-003)
+**Contexto:** O app fica online ~1 mês. Precisamos **diferenciar quem é quem** e manter o progresso por pessoa, cross-device.
+**Decisão:** A tela inicial pede **criar conta / entrar (usuário + senha)**. O progresso é sincronizado **por usuário** (`localStorage` como cache + servidor). *(Decisão original: código pessoal auto-gerado — substituída por contas.)*
+- **Senhas com hash** (pbkdf2 + salt) no servidor — **nunca em texto puro**. Login devolve um **token** (guardado na sessão local) que autentica as chamadas de progresso (um usuário não sobrescreve o de outro → 401).
+- Hoje: **mock de dev** em arquivo (`.dev-data/usuarios`, `.dev-data/progresso`). API: `/api/auth` (registrar/entrar) e `/api/progresso` (GET/POST com usuario+token).
+**Consequências:** Cross-device via login. Sem recuperação de senha por enquanto (esqueceu → nova conta / reset manual). **Recomendação para produção:** usar **Supabase Auth** (hash/sessão/segurança prontos) em vez da auth caseira — a UI de login/cadastro já serve; só o backend troca. Ver [05](05-modelo-de-dados.md), [03](03-arquitetura-tecnica.md).
 
 ---
 
 ### ADR-016 — Itens por animal+classe, mix-and-match, multi-camada com z-index
 **Data:** 08/2026 · **Status:** Aceito (substitui ADR-002)
 **Contexto:** Teste de posicionamento com arte real (Veado-Mago) confirmou que as peças são **específicas por animal+classe**, desenhadas full-canvas (3150×4400) já posicionadas.
-**Decisão:** Itens são **por animal+classe** (não universais), montados **peça a peça (mix-and-match)** nas categorias (cabeça, arma, vestimenta, acessórios). Cada item é um ou mais PNGs full-canvas pré-posicionados; o app só **empilha por z-index**. Um item pode ter **várias camadas** (ex.: capa = frente + atrás; vestimenta = cima + baixo) porque peças envolvem o corpo. A ordem de z vem do número no nome do arquivo (0 = frente … maior = fundo).
+**Decisão:** Itens são **por animal+classe** (não universais), montados **peça a peça (mix-and-match)** em **7 tipos**: camisa, calça, arma, calçado, capa, chapéu, acessório *(atualizado 11/2026; antes eram 5 categorias, com camisa+calça juntas em "vestimenta")*. Cada item é um ou mais PNGs full-canvas pré-posicionados; o app só **empilha por z-index**. O z vem do **tipo** (padrão em `Z_POR_TIPO`); só peças de várias camadas, como a capa (frente + atrás), informam o z no nome do arquivo.
 **Consequências:** Encaixe perfeito e customização máxima. **Custo de arte muito maior** que o universal (volta a tendência de centenas/milhares de arquivos — ver flag de escopo abaixo). O modelo de dados muda: `ItemDef` passa a ter uma lista de camadas `{arquivo, z}`. Ver [04](04-guia-de-assets.md), [05](05-modelo-de-dados.md).
 
-> ⚠️ **Escopo de arte em aberto:** por animal+classe com mix-and-match pode gerar MUITOS assets (8 animais × 5 classes × itens × camadas). Definir com a ilustradora quantos itens por categoria por combinação e se **todas as 40 combinações** terão arte completa até 31/10 — isso é crítico para o prazo.
+> ⚠️ **Escopo de arte em aberto:** por animal+classe com mix-and-match pode gerar MUITOS assets (5 animais × 5 classes × itens × camadas). Definir com a ilustradora quantos itens por categoria por combinação e se **todas as 40 combinações** terão arte completa até 31/10 — isso é crítico para o prazo.
 
 ---
 

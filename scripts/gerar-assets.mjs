@@ -4,7 +4,9 @@
 //
 // Convenção (ver docs/04-guia-de-assets.md):
 //   personagem pelado: animal-classe.png
-//   item: animal-classe-tipo-nome-raridade-grupo-zNN.png  (camadas = mesmo nome, z diferente)
+//   item: animal-classe-tipo-nome-dia.png         (z vem do tipo)
+//         animal-classe-tipo-nome-dia-zNN.png     (z explícito: peças de várias camadas,
+//                                                  ex.: capa frente -z60 + atrás -z10)
 //
 // Uso: npm run assets
 import { createCanvas, loadImage } from "@napi-rs/canvas";
@@ -17,6 +19,11 @@ const W = 744, H = 1039;
 const RAIZ = "Assets Prontos";
 const OUT = "public/assets/itens";
 const JSON_SAIDA = "src/lib/itens-gerados.json";
+
+// z padrão por tipo — manter em sincronia com Z_POR_TIPO em src/lib/tipos.ts
+const Z_POR_TIPO = {
+  capa: 10, calcado: 30, calca: 40, camisa: 50, arma: 70, acessorio: 75, chapeu: 80,
+};
 
 function walk(dir) {
   let out = [];
@@ -68,12 +75,17 @@ const porItem = new Map(); // id -> item em construção
 for (const src of walk(join(RAIZ, "itens"))) {
   const nome = basename(src, ".png");
   const p = nome.split("-");
-  if (p.length !== 6 || !/^z\d+$/.test(p[5])) {
+  const temZ = p.length === 6 && /^z\d+$/.test(p[5]);
+  if (p.length !== 5 && !temZ) {
     console.warn(`item ignorado (nome fora do padrão): ${nome}`);
     continue;
   }
-  const [animal, classe, tipo, nomeItem, grupo, zRaw] = p;
-  const z = parseInt(zRaw.slice(1), 10);
+  const [animal, classe, tipo, nomeItem, grupo] = p;
+  if (!(tipo in Z_POR_TIPO)) {
+    console.warn(`item ignorado (tipo "${tipo}" desconhecido): ${nome}`);
+    continue;
+  }
+  const z = temZ ? parseInt(p[5].slice(1), 10) : Z_POR_TIPO[tipo];
   const id = p.slice(0, 5).join("-"); // sem o zNN
   const arquivo = `/assets/itens/${nome}.png`;
   await otimizar(src, `${nome}.png`);

@@ -26,7 +26,7 @@ O app tem dois papéis:
 ## Personagem — modelo conceitual
 
 - Cada personagem tem **1 animal base** (o corpo completo do animal) — sem customização de olhos/boca/etc. nesta versão.
-- **8 animais:** sapo, macaco, raposa, gato, veado, carpa, coruja, cachorro.
+- **5 animais:** macaco, raposa, gato, veado, cachorro. *(Sapo, coruja e carpa saíram em 11/2026.)*
 - Cada participante escolhe **1 classe** entre 5: guerreiro, arqueiro, mago, bardo, ninja.
 - A classe **filtra** quais itens ficam disponíveis.
 - **5 categorias de item:** vestimenta, arma, item de cabeça, acessório 1, acessório 2.

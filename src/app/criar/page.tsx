@@ -2,23 +2,27 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Editor from "@/components/Editor";
 import { usePersonagem } from "@/lib/store";
+import { useSessao } from "@/lib/sessao";
 import { useSyncProgresso } from "@/lib/sync";
 import { ANIMAIS, CLASSES } from "@/lib/tipos";
 
 type Etapa = "animal" | "classe" | "editor";
 
 export default function CriarPage() {
+  const router = useRouter();
   const [montado, setMontado] = useState(false);
   const [etapa, setEtapa] = useState<Etapa>("animal");
 
+  const usuario = useSessao((s) => s.usuario);
   const animal = usePersonagem((s) => s.animal);
   const classe = usePersonagem((s) => s.classe);
   const setAnimal = usePersonagem((s) => s.setAnimal);
   const setClasse = usePersonagem((s) => s.setClasse);
 
-  // sincronização de progresso (código pessoal + servidor)
+  // sincronização de progresso (por usuário logado)
   useSyncProgresso();
 
   // guarda de hidratação (o estado vem do localStorage no cliente)
@@ -31,7 +35,12 @@ export default function CriarPage() {
     }
   }, []);
 
-  if (!montado) {
+  // exige login
+  useEffect(() => {
+    if (montado && !usuario) router.replace("/");
+  }, [montado, usuario, router]);
+
+  if (!montado || !usuario) {
     return <Centro><p style={{ color: "var(--cor-texto-suave)" }}>Carregando…</p></Centro>;
   }
 

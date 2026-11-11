@@ -72,9 +72,9 @@ Fonte da verdade das coordenadas: `src/lib/cartaLayout.json`.
 | Status 1 (Vida ❤️) | 607 | 781 | 35 | 45 | 34 | escura |
 | Status 2 (Força ⚔️) | 607 | 829 | 35 | 45 | 34 | escura |
 | Status 3 (Intelecto 📖) | 607 | 880 | 35 | 45 | 34 | escura |
-| Status 4 (Velocidade ⚡) | 607 | 926 | 35 | 45 | 34 | escura |
+| Status 4 (Destreza ⚡) | 607 | 926 | 35 | 45 | 34 | escura |
 
-> Mapeamento Status 1–4 → Vida / Força / Intelecto / Velocidade (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita** nome, **título** e status na ficha; o **app os desenha na carta** nestas posições (fonte Adam Script). A caixa de status comporta ~1–2 dígitos — validar a entrada.
+> Mapeamento Status 1–4 → Vida / Força / Intelecto / Destreza (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita nome e título**; o **status é calculado** de animal+classe (`lib/status.ts`). O app desenha os três na carta (fonte Adam Script). Status fica entre 2 e 5 (1 dígito).
 > **Sem preenchimento** atrás do nome nem do título (decisão de design). Ambos ficam direto sobre a ribbon/cenário, então a **cor acompanha o tema** (`corTexto` no dia, `corTextoClaro` na noite) para manter a legibilidade.
 
 > 🎨 **Pendente (calibrar com cenários reais):** cores/opacidades foram definidas sobre fundo placeholder. Ao integrar os cenários reais, revisar o **contraste dos números de status** (e do título) — ajustar cor/opacidade se necessário.

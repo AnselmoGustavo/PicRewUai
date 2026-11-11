@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start",
     "assets": "node scripts/gerar-assets.mjs",
+    "organizar": "node scripts/organizar-itens.mjs",
     "cenarios": "node scripts/otimizar-cenarios.mjs",
-    "carta:exemplo": "node scripts/gerar-carta-exemplo.mjs"
+    "carta:exemplo": "node scripts/gerar-carta-exemplo.mjs",
+    "baixar-cartas": "node scripts/baixar-cartas.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
