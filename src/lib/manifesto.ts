@@ -9,6 +9,7 @@ import type {
   ItemDef,
 } from "./tipos";
 import { CATEGORIAS } from "./tipos";
+import { CODIGOS_ITENS } from "./codigosItens";
 
 // ---- ITENS (arte por animal+classe, ADR-016) ----
 // Gerados automaticamente a partir de "Assets Prontos/" por scripts/gerar-assets.mjs.
@@ -67,4 +68,25 @@ export function estaDesbloqueado(
   desbloqueios: GrupoDesbloqueio[],
 ): boolean {
   return grupo === "inicial" || desbloqueios.includes(grupo);
+}
+
+/** "animal-classe-tipo-nome-dia" -> "classe/tipo/nome" (chave dos arquivos de bônus e de códigos). */
+export function chaveItem(itemId: string): string {
+  const [, classe, tipo, nome] = itemId.split("-");
+  return `${classe}/${tipo}/${nome}`;
+}
+
+/** Item com código próprio (codigosItens.ts) só libera com o código; os outros seguem o dia. */
+export function itemDesbloqueado(
+  item: ItemDef,
+  desbloqueios: GrupoDesbloqueio[],
+  itensLiberados: string[] | undefined,
+): boolean {
+  const chave = chaveItem(item.id);
+  if (CODIGOS_ITENS[chave]?.trim()) return (itensLiberados ?? []).includes(chave);
+  return estaDesbloqueado(item.grupo, desbloqueios);
+}
+
+export function itemTemCodigo(item: ItemDef): boolean {
+  return Boolean(CODIGOS_ITENS[chaveItem(item.id)]?.trim());
 }

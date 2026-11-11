@@ -84,6 +84,7 @@ export interface EstadoPersonagem {
   ficha: Ficha;
   desbloqueios: GrupoDesbloqueio[];
   titulos: string[]; // títulos desbloqueados por código (além do inicial)
+  itensLiberados: string[]; // itens com código próprio já liberados (chave "classe/tipo/nome")
   enviado: boolean;
   atualizadoEm: number; // epoch ms da última mudança (last-write-wins)
 }

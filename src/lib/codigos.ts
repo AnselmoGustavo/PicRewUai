@@ -3,6 +3,7 @@
 // trocar por comparação de HASH (sha256) para não deixá-los legíveis no fonte.
 import type { GrupoDesbloqueio } from "./tipos";
 import { TITULOS } from "./titulos";
+import { CODIGOS_ITENS } from "./codigosItens";
 
 // Códigos de exemplo (placeholder) — definir os reais perto do evento.
 const CODIGOS: Record<Exclude<GrupoDesbloqueio, "inicial">, string> = {
@@ -52,4 +53,13 @@ export function titulosDoCodigo(input: string): string[] {
   if (!c) return [];
   if (c === normalizar(CODIGO_MESTRE)) return TITULOS.map((t) => t.titulo);
   return TITULOS.filter((t) => normalizar(t.codigo) === c).map((t) => t.titulo);
+}
+
+/** Itens (chave "classe/tipo/nome") liberados por este código (lib/codigosItens.ts). Mestre libera todos. */
+export function itensDoCodigo(input: string): string[] {
+  const c = normalizar(input);
+  if (!c) return [];
+  const comCodigo = Object.entries(CODIGOS_ITENS).filter(([, cod]) => normalizar(cod));
+  if (c === normalizar(CODIGO_MESTRE)) return comCodigo.map(([k]) => k);
+  return comCodigo.filter(([, cod]) => normalizar(cod) === c).map(([k]) => k);
 }

@@ -8,11 +8,13 @@ import {
   CENARIOS,
   categoriasDe,
   estaDesbloqueado,
+  itemDesbloqueado,
+  itemTemCodigo,
   itensDe,
 } from "@/lib/manifesto";
 import { statusDe, bonusDosItens, bonusDoItem, textoBonus, ROTULO_STATUS } from "@/lib/status";
 import { titulosDisponiveis } from "@/lib/store";
-import { titulosDoCodigo } from "@/lib/codigos";
+import { titulosDoCodigo, itensDoCodigo } from "@/lib/codigos";
 import { TITULOS } from "@/lib/titulos";
 import { useSessao } from "@/lib/sessao";
 import { salvarProgressoRemoto } from "@/lib/sync";
@@ -41,6 +43,7 @@ export default function Editor({
   const ficha = usePersonagem((s) => s.ficha);
   const desbloqueios = usePersonagem((s) => s.desbloqueios);
   const titulosLiberados = usePersonagem((s) => s.titulos);
+  const itensLiberados = usePersonagem((s) => s.itensLiberados);
   const setCenario = usePersonagem((s) => s.setCenario);
   const selecionarItem = usePersonagem((s) => s.selecionarItem);
   const setNome = usePersonagem((s) => s.setNome);
@@ -104,7 +107,7 @@ export default function Editor({
   const aba: Aba = ABAS.some((a) => a.id === abaEscolhida) ? abaEscolhida : "cenario";
 
   function enviarCodigo() {
-    const { resultado: r, titulosNovos } = aplicarCodigo(codigo);
+    const { resultado: r, titulosNovos, itensNovos } = aplicarCodigo(codigo);
     const partes: string[] = [];
     if (r.tipo === "mestre") partes.push("🔓 Tudo desbloqueado (mestre).");
     else if (r.tipo === "grupo" && r.grupo === "envio") partes.push("📨 Envio liberado! Quando terminar, é só enviar seu personagem.");
@@ -112,8 +115,13 @@ export default function Editor({
     if (titulosNovos.length && r.tipo !== "mestre") {
       partes.push(`🏅 Novo título: ${titulosNovos.map((t) => `“${t}”`).join(", ")} — escolha na aba Ficha.`);
     }
+    if (itensNovos.length && r.tipo !== "mestre") {
+      const n = itensNovos.length;
+      partes.push(`🎁 ${n} item${n > 1 ? "s" : ""} especial${n > 1 ? "is" : ""} desbloqueado${n > 1 ? "s" : ""}!`);
+    }
     if (partes.length) setMsg({ ok: true, texto: partes.join(" ") });
-    else if (titulosDoCodigo(codigo).length) setMsg({ ok: true, texto: "Você já tem esse título. 😉" });
+    else if (titulosDoCodigo(codigo).length || itensDoCodigo(codigo).length)
+      setMsg({ ok: true, texto: "Você já desbloqueou esse código. 😉" });
     else setMsg({ ok: false, texto: "Código inválido." });
     setCodigo("");
   }
@@ -244,10 +252,11 @@ export default function Editor({
           <Grade>
             <Tile nome="Nenhum" selecionado={selecao[aba] === null} onClick={() => selecionarItem(aba, null)} />
             {itensDe(animal, classe, aba).map((it) => {
-              const lock = !estaDesbloqueado(it.grupo, desbloqueios);
+              const lock = !itemDesbloqueado(it, desbloqueios, itensLiberados);
               return (
                 <Tile
                   key={it.id}
+                  dica={lock && itemTemCodigo(it) ? "Item especial — libera com um código especial" : undefined}
                   nome={[it.nome, textoBonus(bonusDoItem(it.id))].filter(Boolean).join(" · ")}
                   cor={it.cor}
                   img={it.thumb}
@@ -369,6 +378,7 @@ function Tile({
   imgContain,
   selecionado,
   bloqueado,
+  dica,
   onClick,
 }: {
   nome: string;
@@ -377,13 +387,14 @@ function Tile({
   imgContain?: boolean;
   selecionado?: boolean;
   bloqueado?: boolean;
+  dica?: string;
   onClick?: () => void;
 }) {
   return (
     <button
       onClick={onClick}
       disabled={bloqueado}
-      title={bloqueado ? "Bloqueado — use o código do dia" : nome}
+      title={dica ?? (bloqueado ? "Bloqueado — use o código do dia" : nome)}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -417,7 +428,7 @@ function Tile({
           fontSize: "1.1rem",
         }}
       >
-        {bloqueado ? "🔒" : ""}
+        {bloqueado ? (dica ? "🎁" : "🔒") : ""}
       </span>
       {nome}
     </button>

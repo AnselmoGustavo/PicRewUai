@@ -137,20 +137,23 @@ for (const item of porItem.values()) {
 writeFileSync(JSON_SAIDA, JSON.stringify({ bases, itens }, null, 2));
 console.log(`bases: ${Object.keys(bases).length} | itens: ${itens.length} -> ${JSON_SAIDA}`);
 
-// ---- aviso: itens sem linha no arquivo de bônus (src/lib/bonusItens.ts) ----
-{
-  const ARQ_BONUS = "src/lib/bonusItens.ts";
-  const comBonus = new Set(
-    [...readFileSync(ARQ_BONUS, "utf8").matchAll(/^\s*"([a-z_]+\/[a-z_]+\/[a-z0-9_]+)"\s*:/gm)].map((m) => m[1]),
+// ---- aviso: itens sem linha nos arquivos editáveis (bônus e códigos) ----
+for (const [arq, valor, efeito] of [
+  ["src/lib/bonusItens.ts", "{}", "ficam sem bônus"],
+  ["src/lib/codigosItens.ts", '""', "seguem a regra do dia"],
+]) {
+  const listados = new Set(
+    [...readFileSync(arq, "utf8").matchAll(/^\s*"([a-z_]+\/[a-z_]+\/[a-z0-9_]+)"\s*:/gm)].map((m) => m[1]),
   );
   const faltando = new Map();
   for (const it of itens) {
     const [, classe, tipo, nome, dia] = it.id.split("-");
     const k = `${classe}/${tipo}/${nome}`;
-    if (!comBonus.has(k) && !faltando.has(k)) faltando.set(k, `${it.nome} (${dia})`);
+    if (!listados.has(k) && !faltando.has(k)) faltando.set(k, `${it.nome} (${dia})`);
   }
   if (faltando.size) {
-    console.log(`\n${faltando.size} item(ns) sem linha em ${ARQ_BONUS} (ficam sem bônus). Cole e ajuste:`);
-    for (const [k, nome] of [...faltando].sort()) console.log(`  "${k}": {}, // ${nome}`);
+    console.log(`
+${faltando.size} item(ns) sem linha em ${arq} (${efeito}). Cole e ajuste:`);
+    for (const [k, nome] of [...faltando].sort()) console.log(`  "${k}": ${valor}, // ${nome}`);
   }
 }

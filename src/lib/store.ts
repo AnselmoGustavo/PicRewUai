@@ -9,7 +9,7 @@ import type {
   Selecao,
 } from "./tipos";
 import { ANIMAIS } from "./tipos";
-import { validarCodigo, titulosDoCodigo, TODOS_OS_GRUPOS } from "./codigos";
+import { validarCodigo, titulosDoCodigo, itensDoCodigo, TODOS_OS_GRUPOS } from "./codigos";
 import { TITULOS, TITULO_INICIAL } from "./titulos";
 import { CENARIOS } from "./manifesto";
 
@@ -17,7 +17,8 @@ import { CENARIOS } from "./manifesto";
 // v3: saíram os animais sapo, coruja e carpa
 // v4: saíram os cenários Padrão e dia 4 (3 cenários no total)
 // v5: título deixou de ser texto livre (lista em lib/titulos.ts, liberada por códigos)
-const VERSAO = 5;
+// v6: itens com código próprio (lib/codigosItens.ts) → itensLiberados
+const VERSAO = 6;
 
 /** Títulos que o personagem pode escolher: o inicial + os desbloqueados que ainda existem na lista. */
 export function titulosDisponiveis(desbloqueados: string[] | undefined): string[] {
@@ -53,6 +54,7 @@ function normalizarEstado(e: EstadoPersonagem): EstadoPersonagem {
     // cenários que saíram (Padrão, dia 4) → escolhe de novo
     cenario: CENARIOS.some((c) => c.id === e?.cenario) ? e.cenario : null,
     titulos: e?.titulos ?? [],
+    itensLiberados: e?.itensLiberados ?? [],
     // título fora da lista (texto livre antigo, ou título que foi renomeado) → volta ao inicial
     ficha: {
       ...e?.ficha,
@@ -77,6 +79,7 @@ const estadoInicial: EstadoPersonagem = {
   },
   desbloqueios: ["inicial"],
   titulos: [],
+  itensLiberados: [],
   enviado: false,
   atualizadoEm: 0,
 };
@@ -92,7 +95,11 @@ interface Acoes {
   setTitulo: (titulo: string) => void;
   setHabilidade: (texto: string) => void;
   /** Aplica um código: grupo do dia/envio/mestre e/ou títulos. */
-  aplicarCodigo: (input: string) => { resultado: ReturnType<typeof validarCodigo>; titulosNovos: string[] };
+  aplicarCodigo: (input: string) => {
+    resultado: ReturnType<typeof validarCodigo>;
+    titulosNovos: string[];
+    itensNovos: string[];
+  };
   marcarEnviado: () => void;
   resetar: () => void;
   /** Substitui o estado inteiro (carga do servidor). */
@@ -164,7 +171,12 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
         if (titulosNovos.length) {
           set({ titulos: [...atuaisT, ...titulosNovos], atualizadoEm: agora() });
         }
-        return { resultado: r, titulosNovos };
+        const atuaisI = get().itensLiberados ?? [];
+        const itensNovos = itensDoCodigo(input).filter((k) => !atuaisI.includes(k));
+        if (itensNovos.length) {
+          set({ itensLiberados: [...atuaisI, ...itensNovos], atualizadoEm: agora() });
+        }
+        return { resultado: r, titulosNovos, itensNovos };
       },
 
       marcarEnviado: () => set({ enviado: true, atualizadoEm: agora() }),
