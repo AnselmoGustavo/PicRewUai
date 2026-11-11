@@ -39,6 +39,11 @@ alter table public.usuarios  enable row level security;
 alter table public.progresso enable row level security;
 alter table public.cartas    enable row level security;
 
+-- Acesso explícito: SÓ a service_role (usada pelo servidor). Funciona mesmo com a opção
+-- "Automatically expose new tables" desligada na criação do projeto.
+revoke all on public.usuarios, public.progresso, public.cartas from anon, authenticated;
+grant select, insert, update, delete on public.usuarios, public.progresso, public.cartas to service_role;
+
 -- Bucket PRIVADO para os PNGs das cartas (só a service_role acessa)
 insert into storage.buckets (id, name, public)
 values ('cartas', 'cartas', false)
