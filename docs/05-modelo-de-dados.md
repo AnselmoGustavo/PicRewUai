@@ -10,7 +10,7 @@ type Classe = 'guerreiro' | 'arqueiro' | 'mago' | 'bardo' | 'ninja';
 type Animal = 'macaco' | 'raposa' | 'gato' | 'veado' | 'cachorro';
 
 // Grupo de desbloqueio: itens iniciais + um grupo por dia do evento
-type GrupoDesbloqueio = 'inicial' | 'dia1' | 'dia2' | 'dia3' | 'dia4';
+type GrupoDesbloqueio = 'inicial' | 'dia1' | 'dia2' | 'dia3' | 'dia4' | 'envio';  // 'envio' libera o botão Enviar
 
 // Itens são POR ANIMAL+CLASSE e MULTI-CAMADA (ADR-016).
 interface CamadaItem {
@@ -118,6 +118,7 @@ A tela inicial pede **criar conta / entrar** (usuário + senha). A conta é a id
 ## Sistema de códigos de desbloqueio
 
 - Cada **código** libera um **grupo** (`dia1`…`dia4`), igual para todos os participantes.
+- Há um **código de envio** (grupo `envio`, hoje `UAI-ENVIAR`): não libera itens, só o botão **Enviar personagem**. Divulgado no último dia, para ninguém enviar antes de ver todos os itens. O código mestre também libera.
 - Cumulativo: no dia 4, com todos inseridos, 100% dos itens da classe ficam disponíveis.
 
 ### Armazenamento seguro dos códigos

@@ -4,17 +4,19 @@ import { usePersonagem } from "./store";
 import { useSessao } from "./sessao";
 import type { EstadoPersonagem } from "./tipos";
 
-export async function salvarProgressoRemoto(estado: EstadoPersonagem): Promise<void> {
+/** Salva no servidor. Retorna true se gravou (false = offline/sem sessão; o localStorage mantém o estado). */
+export async function salvarProgressoRemoto(estado: EstadoPersonagem): Promise<boolean> {
   const { usuario, token } = useSessao.getState();
-  if (!usuario || !token) return;
+  if (!usuario || !token) return false;
   try {
-    await fetch("/api/progresso", {
+    const res = await fetch("/api/progresso", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ usuario, token, estado }),
     });
+    return res.ok;
   } catch {
-    /* offline — o localStorage mantém o estado; sincroniza na próxima mudança */
+    return false; // offline — sincroniza na próxima mudança
   }
 }
 

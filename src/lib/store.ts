@@ -9,7 +9,7 @@ import type {
   Selecao,
 } from "./tipos";
 import { ANIMAIS } from "./tipos";
-import { validarCodigo } from "./codigos";
+import { validarCodigo, TODOS_OS_GRUPOS } from "./codigos";
 import { CENARIOS } from "./manifesto";
 
 // v2: categorias passaram de 5 (vestimenta, acessorio1...) para 7 tipos (camisa, calca...)
@@ -135,7 +135,7 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
           }
         } else if (r.tipo === "mestre") {
           set({
-            desbloqueios: ["inicial", "dia1", "dia2", "dia3", "dia4"],
+            desbloqueios: [...TODOS_OS_GRUPOS],
             atualizadoEm: agora(),
           });
         }

@@ -9,6 +9,7 @@ const CODIGOS: Record<Exclude<GrupoDesbloqueio, "inicial">, string> = {
   dia2: "UAI-DIA2",
   dia3: "UAI-DIA3",
   dia4: "UAI-DIA4",
+  envio: "UAI-ENVIAR", // libera o botão de enviar a carta (divulgar no último dia)
 };
 
 // Código de staff que libera tudo (testes/suporte).
@@ -41,4 +42,5 @@ export const TODOS_OS_GRUPOS: GrupoDesbloqueio[] = [
   "dia2",
   "dia3",
   "dia4",
+  "envio",
 ];

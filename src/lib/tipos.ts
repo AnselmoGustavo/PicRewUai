@@ -14,7 +14,8 @@ export type Categoria =
   | "acessorio";
 
 // 'inicial' sempre liberado; um grupo por dia do evento.
-export type GrupoDesbloqueio = "inicial" | "dia1" | "dia2" | "dia3" | "dia4";
+// 'envio' não libera itens: libera o botão "Enviar personagem" (código próprio, divulgado no último dia).
+export type GrupoDesbloqueio = "inicial" | "dia1" | "dia2" | "dia3" | "dia4" | "envio";
 
 export type Tema = "claro" | "escuro"; // claro → moldura dia · escuro → moldura noite
 

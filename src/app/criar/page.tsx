@@ -46,7 +46,26 @@ export default function CriarPage() {
 
   return (
     <main style={{ minHeight: "100vh", padding: "1.25rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "1.25rem" }}>
-      <Link href="/" style={{ alignSelf: "flex-start", color: "var(--cor-primaria)", fontSize: "0.9rem" }}>← início</Link>
+      <Link
+        href="/"
+        style={{
+          alignSelf: "flex-start",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.4rem",
+          padding: "0.5rem 1rem",
+          borderRadius: 999,
+          background: "#fffaf0",
+          border: "2px solid var(--cor-primaria)",
+          boxShadow: "0 2px 8px rgba(43,38,32,0.18)",
+          color: "var(--cor-primaria)",
+          fontWeight: 600,
+          fontSize: "0.95rem",
+          textDecoration: "none",
+        }}
+      >
+        ← 🏠 Início
+      </Link>
 
       {etapa === "animal" && (
         <>

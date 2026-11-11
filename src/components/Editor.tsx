@@ -12,6 +12,7 @@ import {
 } from "@/lib/manifesto";
 import { statusDe, ROTULO_STATUS } from "@/lib/status";
 import { useSessao } from "@/lib/sessao";
+import { salvarProgressoRemoto } from "@/lib/sync";
 import {
   ANIMAIS,
   CATEGORIAS,
@@ -52,6 +53,17 @@ export default function Editor({
   const [msg, setMsg] = useState<{ ok: boolean; texto: string } | null>(null);
   const [enviando, setEnviando] = useState(false);
   const [erroEnvio, setErroEnvio] = useState<string | null>(null);
+  const [salvando, setSalvando] = useState(false);
+  const [salvo, setSalvo] = useState<boolean | null>(null);
+  const [salvoEm, setSalvoEm] = useState("");
+
+  async function salvar() {
+    setSalvando(true);
+    const ok = await salvarProgressoRemoto(usePersonagem.getState());
+    setSalvando(false);
+    setSalvo(ok);
+    if (ok) setSalvoEm(new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }));
+  }
 
   if (!classe) return null;
 
@@ -88,11 +100,13 @@ export default function Editor({
     const r = aplicarCodigo(codigo);
     if (r.tipo === "invalido") setMsg({ ok: false, texto: "Código inválido." });
     else if (r.tipo === "mestre") setMsg({ ok: true, texto: "🔓 Tudo desbloqueado (mestre)." });
+    else if (r.grupo === "envio") setMsg({ ok: true, texto: "📨 Envio liberado! Quando terminar, é só enviar seu personagem." });
     else setMsg({ ok: true, texto: `🔓 ${r.grupo.toUpperCase()} desbloqueado!` });
     setCodigo("");
   }
 
-  const podeEnviar = !!cenario && ficha.nomePersonagem.trim().length > 0;
+  const envioLiberado = desbloqueios.includes("envio");
+  const podeEnviar = envioLiberado && !!cenario && ficha.nomePersonagem.trim().length > 0;
 
   async function enviar() {
     if (!podeEnviar || enviando) return;
@@ -163,10 +177,13 @@ export default function Editor({
           <input
             value={codigo}
             onChange={(e) => setCodigo(e.target.value)}
-            placeholder="Código do dia (ex.: UAI-DIA1)"
-            style={{ ...inp, flex: 1 }}
+            onKeyDown={(e) => e.key === "Enter" && enviarCodigo()}
+            placeholder="Código do dia"
+            style={{ ...inp, flex: 1, minWidth: 0 }}
           />
-          <button className="botao" onClick={enviarCodigo}>Desbloquear</button>
+          <button className="botao" onClick={enviarCodigo} style={{ flexShrink: 0, padding: "0.5rem 0.9rem" }}>
+            Desbloquear
+          </button>
         </div>
         {msg && (
           <p style={{ margin: "0.5rem 0 0", fontSize: "0.85rem", color: msg.ok ? "var(--cor-primaria)" : "var(--cor-acento)" }}>
@@ -259,8 +276,24 @@ export default function Editor({
         )}
       </div>
 
-      {/* enviar (surpresa) */}
+      {/* salvar + enviar (surpresa) */}
       <div className="superficie" style={{ padding: "0.9rem", width: "min(92vw, 420px)", textAlign: "center", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        <button
+          onClick={salvar}
+          disabled={salvando}
+          className="botao botao--secundario"
+          style={{ padding: "0.7rem" }}
+        >
+          {salvando ? "Salvando…" : "💾 Salvar progresso"}
+        </button>
+        <p style={{ margin: 0, fontSize: "0.75rem", color: salvo === false ? "var(--cor-acento)" : "var(--cor-texto-suave)" }}>
+          {salvo === true
+            ? `✓ Progresso salvo às ${salvoEm}. Você pode fechar e continuar depois.`
+            : salvo === false
+              ? "Não foi possível salvar agora (sem internet?). Suas escolhas ficam neste aparelho; tente de novo."
+              : "Seu progresso também é salvo automaticamente."}
+        </p>
+        <hr style={{ border: "none", borderTop: "1px solid var(--cor-borda)", width: "100%", margin: "0.25rem 0" }} />
         <button
           onClick={enviar}
           disabled={!podeEnviar || enviando}
@@ -271,7 +304,9 @@ export default function Editor({
         </button>
         {!podeEnviar && (
           <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--cor-texto-suave)" }}>
-            Escolha um cenário e preencha o nome (aba Ficha) para enviar.
+            {!envioLiberado
+              ? "🔒 O envio será liberado com um código no último dia do evento. Até lá, monte seu personagem com calma!"
+              : "Escolha um cenário e preencha o nome (aba Ficha) para enviar."}
           </p>
         )}
         {erroEnvio && (
