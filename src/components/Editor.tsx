@@ -10,7 +10,10 @@ import {
   estaDesbloqueado,
   itensDe,
 } from "@/lib/manifesto";
-import { statusDe, ROTULO_STATUS } from "@/lib/status";
+import { statusDe, bonusDosItens, bonusDoItem, textoBonus, ROTULO_STATUS } from "@/lib/status";
+import { titulosDisponiveis } from "@/lib/store";
+import { titulosDoCodigo } from "@/lib/codigos";
+import { TITULOS } from "@/lib/titulos";
 import { useSessao } from "@/lib/sessao";
 import { salvarProgressoRemoto } from "@/lib/sync";
 import {
@@ -37,6 +40,7 @@ export default function Editor({
   const selecao = usePersonagem((s) => s.selecao);
   const ficha = usePersonagem((s) => s.ficha);
   const desbloqueios = usePersonagem((s) => s.desbloqueios);
+  const titulosLiberados = usePersonagem((s) => s.titulos);
   const setCenario = usePersonagem((s) => s.setCenario);
   const selecionarItem = usePersonagem((s) => s.selecionarItem);
   const setNome = usePersonagem((s) => s.setNome);
@@ -84,7 +88,10 @@ export default function Editor({
   }
   const animalInfo = ANIMAIS.find((a) => a.id === animal);
   const classeInfo = CLASSES.find((c) => c.id === classe);
-  const statusAtual = statusDe(animal, classe);
+  const statusAtual = statusDe(animal, classe, selecao);
+  const bonusItens = bonusDosItens(selecao);
+  const meusTitulos = titulosDisponiveis(titulosLiberados);
+  const titulosEscondidos = TITULOS.length - (meusTitulos.length - 1);
 
   // só mostra as abas de categoria que têm itens para este animal+classe
   const comItens = categoriasDe(animal, classe);
@@ -97,11 +104,17 @@ export default function Editor({
   const aba: Aba = ABAS.some((a) => a.id === abaEscolhida) ? abaEscolhida : "cenario";
 
   function enviarCodigo() {
-    const r = aplicarCodigo(codigo);
-    if (r.tipo === "invalido") setMsg({ ok: false, texto: "Código inválido." });
-    else if (r.tipo === "mestre") setMsg({ ok: true, texto: "🔓 Tudo desbloqueado (mestre)." });
-    else if (r.grupo === "envio") setMsg({ ok: true, texto: "📨 Envio liberado! Quando terminar, é só enviar seu personagem." });
-    else setMsg({ ok: true, texto: `🔓 ${r.grupo.toUpperCase()} desbloqueado!` });
+    const { resultado: r, titulosNovos } = aplicarCodigo(codigo);
+    const partes: string[] = [];
+    if (r.tipo === "mestre") partes.push("🔓 Tudo desbloqueado (mestre).");
+    else if (r.tipo === "grupo" && r.grupo === "envio") partes.push("📨 Envio liberado! Quando terminar, é só enviar seu personagem.");
+    else if (r.tipo === "grupo") partes.push(`🔓 ${r.grupo.toUpperCase()} desbloqueado!`);
+    if (titulosNovos.length && r.tipo !== "mestre") {
+      partes.push(`🏅 Novo título: ${titulosNovos.map((t) => `“${t}”`).join(", ")} — escolha na aba Ficha.`);
+    }
+    if (partes.length) setMsg({ ok: true, texto: partes.join(" ") });
+    else if (titulosDoCodigo(codigo).length) setMsg({ ok: true, texto: "Você já tem esse título. 😉" });
+    else setMsg({ ok: false, texto: "Código inválido." });
     setCodigo("");
   }
 
@@ -137,7 +150,7 @@ export default function Editor({
           classe,
           animal,
           cenario,
-          status: statusDe(animal, classe),
+          status: statusDe(animal, classe, selecao),
         }),
       );
       fd.append("token", token ?? "");
@@ -235,7 +248,7 @@ export default function Editor({
               return (
                 <Tile
                   key={it.id}
-                  nome={it.nome}
+                  nome={[it.nome, textoBonus(bonusDoItem(it.id))].filter(Boolean).join(" · ")}
                   cor={it.cor}
                   img={it.thumb}
                   imgContain
@@ -254,20 +267,41 @@ export default function Editor({
               Nome do personagem
               <input value={ficha.nomePersonagem} maxLength={22} onChange={(e) => setNome(e.target.value)} style={inp} />
             </label>
-            <label style={lbl}>
-              Título (ex.: o Bravo)
-              <input value={ficha.titulo ?? ""} maxLength={28} onChange={(e) => setTitulo(e.target.value)} style={inp} />
-            </label>
+            <div style={lbl}>
+              Título
+              <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
+                {meusTitulos.map((t) => (
+                  <button
+                    key={t}
+                    onClick={() => setTitulo(t)}
+                    className={`botao ${ficha.titulo === t ? "" : "botao--secundario"}`}
+                    style={{ padding: "0.35rem 0.7rem", fontSize: "0.82rem" }}
+                  >
+                    {t}
+                  </button>
+                ))}
+              </div>
+              {titulosEscondidos > 0 && (
+                <span style={{ color: "var(--cor-texto-suave)", fontSize: "0.75rem" }}>
+                  🔒 {titulosEscondidos} título{titulosEscondidos > 1 ? "s" : ""} para descobrir com códigos especiais.
+                </span>
+              )}
+            </div>
 
             <div>
               <div style={{ fontSize: "0.82rem", marginBottom: 6 }}>
-                Status <span style={{ color: "var(--cor-texto-suave)" }}>(definido pela raça + classe)</span>
+                Status <span style={{ color: "var(--cor-texto-suave)" }}>(raça + classe + itens)</span>
               </div>
               <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
                 {(Object.keys(ROTULO_STATUS) as (keyof Status)[]).map((k) => (
                   <div key={k} style={{ flex: "1 1 45%", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.45rem 0.6rem", borderRadius: 8, border: "1px solid var(--cor-borda)", background: "var(--cor-superficie)", fontSize: "0.85rem" }}>
                     <span>{ROTULO_STATUS[k]}</span>
-                    <strong style={{ fontSize: "1.05rem", color: "var(--cor-primaria)" }}>{statusAtual[k]}</strong>
+                    <strong style={{ fontSize: "1.05rem", color: "var(--cor-primaria)" }}>
+                      {statusAtual[k]}
+                      {bonusItens[k] > 0 && (
+                        <span style={{ fontSize: "0.72rem", color: "var(--cor-texto-suave)", fontWeight: 400 }}> (+{bonusItens[k]})</span>
+                      )}
+                    </strong>
                   </div>
                 ))}
               </div>

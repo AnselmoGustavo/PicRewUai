@@ -119,6 +119,8 @@ A tela inicial pede **criar conta / entrar** (usuário + senha). A conta é a id
 
 - Cada **código** libera um **grupo** (`dia1`…`dia4`), igual para todos os participantes.
 - Há um **código de envio** (grupo `envio`, hoje `UAI-ENVIAR`): não libera itens, só o botão **Enviar personagem**. Divulgado no último dia, para ninguém enviar antes de ver todos os itens. O código mestre também libera.
+- **Títulos** (`src/lib/titulos.ts`): o participante não digita o título. Todos começam com **"Recruta"** e escolhem, na aba Ficha, entre os títulos já desbloqueados. Cada título tem um `codigo` (pode ser compartilhado entre títulos, ou ser um código do dia). Títulos bloqueados ficam escondidos (só aparece quantos faltam). O mestre libera todos. Estado: `titulos: string[]` (desbloqueados) + `ficha.titulo`.
+- **Bônus dos itens** (`src/lib/bonusItens.ts`): cada item equipado soma status, chave `classe/tipo/nome` (vale para todos os animais). Status final = base 2 + classe + raça + itens, com teto `MAX_STATUS` (9, 1 dígito na carta). `npm run assets` avisa itens novos sem linha no arquivo.
 - Cumulativo: no dia 4, com todos inseridos, 100% dos itens da classe ficam disponíveis.
 
 ### Armazenamento seguro dos códigos

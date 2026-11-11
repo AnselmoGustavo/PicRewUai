@@ -219,7 +219,7 @@ export async function desenharCarta(
 
   // status: escuros no dia; claros (com a mesma sombra) na noite
   ctx.fillStyle = noite ? corTextoClaro : corTexto;
-  const status = statusDe(dados.animal, dados.classe);
+  const status = statusDe(dados.animal, dados.classe, dados.selecao);
   for (const s of textos.status) {
     ctx.font = `${s.fontePx}px "AdamScript"`;
     ctx.fillText(String(status[s.key as keyof Status]), s.x + s.w / 2, s.y + s.h / 2);

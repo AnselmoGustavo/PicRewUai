@@ -2,6 +2,7 @@
 // NOTA: por enquanto os códigos estão em texto puro (dev). Antes do evento,
 // trocar por comparação de HASH (sha256) para não deixá-los legíveis no fonte.
 import type { GrupoDesbloqueio } from "./tipos";
+import { TITULOS } from "./titulos";
 
 // Códigos de exemplo (placeholder) — definir os reais perto do evento.
 const CODIGOS: Record<Exclude<GrupoDesbloqueio, "inicial">, string> = {
@@ -44,3 +45,11 @@ export const TODOS_OS_GRUPOS: GrupoDesbloqueio[] = [
   "dia4",
   "envio",
 ];
+
+/** Títulos liberados por este código (lib/titulos.ts). O código mestre libera todos. */
+export function titulosDoCodigo(input: string): string[] {
+  const c = normalizar(input);
+  if (!c) return [];
+  if (c === normalizar(CODIGO_MESTRE)) return TITULOS.map((t) => t.titulo);
+  return TITULOS.filter((t) => normalizar(t.codigo) === c).map((t) => t.titulo);
+}

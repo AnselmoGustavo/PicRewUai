@@ -70,9 +70,9 @@ export interface Status {
 
 export interface Ficha {
   nomePersonagem: string;
-  titulo?: string; // epíteto/título do personagem (texto livre) — vai na carta
+  titulo?: string; // título escolhido entre os desbloqueados (lib/titulos.ts) — vai na carta
   habilidade?: string;
-  // status NÃO fica aqui: é calculado de animal+classe (ver lib/status.ts)
+  // status NÃO fica aqui: é calculado de animal+classe+itens (ver lib/status.ts)
 }
 
 export interface EstadoPersonagem {
@@ -83,6 +83,7 @@ export interface EstadoPersonagem {
   selecao: Selecao;
   ficha: Ficha;
   desbloqueios: GrupoDesbloqueio[];
+  titulos: string[]; // títulos desbloqueados por código (além do inicial)
   enviado: boolean;
   atualizadoEm: number; // epoch ms da última mudança (last-write-wins)
 }

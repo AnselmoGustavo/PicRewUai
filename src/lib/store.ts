@@ -9,13 +9,21 @@ import type {
   Selecao,
 } from "./tipos";
 import { ANIMAIS } from "./tipos";
-import { validarCodigo, TODOS_OS_GRUPOS } from "./codigos";
+import { validarCodigo, titulosDoCodigo, TODOS_OS_GRUPOS } from "./codigos";
+import { TITULOS, TITULO_INICIAL } from "./titulos";
 import { CENARIOS } from "./manifesto";
 
 // v2: categorias passaram de 5 (vestimenta, acessorio1...) para 7 tipos (camisa, calca...)
 // v3: saíram os animais sapo, coruja e carpa
 // v4: saíram os cenários Padrão e dia 4 (3 cenários no total)
-const VERSAO = 4;
+// v5: título deixou de ser texto livre (lista em lib/titulos.ts, liberada por códigos)
+const VERSAO = 5;
+
+/** Títulos que o personagem pode escolher: o inicial + os desbloqueados que ainda existem na lista. */
+export function titulosDisponiveis(desbloqueados: string[] | undefined): string[] {
+  const ok = new Set(desbloqueados ?? []);
+  return [TITULO_INICIAL, ...TITULOS.map((t) => t.titulo).filter((t) => ok.has(t))];
+}
 
 const SELECAO_VAZIA: Selecao = {
   camisa: null,
@@ -44,6 +52,15 @@ function normalizarEstado(e: EstadoPersonagem): EstadoPersonagem {
     selecao: animalValido ? normalizarSelecao(e?.selecao) : { ...SELECAO_VAZIA },
     // cenários que saíram (Padrão, dia 4) → escolhe de novo
     cenario: CENARIOS.some((c) => c.id === e?.cenario) ? e.cenario : null,
+    titulos: e?.titulos ?? [],
+    // título fora da lista (texto livre antigo, ou título que foi renomeado) → volta ao inicial
+    ficha: {
+      ...e?.ficha,
+      nomePersonagem: e?.ficha?.nomePersonagem ?? "",
+      titulo: titulosDisponiveis(e?.titulos).includes(e?.ficha?.titulo ?? "")
+        ? e.ficha.titulo
+        : TITULO_INICIAL,
+    },
   };
 }
 
@@ -55,10 +72,11 @@ const estadoInicial: EstadoPersonagem = {
   selecao: { ...SELECAO_VAZIA },
   ficha: {
     nomePersonagem: "",
-    titulo: "",
+    titulo: TITULO_INICIAL,
     habilidade: "",
   },
   desbloqueios: ["inicial"],
+  titulos: [],
   enviado: false,
   atualizadoEm: 0,
 };
@@ -73,7 +91,8 @@ interface Acoes {
   setNome: (nome: string) => void;
   setTitulo: (titulo: string) => void;
   setHabilidade: (texto: string) => void;
-  aplicarCodigo: (input: string) => ReturnType<typeof validarCodigo>;
+  /** Aplica um código: grupo do dia/envio/mestre e/ou títulos. */
+  aplicarCodigo: (input: string) => { resultado: ReturnType<typeof validarCodigo>; titulosNovos: string[] };
   marcarEnviado: () => void;
   resetar: () => void;
   /** Substitui o estado inteiro (carga do servidor). */
@@ -115,10 +134,11 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
         })),
 
       setTitulo: (titulo) =>
-        set((s) => ({
-          ficha: { ...s.ficha, titulo },
-          atualizadoEm: agora(),
-        })),
+        set((s) =>
+          titulosDisponiveis(s.titulos).includes(titulo)
+            ? { ficha: { ...s.ficha, titulo }, atualizadoEm: agora() }
+            : {},
+        ),
 
       setHabilidade: (texto) =>
         set((s) => ({
@@ -139,7 +159,12 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
             atualizadoEm: agora(),
           });
         }
-        return r;
+        const atuaisT = get().titulos ?? [];
+        const titulosNovos = titulosDoCodigo(input).filter((t) => !atuaisT.includes(t));
+        if (titulosNovos.length) {
+          set({ titulos: [...atuaisT, ...titulosNovos], atualizadoEm: agora() });
+        }
+        return { resultado: r, titulosNovos };
       },
 
       marcarEnviado: () => set({ enviado: true, atualizadoEm: agora() }),
