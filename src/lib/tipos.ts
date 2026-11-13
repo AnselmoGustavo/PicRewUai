@@ -8,6 +8,7 @@ export type Categoria =
   | "camisa"
   | "calca"
   | "arma"
+  | "escudo"
   | "calcado"
   | "capa"
   | "chapeu"
@@ -28,6 +29,7 @@ export const Z_POR_TIPO: Record<Categoria, number> = {
   calca: 40,
   camisa: 50,
   arma: 70,
+  escudo: 72,
   acessorio: 75,
   chapeu: 80,
 };
@@ -59,7 +61,16 @@ export interface CenarioDef {
   cor?: string;
 }
 
-export type Selecao = Record<Categoria, string | null>;
+// Tipos em que dá para escolher VÁRIOS itens ao mesmo tempo (os outros: no máximo 1).
+export const CATEGORIAS_MULTIPLAS: Categoria[] = ["acessorio"];
+
+// Seleção: lista de ids por tipo (vazia = nenhum; tipos simples têm no máximo 1).
+export type Selecao = Record<Categoria, string[]>;
+
+/** Todos os ids equipados, de todos os tipos. */
+export function idsDaSelecao(selecao: Partial<Selecao> | null | undefined): string[] {
+  return Object.values(selecao ?? {}).flat().filter(Boolean) as string[];
+}
 
 export interface Status {
   vida: number;
@@ -93,6 +104,7 @@ export const CATEGORIAS: { id: Categoria; nome: string }[] = [
   { id: "camisa", nome: "Camisa" },
   { id: "calca", nome: "Calça" },
   { id: "arma", nome: "Arma" },
+  { id: "escudo", nome: "Escudo" },
   { id: "calcado", nome: "Calçado" },
   { id: "capa", nome: "Capa" },
   { id: "chapeu", nome: "Chapéu" },

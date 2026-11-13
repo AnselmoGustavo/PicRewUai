@@ -62,7 +62,7 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "guerreiro/acessorio/oculos_de_grau": {}, // Oculos de Grau (inicial)
   "guerreiro/acessorio/oculos_squirtle": {}, // Oculos Squirtle (inicial)
   "guerreiro/acessorio/pokebola": {},      // Pokebola (inicial)
-  "guerreiro/arma/escudo_link": {},        // Escudo Link (inicial)
+  "guerreiro/escudo/escudo_link": {},        // Escudo Link (inicial)
   "guerreiro/arma/key_blade": {},          // Key Blade (inicial)
   "guerreiro/chapeu/cabeca_godzilla": {},  // Cabeca Godzilla (inicial)
   "guerreiro/chapeu/chapeu_luffy": {},     // Chapeu Luffy (inicial)

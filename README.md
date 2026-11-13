@@ -21,7 +21,7 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 | Assets | **Por animal+classe** — cada peça desenhada para o corpo daquela combinação |
 | Animais | 5: macaco, raposa, gato, veado, cachorro |
 | Classes | 5: guerreiro, arqueiro, mago, bardo, ninja |
-| Tipos de item | camisa, calça, arma, calçado, capa, chapéu, acessório |
+| Tipos de item | camisa, calça, arma, escudo, calçado, capa, chapéu, acessório (**vários acessórios** ao mesmo tempo) |
 | Cenário | 3 fundos, 1 por dia (Floresta = noite, Montanhas = dia, 3º a definir) — define a moldura dia/noite |
 | Status | 4 atributos na carta (Vida, Força, Intelecto, Destreza), **calculados**: base + classe + raça + **bônus dos itens** |
 | Título | **Recruta** para todos; outros títulos liberados por **códigos** (`src/lib/titulos.ts`) |

@@ -22,7 +22,7 @@ const JSON_SAIDA = "src/lib/itens-gerados.json";
 
 // z padrão por tipo — manter em sincronia com Z_POR_TIPO em src/lib/tipos.ts
 const Z_POR_TIPO = {
-  capa: 10, calcado: 30, calca: 40, camisa: 50, arma: 70, acessorio: 75, chapeu: 80,
+  capa: 10, calcado: 30, calca: 40, camisa: 50, arma: 70, escudo: 72, acessorio: 75, chapeu: 80,
 };
 
 function walk(dir) {

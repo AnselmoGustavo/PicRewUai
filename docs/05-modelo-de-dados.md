@@ -30,7 +30,7 @@ interface ItemDef {
 }
 ```
 
-> **Z-index padrão por tipo** (`Z_POR_TIPO` em `src/lib/tipos.ts`): capa 10, corpo (base) 20, calçado 30, calça 40, camisa 50, arma 70, acessório 75, chapéu 80. A frente da capa usa z60, informado no nome do arquivo. O app coleta a base + as camadas dos itens escolhidos e **desenha tudo ordenado por z**. Uma peça com partes na frente e atrás do corpo (capa) tem duas camadas com z diferentes.
+> **Z-index padrão por tipo** (`Z_POR_TIPO` em `src/lib/tipos.ts`): capa 10, corpo (base) 20, calçado 30, calça 40, camisa 50, arma 70, escudo 72, acessório 75, chapéu 80. A frente da capa usa z60, informado no nome do arquivo. O app coleta a base + as camadas dos itens escolhidos e **desenha tudo ordenado por z**. Uma peça com partes na frente e atrás do corpo (capa) tem duas camadas com z diferentes.
 
 > **Base (corpo) por animal+classe:** `bases["animal-classe"]` em `itens-gerados.json` → PNG do corpo (desenhado em z=20). As 25 combinações têm corpo real.
 
@@ -82,7 +82,7 @@ interface EstadoPersonagem {
   animal: Animal | null;
   classe: Classe | null;
   cenario: string | null;         // fundo escolhido; define o tema dia/noite
-  selecao: Record<Categoria, string | null>; // item escolhido por tipo (id ou null)
+  selecao: Record<Categoria, string[]>; // ids escolhidos por tipo ([] = nenhum; só 'acessorio' aceita vários)
   ficha: {
     nomePersonagem: string;       // aparece na carta (fonte Adam Script)
     titulo?: string;              // título ESCOLHIDO entre os liberados (padrão "Recruta") — vai na carta

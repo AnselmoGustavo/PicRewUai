@@ -60,7 +60,7 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "guerreiro/acessorio/oculos_de_grau": "", // Oculos de Grau (hoje: inicial)
   "guerreiro/acessorio/oculos_squirtle": "", // Oculos Squirtle (hoje: inicial)
   "guerreiro/acessorio/pokebola": "",      // Pokebola (hoje: inicial)
-  "guerreiro/arma/escudo_link": "",        // Escudo Link (hoje: inicial)
+  "guerreiro/escudo/escudo_link": "",        // Escudo Link (hoje: inicial)
   "guerreiro/arma/key_blade": "",          // Key Blade (hoje: inicial)
   "guerreiro/chapeu/cabeca_godzilla": "",  // Cabeca Godzilla (hoje: inicial)
   "guerreiro/chapeu/chapeu_luffy": "",     // Chapeu Luffy (hoje: inicial)

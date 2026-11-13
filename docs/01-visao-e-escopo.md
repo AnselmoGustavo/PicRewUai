@@ -29,7 +29,7 @@ O app tem dois papéis:
 - **5 animais:** macaco, raposa, gato, veado, cachorro. *(Sapo, coruja e carpa saíram em 11/2026.)*
 - Cada participante escolhe **1 classe** entre 5: guerreiro, arqueiro, mago, bardo, ninja.
 - A classe **filtra** quais itens ficam disponíveis.
-- **7 tipos de item:** camisa, calça, arma, calçado, capa, chapéu, acessório *(antes eram 5 categorias)*.
+- **8 tipos de item:** camisa, calça, arma, escudo, calçado, capa, chapéu, acessório *(antes eram 5 categorias)*. Em **acessório** dá para equipar vários ao mesmo tempo; nos outros tipos, um só.
 - Itens desenhados **por animal+classe** (ADR-016): skin básica (dia 1), skin avançada (dia 2) e acessórios avulsos (liberados desde o início). Hoje: **465 itens** nas 25 combinações.
 - Cada item pode dar **bônus de status** e pode ter um **código especial** próprio (ver [05](05-modelo-de-dados.md)).
 - **Título** do personagem: todos começam como **Recruta**; outros títulos são liberados por código.

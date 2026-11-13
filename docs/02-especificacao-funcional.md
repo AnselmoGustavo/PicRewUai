@@ -30,7 +30,7 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 
 ### 4. Editor (picrew) — tela principal
 - **Área de preview**: a carta renderizada em tempo real (cenário + personagem + moldura).
-- **Abas**: **cenário**, os tipos de item **que existem para aquele animal+classe** (camisa, calça, arma, calçado, capa, chapéu, acessório — abas vazias ficam escondidas), ficha.
+- **Abas**: **cenário**, os tipos de item **que existem para aquele animal+classe** (camisa, calça, arma, escudo, calçado, capa, chapéu, acessório — abas vazias ficam escondidas), ficha. Em **Acessório** a pessoa escolhe **vários** (toque de novo para tirar; "Nenhum" limpa todos); nos outros tipos, um só.
 - **Cenário**: escolha do fundo (não depende de classe). **3 cenários** (Floresta dia 1, Montanhas dia 2, 3º a definir no dia 3), liberados **1 por dia** via código. O cenário define se a moldura fica dia/noite (ver [11](11-carta-composicao.md)) — mas isso é interno; o participante só escolhe o fundo.
 - Ao abrir uma categoria de item, mostra os itens **daquela classe**:
   - Itens **desbloqueados**: selecionáveis.

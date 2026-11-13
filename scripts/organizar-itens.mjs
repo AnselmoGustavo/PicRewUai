@@ -62,7 +62,7 @@ const ARMA = /^(arco|espada|cajado|varinha|katana|alaude|viola|leque)/;
 
 // Formato "tipo nome" (ex.: "acessorio pokebola Mescladas.PNG", "arma besta twich"):
 // o tipo vem na frente. Dia = DIA_PADRAO.
-const PREFIXO_TIPO = /^(acessorio|arma|chapeu|camisa|calca|calcado|capa) (.+)$/;
+const PREFIXO_TIPO = /^(acessorio|arma|escudo|chapeu|camisa|calca|calcado|capa) (.+)$/;
 
 // Tipo FIXO de peças que já vieram com etiquetas diferentes entre animais — mantém a mesma
 // peça no mesmo tipo em todos (o bônus e o código do item dependem disso).
@@ -70,6 +70,7 @@ const TIPO_FIXO = {
   megaman: "arma",
   cabeca_godzilla: "chapeu",
   key_blade: "arma",
+  escudo_link: "escudo", // escudo é tipo próprio (o guerreiro usa arma + escudo)
 };
 
 const semAcento = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
@@ -111,7 +112,9 @@ function classificar(arq, animal, classe) {
   let def = PECAS[peca];
   if (!def && ARMA.test(peca)) def = ["arma", peca];
   if (!def) return { erro: `peça "${peca}" sem tipo conhecido` };
-  const [tipo, nome, z] = def;
+  const [tipo, nome, zPeca] = def;
+  // a capa do guerreiro (uma camada só) fica POR CIMA da armadura, não atrás do corpo
+  const z = zPeca ?? (tipo === "capa" && classe === "guerreiro" ? 60 : undefined);
   const sufixoZ = z ? `-z${z}` : "";
   return { tipo, destino: join(ITENS, tipo, `${animal}-${classe}-${tipo}-${nome}-${dia}${sufixoZ}.png`) };
 }

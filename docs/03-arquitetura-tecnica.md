@@ -79,6 +79,7 @@ ordem de desenho (fundo → frente), por z-index:
   50  camisa
   60  capa (parte da frente)
   70  arma
+  72  escudo
   75  acessório
   80  chapéu
 ```

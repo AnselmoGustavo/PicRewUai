@@ -32,15 +32,7 @@ export default function CartaCanvas({ nome, titulo, tema }: Props) {
         classe: "mago",
         cenario: "cen_floresta",
         temaForcado: tema, // página de dev: força dia/noite
-        selecao: {
-          camisa: null,
-          calca: null,
-          arma: null,
-          calcado: null,
-          capa: null,
-          chapeu: null,
-          acessorio: null,
-        },
+        selecao: { camisa: [], calca: [], arma: [], escudo: [], calcado: [], capa: [], chapeu: [], acessorio: [] },
         nome,
         titulo: titulo ?? "",
       };

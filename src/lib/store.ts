@@ -8,7 +8,7 @@ import type {
   GrupoDesbloqueio,
   Selecao,
 } from "./tipos";
-import { ANIMAIS } from "./tipos";
+import { ANIMAIS, CATEGORIAS_MULTIPLAS } from "./tipos";
 import { validarCodigo, titulosDoCodigo, itensDoCodigo, TODOS_OS_GRUPOS } from "./codigos";
 import { TITULOS, TITULO_INICIAL } from "./titulos";
 import { CENARIOS } from "./manifesto";
@@ -18,7 +18,8 @@ import { CENARIOS } from "./manifesto";
 // v4: saíram os cenários Padrão e dia 4 (3 cenários no total)
 // v5: título deixou de ser texto livre (lista em lib/titulos.ts, liberada por códigos)
 // v6: itens com código próprio (lib/codigosItens.ts) → itensLiberados
-const VERSAO = 6;
+// v7: seleção vira lista por tipo (vários acessórios) + escudo como tipo próprio
+const VERSAO = 7;
 
 /** Títulos que o personagem pode escolher: o inicial + os desbloqueados que ainda existem na lista. */
 export function titulosDisponiveis(desbloqueados: string[] | undefined): string[] {
@@ -27,20 +28,34 @@ export function titulosDisponiveis(desbloqueados: string[] | undefined): string[
 }
 
 const SELECAO_VAZIA: Selecao = {
-  camisa: null,
-  calca: null,
-  arma: null,
-  calcado: null,
-  capa: null,
-  chapeu: null,
-  acessorio: null,
+  camisa: [],
+  calca: [],
+  arma: [],
+  escudo: [],
+  calcado: [],
+  capa: [],
+  chapeu: [],
+  acessorio: [],
 };
+const selecaoVazia = (): Selecao =>
+  Object.fromEntries(Object.keys(SELECAO_VAZIA).map((k) => [k, []])) as unknown as Selecao;
 
-// Saves antigos (ou vindos do servidor) podem ter chaves de categorias que não existem mais:
-// reconstrói a seleção só com os 7 tipos atuais.
-function normalizarSelecao(s: Partial<Record<string, string | null>> | undefined): Selecao {
-  const out = { ...SELECAO_VAZIA };
-  for (const k of Object.keys(out) as Categoria[]) out[k] = s?.[k] ?? null;
+// Saves antigos (ou vindos do servidor) podem ter: 1 id por tipo (string) em vez de lista,
+// tipos que não existem mais, ou o escudo ainda como arma. Reagrupa cada id pelo tipo que
+// está no próprio id ("animal-classe-TIPO-nome-dia") e respeita o limite de 1 nos tipos simples.
+function normalizarSelecao(s: Partial<Record<string, string | string[] | null>> | undefined): Selecao {
+  const out = selecaoVazia();
+  const ids = Object.values(s ?? {}).flat().filter((x): x is string => typeof x === "string" && !!x);
+  for (const idOriginal of ids) {
+    const id = idOriginal.replace("-arma-escudo_", "-escudo-escudo_"); // escudo virou tipo próprio
+    const tipo = id.split("-")[2] as Categoria;
+    if (!(tipo in out)) continue;
+    if (CATEGORIAS_MULTIPLAS.includes(tipo)) {
+      if (!out[tipo].includes(id)) out[tipo].push(id);
+    } else {
+      out[tipo] = [id];
+    }
+  }
   return out;
 }
 
@@ -50,7 +65,7 @@ function normalizarEstado(e: EstadoPersonagem): EstadoPersonagem {
   return {
     ...e,
     animal: animalValido ? e.animal : null,
-    selecao: animalValido ? normalizarSelecao(e?.selecao) : { ...SELECAO_VAZIA },
+    selecao: animalValido ? normalizarSelecao(e?.selecao as never) : selecaoVazia(),
     // cenários que saíram (Padrão, dia 4) → escolhe de novo
     cenario: CENARIOS.some((c) => c.id === e?.cenario) ? e.cenario : null,
     titulos: e?.titulos ?? [],
@@ -71,7 +86,7 @@ const estadoInicial: EstadoPersonagem = {
   animal: null,
   classe: null,
   cenario: null,
-  selecao: { ...SELECAO_VAZIA },
+  selecao: selecaoVazia(),
   ficha: {
     nomePersonagem: "",
     titulo: TITULO_INICIAL,
@@ -115,24 +130,30 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
       setAnimal: (a) =>
         set({
           animal: a,
-          selecao: { ...estadoInicial.selecao },
+          selecao: selecaoVazia(),
           atualizadoEm: agora(),
         }),
 
       setClasse: (c) =>
         set({
           classe: c,
-          selecao: { ...estadoInicial.selecao },
+          selecao: selecaoVazia(),
           atualizadoEm: agora(),
         }),
 
       setCenario: (id) => set({ cenario: id, atualizadoEm: agora() }),
 
+      // id null = "Nenhum" (limpa o tipo). Tipo múltiplo: liga/desliga o item. Simples: troca.
       selecionarItem: (cat, id) =>
-        set((s) => ({
-          selecao: { ...s.selecao, [cat]: id },
-          atualizadoEm: agora(),
-        })),
+        set((s) => {
+          const atual = s.selecao[cat] ?? [];
+          let nova: string[];
+          if (id === null) nova = [];
+          else if (CATEGORIAS_MULTIPLAS.includes(cat))
+            nova = atual.includes(id) ? atual.filter((x) => x !== id) : [...atual, id];
+          else nova = [id];
+          return { selecao: { ...s.selecao, [cat]: nova }, atualizadoEm: agora() };
+        }),
 
       setNome: (nome) =>
         set((s) => ({

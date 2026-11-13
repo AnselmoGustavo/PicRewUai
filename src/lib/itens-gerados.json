@@ -2398,21 +2398,6 @@
       "thumb": "/assets/itens/thumbs/cachorro-bardo-arma-viola_desafinada-dia1.png"
     },
     {
-      "id": "cachorro-guerreiro-arma-escudo_link-inicial",
-      "nome": "Escudo Link",
-      "categoria": "arma",
-      "classe": "guerreiro",
-      "animal": "cachorro",
-      "grupo": "inicial",
-      "camadas": [
-        {
-          "arquivo": "/assets/itens/cachorro-guerreiro-arma-escudo_link-inicial.png",
-          "z": 70
-        }
-      ],
-      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-arma-escudo_link-inicial.png"
-    },
-    {
       "id": "cachorro-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -2666,21 +2651,6 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-bardo-arma-viola_desafinada-dia1.png"
-    },
-    {
-      "id": "gato-guerreiro-arma-escudo_link-inicial",
-      "nome": "Escudo Link",
-      "categoria": "arma",
-      "classe": "guerreiro",
-      "animal": "gato",
-      "grupo": "inicial",
-      "camadas": [
-        {
-          "arquivo": "/assets/itens/gato-guerreiro-arma-escudo_link-inicial.png",
-          "z": 70
-        }
-      ],
-      "thumb": "/assets/itens/thumbs/gato-guerreiro-arma-escudo_link-inicial.png"
     },
     {
       "id": "gato-guerreiro-arma-espada_boa-dia2",
@@ -2938,21 +2908,6 @@
       "thumb": "/assets/itens/thumbs/macaco-bardo-arma-viola_desafinada-dia1.png"
     },
     {
-      "id": "macaco-guerreiro-arma-escudo_link-inicial",
-      "nome": "Escudo Link",
-      "categoria": "arma",
-      "classe": "guerreiro",
-      "animal": "macaco",
-      "grupo": "inicial",
-      "camadas": [
-        {
-          "arquivo": "/assets/itens/macaco-guerreiro-arma-escudo_link-inicial.png",
-          "z": 70
-        }
-      ],
-      "thumb": "/assets/itens/thumbs/macaco-guerreiro-arma-escudo_link-inicial.png"
-    },
-    {
       "id": "macaco-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -3208,21 +3163,6 @@
       "thumb": "/assets/itens/thumbs/raposa-bardo-arma-viola_desafinada-dia1.png"
     },
     {
-      "id": "raposa-guerreiro-arma-escudo_link-inicial",
-      "nome": "Escudo Link",
-      "categoria": "arma",
-      "classe": "guerreiro",
-      "animal": "raposa",
-      "grupo": "inicial",
-      "camadas": [
-        {
-          "arquivo": "/assets/itens/raposa-guerreiro-arma-escudo_link-inicial.png",
-          "z": 70
-        }
-      ],
-      "thumb": "/assets/itens/thumbs/raposa-guerreiro-arma-escudo_link-inicial.png"
-    },
-    {
       "id": "raposa-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -3476,21 +3416,6 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-bardo-arma-viola_desafinada-dia1.png"
-    },
-    {
-      "id": "veado-guerreiro-arma-escudo_link-inicial",
-      "nome": "Escudo Link",
-      "categoria": "arma",
-      "classe": "guerreiro",
-      "animal": "veado",
-      "grupo": "inicial",
-      "camadas": [
-        {
-          "arquivo": "/assets/itens/veado-guerreiro-arma-escudo_link-inicial.png",
-          "z": 70
-        }
-      ],
-      "thumb": "/assets/itens/thumbs/veado-guerreiro-arma-escudo_link-inicial.png"
     },
     {
       "id": "veado-guerreiro-arma-espada_boa-dia2",
@@ -5511,8 +5436,8 @@
       "grupo": "dia2",
       "camadas": [
         {
-          "arquivo": "/assets/itens/cachorro-guerreiro-capa-capa-dia2.png",
-          "z": 10
+          "arquivo": "/assets/itens/cachorro-guerreiro-capa-capa-dia2-z60.png",
+          "z": 60
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-capa-capa-dia2.png"
@@ -5545,8 +5470,8 @@
       "grupo": "dia2",
       "camadas": [
         {
-          "arquivo": "/assets/itens/gato-guerreiro-capa-capa-dia2.png",
-          "z": 10
+          "arquivo": "/assets/itens/gato-guerreiro-capa-capa-dia2-z60.png",
+          "z": 60
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-guerreiro-capa-capa-dia2.png"
@@ -5579,8 +5504,8 @@
       "grupo": "dia2",
       "camadas": [
         {
-          "arquivo": "/assets/itens/macaco-guerreiro-capa-capa-dia2.png",
-          "z": 10
+          "arquivo": "/assets/itens/macaco-guerreiro-capa-capa-dia2-z60.png",
+          "z": 60
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-capa-capa-dia2.png"
@@ -5613,8 +5538,8 @@
       "grupo": "dia2",
       "camadas": [
         {
-          "arquivo": "/assets/itens/raposa-guerreiro-capa-capa-dia2.png",
-          "z": 10
+          "arquivo": "/assets/itens/raposa-guerreiro-capa-capa-dia2-z60.png",
+          "z": 60
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-capa-capa-dia2.png"
@@ -5647,8 +5572,8 @@
       "grupo": "dia2",
       "camadas": [
         {
-          "arquivo": "/assets/itens/veado-guerreiro-capa-capa-dia2.png",
-          "z": 10
+          "arquivo": "/assets/itens/veado-guerreiro-capa-capa-dia2-z60.png",
+          "z": 60
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-guerreiro-capa-capa-dia2.png"
@@ -7021,6 +6946,81 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-ninja-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-escudo-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "escudo",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-escudo-escudo_link-inicial.png",
+          "z": 72
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-escudo-escudo_link-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-escudo-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "escudo",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-escudo-escudo_link-inicial.png",
+          "z": 72
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-escudo-escudo_link-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-escudo-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "escudo",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-escudo-escudo_link-inicial.png",
+          "z": 72
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-escudo-escudo_link-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-escudo-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "escudo",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-escudo-escudo_link-inicial.png",
+          "z": 72
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-escudo-escudo_link-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-escudo-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "escudo",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-escudo-escudo_link-inicial.png",
+          "z": 72
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-escudo-escudo_link-inicial.png"
     }
   ]
 }

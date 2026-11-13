@@ -22,6 +22,7 @@ import { salvarProgressoRemoto } from "@/lib/sync";
 import {
   ANIMAIS,
   CATEGORIAS,
+  CATEGORIAS_MULTIPLAS,
   CLASSES,
   type Categoria,
   type Status,
@@ -251,9 +252,14 @@ export default function Editor({
           </Grade>
         )}
 
+        {aba !== "cenario" && aba !== "ficha" && CATEGORIAS_MULTIPLAS.includes(aba) && (
+          <p style={{ margin: "0 0 0.6rem", fontSize: "0.78rem", color: "var(--cor-texto-suave)" }}>
+            Pode escolher vários — toque de novo para tirar.
+          </p>
+        )}
         {aba !== "cenario" && aba !== "ficha" && (
           <Grade>
-            <Tile nome="Nenhum" selecionado={selecao[aba] === null} onClick={() => selecionarItem(aba, null)} />
+            <Tile nome="Nenhum" selecionado={(selecao[aba] ?? []).length === 0} onClick={() => selecionarItem(aba, null)} />
             {itensDe(animal, classe, aba).map((it) => {
               const lock = !itemDesbloqueado(it, desbloqueios, itensLiberados);
               return (
@@ -264,7 +270,7 @@ export default function Editor({
                   cor={it.cor}
                   img={it.thumb}
                   imgContain
-                  selecionado={selecao[aba] === it.id}
+                  selecionado={(selecao[aba] ?? []).includes(it.id)}
                   bloqueado={lock}
                   onClick={() => !lock && selecionarItem(aba, it.id)}
                 />

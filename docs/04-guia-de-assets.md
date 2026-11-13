@@ -10,19 +10,19 @@
 
 Teste real (Veado-Mago) validou o pipeline. Padrões:
 - **Canvas 3150×4400** (aspecto da carta), **PNG transparente**, cada peça **pré-posicionada**. O app reduz para 744×1039 automaticamente.
-- **7 tipos de item:** camisa · calça · arma · calçado · capa · chapéu · acessório.
+- **8 tipos de item:** camisa · calça · arma · escudo · calçado · capa · chapéu · acessório (acessório aceita vários ao mesmo tempo).
 - **Base muda por classe** → um corpo por **animal+classe**.
 - **z-index padrão por tipo** (menor = mais atrás) — o gerador aplica sozinho:
 
-> capa **10** · corpo **20** · calçado **30** · calça **40** · camisa **50** · arma **70** · acessório **75** · chapéu **80**
+> capa **10** · corpo **20** · calçado **30** · calça **40** · camisa **50** · arma **70** · escudo **72** · acessório **75** · chapéu **80**
 
-- Só peças com **várias camadas** precisam de z no nome. Hoje isso acontece com a **capa** (frente z60 + atrás z10).
+- Só peças com **várias camadas** (ou fora do z padrão) precisam de z no nome. Hoje: a **capa do mago** (frente z60 + atrás z10) e a **capa do guerreiro** (uma camada, **z60** — por cima da armadura; o organizador já aplica).
 
 ### Nomenclatura dos arquivos
 **Personagem pelado:** `animal-classe.png` (em `personages-pelados/<animal>/`). Ex.: `veado-mago.png`.
 
 **Itens:** `animal-classe-tipo-nome-dia.png` (em `itens/<tipo>/`)
-- `tipo` = `camisa` · `calca` · `arma` · `calcado` · `capa` · `chapeu` · `acessorio`
+- `tipo` = `camisa` · `calca` · `arma` · `escudo` · `calcado` · `capa` · `chapeu` · `acessorio`
 - `nome` = slug, `_` entre palavras (ex.: `espada_madeira`)
 - `dia` = `inicial` · `dia1` · `dia2` · `dia3` · `dia4` (código do dia que libera). Itens que devem liberar com um **código especial** recebem o código em `src/lib/codigosItens.ts` (aí o dia deixa de valer).
 - **Peça com várias camadas:** acrescenta `-zNN` em cada arquivo (mesmo nome, z diferente).
@@ -87,6 +87,7 @@ O app empilha as imagens nesta ordem padrão (fundo → frente):
 50  camisa
 60  capa (parte da frente)
 70  arma
+72  escudo
 75  acessório
 80  chapéu
 ```
@@ -104,7 +105,7 @@ Por **animal+classe** (5 × 5 = 25 combinações), todas com arte:
 - **Skin básica (dia 1):** camisa (túnica), calça (short), arma básica.
 - **Skin avançada (dia 2):** camisa, calça, calçado e arma; o **guerreiro** e o **mago** têm capa (duas camadas no mago) e o **mago** tem chapéu.
 - **Acessórios avulsos (inicial)**, em todas as classes e ajustados a cada corpo: cachecol, girassol, laço, óculos de grau, óculos Squirtle, pokébola (acessório); cabeça de Godzilla, chapéu do Luffy, chapéu de maquinista (chapéu).
-- **Exclusivos por classe (inicial):** ninja — bandana, leques katana; arqueiro — besta twich, Megaman; bardo — guitarra Brook, guitarra Larinha; guerreiro — escudo do Link, key blade, diário; mago — varinha das varinhas, chapéu de bruxa (Witch Hat Atelier).
+- **Exclusivos por classe (inicial):** ninja — bandana, leques katana; arqueiro — besta twich, Megaman; bardo — guitarra Brook, guitarra Larinha; guerreiro — escudo do Link (tipo **escudo**, usado junto com a arma), key blade, diário; mago — varinha das varinhas, chapéu de bruxa (Witch Hat Atelier).
 
 **Pendente:** diário para arqueiro/bardo/mago/ninja e pokébola para o ninja (se forem para todas as classes).
 
@@ -141,4 +142,4 @@ Passos:
 4. `npm run assets` → otimiza, gera miniaturas e o manifesto, e **acrescenta as peças novas** em `src/lib/bonusItens.ts` e `src/lib/codigosItens.ts` (sem bônus/código).
 5. `npm run build`, commit e push (a Vercel publica sozinha).
 
-Peças que já vieram com tipo diferente entre animais têm o tipo fixado em `TIPO_FIXO` (`scripts/organizar-itens.mjs`): Megaman e key blade = arma; cabeça de Godzilla = chapéu. Grafias alternativas viram o nome padrão (`oculos grau` → `oculos_de_grau`, `besta twitch` → `besta_twich`, `sandalia` → `sapatos`).
+Peças que já vieram com tipo diferente entre animais têm o tipo fixado em `TIPO_FIXO` (`scripts/organizar-itens.mjs`): Megaman e key blade = arma; escudo do Link = escudo; cabeça de Godzilla = chapéu. Grafias alternativas viram o nome padrão (`oculos grau` → `oculos_de_grau`, `besta twitch` → `besta_twich`, `sandalia` → `sapatos`).

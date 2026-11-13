@@ -1,6 +1,7 @@
 // Cálculo de status: base 2 em tudo + bônus de classe + bônus de raça (animal) + bônus dos itens
 // equipados (lib/bonusItens.ts). Aditivo, sem penalidade. Ajuste os números livremente aqui.
 import type { Animal, Classe, Selecao, Status } from "./tipos";
+import { idsDaSelecao } from "./tipos";
 import { BONUS_ITENS } from "./bonusItens";
 
 type Stat = keyof Status; // "vida" | "forca" | "intelecto" | "destreza"
@@ -44,7 +45,7 @@ export function bonusDoItem(itemId: string | null | undefined): Partial<Status> 
 /** Soma dos bônus de todos os itens equipados. */
 export function bonusDosItens(selecao?: Selecao | null): Status {
   const s = zerado();
-  for (const id of Object.values(selecao ?? {})) {
+  for (const id of idsDaSelecao(selecao)) {
     const b = bonusDoItem(id);
     for (const k of STATS) s[k] += b[k] ?? 0;
   }

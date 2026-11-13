@@ -32,7 +32,7 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 20. Corpo (animal+classe)
 30. Calçado · 40. Calça · 50. Camisa
 60. Capa (parte da frente)
-70. Arma · 75. Acessório · 80. Chapéu
+70. Arma · 72. Escudo · 75. Acessório(s) · 80. Chapéu
 ```
 → achatado, é a imagem que o app envia e que preenche a carta inteira.
 

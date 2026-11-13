@@ -65,6 +65,9 @@ function desenharItemPlaceholder(
     case "arma":
       ctx.roundRect(cx + 82, 540, 28, 300, 14);
       break;
+    case "escudo":
+      ctx.roundRect(cx + 60, 640, 90, 110, 30);
+      break;
     case "acessorio":
       ctx.arc(cx + 32, 705, 20, 0, Math.PI * 2);
       break;
@@ -113,7 +116,8 @@ async function desenharPersonagem(
 
   // itens selecionados
   for (const cat of CATEGORIAS_ITEM) {
-    const item = itemPorId(dados.selecao[cat]);
+   for (const idItem of dados.selecao[cat] ?? []) {
+    const item = itemPorId(idItem);
     if (!item) continue;
     if (item.camadas?.length) {
       for (const cam of item.camadas) {
@@ -129,6 +133,7 @@ async function desenharPersonagem(
       const cor = item.cor;
       camadas.push({ z: Z_POR_TIPO[cat], render: () => desenharItemPlaceholder(ctx, cat, cor) });
     }
+   }
   }
 
   await Promise.all(cargas);

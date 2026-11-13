@@ -74,8 +74,11 @@ async function comporCarta({ animal, classe, cenario, selecao, nome, titulo, sta
   const camadas = [];
   const base = gerados.bases[`${animal}-${classe}`];
   if (base) camadas.push({ z: 20, arq: base });
-  for (const id of Object.values(selecao ?? {})) {
-    const item = id && ITENS.get(id);
+  // seleção nova (listas) ou antiga (1 id por tipo); escudo antigo era arma
+  const ids = Object.values(selecao ?? {}).flat().filter(Boolean)
+    .map((id) => id.replace("-arma-escudo_", "-escudo-escudo_"));
+  for (const id of ids) {
+    const item = ITENS.get(id);
     for (const c of item?.camadas ?? []) camadas.push({ z: c.z, arq: c.arquivo });
   }
   const imgs = await Promise.all(camadas.map((c) => loadImage(pub(c.arq))));
