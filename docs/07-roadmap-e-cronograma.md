@@ -80,8 +80,17 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 
 ## Dependências externas (não são código)
 
-- 🎨 **Arte** (ilustradora): bases dos 8 animais, ~150 itens, **3 cenários**. ✅ **Molduras da carta já entregues** (`Assets Finais/`).
+- 🎨 **Arte** (ilustradora): ✅ corpos e itens das 25 combinações (465 itens); ✅ 2 de 3 cenários; ✅ molduras da carta e **verso** (`Assets Finais/verso-carta.jpeg`). Faltam: 3º cenário, diário/pokébola em algumas classes.
 - 🗂️ **Conteúdo**: itens (e cenário) que desbloqueiam em cada dia.
-- 🔑 **Códigos**: os 4 textos dos códigos diários (definir perto do evento).
+- 🔑 **Códigos**: textos reais dos códigos do dia, de envio, de títulos (`titulos.ts`) e de itens especiais (`codigosItens.ts`) — trocar os de exemplo e esconder do bundle antes de 18/11.
 - 🖨️ **Gráfica**: ✅ aceita sem sangria; definir tamanho da folha e perfil de cor; rodar uma amostra cedo.
 - 🔤 **Fontes**: ✅ Poppins, Arcane Fable e Adam Script no projeto; converter as locais → `.woff2`.
+
+## Situação em 12/11/2026
+
+- ✅ App **no ar** em https://pic-rew-uai.vercel.app (Vercel + Supabase, planos grátis), já com participantes testando e cartas enviadas.
+- ✅ Arte integrada nas 25 combinações; pipeline de lotes (`npm run organizar` → `npm run assets`).
+- ✅ Status com bônus de itens, títulos por código, códigos de item especial, código de envio.
+- ✅ Impressão: `npm run baixar-cartas` + **PrintingCardFormatter** (PDF A4, marcas de corte, verso intercalado).
+- ⏳ **Véspera (18/11):** tirar "recomeçar (teste)", códigos reais escondidos, apagar contas de teste, acordar o Supabase.
+

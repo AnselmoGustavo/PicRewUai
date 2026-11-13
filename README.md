@@ -16,15 +16,16 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 | Conta | **Usuário + senha** na tela inicial (identidade + progresso por pessoa) |
 | Persistência | `localStorage` (offline) + sincronização por usuário (cross-device) |
 | Backend | Vercel Functions + Supabase: auth, progresso por usuário, coleta das cartas |
-| Hospedagem | Vercel free tier |
+| Hospedagem | **No ar:** https://pic-rew-uai.vercel.app (Vercel + Supabase, planos grátis) |
 | Identidade | Tema único · primária verde `#45754a` · Poppins + Arcane Fable |
 | Assets | **Por animal+classe** — cada peça desenhada para o corpo daquela combinação |
 | Animais | 5: macaco, raposa, gato, veado, cachorro |
 | Classes | 5: guerreiro, arqueiro, mago, bardo, ninja |
 | Tipos de item | camisa, calça, arma, calçado, capa, chapéu, acessório |
-| Cenário | fundo selecionável (define moldura dia/noite da carta) |
-| Status | 4 atributos na carta: Vida, Força, Intelecto, Destreza |
-| Desbloqueio | Códigos diários iguais para todos, validados no app |
+| Cenário | 3 fundos, 1 por dia (Floresta = noite, Montanhas = dia, 3º a definir) — define a moldura dia/noite |
+| Status | 4 atributos na carta (Vida, Força, Intelecto, Destreza), **calculados**: base + classe + raça + **bônus dos itens** |
+| Título | **Recruta** para todos; outros títulos liberados por **códigos** (`src/lib/titulos.ts`) |
+| Desbloqueio | Um campo só de códigos: **do dia** (itens + cenário), **de envio**, **de título** e **de item especial** |
 | Carta (surpresa) | Participante "envia o personagem" → carta TCG 63 × 88 mm (744×1039, 300 DPI) gerada **por trás** e enviada para impressão. O participante nunca vê a carta |
 
 **Prazo de entrega:** app pronto até **31/10/2026**.
@@ -48,7 +49,7 @@ Toda a documentação vive em [`docs/`](docs/):
 11. [Composição da carta (assets e posições)](docs/11-carta-composicao.md)
 12. [Deploy (Vercel + Supabase)](docs/12-deploy.md)
 
-> ⭐ O **guia de assets** é o documento mais urgente: ele precisa ser combinado com a ilustradora **antes** de ela produzir a arte em volume, porque define tamanho de canvas, ancoragem e ordem das camadas.
+> ⭐ O **guia de assets** define a convenção de nomes, o canvas e a ordem das camadas — e o fluxo de organização dos lotes que a ilustradora manda.
 
 ---
 
@@ -65,32 +66,34 @@ npm run dev          # sobe o app em http://localhost:3000
 - **Criar personagem: `/criar`** — fluxo animal → classe → editor (cenário, itens por categoria filtrados por classe, códigos de desbloqueio, ficha). Estado persiste no navegador.
 - Protótipo da carta (dev): `/poc-carta` — monta a carta com moldura + nome/status e alterna dia/noite.
 
-> Códigos de teste: `UAI-DIA1` … `UAI-DIA4` (liberam itens + cenário do dia) e `UAI-MESTRE` (libera tudo).
+> Códigos de teste: `UAI-DIA1` … `UAI-DIA3` (itens + cenário do dia), `UAI-ENVIAR` (libera o envio), `UAI-BRAVO` / `UAI-TAVERNA` (títulos de exemplo) e `UAI-MESTRE` (libera tudo). ⚠️ Trocar pelos códigos reais antes do evento.
 
 Outros comandos:
 
 ```bash
-npm run build            # build de produção
+npm run build            # build de produção (rodar antes do push)
+npm run organizar        # simula a organização dos lotes da ilustradora (-- --mover para mover)
+npm run assets           # otimiza a arte, gera o manifesto e completa bônus/códigos dos itens
+npm run baixar-cartas    # baixa as cartas enviadas (Supabase) para cartas-baixadas/ + CSV
+npm run regerar-cartas   # regera cartas já enviadas (ver docs/12-deploy.md)
 npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação headless)
 ```
 
 ## Status do projeto
 
-🟢 **Fluxo de criação funcional (com placeholders).**
+🟢 **No ar e em uso** — https://pic-rew-uai.vercel.app (deploy automático a cada push na `main`).
 
-- ✅ Documentação completa ([`docs/`](docs/)).
-- ✅ App Next.js rodando (paleta creme + verde, fundo texturizado, 3 fontes, logo).
-- ✅ Composição da carta validada com os assets reais — exemplos em [`docs/exemplos/`](docs/exemplos/). Coordenadas do [doc 11](docs/11-carta-composicao.md) confirmadas.
-- ✅ Estado global (Zustand) + persistência no `localStorage`; manifesto de itens/cenários ([`src/lib/`](src/lib/)).
-- ✅ Fluxo `/criar`: seleção de animal → classe → editor com abas (cenário + 7 tipos de item + ficha), itens filtrados por classe, bloqueio/desbloqueio por código, preview ao vivo (sem moldura — a carta é surpresa).
-- ✅ **Envio surpresa**: botão "Enviar personagem" → confirmação de que é definitivo → a carta completa (moldura + nome + status) é composta **offscreen** e enviada; editor trava (`enviado`) com tela de agradecimento. A palavra "carta" e a moldura nunca aparecem para o participante.
-- ✅ Endpoint `POST /api/enviar-carta` — **mock de dev** que salva em `./envios` (verificado de ponta a ponta).
-- ✅ **Conta (usuário + senha)** na tela inicial (ADR-015): cadastro/login com senha em **hash (pbkdf2)**, sessão com token, e **sincronização do progresso por usuário** (auto-save com debounce, cross-device). Endpoints `/api/auth` e `/api/progresso` com **mock de dev** em `.dev-data/` (verificado end-to-end). Produção: tabelas no Supabase (`supabase/schema.sql`).
+- ✅ **Arte completa nas 25 combinações** (5 animais × 5 classes): corpo base + skin básica (dia 1) + skin avançada (dia 2) + acessórios avulsos (liberados desde o início) — **465 itens**. Toda peça existe para os 5 animais da classe.
+- ✅ **Pipeline de assets**: a ilustradora manda pastas `<Animal> - <Classe>` em `Assets Prontos/itens/itens-para-formatacao/` → `npm run organizar` (simulação) / `npm run organizar -- --mover` → `npm run assets` (otimiza, gera miniaturas, o manifesto `src/lib/itens-gerados.json` e **acrescenta as peças novas** nos arquivos de bônus e de códigos). Ver [doc 04](docs/04-guia-de-assets.md).
+- ✅ **Editor**: animal → classe → abas (cenário + só os tipos de item que existem para aquele animal+classe + ficha). Preview ao vivo sem moldura (a carta é surpresa). Botão **Salvar progresso** (além do auto-save).
+- ✅ **Status** = base 2 + classe + raça + **bônus dos itens equipados** (`src/lib/bonusItens.ts`, teto 9). Mostrado na ficha e desenhado na carta.
+- ✅ **Títulos**: todos começam como **Recruta**; os demais (`src/lib/titulos.ts`) são liberados por código e ficam escondidos até lá.
+- ✅ **Códigos**: do dia, de envio (`UAI-ENVIAR` — o botão Enviar fica bloqueado até lá), de título e de **item especial** (`src/lib/codigosItens.ts` — item com código só libera com ele).
+- ✅ **Envio surpresa**: a carta completa (moldura dia/noite conforme o cenário + nome + título + status) é composta **offscreen** e enviada. 1 envio por pessoa.
+- ✅ **Backend real (Supabase)**: contas (`usuarios`, senha pbkdf2), progresso (`progresso`) e cartas (tabela `cartas` + Storage privado `cartas/<usuario>.png`). Schema em [`supabase/schema.sql`](supabase/schema.sql); guia em [doc 12](docs/12-deploy.md). Sem as variáveis de ambiente, cai num mock local (`.dev-data/`, `envios/`).
+- ✅ **Gráfica**: `npm run baixar-cartas` baixa os PNGs + `cartas.csv`; o projeto irmão **PrintingCardFormatter** (`GerarPDFCartas.exe`) monta o PDF A4 (9 por folha, marcas de corte, verso intercalado).
+- ✅ `npm run regerar-cartas` regera cartas já enviadas a partir do progresso salvo (usado quando a Floresta passou a ter moldura de noite).
 
-- ✅ **Cenários reais**: 2 de 5 integrados (Floresta=dia1, Montanhas=dia2, ambos claros) — otimizados para 744×1039 em `public/assets/cenarios/` (`scripts/otimizar-cenarios.mjs`); demais são placeholders coloridos.
-- ✅ **Itens reais por animal+classe** (ADR-016): **Veado-Mago** integrado (roupa básica + avançada), itens **multi-camada** empilhados por z-index, com miniaturas. Base do corpo por animal+classe.
-- ✅ **Pipeline automático de assets**: arquivos nomeados na convenção (`animal-classe-tipo-nome-grupo-zNN.png`) em `Assets Prontos/` → `npm run assets` otimiza, recorta miniaturas e **gera o manifesto** (`src/lib/itens-gerados.json`). Adicionar item = soltar arquivo + rodar o script. Convenção no [doc 04](docs/04-guia-de-assets.md).
+**Antes do evento (18/11):** tirar o botão "recomeçar (teste)", trocar os códigos de exemplo pelos reais (escondidos do bundle), apagar contas de teste no Supabase e abrir o painel do Supabase (pausa após 7 dias parado).
 
-> ⚠️ **Demais animais/classes usam placeholders** (cores/silhuetas) até a arte chegar. A lógica (multi-camada, filtro por animal+classe, render por z-index, gerador) já está pronta e validada.
-
-**Próximos passos:** criar os projetos Supabase + Vercel seguindo o [doc 12](docs/12-deploy.md) (o código já está pronto: contas, progresso e cartas no Supabase; `npm run baixar-cartas` para a gráfica); polir a ficha; integrar a arte final quando chegar.
+**Arte pendente:** diário para arqueiro/bardo/mago/ninja e pokébola para o ninja (se forem para todas as classes); 3º cenário.

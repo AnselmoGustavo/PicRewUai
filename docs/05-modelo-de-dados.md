@@ -19,20 +19,22 @@ interface CamadaItem {
 }
 
 interface ItemDef {
-  id: string;              // único e estável, ex.: "vm_arma_cajado"
+  id: string;              // = nome do arquivo sem .png, ex.: "veado-mago-arma-cajado-dia2"
   nome: string;            // rótulo exibido no app
   categoria: Categoria;
   classe: Classe;
-  animal?: Animal;         // item específico deste animal; ausente = placeholder genérico
+  animal?: Animal;         // animal do item (todos os itens reais têm)
   grupo: GrupoDesbloqueio; // define por qual código é liberado
   camadas?: CamadaItem[];  // camadas reais (uma peça pode ter várias: ex. capa frente+atrás)
-  cor?: string;            // cor do placeholder enquanto não há arte
+  thumb?: string;          // miniatura recortada para a UI
 }
 ```
 
 > **Z-index padrão por tipo** (`Z_POR_TIPO` em `src/lib/tipos.ts`): capa 10, corpo (base) 20, calçado 30, calça 40, camisa 50, arma 70, acessório 75, chapéu 80. A frente da capa usa z60, informado no nome do arquivo. O app coleta a base + as camadas dos itens escolhidos e **desenha tudo ordenado por z**. Uma peça com partes na frente e atrás do corpo (capa) tem duas camadas com z diferentes.
 
-> **Base (corpo) por animal:** `BASES_POR_ANIMAL[animal]` → PNG do corpo (desenhado em z=20). Hoje só o Veado tem base real; os demais usam a silhueta placeholder.
+> **Base (corpo) por animal+classe:** `bases["animal-classe"]` em `itens-gerados.json` → PNG do corpo (desenhado em z=20). As 25 combinações têm corpo real.
+
+> **Manifesto gerado:** os itens não são escritos à mão — `npm run assets` lê `Assets Prontos/` e gera `src/lib/itens-gerados.json` (`{ bases, itens }`). Bônus e códigos por item ficam em arquivos editáveis à parte (abaixo).
 
 ### Cenários (fundos)
 
@@ -44,29 +46,31 @@ interface CenarioDef {
   nome: string;
   arquivo: string;            // /public/assets/cenarios/...
   tema: 'claro' | 'escuro';   // claro → moldura "dia" · escuro → moldura "noite"
-  grupo: GrupoDesbloqueio;    // dia1..dia4 — cada dia libera 1 cenário
+  grupo: GrupoDesbloqueio;    // dia1..dia3 — cada dia libera 1 cenário
 }
 ```
 
 > **3 cenários no total, liberados 1 por dia** — o mesmo código do dia libera os itens **e** o cenário daquele dia.
 
-Exemplo:
+Exemplo de item no manifesto gerado:
 
-```ts
-export const ITENS: ItemDef[] = [
-  {
-    id: 'arma_mago_cajado-cristal',
-    nome: 'Cajado de Cristal',
-    categoria: 'arma',
-    classe: 'mago',
-    grupo: 'dia2',
-    arquivo: '/assets/itens/mago/arma_mago_cajado-cristal.png',
-  },
-  // ...
-];
+```json
+{
+  "id": "veado-mago-capa-capa-dia2",
+  "nome": "Capa",
+  "categoria": "capa",
+  "classe": "mago",
+  "animal": "veado",
+  "grupo": "dia2",
+  "camadas": [
+    { "arquivo": "/assets/itens/veado-mago-capa-capa-dia2-z10.png", "z": 10 },
+    { "arquivo": "/assets/itens/veado-mago-capa-capa-dia2-z60.png", "z": 60 }
+  ],
+  "thumb": "/assets/itens/thumbs/veado-mago-capa-capa-dia2.png"
+}
 ```
 
-> A planilha de itens da ilustradora (nome, classe, categoria, dia de desbloqueio) é convertida diretamente neste manifesto.
+> Bônus e código de um item usam a chave **`classe/tipo/nome`** (ex.: `mago/capa/capa`), que vale para os 5 animais.
 
 ## Estado do personagem
 
@@ -81,11 +85,13 @@ interface EstadoPersonagem {
   selecao: Record<Categoria, string | null>; // item escolhido por tipo (id ou null)
   ficha: {
     nomePersonagem: string;       // aparece na carta (fonte Adam Script)
-    titulo?: string;              // epíteto/título — aparece na carta, abaixo do nome
-    // status NÃO fica no estado: é CALCULADO de animal+classe (lib/status.ts)
+    titulo?: string;              // título ESCOLHIDO entre os liberados (padrão "Recruta") — vai na carta
+    // status NÃO fica no estado: é CALCULADO de animal+classe+itens (lib/status.ts)
     habilidade?: string;          // campo de "habilidade" (uso na ficha; não vai na carta)
   };
-  desbloqueios: GrupoDesbloqueio[]; // grupos já liberados, ex.: ['inicial','dia1']
+  desbloqueios: GrupoDesbloqueio[]; // grupos já liberados, ex.: ['inicial','dia1','envio']
+  titulos: string[];                // títulos liberados por código (além do Recruta)
+  itensLiberados: string[];         // itens com código especial já liberados ("classe/tipo/nome")
   enviado: boolean;                 // true após o envio final → trava o editor
   atualizadoEm: number;             // epoch ms da última mudança (last-write-wins)
 }
@@ -94,7 +100,7 @@ interface EstadoPersonagem {
 - Persistido automaticamente em `localStorage` a cada mudança (cache rápido/offline).
 - `inicial` está sempre desbloqueado.
 - Quando `enviado === true`, o editor entra em modo somente-leitura (envio é único e definitivo).
-- **Status é derivado** de `animal + classe` (`src/lib/status.ts`: base 2 + bônus de classe + bônus de raça, aditivo), **não armazenado** nem editável. Exibido na ficha e desenhado na carta.
+- **Status é derivado** de `animal + classe + itens equipados` (`src/lib/status.ts`: base 2 + bônus de classe + bônus de raça + bônus dos itens, aditivo, teto 9), **não armazenado** nem editável. Exibido na ficha e desenhado na carta.
 
 ## Conta (usuário + senha) e sincronização — ADR-015
 
@@ -113,7 +119,7 @@ A tela inicial pede **criar conta / entrar** (usuário + senha). A conta é a id
 ```
 
 > **Dev:** sem chaves Supabase, auth e progresso usam **mock em arquivo** (`.dev-data/usuarios`, `.dev-data/progresso`). Senhas sempre com hash, nunca em texto puro.
-> **Produção:** recomendado **Supabase Auth** no lugar da auth caseira (ver ADR-015).
+> **Produção:** tabela `usuarios` no Supabase com a mesma auth própria (usuário + senha, sem e-mail) — ADR-021, [`supabase/schema.sql`](../supabase/schema.sql).
 
 ## Sistema de códigos de desbloqueio
 

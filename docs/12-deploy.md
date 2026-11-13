@@ -51,6 +51,18 @@ npm run baixar-cartas
 
 Baixa todos os PNGs para `cartas-baixadas/` e gera `cartas-baixadas/cartas.csv` (usuário, nome, título, animal, classe, cenário, status, data). Pode rodar quantas vezes quiser: só baixa as novas.
 
+## Regerar cartas já enviadas
+
+Se a composição da carta mudar depois que pessoas já enviaram (ex.: um cenário trocou de dia para noite), dá para remontar as cartas a partir do progresso salvo:
+
+```bash
+npm run regerar-cartas -- --cenario cen_floresta            # prévias em cartas-regeradas/
+npm run regerar-cartas -- --usuario fulano --usuario ciclano
+npm run regerar-cartas -- --cenario cen_floresta --enviar   # SUBSTITUI no Storage (guarda as antigas em cartas-regeradas/antigas/)
+```
+
+Usa o progresso salvo (itens, cenário) + nome, título e status gravados no envio. Quem usou "recomeçar" depois de enviar perdeu o progresso e não dá para regerar.
+
 ## Como os dados ficam guardados
 
 | O quê | Onde | Observação |

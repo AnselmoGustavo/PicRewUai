@@ -2,7 +2,7 @@
 
 > **Ilustradora:** Ana Beatriz — responsável por todos os assets dos personagens (corpo, roupas, acessórios, equipamentos) e possivelmente os cenários.
 
-> **Documento mais importante para começar a arte.** Ele precisa ser combinado e aprovado **antes** de produzir os itens em volume. Se o padrão de canvas/ancoragem mudar depois, boa parte da arte precisa ser refeita.
+> **Estado (12/11/2026):** arte entregue nas **25 combinações** (corpo + skin básica + skin avançada + acessórios avulsos) — **465 itens**. Novos lotes entram pelo fluxo de [Recebimento dos lotes](#recebimento-dos-lotes-fluxo-atual).
 
 > 🔄 **ATUALIZAÇÃO (ADR-016):** o modelo mudou de "itens universais" para **itens por animal+classe** — cada peça é desenhada já encaixada no corpo daquele animal (ex.: chapéu que respeita os chifres do veado). Validado com o Veado-Mago. Ver detalhes abaixo em **"Estrutura confirmada (Veado-Mago)"**. As partes sobre canvas fixo/transparência/nomenclatura seguem valendo; o que mudou é que a arte é **específica por combinação**, não compartilhada entre animais.
 
@@ -24,7 +24,7 @@ Teste real (Veado-Mago) validou o pipeline. Padrões:
 **Itens:** `animal-classe-tipo-nome-dia.png` (em `itens/<tipo>/`)
 - `tipo` = `camisa` · `calca` · `arma` · `calcado` · `capa` · `chapeu` · `acessorio`
 - `nome` = slug, `_` entre palavras (ex.: `espada_madeira`)
-- `dia` = `inicial` · `dia1` · `dia2` · `dia3` · `dia4` (código do dia que libera). *Itens com código especial/à parte: a definir depois.*
+- `dia` = `inicial` · `dia1` · `dia2` · `dia3` · `dia4` (código do dia que libera). Itens que devem liberar com um **código especial** recebem o código em `src/lib/codigosItens.ts` (aí o dia deixa de valer).
 - **Peça com várias camadas:** acrescenta `-zNN` em cada arquivo (mesmo nome, z diferente).
 
 **Regras:** só `-` separa campos; dentro de um campo use `_`. Tudo **minúsculo, sem acento/espaço**.
@@ -56,10 +56,10 @@ Alinhado aos designs de carta já produzidos (`Assets Finais/`), que estão em *
 
 | Propriedade | Valor |
 |-------------|-------|
-| Tamanho do canvas | **744 × 1039 px @ 300 DPI** (igual à carta — o personagem preenche a carta) |
+| Tamanho do canvas | **3150 × 4400 px** (mesmo aspecto da carta); o app reduz para **744 × 1039 @ 300 DPI** |
 | Formato | **PNG com transparência** (fundo 100% transparente; exceto cenários, que são opacos) |
 | Resolução | Se quisermos impressão a 600 DPI no futuro, **tudo** (personagem + frames) é re-exportado a 2× (1488 × 2078) |
-| Nomeação | `categoria_classe_nome.png` (ex.: `arma_mago_cajado-cristal.png`) |
+| Nomeação | `animal-classe-tipo-nome-dia[-zNN].png` (ver acima) |
 
 ### Zonas cobertas pela moldura (evitar detalhes importantes aqui)
 A moldura da carta cobre partes da imagem. Evite posicionar o rosto/detalhe-chave do personagem sob:
@@ -97,19 +97,21 @@ Depois dessas camadas, o app coloca a **moldura da carta** (frames + textos) por
 - Se um item precisar furar essa ordem (ex.: uma arma nas costas, atrás do corpo), me avise — damos um **z-index especial** a ele no app.
 - Itens que se sobrepõem a partes do corpo (ex.: camisa cobrindo o tronco) devem ser desenhados **cobrindo** essa parte, já que ficam por cima da base.
 
-## Inventário de arte a produzir
+## Inventário (12/11/2026)
 
-Por **animal+classe** (5 animais × 5 classes = 25 combinações):
-- **1 corpo** (personagem pelado): `animal-classe.png`
-- **Itens** nos 7 tipos (camisa, calça, arma, calçado, capa, chapéu, acessório). Nem todo tipo precisa existir em toda combinação; o editor mostra "Nenhum" quando não há.
+Por **animal+classe** (5 × 5 = 25 combinações), todas com arte:
+- **1 corpo** (personagem pelado): `animal-classe.png`.
+- **Skin básica (dia 1):** camisa (túnica), calça (short), arma básica.
+- **Skin avançada (dia 2):** camisa, calça, calçado e arma; o **guerreiro** e o **mago** têm capa (duas camadas no mago) e o **mago** tem chapéu.
+- **Acessórios avulsos (inicial)**, em todas as classes e ajustados a cada corpo: cachecol, girassol, laço, óculos de grau, óculos Squirtle, pokébola (acessório); cabeça de Godzilla, chapéu do Luffy, chapéu de maquinista (chapéu).
+- **Exclusivos por classe (inicial):** ninja — bandana, leques katana; arqueiro — besta twich, Megaman; bardo — guitarra Brook, guitarra Larinha; guerreiro — escudo do Link, key blade, diário; mago — varinha das varinhas, chapéu de bruxa (Witch Hat Atelier).
 
-Pronto hoje: **Veado-Mago** e **Raposa** (as 5 classes), com roupa básica (dia 1) e avançada (dia 2).
+**Pendente:** diário para arqueiro/bardo/mago/ninja e pokébola para o ninja (se forem para todas as classes).
 
-### Cenários (fundos) — N arquivos (a definir quantos)
-- Imagens **opacas** de 744 × 1039 que preenchem a carta atrás do personagem.
+### Cenários (fundos) — 3 no total
+- Imagens **opacas** que preenchem a carta atrás do personagem (otimizadas para 744 × 1039 com `npm run cenarios`).
 - Cada cenário é **claro** ou **escuro** → define se a carta usa a moldura **dia** ou **noite**.
-- Idealmente equilibrar a quantidade de claros e escuros.
-- Nomeação sugerida: `cenario_nome_claro.png` / `cenario_nome_escuro.png`.
+- Hoje: **Floresta** (dia 1, **escuro** → moldura noite), **Montanhas** (dia 2, claro → moldura dia), **3º** (dia 3, arte a chegar).
 
 ### Moldura da carta — ✅ já entregue
 Em `Assets Finais/`: bordas (dia/noite/corte), name frame (dia/noite + preenchimento), status (dia/noite + preenchimento). Composição documentada em [11](11-carta-composicao.md). **Nada a produzir aqui** (gráfica aceita sem sangria).
@@ -119,15 +121,24 @@ Em `Assets Finais/`: bordas (dia/noite/corte), name frame (dia/noite + preenchim
 
 ## Checklist de entrega de cada asset
 
-- [ ] Canvas **744 × 1039 px @ 300 DPI**
-- [ ] Fundo 100% transparente (cenários são opacos)
-- [ ] Elemento na posição final (não centralizado "solto")
-- [ ] Nomeado no padrão `categoria_classe_nome.png`
-- [ ] Dentro da camada/z-index correto
-- [ ] Testado sobre pelo menos 2–3 animais diferentes
+- [ ] Canvas **3150 × 4400**, PNG com fundo 100% transparente (cenários são opacos)
+- [ ] Peça na posição final, encaixada no corpo daquele animal+classe
+- [ ] Mesma peça com o **mesmo nome** em todos os animais (o bônus e o código do item dependem do nome)
+- [ ] Peça de várias camadas: uma imagem por camada
 
-## Entrega e organização
+## Recebimento dos lotes (fluxo atual)
 
-- Entregar em pastas por classe/categoria, espelhando `public/assets/`.
-- Um item = um arquivo PNG. Nada de spritesheets.
-- Manter um arquivo/planilha listando cada item (nome exibido no app, classe, categoria, **em qual dia/código ele desbloqueia**). Isso alimenta o manifesto (ver [05](05-modelo-de-dados.md)).
+A ilustradora manda uma pasta por combinação, `<Animal> - <Classe>` (ex.: `Gato - Bardo`), podendo ter subpastas. Nomes aceitos pelo organizador:
+- **Corpo:** `Gato - Bardo.png`, `gato-bardo.png`…
+- **Skin:** `gato-bardo-[adv|basico|tipo]-peça-dia.png` (ex.: `veado-ninja-adv-blusa-dia2.png`) — a peça é traduzida pela tabela `PECAS` (blusa → camisa, short → calça…).
+- **Avulso com tipo na frente:** `acessorio pokebola Mescladas.PNG`, `arma besta twich.png` → dia `inicial`.
+- **Avulso conhecido sem tipo:** `bandana Mescladas.PNG` (tabela `AVULSOS`).
+
+Passos:
+1. Colocar as pastas em `Assets Prontos/itens/itens-para-formatacao/`.
+2. `npm run organizar` → mostra o que faria e lista as pendências (`??`).
+3. `npm run organizar -- --mover` → move para as pastas de tipo, já com o nome da convenção. Arquivo idêntico ao que já existe é descartado; diferente vira pendência (nunca sobrescreve).
+4. `npm run assets` → otimiza, gera miniaturas e o manifesto, e **acrescenta as peças novas** em `src/lib/bonusItens.ts` e `src/lib/codigosItens.ts` (sem bônus/código).
+5. `npm run build`, commit e push (a Vercel publica sozinha).
+
+Peças que já vieram com tipo diferente entre animais têm o tipo fixado em `TIPO_FIXO` (`scripts/organizar-itens.mjs`): Megaman e key blade = arma; cabeça de Godzilla = chapéu. Grafias alternativas viram o nome padrão (`oculos grau` → `oculos_de_grau`, `besta twitch` → `besta_twich`, `sandalia` → `sapatos`).

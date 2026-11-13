@@ -30,14 +30,15 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 
 ### 4. Editor (picrew) — tela principal
 - **Área de preview**: a carta renderizada em tempo real (cenário + personagem + moldura).
-- **Abas**: **cenário**, camisa, calça, arma, calçado, capa, chapéu, acessório, ficha.
+- **Abas**: **cenário**, os tipos de item **que existem para aquele animal+classe** (camisa, calça, arma, calçado, capa, chapéu, acessório — abas vazias ficam escondidas), ficha.
 - **Cenário**: escolha do fundo (não depende de classe). **3 cenários** (Floresta dia 1, Montanhas dia 2, 3º a definir no dia 3), liberados **1 por dia** via código. O cenário define se a moldura fica dia/noite (ver [11](11-carta-composicao.md)) — mas isso é interno; o participante só escolhe o fundo.
 - Ao abrir uma categoria de item, mostra os itens **daquela classe**:
   - Itens **desbloqueados**: selecionáveis.
-  - Itens **bloqueados**: aparecem esmaecidos com um cadeado 🔒 (mostrar que existem, mas indisponíveis — cria expectativa/coleção).
+  - Itens **bloqueados**: aparecem esmaecidos com um cadeado 🔒 (mostrar que existem, mas indisponíveis — cria expectativa/coleção). Itens com **código especial** aparecem com 🎁.
+  - Itens com **bônus de status** mostram o bônus no nome (ex.: "Cajado · +2📖").
   - Opção **"Nenhum"** para não usar item naquela categoria.
 - Botão para **trocar animal** e **trocar classe**.
-- Ações: **Inserir código**, **Ficha**, **Salvar/Backup**, **Enviar** (personagem).
+- Ações: **Inserir código**, **Ficha**, **Salvar progresso** (além do auto-save), **Enviar** (personagem — só depois do código de envio).
 
 ### 5. Inserir código
 - Campo de texto para o código do dia.
@@ -51,16 +52,15 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 ### 6. Ficha de personagem
 - A aba **Ficha** tem só os campos **editáveis** + o status **exibido** (não editável):
   - **Nome do personagem** (texto, escrito pelo participante) — vai na carta (fonte Adam Script)
-  - **Título** (texto livre, ex.: "o Bravo") — vai na carta, abaixo do nome
-  - **Status** (somente leitura): **Vida ❤️, Força ⚔️, Intelecto 📖, Destreza ⚡** — **calculados** de `base 2 + classe + raça (animal)`, não digitados. Ver `src/lib/status.ts` (tabelas de bônus) e [09](09-decisoes.md).
+  - **Título** — **escolhido** (não digitado) entre os títulos já liberados: todos começam com **Recruta**, os outros vêm de códigos (`src/lib/titulos.ts`). Títulos bloqueados ficam escondidos (só aparece quantos faltam). Vai na carta, abaixo do nome.
+  - **Status** (somente leitura): **Vida ❤️, Força ⚔️, Intelecto 📖, Destreza ⚡** — **calculados** de `base 2 + classe + raça (animal) + bônus dos itens equipados`, não digitados. Ver `src/lib/status.ts`, `src/lib/bonusItens.ts` e [09](09-decisoes.md). A ficha mostra o bônus dos itens à parte, ex.: "6 (+2)".
 - O app **desenha nome, título e status (calculado) na carta** nas posições de [11](11-carta-composicao.md).
-- Status fica entre **2 e 5** (1 dígito), cabe na caixa da carta.
+- Cada status vai no máximo até **9** (1 dígito, cabe na caixa da carta).
 
-### 7. Salvar / Código de backup
-- O save é **automático** no `localStorage` a cada mudança.
-- Botão **Gerar código de backup**: gera uma string que representa todo o estado do personagem.
-- O usuário pode copiar esse código e colar em outro dispositivo (tela inicial → restaurar).
-- Ver formato em [05-modelo-de-dados](05-modelo-de-dados.md).
+### 7. Salvar
+- O progresso é salvo **automaticamente** (no aparelho e, logado, no servidor) a cada mudança.
+- Botão **💾 Salvar progresso** força o envio ao servidor e confirma com o horário ("✓ Progresso salvo às 13:05").
+- A mesma conta (usuário + senha) abre o personagem em qualquer aparelho. *(O antigo "código de backup" foi substituído pela conta — ADR-015.)*
 
 ### 8. Enviar personagem 🎁 (a carta é surpresa)
 - Botão **Enviar** — do ponto de vista do participante, ele está enviando **o personagem** (a palavra "carta" **não aparece**).

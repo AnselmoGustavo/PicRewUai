@@ -14,6 +14,7 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 |-------|---------|:------------:|-----------|
 | Borda | `Bordas/Borda dia.png` · `Borda noite.png` | 744 × 1039 | dia / noite |
 | Borda p/ corte | `Bordas/Borda pra corte.png` | 744 × 1039 | guia de corte (só no PDF) |
+| **Verso** | `verso-carta.jpeg` | 745 × 1040 | verso da carta (usado só no PDF de impressão, ajustado a 744 × 1039) |
 | Name Frame | `Name Frame/Frames novos/Name Frame {Dia,Noite} Title 1.png` | **744 × 1039** | dia / noite · **full-canvas** (banner + linha de título), traço escuro/claro |
 | Name Frame Preench. | — (removido) | — | agora o preenchimento do nome é **gerado por código** (ver abaixo) |
 | Status Frame | `Status Completo/Status dia.png` · `noite.png` | 169 × 240 | dia / noite (ícones embutidos) |
@@ -26,13 +27,12 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 
 ### Parte A — imagem do participante (vira o "fundo" da carta) · 744 × 1039
 ```
-0. Cenário (fundo escolhido)   ← define o tema dia/noite
-1. Base do animal
-2. Vestimenta
-3. Acessório 1
-4. Item de cabeça
-5. Arma
-6. Acessório 2
+ 0. Cenário (fundo escolhido)   ← define o tema dia/noite
+10. Capa (parte de trás)
+20. Corpo (animal+classe)
+30. Calçado · 40. Calça · 50. Camisa
+60. Capa (parte da frente)
+70. Arma · 75. Acessório · 80. Chapéu
 ```
 → achatado, é a imagem que o app envia e que preenche a carta inteira.
 
@@ -74,10 +74,10 @@ Fonte da verdade das coordenadas: `src/lib/cartaLayout.json`.
 | Status 3 (Intelecto 📖) | 607 | 880 | 35 | 45 | 34 | escura |
 | Status 4 (Destreza ⚡) | 607 | 926 | 35 | 45 | 34 | escura |
 
-> Mapeamento Status 1–4 → Vida / Força / Intelecto / Destreza (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita nome e título**; o **status é calculado** de animal+classe (`lib/status.ts`). O app desenha os três na carta (fonte Adam Script). Status fica entre 2 e 5 (1 dígito).
+> Mapeamento Status 1–4 → Vida / Força / Intelecto / Destreza (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita o nome** e **escolhe o título** entre os liberados (padrão "Recruta"); o **status é calculado** de animal+classe+itens (`lib/status.ts`). O app desenha os três na carta (fonte Adam Script). Cada status vai até 9 (1 dígito).
 > **Sem preenchimento** atrás do nome nem do título (decisão de design). Ambos ficam direto sobre a ribbon/cenário, então a **cor acompanha o tema** (`corTexto` no dia, `corTextoClaro` na noite) para manter a legibilidade.
 
-> 🎨 **Pendente (calibrar com cenários reais):** cores/opacidades foram definidas sobre fundo placeholder. Ao integrar os cenários reais, revisar o **contraste dos números de status** (e do título) — ajustar cor/opacidade se necessário.
+> ✅ **Calibrado com os cenários reais (11/2026):** na moldura de **noite** (Floresta), nome, título e números de status são **claros com sombra escura** (`sombraNoite` em `cartaLayout.json`); na de **dia** (Montanhas), escuros sem sombra. Ver ADR-020.
 
 ## Preenchimentos (transparência)
 

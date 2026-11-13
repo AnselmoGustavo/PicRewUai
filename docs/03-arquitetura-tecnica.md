@@ -13,7 +13,7 @@
 | Backend | **Serverless (Vercel Functions)** + **Supabase** (Storage + Postgres) | (1) sincronizar progresso cross-device; (2) receber as cartas para impressão + painel |
 | Hospedagem | **Vercel** (free) | App estático + funções serverless |
 
-> **Backend enxuto.** A lógica do app (montar personagem, códigos, gerar imagem) roda no navegador e funciona offline via `localStorage`. O servidor entra em três pontos: **conta (usuário+senha)** e **sincronização do progresso por usuário** (ADR-015, ver [05](05-modelo-de-dados.md)) e **receber a carta final** para impressão (ver [06](06-exportacao-carta.md)). Editar funciona offline; logar/sincronizar/enviar precisa de internet. Em dev, auth/progresso usam mock em arquivo; em produção, Supabase (recomendado Supabase Auth).
+> **Backend enxuto.** A lógica do app (montar personagem, códigos, gerar imagem) roda no navegador e funciona offline via `localStorage`. O servidor entra em três pontos: **conta (usuário+senha)** e **sincronização do progresso por usuário** (ADR-015, ver [05](05-modelo-de-dados.md)) e **receber a carta final** para impressão (ver [06](06-exportacao-carta.md)). Editar funciona offline; logar/sincronizar/enviar precisa de internet. Em dev, auth/progresso usam mock em arquivo; em produção, tabelas no Supabase com auth própria (ADR-021, [12](12-deploy.md)).
 
 ## Princípios de arquitetura
 
@@ -70,16 +70,20 @@
 ## Modelo de renderização (resumo)
 
 ```
-ordem de desenho (fundo → frente):
-  1. base do animal
-  2. vestimenta
-  3. acessório 1        (ex.: capa, asas — atrás do corpo/cabeça)
-  4. item de cabeça
-  5. arma
-  6. acessório 2        (ex.: item na mão, joia frontal)
+ordem de desenho (fundo → frente), por z-index:
+   0  cenário (fundo opaco)
+  10  capa (parte de trás)
+  20  corpo (animal+classe)
+  30  calçado
+  40  calça
+  50  camisa
+  60  capa (parte da frente)
+  70  arma
+  75  acessório
+  80  chapéu
 ```
 
-> A ordem padrão acima é uma proposta. Cada item pode ter um **z-index próprio** no manifesto, permitindo exceções (ex.: uma arma que fica nas costas). Ver [04](04-guia-de-assets.md) e [05](05-modelo-de-dados.md).
+> O z vem do **tipo** (`Z_POR_TIPO` em `src/lib/tipos.ts`); peças de várias camadas (a capa) informam o z no nome do arquivo (`-zNN`). Ver [04](04-guia-de-assets.md) e [05](05-modelo-de-dados.md).
 
 ## Considerações de compatibilidade mobile
 
