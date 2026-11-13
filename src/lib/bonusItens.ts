@@ -116,4 +116,7 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "ninja/chapeu/chapeu_maquinista": {},    // Chapeu Maquinista (inicial)
   "ninja/acessorio/girassol": {},             // Girassol (inicial)
   "ninja/acessorio/laco": {},                 // Laco (inicial)
+
+  // ---- ninja ----
+  "ninja/acessorio/pokebola": {},          // Pokébola (inicial)
 };

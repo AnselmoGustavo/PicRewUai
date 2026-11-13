@@ -107,7 +107,7 @@ Por **animal+classe** (5 × 5 = 25 combinações), todas com arte:
 - **Acessórios avulsos (inicial)**, em todas as classes e ajustados a cada corpo: cachecol, girassol, laço, óculos de grau, óculos Squirtle, pokébola (acessório); cabeça de Godzilla, chapéu do Luffy, chapéu de maquinista (chapéu).
 - **Exclusivos por classe (inicial):** ninja — bandana, leques katana; arqueiro — besta twich, Megaman; bardo — guitarra Brook, guitarra Larinha; guerreiro — escudo do Link (tipo **escudo**, usado junto com a arma), key blade, diário; mago — varinha das varinhas, chapéu de bruxa (Witch Hat Atelier).
 
-**Pendente:** diário para arqueiro/bardo/mago/ninja e pokébola para o ninja (se forem para todas as classes).
+**Pendente:** diário para arqueiro/bardo/mago/ninja (se for para todas as classes).
 
 ### Cenários (fundos) — 3 no total
 - Imagens **opacas** que preenchem a carta atrás do personagem (otimizadas para 744 × 1039 com `npm run cenarios`).

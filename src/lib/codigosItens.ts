@@ -114,4 +114,7 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "ninja/chapeu/chapeu_maquinista": "",    // Chapeu Maquinista (hoje: inicial)
   "ninja/acessorio/girassol": "",             // Girassol (hoje: inicial)
   "ninja/acessorio/laco": "",                 // Laco (hoje: inicial)
+
+  // ---- ninja ----
+  "ninja/acessorio/pokebola": "",          // Pokébola (hoje: inicial)
 };

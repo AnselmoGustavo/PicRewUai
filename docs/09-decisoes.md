@@ -168,4 +168,4 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 - [ ] Confirmar interpretação de uso das fontes Poppins/Arcane Fable (qual corpo / qual display).
 - [ ] Textos reais de todos os códigos (dia, envio, títulos, itens especiais) — definir e esconder do bundle até 18/11.
-- [ ] Diário e pokébola: vão para todas as classes? (hoje: diário só no guerreiro; pokébola falta no ninja).
+- [ ] Diário: vai para todas as classes? (hoje só no guerreiro). Pokébola: ✅ em todas.

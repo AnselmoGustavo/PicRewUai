@@ -96,4 +96,4 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 
 **Antes do evento (18/11):** tirar o botão "recomeçar (teste)", trocar os códigos de exemplo pelos reais (escondidos do bundle), apagar contas de teste no Supabase e abrir o painel do Supabase (pausa após 7 dias parado).
 
-**Arte pendente:** diário para arqueiro/bardo/mago/ninja e pokébola para o ninja (se forem para todas as classes); 3º cenário.
+**Arte pendente:** diário para arqueiro/bardo/mago/ninja (se for para todas as classes); 3º cenário.

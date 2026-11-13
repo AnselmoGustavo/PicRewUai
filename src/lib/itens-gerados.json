@@ -478,6 +478,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-oculos_squirtle-inicial.png"
     },
     {
+      "id": "cachorro-ninja-acessorio-pokebola-inicial",
+      "nome": "Pokébola",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "gato-arqueiro-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -926,6 +941,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "gato-ninja-acessorio-pokebola-inicial",
+      "nome": "Pokébola",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-pokebola-inicial.png"
     },
     {
       "id": "macaco-arqueiro-acessorio-cachecol-inicial",
@@ -1378,6 +1408,21 @@
       "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-oculos_squirtle-inicial.png"
     },
     {
+      "id": "macaco-ninja-acessorio-pokebola-inicial",
+      "nome": "Pokébola",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "raposa-arqueiro-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -1828,6 +1873,21 @@
       "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-oculos_squirtle-inicial.png"
     },
     {
+      "id": "raposa-ninja-acessorio-pokebola-inicial",
+      "nome": "Pokébola",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "veado-arqueiro-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -2276,6 +2336,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "veado-ninja-acessorio-pokebola-inicial",
+      "nome": "Pokébola",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-pokebola-inicial.png"
     },
     {
       "id": "cachorro-arqueiro-arma-arco_bom-dia2",
