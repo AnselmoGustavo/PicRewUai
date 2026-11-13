@@ -137,23 +137,32 @@ for (const item of porItem.values()) {
 writeFileSync(JSON_SAIDA, JSON.stringify({ bases, itens }, null, 2));
 console.log(`bases: ${Object.keys(bases).length} | itens: ${itens.length} -> ${JSON_SAIDA}`);
 
-// ---- aviso: itens sem linha nos arquivos editáveis (bônus e códigos) ----
-for (const [arq, valor, efeito] of [
-  ["src/lib/bonusItens.ts", "{}", "ficam sem bônus"],
-  ["src/lib/codigosItens.ts", '""', "seguem a regra do dia"],
+// ---- completa os arquivos editáveis (bônus e códigos) com os itens novos ----
+// Itens que ainda não têm linha ganham uma linha vazia na seção da classe ("// ---- classe ----").
+// Nunca altera nem apaga linhas existentes (o que você já preencheu fica como está).
+for (const [arq, valor, prefixoComentario] of [
+  ["src/lib/bonusItens.ts", "{}", ""],
+  ["src/lib/codigosItens.ts", '""', "hoje: "],
 ]) {
+  let texto = readFileSync(arq, "utf8");
   const listados = new Set(
-    [...readFileSync(arq, "utf8").matchAll(/^\s*"([a-z_]+\/[a-z_]+\/[a-z0-9_]+)"\s*:/gm)].map((m) => m[1]),
+    [...texto.matchAll(/^\s*"([a-z_]+\/[a-z_]+\/[a-z0-9_]+)"\s*:/gm)].map((m) => m[1]),
   );
-  const faltando = new Map();
+  const novos = new Map();
   for (const it of itens) {
     const [, classe, tipo, nome, dia] = it.id.split("-");
     const k = `${classe}/${tipo}/${nome}`;
-    if (!listados.has(k) && !faltando.has(k)) faltando.set(k, `${it.nome} (${dia})`);
+    if (!listados.has(k) && !novos.has(k)) novos.set(k, `${it.nome} (${prefixoComentario}${dia})`);
   }
-  if (faltando.size) {
-    console.log(`
-${faltando.size} item(ns) sem linha em ${arq} (${efeito}). Cole e ajuste:`);
-    for (const [k, nome] of [...faltando].sort()) console.log(`  "${k}": ${valor}, // ${nome}`);
+  if (!novos.size) continue;
+  for (const [k, nome] of [...novos].sort().reverse()) {
+    const classe = k.split("/")[0];
+    const cab = `  // ---- ${classe} ----\n`;
+    if (!texto.includes(cab)) texto = texto.replace(/\n};\s*$/, `\n\n${cab}};\n`);
+    const linha = `  "${k}": ${valor},`;
+    texto = texto.replace(cab, cab + linha.padEnd(42) + ` // ${nome}\n`);
   }
+  writeFileSync(arq, texto);
+  console.log(`\n${arq}: +${novos.size} item(ns) novo(s) (sem bônus/código ainda):`);
+  for (const k of [...novos.keys()].sort()) console.log(`  ${k}`);
 }

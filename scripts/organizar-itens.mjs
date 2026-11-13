@@ -27,13 +27,15 @@ const AVULSOS = {
   "bandana": ["chapeu", "bandana"],
   "cabeca godzilla": ["chapeu", "cabeca_godzilla"],
   "cabeca godzila": ["chapeu", "cabeca_godzilla"],
+  "besta twitch": ["arma", "besta_twich"],
   "cachecol": ["acessorio", "cachecol"],
   "chapeu luffy": ["chapeu", "chapeu_luffy"],
   "chapeu maquinista": ["chapeu", "chapeu_maquinista"],
-  "girassol": ["chapeu", "girassol"],
-  "laco": ["chapeu", "laco"],
+  "girassol": ["acessorio", "girassol"],
+  "laco": ["acessorio", "laco"],
   "leques katana": ["arma", "leques_katana"],
   "oculos de grau": ["acessorio", "oculos_de_grau"],
+  "oculos grau": ["acessorio", "oculos_de_grau"],
   "oculos squirtle": ["acessorio", "oculos_squirtle"],
 };
 
@@ -50,13 +52,25 @@ const PECAS = {
   botas: ["calcado", "botas"],
   sapatos: ["calcado", "sapatos"],
   sapato: ["calcado", "sapatos"],
-  sandalia: ["calcado", "sandalia"],
+  sandalia: ["calcado", "sapatos"], // mesma peça que "sapatos" no bardo
   capa: ["capa", "capa"],
   capa_cima: ["capa", "capa", 60],
   capa_baixo: ["capa", "capa", 10],
   chapeu: ["chapeu", "chapeu"],
 };
 const ARMA = /^(arco|espada|cajado|varinha|katana|alaude|viola|leque)/;
+
+// Formato "tipo nome" (ex.: "acessorio pokebola Mescladas.PNG", "arma besta twich"):
+// o tipo vem na frente. Dia = DIA_PADRAO.
+const PREFIXO_TIPO = /^(acessorio|arma|chapeu|camisa|calca|calcado|capa) (.+)$/;
+
+// Tipo FIXO de peças que já vieram com etiquetas diferentes entre animais — mantém a mesma
+// peça no mesmo tipo em todos (o bônus e o código do item dependem disso).
+const TIPO_FIXO = {
+  megaman: "arma",
+  cabeca_godzilla: "chapeu",
+  key_blade: "arma",
+};
 
 const semAcento = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
 const normalizar = (arq) =>
@@ -81,6 +95,14 @@ function classificar(arq, animal, classe) {
   if (AVULSOS[n]) {
     const [tipo, nome] = AVULSOS[n];
     return { tipo, destino: join(ITENS, tipo, `${animal}-${classe}-${tipo}-${nome}-${DIA_PADRAO}.png`) };
+  }
+  const pre = PREFIXO_TIPO.exec(n);
+  if (pre) {
+    const resto = pre[2].trim();
+    const nome = AVULSOS[resto]?.[1] ?? resto.replace(/[\s-]+/g, "_");
+    const tipo = TIPO_FIXO[nome] ?? pre[1];
+    const aviso = tipo !== pre[1] ? `veio como "${pre[1]}", usei "${tipo}" (TIPO_FIXO)` : undefined;
+    return { tipo, aviso, destino: join(ITENS, tipo, `${animal}-${classe}-${tipo}-${nome}-${DIA_PADRAO}.png`) };
   }
   const dia = (n.match(/[-_](inicial|dia\d)$/) || [])[1];
   if (!dia) return { erro: "sem dia no nome e não é acessório conhecido" };
@@ -137,7 +159,7 @@ for (const pasta of readdirSync(ENTRADA)) {
       }
       continue;
     }
-    console.log(`  ${rel}  ->  ${r.destino}`);
+    console.log(`  ${rel}  ->  ${r.destino}${r.aviso ? `   (${r.aviso})` : ""}`);
     if (mover) {
       mkdirSync(join(r.destino, ".."), { recursive: true });
       renameSync(origem, r.destino);

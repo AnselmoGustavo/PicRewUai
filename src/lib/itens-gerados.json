@@ -28,6 +28,381 @@
   },
   "itens": [
     {
+      "id": "cachorro-arqueiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-diario-inicial",
+      "nome": "Diario",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-diario-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-diario-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "cachorro-ninja-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -41,6 +416,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "cachorro-ninja-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "cachorro-ninja-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-laco-inicial.png"
     },
     {
       "id": "cachorro-ninja-acessorio-oculos_de_grau-inicial",
@@ -73,6 +478,381 @@
       "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-oculos_squirtle-inicial.png"
     },
     {
+      "id": "gato-arqueiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-diario-inicial",
+      "nome": "Diario",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-diario-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-diario-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "gato-ninja-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -86,6 +866,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "gato-ninja-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "gato-ninja-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-laco-inicial.png"
     },
     {
       "id": "gato-ninja-acessorio-oculos_de_grau-inicial",
@@ -118,6 +928,381 @@
       "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-oculos_squirtle-inicial.png"
     },
     {
+      "id": "macaco-arqueiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-diario-inicial",
+      "nome": "Diario",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-diario-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-diario-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "macaco-ninja-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -131,6 +1316,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "macaco-ninja-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "macaco-ninja-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-laco-inicial.png"
     },
     {
       "id": "macaco-ninja-acessorio-oculos_de_grau-inicial",
@@ -163,6 +1378,381 @@
       "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-oculos_squirtle-inicial.png"
     },
     {
+      "id": "raposa-arqueiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-diario-inicial",
+      "nome": "Diario",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-diario-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-diario-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "raposa-ninja-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -176,6 +1766,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "raposa-ninja-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "raposa-ninja-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-laco-inicial.png"
     },
     {
       "id": "raposa-ninja-acessorio-oculos_de_grau-inicial",
@@ -208,6 +1828,381 @@
       "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-oculos_squirtle-inicial.png"
     },
     {
+      "id": "veado-arqueiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-diario-inicial",
+      "nome": "Diario",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-diario-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-diario-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-pokebola-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-cachecol-inicial",
+      "nome": "Cachecol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-cachecol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-oculos_de_grau-inicial",
+      "nome": "Oculos de Grau",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-oculos_de_grau-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-oculos_de_grau-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-oculos_squirtle-inicial",
+      "nome": "Oculos Squirtle",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-oculos_squirtle-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-oculos_squirtle-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-pokebola-inicial",
+      "nome": "Pokebola",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-pokebola-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-pokebola-inicial.png"
+    },
+    {
       "id": "veado-ninja-acessorio-cachecol-inicial",
       "nome": "Cachecol",
       "categoria": "acessorio",
@@ -221,6 +2216,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-cachecol-inicial.png"
+    },
+    {
+      "id": "veado-ninja-acessorio-girassol-inicial",
+      "nome": "Girassol",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-acessorio-girassol-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-girassol-inicial.png"
+    },
+    {
+      "id": "veado-ninja-acessorio-laco-inicial",
+      "nome": "Laco",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-acessorio-laco-inicial.png",
+          "z": 75
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-laco-inicial.png"
     },
     {
       "id": "veado-ninja-acessorio-oculos_de_grau-inicial",
@@ -283,6 +2308,36 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-arma-arco_vagabundo-dia1.png"
     },
     {
+      "id": "cachorro-arqueiro-arma-besta_twich-inicial",
+      "nome": "Besta Twich",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-arma-besta_twich-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-arma-besta_twich-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-arma-megaman-inicial",
+      "nome": "Megaman",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-arma-megaman-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-arma-megaman-inicial.png"
+    },
+    {
       "id": "cachorro-bardo-arma-alaude-dia2",
       "nome": "Alaude",
       "categoria": "arma",
@@ -298,6 +2353,36 @@
       "thumb": "/assets/itens/thumbs/cachorro-bardo-arma-alaude-dia2.png"
     },
     {
+      "id": "cachorro-bardo-arma-guitarra_brook-inicial",
+      "nome": "Guitarra Brook",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-arma-guitarra_brook-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-arma-guitarra_brook-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-arma-guitarra_larinha-inicial",
+      "nome": "Guitarra Larinha",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-arma-guitarra_larinha-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-arma-guitarra_larinha-inicial.png"
+    },
+    {
       "id": "cachorro-bardo-arma-viola_desafinada-dia1",
       "nome": "Viola Desafinada",
       "categoria": "arma",
@@ -311,6 +2396,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-bardo-arma-viola_desafinada-dia1.png"
+    },
+    {
+      "id": "cachorro-guerreiro-arma-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-arma-escudo_link-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-arma-escudo_link-inicial.png"
     },
     {
       "id": "cachorro-guerreiro-arma-espada_boa-dia2",
@@ -343,6 +2443,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-arma-espada_madeira-dia1.png"
     },
     {
+      "id": "cachorro-guerreiro-arma-key_blade-inicial",
+      "nome": "Key Blade",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-arma-key_blade-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
       "id": "cachorro-mago-arma-cajado-dia2",
       "nome": "Cajado",
       "categoria": "arma",
@@ -356,6 +2471,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-mago-arma-cajado-dia2.png"
+    },
+    {
+      "id": "cachorro-mago-arma-varinha_das_varinhas-inicial",
+      "nome": "Varinha das Varinhas",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-arma-varinha_das_varinhas-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-arma-varinha_das_varinhas-inicial.png"
     },
     {
       "id": "cachorro-mago-arma-varinha_furreca-dia1",
@@ -448,6 +2578,36 @@
       "thumb": "/assets/itens/thumbs/gato-arqueiro-arma-arco_vagabundo-dia1.png"
     },
     {
+      "id": "gato-arqueiro-arma-besta_twich-inicial",
+      "nome": "Besta Twich",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-arma-besta_twich-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-arma-besta_twich-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-arma-megaman-inicial",
+      "nome": "Megaman",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-arma-megaman-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-arma-megaman-inicial.png"
+    },
+    {
       "id": "gato-bardo-arma-alaude-dia2",
       "nome": "Alaude",
       "categoria": "arma",
@@ -463,6 +2623,36 @@
       "thumb": "/assets/itens/thumbs/gato-bardo-arma-alaude-dia2.png"
     },
     {
+      "id": "gato-bardo-arma-guitarra_brook-inicial",
+      "nome": "Guitarra Brook",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-arma-guitarra_brook-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-arma-guitarra_brook-inicial.png"
+    },
+    {
+      "id": "gato-bardo-arma-guitarra_larinha-inicial",
+      "nome": "Guitarra Larinha",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-arma-guitarra_larinha-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-arma-guitarra_larinha-inicial.png"
+    },
+    {
       "id": "gato-bardo-arma-viola_desafinada-dia1",
       "nome": "Viola Desafinada",
       "categoria": "arma",
@@ -476,6 +2666,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-bardo-arma-viola_desafinada-dia1.png"
+    },
+    {
+      "id": "gato-guerreiro-arma-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-arma-escudo_link-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-arma-escudo_link-inicial.png"
     },
     {
       "id": "gato-guerreiro-arma-espada_boa-dia2",
@@ -508,6 +2713,21 @@
       "thumb": "/assets/itens/thumbs/gato-guerreiro-arma-espada_madeira-dia1.png"
     },
     {
+      "id": "gato-guerreiro-arma-key_blade-inicial",
+      "nome": "Key Blade",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-arma-key_blade-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
       "id": "gato-mago-arma-cajado-dia2",
       "nome": "Cajado",
       "categoria": "arma",
@@ -521,6 +2741,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-mago-arma-cajado-dia2.png"
+    },
+    {
+      "id": "gato-mago-arma-varinha_das_varinhas-inicial",
+      "nome": "Varinha das Varinhas",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-arma-varinha_das_varinhas-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-arma-varinha_das_varinhas-inicial.png"
     },
     {
       "id": "gato-mago-arma-varinha_furreca-dia1",
@@ -613,6 +2848,36 @@
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-arma-arco_vagabundo-dia1.png"
     },
     {
+      "id": "macaco-arqueiro-arma-besta_twich-inicial",
+      "nome": "Besta Twich",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-arma-besta_twich-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-arma-besta_twich-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-arma-megaman-inicial",
+      "nome": "Megaman",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-arma-megaman-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-arma-megaman-inicial.png"
+    },
+    {
       "id": "macaco-bardo-arma-alaude-dia2",
       "nome": "Alaude",
       "categoria": "arma",
@@ -628,6 +2893,36 @@
       "thumb": "/assets/itens/thumbs/macaco-bardo-arma-alaude-dia2.png"
     },
     {
+      "id": "macaco-bardo-arma-guitarra_brook-inicial",
+      "nome": "Guitarra Brook",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-arma-guitarra_brook-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-arma-guitarra_brook-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-arma-guitarra_larinha-inicial",
+      "nome": "Guitarra Larinha",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-arma-guitarra_larinha-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-arma-guitarra_larinha-inicial.png"
+    },
+    {
       "id": "macaco-bardo-arma-viola_desafinada-dia1",
       "nome": "Viola Desafinada",
       "categoria": "arma",
@@ -641,6 +2936,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-bardo-arma-viola_desafinada-dia1.png"
+    },
+    {
+      "id": "macaco-guerreiro-arma-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-arma-escudo_link-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-arma-escudo_link-inicial.png"
     },
     {
       "id": "macaco-guerreiro-arma-espada_boa-dia2",
@@ -673,6 +2983,21 @@
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-arma-espada_madeira-dia1.png"
     },
     {
+      "id": "macaco-guerreiro-arma-key_blade-inicial",
+      "nome": "Key Blade",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-arma-key_blade-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
       "id": "macaco-mago-arma-cajado-dia2",
       "nome": "Cajado",
       "categoria": "arma",
@@ -686,6 +3011,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-mago-arma-cajado-dia2.png"
+    },
+    {
+      "id": "macaco-mago-arma-varinha_das_varinhas-inicial",
+      "nome": "Varinha das Varinhas",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-arma-varinha_das_varinhas-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-arma-varinha_das_varinhas-inicial.png"
     },
     {
       "id": "macaco-mago-arma-varinha_furreca-dia1",
@@ -778,6 +3118,36 @@
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-arma-arco_vagabundo-dia1.png"
     },
     {
+      "id": "raposa-arqueiro-arma-besta_twich-inicial",
+      "nome": "Besta Twich",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-arma-besta_twich-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-arma-besta_twich-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-arma-megaman-inicial",
+      "nome": "Megaman",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-arma-megaman-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-arma-megaman-inicial.png"
+    },
+    {
       "id": "raposa-bardo-arma-alaude-dia2",
       "nome": "Alaude",
       "categoria": "arma",
@@ -793,6 +3163,36 @@
       "thumb": "/assets/itens/thumbs/raposa-bardo-arma-alaude-dia2.png"
     },
     {
+      "id": "raposa-bardo-arma-guitarra_brook-inicial",
+      "nome": "Guitarra Brook",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-arma-guitarra_brook-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-arma-guitarra_brook-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-arma-guitarra_larinha-inicial",
+      "nome": "Guitarra Larinha",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-arma-guitarra_larinha-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-arma-guitarra_larinha-inicial.png"
+    },
+    {
       "id": "raposa-bardo-arma-viola_desafinada-dia1",
       "nome": "Viola Desafinada",
       "categoria": "arma",
@@ -806,6 +3206,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-bardo-arma-viola_desafinada-dia1.png"
+    },
+    {
+      "id": "raposa-guerreiro-arma-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-arma-escudo_link-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-arma-escudo_link-inicial.png"
     },
     {
       "id": "raposa-guerreiro-arma-espada_boa-dia2",
@@ -838,6 +3253,21 @@
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-arma-espada_madeira-dia1.png"
     },
     {
+      "id": "raposa-guerreiro-arma-key_blade-inicial",
+      "nome": "Key Blade",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-arma-key_blade-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
       "id": "raposa-mago-arma-cajado-dia2",
       "nome": "Cajado",
       "categoria": "arma",
@@ -851,6 +3281,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-mago-arma-cajado-dia2.png"
+    },
+    {
+      "id": "raposa-mago-arma-varinha_das_varinhas-inicial",
+      "nome": "Varinha das Varinhas",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-arma-varinha_das_varinhas-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-arma-varinha_das_varinhas-inicial.png"
     },
     {
       "id": "raposa-mago-arma-varinha_furreca-dia1",
@@ -943,6 +3388,36 @@
       "thumb": "/assets/itens/thumbs/veado-arqueiro-arma-arco_vagabundo-dia1.png"
     },
     {
+      "id": "veado-arqueiro-arma-besta_twich-inicial",
+      "nome": "Besta Twich",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-arma-besta_twich-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-arma-besta_twich-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-arma-megaman-inicial",
+      "nome": "Megaman",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-arma-megaman-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-arma-megaman-inicial.png"
+    },
+    {
       "id": "veado-bardo-arma-alaude-dia2",
       "nome": "Alaude",
       "categoria": "arma",
@@ -958,6 +3433,36 @@
       "thumb": "/assets/itens/thumbs/veado-bardo-arma-alaude-dia2.png"
     },
     {
+      "id": "veado-bardo-arma-guitarra_brook-inicial",
+      "nome": "Guitarra Brook",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-arma-guitarra_brook-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-arma-guitarra_brook-inicial.png"
+    },
+    {
+      "id": "veado-bardo-arma-guitarra_larinha-inicial",
+      "nome": "Guitarra Larinha",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-arma-guitarra_larinha-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-arma-guitarra_larinha-inicial.png"
+    },
+    {
       "id": "veado-bardo-arma-viola_desafinada-dia1",
       "nome": "Viola Desafinada",
       "categoria": "arma",
@@ -971,6 +3476,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-bardo-arma-viola_desafinada-dia1.png"
+    },
+    {
+      "id": "veado-guerreiro-arma-escudo_link-inicial",
+      "nome": "Escudo Link",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-arma-escudo_link-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-arma-escudo_link-inicial.png"
     },
     {
       "id": "veado-guerreiro-arma-espada_boa-dia2",
@@ -1003,6 +3523,21 @@
       "thumb": "/assets/itens/thumbs/veado-guerreiro-arma-espada_madeira-dia1.png"
     },
     {
+      "id": "veado-guerreiro-arma-key_blade-inicial",
+      "nome": "Key Blade",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-arma-key_blade-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
       "id": "veado-mago-arma-cajado-dia2",
       "nome": "Cajado",
       "categoria": "arma",
@@ -1016,6 +3551,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-arma-cajado-dia2.png"
+    },
+    {
+      "id": "veado-mago-arma-varinha_das_varinhas-inicial",
+      "nome": "Varinha das Varinhas",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-arma-varinha_das_varinhas-inicial.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-arma-varinha_das_varinhas-inicial.png"
     },
     {
       "id": "veado-mago-arma-varinha_furreca-dia1",
@@ -1843,19 +4393,19 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-calcado-botas-dia2.png"
     },
     {
-      "id": "cachorro-bardo-calcado-sandalia-dia2",
-      "nome": "Sandalia",
+      "id": "cachorro-bardo-calcado-sapatos-dia2",
+      "nome": "Sapatos",
       "categoria": "calcado",
       "classe": "bardo",
       "animal": "cachorro",
       "grupo": "dia2",
       "camadas": [
         {
-          "arquivo": "/assets/itens/cachorro-bardo-calcado-sandalia-dia2.png",
+          "arquivo": "/assets/itens/cachorro-bardo-calcado-sapatos-dia2.png",
           "z": 30
         }
       ],
-      "thumb": "/assets/itens/thumbs/cachorro-bardo-calcado-sandalia-dia2.png"
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-calcado-sapatos-dia2.png"
     },
     {
       "id": "cachorro-guerreiro-calcado-botas-dia2",
@@ -1918,19 +4468,19 @@
       "thumb": "/assets/itens/thumbs/gato-arqueiro-calcado-botas-dia2.png"
     },
     {
-      "id": "gato-bardo-calcado-sandalia-dia2",
-      "nome": "Sandalia",
+      "id": "gato-bardo-calcado-sapatos-dia2",
+      "nome": "Sapatos",
       "categoria": "calcado",
       "classe": "bardo",
       "animal": "gato",
       "grupo": "dia2",
       "camadas": [
         {
-          "arquivo": "/assets/itens/gato-bardo-calcado-sandalia-dia2.png",
+          "arquivo": "/assets/itens/gato-bardo-calcado-sapatos-dia2.png",
           "z": 30
         }
       ],
-      "thumb": "/assets/itens/thumbs/gato-bardo-calcado-sandalia-dia2.png"
+      "thumb": "/assets/itens/thumbs/gato-bardo-calcado-sapatos-dia2.png"
     },
     {
       "id": "gato-guerreiro-calcado-botas-dia2",
@@ -3123,6 +5673,156 @@
       "thumb": "/assets/itens/thumbs/veado-mago-capa-capa-dia2.png"
     },
     {
+      "id": "cachorro-arqueiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
       "id": "cachorro-mago-chapeu-chapeu-dia2",
       "nome": "Chapeu",
       "categoria": "chapeu",
@@ -3136,6 +5836,51 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "cachorro-mago-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-chapeu-witch_hat_atelier-inicial",
+      "nome": "Witch Hat Atelier",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-chapeu-witch_hat_atelier-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-chapeu-witch_hat_atelier-inicial.png"
     },
     {
       "id": "cachorro-ninja-chapeu-bandana-inicial",
@@ -3198,34 +5943,154 @@
       "thumb": "/assets/itens/thumbs/cachorro-ninja-chapeu-chapeu_maquinista-inicial.png"
     },
     {
-      "id": "cachorro-ninja-chapeu-girassol-inicial",
-      "nome": "Girassol",
+      "id": "gato-arqueiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "cachorro",
+      "classe": "arqueiro",
+      "animal": "gato",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/cachorro-ninja-chapeu-girassol-inicial.png",
+          "arquivo": "/assets/itens/gato-arqueiro-chapeu-cabeca_godzilla-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/cachorro-ninja-chapeu-girassol-inicial.png"
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-chapeu-cabeca_godzilla-inicial.png"
     },
     {
-      "id": "cachorro-ninja-chapeu-laco-inicial",
-      "nome": "Laco",
+      "id": "gato-arqueiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "cachorro",
+      "classe": "arqueiro",
+      "animal": "gato",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/cachorro-ninja-chapeu-laco-inicial.png",
+          "arquivo": "/assets/itens/gato-arqueiro-chapeu-chapeu_luffy-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/cachorro-ninja-chapeu-laco-inicial.png"
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "gato-bardo-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "gato-bardo-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "gato-bardo-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "gato-mago-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-chapeu-cabeca_godzilla-inicial.png"
     },
     {
       "id": "gato-mago-chapeu-chapeu-dia2",
@@ -3241,6 +6106,51 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "gato-mago-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "gato-mago-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "gato-mago-chapeu-witch_hat_atelier-inicial",
+      "nome": "Witch Hat Atelier",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-chapeu-witch_hat_atelier-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-chapeu-witch_hat_atelier-inicial.png"
     },
     {
       "id": "gato-ninja-chapeu-bandana-inicial",
@@ -3303,34 +6213,154 @@
       "thumb": "/assets/itens/thumbs/gato-ninja-chapeu-chapeu_maquinista-inicial.png"
     },
     {
-      "id": "gato-ninja-chapeu-girassol-inicial",
-      "nome": "Girassol",
+      "id": "macaco-arqueiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "gato",
+      "classe": "arqueiro",
+      "animal": "macaco",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/gato-ninja-chapeu-girassol-inicial.png",
+          "arquivo": "/assets/itens/macaco-arqueiro-chapeu-cabeca_godzilla-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/gato-ninja-chapeu-girassol-inicial.png"
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-chapeu-cabeca_godzilla-inicial.png"
     },
     {
-      "id": "gato-ninja-chapeu-laco-inicial",
-      "nome": "Laco",
+      "id": "macaco-arqueiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "gato",
+      "classe": "arqueiro",
+      "animal": "macaco",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/gato-ninja-chapeu-laco-inicial.png",
+          "arquivo": "/assets/itens/macaco-arqueiro-chapeu-chapeu_luffy-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/gato-ninja-chapeu-laco-inicial.png"
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "macaco-mago-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-chapeu-cabeca_godzilla-inicial.png"
     },
     {
       "id": "macaco-mago-chapeu-chapeu-dia2",
@@ -3346,6 +6376,51 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "macaco-mago-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "macaco-mago-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "macaco-mago-chapeu-witch_hat_atelier-inicial",
+      "nome": "Witch Hat Atelier",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-chapeu-witch_hat_atelier-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-chapeu-witch_hat_atelier-inicial.png"
     },
     {
       "id": "macaco-ninja-chapeu-bandana-inicial",
@@ -3408,34 +6483,154 @@
       "thumb": "/assets/itens/thumbs/macaco-ninja-chapeu-chapeu_maquinista-inicial.png"
     },
     {
-      "id": "macaco-ninja-chapeu-girassol-inicial",
-      "nome": "Girassol",
+      "id": "raposa-arqueiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "macaco",
+      "classe": "arqueiro",
+      "animal": "raposa",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/macaco-ninja-chapeu-girassol-inicial.png",
+          "arquivo": "/assets/itens/raposa-arqueiro-chapeu-cabeca_godzilla-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/macaco-ninja-chapeu-girassol-inicial.png"
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-chapeu-cabeca_godzilla-inicial.png"
     },
     {
-      "id": "macaco-ninja-chapeu-laco-inicial",
-      "nome": "Laco",
+      "id": "raposa-arqueiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "macaco",
+      "classe": "arqueiro",
+      "animal": "raposa",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/macaco-ninja-chapeu-laco-inicial.png",
+          "arquivo": "/assets/itens/raposa-arqueiro-chapeu-chapeu_luffy-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/macaco-ninja-chapeu-laco-inicial.png"
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "raposa-mago-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-chapeu-cabeca_godzilla-inicial.png"
     },
     {
       "id": "raposa-mago-chapeu-chapeu-dia2",
@@ -3451,6 +6646,51 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "raposa-mago-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "raposa-mago-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "raposa-mago-chapeu-witch_hat_atelier-inicial",
+      "nome": "Witch Hat Atelier",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-chapeu-witch_hat_atelier-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-chapeu-witch_hat_atelier-inicial.png"
     },
     {
       "id": "raposa-ninja-chapeu-bandana-inicial",
@@ -3513,34 +6753,154 @@
       "thumb": "/assets/itens/thumbs/raposa-ninja-chapeu-chapeu_maquinista-inicial.png"
     },
     {
-      "id": "raposa-ninja-chapeu-girassol-inicial",
-      "nome": "Girassol",
+      "id": "veado-arqueiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "raposa",
+      "classe": "arqueiro",
+      "animal": "veado",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/raposa-ninja-chapeu-girassol-inicial.png",
+          "arquivo": "/assets/itens/veado-arqueiro-chapeu-cabeca_godzilla-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/raposa-ninja-chapeu-girassol-inicial.png"
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-chapeu-cabeca_godzilla-inicial.png"
     },
     {
-      "id": "raposa-ninja-chapeu-laco-inicial",
-      "nome": "Laco",
+      "id": "veado-arqueiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
       "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "raposa",
+      "classe": "arqueiro",
+      "animal": "veado",
       "grupo": "inicial",
       "camadas": [
         {
-          "arquivo": "/assets/itens/raposa-ninja-chapeu-laco-inicial.png",
+          "arquivo": "/assets/itens/veado-arqueiro-chapeu-chapeu_luffy-inicial.png",
           "z": 80
         }
       ],
-      "thumb": "/assets/itens/thumbs/raposa-ninja-chapeu-laco-inicial.png"
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "veado-bardo-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "veado-bardo-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "veado-bardo-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-chapeu-cabeca_godzilla-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "veado-mago-chapeu-cabeca_godzilla-inicial",
+      "nome": "Cabeca Godzilla",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-chapeu-cabeca_godzilla-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-chapeu-cabeca_godzilla-inicial.png"
     },
     {
       "id": "veado-mago-chapeu-chapeu-dia2",
@@ -3556,6 +6916,51 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "veado-mago-chapeu-chapeu_luffy-inicial",
+      "nome": "Chapeu Luffy",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-chapeu-chapeu_luffy-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-chapeu-chapeu_luffy-inicial.png"
+    },
+    {
+      "id": "veado-mago-chapeu-chapeu_maquinista-inicial",
+      "nome": "Chapeu Maquinista",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-chapeu-chapeu_maquinista-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "veado-mago-chapeu-witch_hat_atelier-inicial",
+      "nome": "Witch Hat Atelier",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-chapeu-witch_hat_atelier-inicial.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-chapeu-witch_hat_atelier-inicial.png"
     },
     {
       "id": "veado-ninja-chapeu-bandana-inicial",
@@ -3616,36 +7021,6 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-ninja-chapeu-chapeu_maquinista-inicial.png"
-    },
-    {
-      "id": "veado-ninja-chapeu-girassol-inicial",
-      "nome": "Girassol",
-      "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "veado",
-      "grupo": "inicial",
-      "camadas": [
-        {
-          "arquivo": "/assets/itens/veado-ninja-chapeu-girassol-inicial.png",
-          "z": 80
-        }
-      ],
-      "thumb": "/assets/itens/thumbs/veado-ninja-chapeu-girassol-inicial.png"
-    },
-    {
-      "id": "veado-ninja-chapeu-laco-inicial",
-      "nome": "Laco",
-      "categoria": "chapeu",
-      "classe": "ninja",
-      "animal": "veado",
-      "grupo": "inicial",
-      "camadas": [
-        {
-          "arquivo": "/assets/itens/veado-ninja-chapeu-laco-inicial.png",
-          "z": 80
-        }
-      ],
-      "thumb": "/assets/itens/thumbs/veado-ninja-chapeu-laco-inicial.png"
     }
   ]
 }
