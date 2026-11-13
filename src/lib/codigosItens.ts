@@ -39,7 +39,7 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "bardo/acessorio/oculos_de_grau": "",    // Oculos de Grau (hoje: inicial)
   "bardo/acessorio/oculos_squirtle": "",   // Oculos Squirtle (hoje: inicial)
   "bardo/acessorio/pokebola": "",          // Pokebola (hoje: inicial)
-  "bardo/arma/guitarra_brook": "",         // Guitarra Brook (hoje: inicial)
+  "bardo/arma/guitarra_brook": "UAI-BROOK",         // Guitarra Brook (hoje: inicial)
   "bardo/arma/guitarra_larinha": "",       // Guitarra Larinha (hoje: inicial)
   "bardo/chapeu/cabeca_godzilla": "",      // Cabeca Godzilla (hoje: inicial)
   "bardo/chapeu/chapeu_luffy": "",         // Chapeu Luffy (hoje: inicial)
