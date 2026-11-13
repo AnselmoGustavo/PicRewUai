@@ -90,3 +90,9 @@ export function itemDesbloqueado(
 export function itemTemCodigo(item: ItemDef): boolean {
   return Boolean(CODIGOS_ITENS[chaveItem(item.id)]?.trim());
 }
+
+/** Nome de exibição de um item a partir da chave "classe/tipo/nome" (ex.: "Guitarra Brook"). */
+export function nomeDoItemPorChave(chave: string): string {
+  const item = ITENS.find((i) => chaveItem(i.id) === chave);
+  return item?.nome ?? chave.split("/").pop()!.replace(/_/g, " ");
+}

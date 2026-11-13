@@ -59,7 +59,7 @@
     },
     {
       "id": "cachorro-arqueiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -74,7 +74,7 @@
     },
     {
       "id": "cachorro-arqueiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -89,7 +89,7 @@
     },
     {
       "id": "cachorro-arqueiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -104,7 +104,7 @@
     },
     {
       "id": "cachorro-arqueiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -149,7 +149,7 @@
     },
     {
       "id": "cachorro-bardo-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "cachorro",
@@ -164,7 +164,7 @@
     },
     {
       "id": "cachorro-bardo-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "cachorro",
@@ -179,7 +179,7 @@
     },
     {
       "id": "cachorro-bardo-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "cachorro",
@@ -194,7 +194,7 @@
     },
     {
       "id": "cachorro-bardo-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "cachorro",
@@ -224,7 +224,7 @@
     },
     {
       "id": "cachorro-guerreiro-acessorio-diario-inicial",
-      "nome": "Diario",
+      "nome": "Diário",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -254,7 +254,7 @@
     },
     {
       "id": "cachorro-guerreiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -269,7 +269,7 @@
     },
     {
       "id": "cachorro-guerreiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -284,7 +284,7 @@
     },
     {
       "id": "cachorro-guerreiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -299,7 +299,7 @@
     },
     {
       "id": "cachorro-guerreiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -344,7 +344,7 @@
     },
     {
       "id": "cachorro-mago-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "cachorro",
@@ -359,7 +359,7 @@
     },
     {
       "id": "cachorro-mago-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "cachorro",
@@ -374,7 +374,7 @@
     },
     {
       "id": "cachorro-mago-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "cachorro",
@@ -389,7 +389,7 @@
     },
     {
       "id": "cachorro-mago-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "cachorro",
@@ -434,7 +434,7 @@
     },
     {
       "id": "cachorro-ninja-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "cachorro",
@@ -449,7 +449,7 @@
     },
     {
       "id": "cachorro-ninja-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "cachorro",
@@ -464,7 +464,7 @@
     },
     {
       "id": "cachorro-ninja-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "cachorro",
@@ -509,7 +509,7 @@
     },
     {
       "id": "gato-arqueiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "gato",
@@ -524,7 +524,7 @@
     },
     {
       "id": "gato-arqueiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "gato",
@@ -539,7 +539,7 @@
     },
     {
       "id": "gato-arqueiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "gato",
@@ -554,7 +554,7 @@
     },
     {
       "id": "gato-arqueiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "gato",
@@ -599,7 +599,7 @@
     },
     {
       "id": "gato-bardo-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "gato",
@@ -614,7 +614,7 @@
     },
     {
       "id": "gato-bardo-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "gato",
@@ -629,7 +629,7 @@
     },
     {
       "id": "gato-bardo-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "gato",
@@ -644,7 +644,7 @@
     },
     {
       "id": "gato-bardo-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "gato",
@@ -674,7 +674,7 @@
     },
     {
       "id": "gato-guerreiro-acessorio-diario-inicial",
-      "nome": "Diario",
+      "nome": "Diário",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "gato",
@@ -704,7 +704,7 @@
     },
     {
       "id": "gato-guerreiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "gato",
@@ -719,7 +719,7 @@
     },
     {
       "id": "gato-guerreiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "gato",
@@ -734,7 +734,7 @@
     },
     {
       "id": "gato-guerreiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "gato",
@@ -749,7 +749,7 @@
     },
     {
       "id": "gato-guerreiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "gato",
@@ -794,7 +794,7 @@
     },
     {
       "id": "gato-mago-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "gato",
@@ -809,7 +809,7 @@
     },
     {
       "id": "gato-mago-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "gato",
@@ -824,7 +824,7 @@
     },
     {
       "id": "gato-mago-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "gato",
@@ -839,7 +839,7 @@
     },
     {
       "id": "gato-mago-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "gato",
@@ -884,7 +884,7 @@
     },
     {
       "id": "gato-ninja-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "gato",
@@ -899,7 +899,7 @@
     },
     {
       "id": "gato-ninja-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "gato",
@@ -914,7 +914,7 @@
     },
     {
       "id": "gato-ninja-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "gato",
@@ -959,7 +959,7 @@
     },
     {
       "id": "macaco-arqueiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -974,7 +974,7 @@
     },
     {
       "id": "macaco-arqueiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -989,7 +989,7 @@
     },
     {
       "id": "macaco-arqueiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -1004,7 +1004,7 @@
     },
     {
       "id": "macaco-arqueiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -1049,7 +1049,7 @@
     },
     {
       "id": "macaco-bardo-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "macaco",
@@ -1064,7 +1064,7 @@
     },
     {
       "id": "macaco-bardo-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "macaco",
@@ -1079,7 +1079,7 @@
     },
     {
       "id": "macaco-bardo-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "macaco",
@@ -1094,7 +1094,7 @@
     },
     {
       "id": "macaco-bardo-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "macaco",
@@ -1124,7 +1124,7 @@
     },
     {
       "id": "macaco-guerreiro-acessorio-diario-inicial",
-      "nome": "Diario",
+      "nome": "Diário",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -1154,7 +1154,7 @@
     },
     {
       "id": "macaco-guerreiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -1169,7 +1169,7 @@
     },
     {
       "id": "macaco-guerreiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -1184,7 +1184,7 @@
     },
     {
       "id": "macaco-guerreiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -1199,7 +1199,7 @@
     },
     {
       "id": "macaco-guerreiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -1244,7 +1244,7 @@
     },
     {
       "id": "macaco-mago-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "macaco",
@@ -1259,7 +1259,7 @@
     },
     {
       "id": "macaco-mago-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "macaco",
@@ -1274,7 +1274,7 @@
     },
     {
       "id": "macaco-mago-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "macaco",
@@ -1289,7 +1289,7 @@
     },
     {
       "id": "macaco-mago-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "macaco",
@@ -1334,7 +1334,7 @@
     },
     {
       "id": "macaco-ninja-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "macaco",
@@ -1349,7 +1349,7 @@
     },
     {
       "id": "macaco-ninja-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "macaco",
@@ -1364,7 +1364,7 @@
     },
     {
       "id": "macaco-ninja-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "macaco",
@@ -1409,7 +1409,7 @@
     },
     {
       "id": "raposa-arqueiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -1424,7 +1424,7 @@
     },
     {
       "id": "raposa-arqueiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -1439,7 +1439,7 @@
     },
     {
       "id": "raposa-arqueiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -1454,7 +1454,7 @@
     },
     {
       "id": "raposa-arqueiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -1499,7 +1499,7 @@
     },
     {
       "id": "raposa-bardo-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "raposa",
@@ -1514,7 +1514,7 @@
     },
     {
       "id": "raposa-bardo-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "raposa",
@@ -1529,7 +1529,7 @@
     },
     {
       "id": "raposa-bardo-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "raposa",
@@ -1544,7 +1544,7 @@
     },
     {
       "id": "raposa-bardo-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "raposa",
@@ -1574,7 +1574,7 @@
     },
     {
       "id": "raposa-guerreiro-acessorio-diario-inicial",
-      "nome": "Diario",
+      "nome": "Diário",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -1604,7 +1604,7 @@
     },
     {
       "id": "raposa-guerreiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -1619,7 +1619,7 @@
     },
     {
       "id": "raposa-guerreiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -1634,7 +1634,7 @@
     },
     {
       "id": "raposa-guerreiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -1649,7 +1649,7 @@
     },
     {
       "id": "raposa-guerreiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -1694,7 +1694,7 @@
     },
     {
       "id": "raposa-mago-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "raposa",
@@ -1709,7 +1709,7 @@
     },
     {
       "id": "raposa-mago-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "raposa",
@@ -1724,7 +1724,7 @@
     },
     {
       "id": "raposa-mago-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "raposa",
@@ -1739,7 +1739,7 @@
     },
     {
       "id": "raposa-mago-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "raposa",
@@ -1784,7 +1784,7 @@
     },
     {
       "id": "raposa-ninja-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "raposa",
@@ -1799,7 +1799,7 @@
     },
     {
       "id": "raposa-ninja-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "raposa",
@@ -1814,7 +1814,7 @@
     },
     {
       "id": "raposa-ninja-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "raposa",
@@ -1859,7 +1859,7 @@
     },
     {
       "id": "veado-arqueiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "veado",
@@ -1874,7 +1874,7 @@
     },
     {
       "id": "veado-arqueiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "veado",
@@ -1889,7 +1889,7 @@
     },
     {
       "id": "veado-arqueiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "veado",
@@ -1904,7 +1904,7 @@
     },
     {
       "id": "veado-arqueiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "arqueiro",
       "animal": "veado",
@@ -1949,7 +1949,7 @@
     },
     {
       "id": "veado-bardo-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "veado",
@@ -1964,7 +1964,7 @@
     },
     {
       "id": "veado-bardo-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "veado",
@@ -1979,7 +1979,7 @@
     },
     {
       "id": "veado-bardo-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "veado",
@@ -1994,7 +1994,7 @@
     },
     {
       "id": "veado-bardo-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "bardo",
       "animal": "veado",
@@ -2024,7 +2024,7 @@
     },
     {
       "id": "veado-guerreiro-acessorio-diario-inicial",
-      "nome": "Diario",
+      "nome": "Diário",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "veado",
@@ -2054,7 +2054,7 @@
     },
     {
       "id": "veado-guerreiro-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "veado",
@@ -2069,7 +2069,7 @@
     },
     {
       "id": "veado-guerreiro-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "veado",
@@ -2084,7 +2084,7 @@
     },
     {
       "id": "veado-guerreiro-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "veado",
@@ -2099,7 +2099,7 @@
     },
     {
       "id": "veado-guerreiro-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "guerreiro",
       "animal": "veado",
@@ -2144,7 +2144,7 @@
     },
     {
       "id": "veado-mago-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "veado",
@@ -2159,7 +2159,7 @@
     },
     {
       "id": "veado-mago-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "veado",
@@ -2174,7 +2174,7 @@
     },
     {
       "id": "veado-mago-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "veado",
@@ -2189,7 +2189,7 @@
     },
     {
       "id": "veado-mago-acessorio-pokebola-inicial",
-      "nome": "Pokebola",
+      "nome": "Pokébola",
       "categoria": "acessorio",
       "classe": "mago",
       "animal": "veado",
@@ -2234,7 +2234,7 @@
     },
     {
       "id": "veado-ninja-acessorio-laco-inicial",
-      "nome": "Laco",
+      "nome": "Laço",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "veado",
@@ -2249,7 +2249,7 @@
     },
     {
       "id": "veado-ninja-acessorio-oculos_de_grau-inicial",
-      "nome": "Oculos de Grau",
+      "nome": "Óculos de Grau",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "veado",
@@ -2264,7 +2264,7 @@
     },
     {
       "id": "veado-ninja-acessorio-oculos_squirtle-inicial",
-      "nome": "Oculos Squirtle",
+      "nome": "Óculos Squirtle",
       "categoria": "acessorio",
       "classe": "ninja",
       "animal": "veado",
@@ -2309,7 +2309,7 @@
     },
     {
       "id": "cachorro-arqueiro-arma-besta_twich-inicial",
-      "nome": "Besta Twich",
+      "nome": "Besta Twitch",
       "categoria": "arma",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -2339,7 +2339,7 @@
     },
     {
       "id": "cachorro-bardo-arma-alaude-dia2",
-      "nome": "Alaude",
+      "nome": "Alaúde",
       "categoria": "arma",
       "classe": "bardo",
       "animal": "cachorro",
@@ -2579,7 +2579,7 @@
     },
     {
       "id": "gato-arqueiro-arma-besta_twich-inicial",
-      "nome": "Besta Twich",
+      "nome": "Besta Twitch",
       "categoria": "arma",
       "classe": "arqueiro",
       "animal": "gato",
@@ -2609,7 +2609,7 @@
     },
     {
       "id": "gato-bardo-arma-alaude-dia2",
-      "nome": "Alaude",
+      "nome": "Alaúde",
       "categoria": "arma",
       "classe": "bardo",
       "animal": "gato",
@@ -2849,7 +2849,7 @@
     },
     {
       "id": "macaco-arqueiro-arma-besta_twich-inicial",
-      "nome": "Besta Twich",
+      "nome": "Besta Twitch",
       "categoria": "arma",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -2879,7 +2879,7 @@
     },
     {
       "id": "macaco-bardo-arma-alaude-dia2",
-      "nome": "Alaude",
+      "nome": "Alaúde",
       "categoria": "arma",
       "classe": "bardo",
       "animal": "macaco",
@@ -3119,7 +3119,7 @@
     },
     {
       "id": "raposa-arqueiro-arma-besta_twich-inicial",
-      "nome": "Besta Twich",
+      "nome": "Besta Twitch",
       "categoria": "arma",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -3149,7 +3149,7 @@
     },
     {
       "id": "raposa-bardo-arma-alaude-dia2",
-      "nome": "Alaude",
+      "nome": "Alaúde",
       "categoria": "arma",
       "classe": "bardo",
       "animal": "raposa",
@@ -3389,7 +3389,7 @@
     },
     {
       "id": "veado-arqueiro-arma-besta_twich-inicial",
-      "nome": "Besta Twich",
+      "nome": "Besta Twitch",
       "categoria": "arma",
       "classe": "arqueiro",
       "animal": "veado",
@@ -3419,7 +3419,7 @@
     },
     {
       "id": "veado-bardo-arma-alaude-dia2",
-      "nome": "Alaude",
+      "nome": "Alaúde",
       "categoria": "arma",
       "classe": "bardo",
       "animal": "veado",
@@ -3629,7 +3629,7 @@
     },
     {
       "id": "cachorro-arqueiro-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -3659,7 +3659,7 @@
     },
     {
       "id": "cachorro-bardo-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "bardo",
       "animal": "cachorro",
@@ -3719,7 +3719,7 @@
     },
     {
       "id": "cachorro-mago-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "mago",
       "animal": "cachorro",
@@ -3749,7 +3749,7 @@
     },
     {
       "id": "cachorro-ninja-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "ninja",
       "animal": "cachorro",
@@ -3779,7 +3779,7 @@
     },
     {
       "id": "gato-arqueiro-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "arqueiro",
       "animal": "gato",
@@ -3809,7 +3809,7 @@
     },
     {
       "id": "gato-bardo-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "bardo",
       "animal": "gato",
@@ -3869,7 +3869,7 @@
     },
     {
       "id": "gato-mago-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "mago",
       "animal": "gato",
@@ -3899,7 +3899,7 @@
     },
     {
       "id": "gato-ninja-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "ninja",
       "animal": "gato",
@@ -3929,7 +3929,7 @@
     },
     {
       "id": "macaco-arqueiro-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -3959,7 +3959,7 @@
     },
     {
       "id": "macaco-bardo-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "bardo",
       "animal": "macaco",
@@ -4019,7 +4019,7 @@
     },
     {
       "id": "macaco-mago-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "mago",
       "animal": "macaco",
@@ -4049,7 +4049,7 @@
     },
     {
       "id": "macaco-ninja-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "ninja",
       "animal": "macaco",
@@ -4079,7 +4079,7 @@
     },
     {
       "id": "raposa-arqueiro-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -4109,7 +4109,7 @@
     },
     {
       "id": "raposa-bardo-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "bardo",
       "animal": "raposa",
@@ -4169,7 +4169,7 @@
     },
     {
       "id": "raposa-mago-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "mago",
       "animal": "raposa",
@@ -4199,7 +4199,7 @@
     },
     {
       "id": "raposa-ninja-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "ninja",
       "animal": "raposa",
@@ -4229,7 +4229,7 @@
     },
     {
       "id": "veado-arqueiro-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "arqueiro",
       "animal": "veado",
@@ -4259,7 +4259,7 @@
     },
     {
       "id": "veado-bardo-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "bardo",
       "animal": "veado",
@@ -4319,7 +4319,7 @@
     },
     {
       "id": "veado-mago-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "mago",
       "animal": "veado",
@@ -4349,7 +4349,7 @@
     },
     {
       "id": "veado-ninja-calca-calca-dia2",
-      "nome": "Calca",
+      "nome": "Calça",
       "categoria": "calca",
       "classe": "ninja",
       "animal": "veado",
@@ -4769,7 +4769,7 @@
     },
     {
       "id": "cachorro-arqueiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -4799,7 +4799,7 @@
     },
     {
       "id": "cachorro-bardo-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "bardo",
       "animal": "cachorro",
@@ -4829,7 +4829,7 @@
     },
     {
       "id": "cachorro-guerreiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -4859,7 +4859,7 @@
     },
     {
       "id": "cachorro-mago-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "mago",
       "animal": "cachorro",
@@ -4889,7 +4889,7 @@
     },
     {
       "id": "cachorro-ninja-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "ninja",
       "animal": "cachorro",
@@ -4919,7 +4919,7 @@
     },
     {
       "id": "gato-arqueiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "arqueiro",
       "animal": "gato",
@@ -4949,7 +4949,7 @@
     },
     {
       "id": "gato-bardo-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "bardo",
       "animal": "gato",
@@ -4979,7 +4979,7 @@
     },
     {
       "id": "gato-guerreiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "guerreiro",
       "animal": "gato",
@@ -5009,7 +5009,7 @@
     },
     {
       "id": "gato-mago-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "mago",
       "animal": "gato",
@@ -5039,7 +5039,7 @@
     },
     {
       "id": "gato-ninja-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "ninja",
       "animal": "gato",
@@ -5069,7 +5069,7 @@
     },
     {
       "id": "macaco-arqueiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -5099,7 +5099,7 @@
     },
     {
       "id": "macaco-bardo-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "bardo",
       "animal": "macaco",
@@ -5129,7 +5129,7 @@
     },
     {
       "id": "macaco-guerreiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -5159,7 +5159,7 @@
     },
     {
       "id": "macaco-mago-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "mago",
       "animal": "macaco",
@@ -5189,7 +5189,7 @@
     },
     {
       "id": "macaco-ninja-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "ninja",
       "animal": "macaco",
@@ -5219,7 +5219,7 @@
     },
     {
       "id": "raposa-arqueiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -5249,7 +5249,7 @@
     },
     {
       "id": "raposa-bardo-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "bardo",
       "animal": "raposa",
@@ -5279,7 +5279,7 @@
     },
     {
       "id": "raposa-guerreiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -5309,7 +5309,7 @@
     },
     {
       "id": "raposa-mago-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "mago",
       "animal": "raposa",
@@ -5339,7 +5339,7 @@
     },
     {
       "id": "raposa-ninja-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "ninja",
       "animal": "raposa",
@@ -5369,7 +5369,7 @@
     },
     {
       "id": "veado-arqueiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "arqueiro",
       "animal": "veado",
@@ -5399,7 +5399,7 @@
     },
     {
       "id": "veado-bardo-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "bardo",
       "animal": "veado",
@@ -5429,7 +5429,7 @@
     },
     {
       "id": "veado-guerreiro-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "guerreiro",
       "animal": "veado",
@@ -5459,7 +5459,7 @@
     },
     {
       "id": "veado-mago-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "mago",
       "animal": "veado",
@@ -5489,7 +5489,7 @@
     },
     {
       "id": "veado-ninja-camisa-tunica-dia1",
-      "nome": "Tunica",
+      "nome": "Túnica",
       "categoria": "camisa",
       "classe": "ninja",
       "animal": "veado",
@@ -5674,7 +5674,7 @@
     },
     {
       "id": "cachorro-arqueiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -5689,7 +5689,7 @@
     },
     {
       "id": "cachorro-arqueiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -5704,7 +5704,7 @@
     },
     {
       "id": "cachorro-arqueiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "cachorro",
@@ -5719,7 +5719,7 @@
     },
     {
       "id": "cachorro-bardo-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "cachorro",
@@ -5734,7 +5734,7 @@
     },
     {
       "id": "cachorro-bardo-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "cachorro",
@@ -5749,7 +5749,7 @@
     },
     {
       "id": "cachorro-bardo-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "cachorro",
@@ -5764,7 +5764,7 @@
     },
     {
       "id": "cachorro-guerreiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -5779,7 +5779,7 @@
     },
     {
       "id": "cachorro-guerreiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -5794,7 +5794,7 @@
     },
     {
       "id": "cachorro-guerreiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "cachorro",
@@ -5809,7 +5809,7 @@
     },
     {
       "id": "cachorro-mago-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "cachorro",
@@ -5824,7 +5824,7 @@
     },
     {
       "id": "cachorro-mago-chapeu-chapeu-dia2",
-      "nome": "Chapeu",
+      "nome": "Chapéu",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "cachorro",
@@ -5839,7 +5839,7 @@
     },
     {
       "id": "cachorro-mago-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "cachorro",
@@ -5854,7 +5854,7 @@
     },
     {
       "id": "cachorro-mago-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "cachorro",
@@ -5899,7 +5899,7 @@
     },
     {
       "id": "cachorro-ninja-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "cachorro",
@@ -5914,7 +5914,7 @@
     },
     {
       "id": "cachorro-ninja-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "cachorro",
@@ -5929,7 +5929,7 @@
     },
     {
       "id": "cachorro-ninja-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "cachorro",
@@ -5944,7 +5944,7 @@
     },
     {
       "id": "gato-arqueiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "gato",
@@ -5959,7 +5959,7 @@
     },
     {
       "id": "gato-arqueiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "gato",
@@ -5974,7 +5974,7 @@
     },
     {
       "id": "gato-arqueiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "gato",
@@ -5989,7 +5989,7 @@
     },
     {
       "id": "gato-bardo-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "gato",
@@ -6004,7 +6004,7 @@
     },
     {
       "id": "gato-bardo-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "gato",
@@ -6019,7 +6019,7 @@
     },
     {
       "id": "gato-bardo-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "gato",
@@ -6034,7 +6034,7 @@
     },
     {
       "id": "gato-guerreiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "gato",
@@ -6049,7 +6049,7 @@
     },
     {
       "id": "gato-guerreiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "gato",
@@ -6064,7 +6064,7 @@
     },
     {
       "id": "gato-guerreiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "gato",
@@ -6079,7 +6079,7 @@
     },
     {
       "id": "gato-mago-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "gato",
@@ -6094,7 +6094,7 @@
     },
     {
       "id": "gato-mago-chapeu-chapeu-dia2",
-      "nome": "Chapeu",
+      "nome": "Chapéu",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "gato",
@@ -6109,7 +6109,7 @@
     },
     {
       "id": "gato-mago-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "gato",
@@ -6124,7 +6124,7 @@
     },
     {
       "id": "gato-mago-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "gato",
@@ -6169,7 +6169,7 @@
     },
     {
       "id": "gato-ninja-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "gato",
@@ -6184,7 +6184,7 @@
     },
     {
       "id": "gato-ninja-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "gato",
@@ -6199,7 +6199,7 @@
     },
     {
       "id": "gato-ninja-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "gato",
@@ -6214,7 +6214,7 @@
     },
     {
       "id": "macaco-arqueiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -6229,7 +6229,7 @@
     },
     {
       "id": "macaco-arqueiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -6244,7 +6244,7 @@
     },
     {
       "id": "macaco-arqueiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "macaco",
@@ -6259,7 +6259,7 @@
     },
     {
       "id": "macaco-bardo-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "macaco",
@@ -6274,7 +6274,7 @@
     },
     {
       "id": "macaco-bardo-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "macaco",
@@ -6289,7 +6289,7 @@
     },
     {
       "id": "macaco-bardo-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "macaco",
@@ -6304,7 +6304,7 @@
     },
     {
       "id": "macaco-guerreiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -6319,7 +6319,7 @@
     },
     {
       "id": "macaco-guerreiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -6334,7 +6334,7 @@
     },
     {
       "id": "macaco-guerreiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "macaco",
@@ -6349,7 +6349,7 @@
     },
     {
       "id": "macaco-mago-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "macaco",
@@ -6364,7 +6364,7 @@
     },
     {
       "id": "macaco-mago-chapeu-chapeu-dia2",
-      "nome": "Chapeu",
+      "nome": "Chapéu",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "macaco",
@@ -6379,7 +6379,7 @@
     },
     {
       "id": "macaco-mago-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "macaco",
@@ -6394,7 +6394,7 @@
     },
     {
       "id": "macaco-mago-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "macaco",
@@ -6439,7 +6439,7 @@
     },
     {
       "id": "macaco-ninja-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "macaco",
@@ -6454,7 +6454,7 @@
     },
     {
       "id": "macaco-ninja-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "macaco",
@@ -6469,7 +6469,7 @@
     },
     {
       "id": "macaco-ninja-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "macaco",
@@ -6484,7 +6484,7 @@
     },
     {
       "id": "raposa-arqueiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -6499,7 +6499,7 @@
     },
     {
       "id": "raposa-arqueiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -6514,7 +6514,7 @@
     },
     {
       "id": "raposa-arqueiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "raposa",
@@ -6529,7 +6529,7 @@
     },
     {
       "id": "raposa-bardo-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "raposa",
@@ -6544,7 +6544,7 @@
     },
     {
       "id": "raposa-bardo-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "raposa",
@@ -6559,7 +6559,7 @@
     },
     {
       "id": "raposa-bardo-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "raposa",
@@ -6574,7 +6574,7 @@
     },
     {
       "id": "raposa-guerreiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -6589,7 +6589,7 @@
     },
     {
       "id": "raposa-guerreiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -6604,7 +6604,7 @@
     },
     {
       "id": "raposa-guerreiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "raposa",
@@ -6619,7 +6619,7 @@
     },
     {
       "id": "raposa-mago-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "raposa",
@@ -6634,7 +6634,7 @@
     },
     {
       "id": "raposa-mago-chapeu-chapeu-dia2",
-      "nome": "Chapeu",
+      "nome": "Chapéu",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "raposa",
@@ -6649,7 +6649,7 @@
     },
     {
       "id": "raposa-mago-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "raposa",
@@ -6664,7 +6664,7 @@
     },
     {
       "id": "raposa-mago-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "raposa",
@@ -6709,7 +6709,7 @@
     },
     {
       "id": "raposa-ninja-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "raposa",
@@ -6724,7 +6724,7 @@
     },
     {
       "id": "raposa-ninja-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "raposa",
@@ -6739,7 +6739,7 @@
     },
     {
       "id": "raposa-ninja-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "raposa",
@@ -6754,7 +6754,7 @@
     },
     {
       "id": "veado-arqueiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "veado",
@@ -6769,7 +6769,7 @@
     },
     {
       "id": "veado-arqueiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "veado",
@@ -6784,7 +6784,7 @@
     },
     {
       "id": "veado-arqueiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "arqueiro",
       "animal": "veado",
@@ -6799,7 +6799,7 @@
     },
     {
       "id": "veado-bardo-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "veado",
@@ -6814,7 +6814,7 @@
     },
     {
       "id": "veado-bardo-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "veado",
@@ -6829,7 +6829,7 @@
     },
     {
       "id": "veado-bardo-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "bardo",
       "animal": "veado",
@@ -6844,7 +6844,7 @@
     },
     {
       "id": "veado-guerreiro-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "veado",
@@ -6859,7 +6859,7 @@
     },
     {
       "id": "veado-guerreiro-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "veado",
@@ -6874,7 +6874,7 @@
     },
     {
       "id": "veado-guerreiro-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "guerreiro",
       "animal": "veado",
@@ -6889,7 +6889,7 @@
     },
     {
       "id": "veado-mago-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "veado",
@@ -6904,7 +6904,7 @@
     },
     {
       "id": "veado-mago-chapeu-chapeu-dia2",
-      "nome": "Chapeu",
+      "nome": "Chapéu",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "veado",
@@ -6919,7 +6919,7 @@
     },
     {
       "id": "veado-mago-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "veado",
@@ -6934,7 +6934,7 @@
     },
     {
       "id": "veado-mago-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "mago",
       "animal": "veado",
@@ -6979,7 +6979,7 @@
     },
     {
       "id": "veado-ninja-chapeu-cabeca_godzilla-inicial",
-      "nome": "Cabeca Godzilla",
+      "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "veado",
@@ -6994,7 +6994,7 @@
     },
     {
       "id": "veado-ninja-chapeu-chapeu_luffy-inicial",
-      "nome": "Chapeu Luffy",
+      "nome": "Chapéu Luffy",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "veado",
@@ -7009,7 +7009,7 @@
     },
     {
       "id": "veado-ninja-chapeu-chapeu_maquinista-inicial",
-      "nome": "Chapeu Maquinista",
+      "nome": "Chapéu Maquinista",
       "categoria": "chapeu",
       "classe": "ninja",
       "animal": "veado",

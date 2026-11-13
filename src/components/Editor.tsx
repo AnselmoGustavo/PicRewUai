@@ -10,6 +10,7 @@ import {
   estaDesbloqueado,
   itemDesbloqueado,
   itemTemCodigo,
+  nomeDoItemPorChave,
   itensDe,
 } from "@/lib/manifesto";
 import { statusDe, bonusDosItens, bonusDoItem, textoBonus, ROTULO_STATUS } from "@/lib/status";
@@ -116,8 +117,10 @@ export default function Editor({
       partes.push(`🏅 Novo título: ${titulosNovos.map((t) => `“${t}”`).join(", ")} — escolha na aba Ficha.`);
     }
     if (itensNovos.length && r.tipo !== "mestre") {
-      const n = itensNovos.length;
-      partes.push(`🎁 ${n} item${n > 1 ? "s" : ""} especial${n > 1 ? "is" : ""} desbloqueado${n > 1 ? "s" : ""}!`);
+      // nomes sem repetir (a mesma peça pode existir em várias classes com o mesmo nome)
+      const nomes = [...new Set(itensNovos.map(nomeDoItemPorChave))];
+      const lista = nomes.length > 1 ? `${nomes.slice(0, -1).join(", ")} e ${nomes[nomes.length - 1]}` : nomes[0];
+      partes.push(nomes.length > 1 ? `🎁 Os itens ${lista} foram desbloqueados!` : `🎁 O item ${lista} foi desbloqueado!`);
     }
     if (partes.length) setMsg({ ok: true, texto: partes.join(" ") });
     else if (titulosDoCodigo(codigo).length || itensDoCodigo(codigo).length)

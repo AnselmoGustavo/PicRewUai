@@ -36,9 +36,26 @@ function walk(dir) {
 }
 
 const CONECTORES = new Set(["de", "da", "do", "dos", "das", "e"]);
+
+// O nome do arquivo é sem acento; aqui ele volta com acento/grafia certa para o app.
+// Palavra nova com acento? Acrescente aqui (chave = como está no arquivo, sem acento).
+const GRAFIA = {
+  alaude: "alaúde",
+  cabeca: "cabeça",
+  calca: "calça",
+  chapeu: "chapéu",
+  diario: "diário",
+  laco: "laço",
+  oculos: "óculos",
+  pokebola: "pokébola",
+  tunica: "túnica",
+  twich: "twitch",
+};
+
 function titulo(slug) {
   return slug
     .split("_")
+    .map((p) => GRAFIA[p] ?? p)
     .map((p, i) =>
       i > 0 && CONECTORES.has(p) ? p : p.charAt(0).toUpperCase() + p.slice(1),
     )
