@@ -58,6 +58,7 @@ Se a composição da carta mudar depois que pessoas já enviaram (ex.: um cenár
 ```bash
 npm run regerar-cartas -- --cenario cen_floresta            # prévias em cartas-regeradas/
 npm run regerar-cartas -- --usuario fulano --usuario ciclano
+npm run regerar-cartas -- --todas                            # todas as cartas enviadas
 npm run regerar-cartas -- --cenario cen_floresta --enviar   # SUBSTITUI no Storage (guarda as antigas em cartas-regeradas/antigas/)
 ```
 

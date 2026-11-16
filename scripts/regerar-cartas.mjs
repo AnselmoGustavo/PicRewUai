@@ -5,6 +5,7 @@
 // Uso:
 //   npm run regerar-cartas -- --cenario cen_floresta          -> só gera prévias em cartas-regeradas/
 //   npm run regerar-cartas -- --usuario jules --usuario santhi -> idem, por usuário
+//   npm run regerar-cartas -- --todas                          -> idem, TODAS as cartas enviadas
 //   ... --enviar                                               -> SUBSTITUI o PNG no Storage
 // Antes de --enviar, a versão antiga de cada carta é guardada em cartas-regeradas/antigas/.
 //
@@ -33,8 +34,9 @@ const valores = (flag) => args.flatMap((a, i) => (a === flag ? [args[i + 1]] : [
 const filtroUsuarios = valores("--usuario");
 const filtroCenarios = valores("--cenario");
 const enviar = args.includes("--enviar");
-if (!filtroUsuarios.length && !filtroCenarios.length) {
-  console.error("Informe --usuario <nome> e/ou --cenario <id> (ex.: --cenario cen_floresta).");
+const todas = args.includes("--todas");
+if (!todas && !filtroUsuarios.length && !filtroCenarios.length) {
+  console.error("Informe --todas, ou --usuario <nome> e/ou --cenario <id> (ex.: --cenario cen_floresta).");
   process.exit(1);
 }
 
@@ -143,7 +145,7 @@ const get = async (q) => {
   return r.json();
 };
 let cartas = await get("cartas?select=*");
-cartas = cartas.filter(
+if (!todas) cartas = cartas.filter(
   (c) => filtroUsuarios.includes(c.usuario) || (c.cenario && filtroCenarios.includes(c.cenario)),
 );
 if (!cartas.length) {
