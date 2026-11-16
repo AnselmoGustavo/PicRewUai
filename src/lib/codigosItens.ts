@@ -116,5 +116,37 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "ninja/acessorio/laco": "",                 // Laco (hoje: inicial)
 
   // ---- ninja ----
+  "ninja/arma/shuriken": "",               // Shuriken (hoje: dia3)
+  "ninja/calca/calca_dark": "",            // Calça Dark (hoje: dia3)
+  "ninja/calcado/geta_com_meia": "",       // Geta com Meia (hoje: dia3)
+  "ninja/camisa/blusa_dark": "",           // Blusa Dark (hoje: dia3)
+  "ninja/capa/ombreiras_e_katana_dark": "", // Ombreiras e Katana Dark (hoje: dia3)
   "ninja/acessorio/pokebola": "",          // Pokébola (hoje: inicial)
+
+  // ---- arqueiro ----
+  "arqueiro/arma/arco_dark": "",           // Arco Dark (hoje: dia3)
+  "arqueiro/calca/calca_dark": "",         // Calça Dark (hoje: dia3)
+  "arqueiro/calcado/botas_dark": "",       // Botas Dark (hoje: dia3)
+  "arqueiro/camisa/blusa_com_capuz_dark": "", // Blusa Com Capuz Dark (hoje: dia3)
+
+  // ---- bardo ----
+  "bardo/arma/violino_sombrio": "",        // Violino Sombrio (hoje: dia3)
+  "bardo/calca/calca_suspensorio_e_cintos_dark": "", // Calça Suspensório e Cintos Dark (hoje: dia3)
+  "bardo/calcado/botas_dark": "",          // Botas Dark (hoje: dia3)
+  "bardo/camisa/jaqueta_e_blusa_dark": "", // Jaqueta e Blusa Dark (hoje: dia3)
+
+  // ---- guerreiro ----
+  "guerreiro/arma/machado": "",            // Machado (hoje: dia3)
+  "guerreiro/calca/armadura_dark": "",     // Armadura Dark (hoje: dia3)
+  "guerreiro/calcado/botas_dark": "",      // Botas Dark (hoje: dia3)
+  "guerreiro/camisa/armadura_dark": "",    // Armadura Dark (hoje: dia3)
+  "guerreiro/capa/capa_dark": "",          // Capa Dark (hoje: dia3)
+  "guerreiro/chapeu/elmo_dark": "",        // Elmo Dark (hoje: dia3)
+
+  // ---- mago ----
+  "mago/arma/vassoura": "",                // Vassoura (hoje: dia3)
+  "mago/calca/saia_babados_dark": "",      // Saia Babados Dark (hoje: dia3)
+  "mago/calcado/sapatinho_magico_dark": "", // Sapatinho Mágico Dark (hoje: dia3)
+  "mago/camisa/blusa_babados_dark": "",    // Blusa Babados Dark (hoje: dia3)
+  "mago/chapeu/chapeu_dark": "",           // Chapéu Dark (hoje: dia3)
 };

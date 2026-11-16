@@ -35,7 +35,7 @@ function walk(dir) {
   return out;
 }
 
-const CONECTORES = new Set(["de", "da", "do", "dos", "das", "e"]);
+const CONECTORES = new Set(["de", "da", "do", "dos", "das", "e", "com"]);
 
 // O nome do arquivo é sem acento; aqui ele volta com acento/grafia certa para o app.
 // Palavra nova com acento? Acrescente aqui (chave = como está no arquivo, sem acento).
@@ -46,8 +46,10 @@ const GRAFIA = {
   chapeu: "chapéu",
   diario: "diário",
   laco: "laço",
+  magico: "mágico",
   oculos: "óculos",
   pokebola: "pokébola",
+  suspensorio: "suspensório",
   tunica: "túnica",
   twich: "twitch",
 };

@@ -2368,6 +2368,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-arma-arco_bom-dia2.png"
     },
     {
+      "id": "cachorro-arqueiro-arma-arco_dark-dia3",
+      "nome": "Arco Dark",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-arma-arco_dark-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-arma-arco_dark-dia3.png"
+    },
+    {
       "id": "cachorro-arqueiro-arma-arco_vagabundo-dia1",
       "nome": "Arco Vagabundo",
       "categoria": "arma",
@@ -2473,6 +2488,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-bardo-arma-viola_desafinada-dia1.png"
     },
     {
+      "id": "cachorro-bardo-arma-violino_sombrio-dia3",
+      "nome": "Violino Sombrio",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-arma-violino_sombrio-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-arma-violino_sombrio-dia3.png"
+    },
+    {
       "id": "cachorro-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -2516,6 +2546,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-arma-machado-dia3",
+      "nome": "Machado",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-arma-machado-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-arma-machado-dia3.png"
     },
     {
       "id": "cachorro-mago-arma-cajado-dia2",
@@ -2563,6 +2608,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-mago-arma-varinha_furreca-dia1.png"
     },
     {
+      "id": "cachorro-mago-arma-vassoura-dia3",
+      "nome": "Vassoura",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-arma-vassoura-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-arma-vassoura-dia3.png"
+    },
+    {
       "id": "cachorro-ninja-arma-katana_decente-dia2",
       "nome": "Katana Decente",
       "categoria": "arma",
@@ -2608,6 +2668,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-ninja-arma-leques_katana-inicial.png"
     },
     {
+      "id": "cachorro-ninja-arma-shuriken-dia3",
+      "nome": "Shuriken",
+      "categoria": "arma",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-arma-shuriken-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-arma-shuriken-dia3.png"
+    },
+    {
       "id": "gato-arqueiro-arma-arco_bom-dia2",
       "nome": "Arco Bom",
       "categoria": "arma",
@@ -2621,6 +2696,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-arqueiro-arma-arco_bom-dia2.png"
+    },
+    {
+      "id": "gato-arqueiro-arma-arco_dark-dia3",
+      "nome": "Arco Dark",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-arma-arco_dark-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-arma-arco_dark-dia3.png"
     },
     {
       "id": "gato-arqueiro-arma-arco_vagabundo-dia1",
@@ -2728,6 +2818,21 @@
       "thumb": "/assets/itens/thumbs/gato-bardo-arma-viola_desafinada-dia1.png"
     },
     {
+      "id": "gato-bardo-arma-violino_sombrio-dia3",
+      "nome": "Violino Sombrio",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-arma-violino_sombrio-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-arma-violino_sombrio-dia3.png"
+    },
+    {
       "id": "gato-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -2771,6 +2876,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-arma-machado-dia3",
+      "nome": "Machado",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-arma-machado-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-arma-machado-dia3.png"
     },
     {
       "id": "gato-mago-arma-cajado-dia2",
@@ -2818,6 +2938,21 @@
       "thumb": "/assets/itens/thumbs/gato-mago-arma-varinha_furreca-dia1.png"
     },
     {
+      "id": "gato-mago-arma-vassoura-dia3",
+      "nome": "Vassoura",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-arma-vassoura-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-arma-vassoura-dia3.png"
+    },
+    {
       "id": "gato-ninja-arma-katana_decente-dia2",
       "nome": "Katana Decente",
       "categoria": "arma",
@@ -2863,6 +2998,21 @@
       "thumb": "/assets/itens/thumbs/gato-ninja-arma-leques_katana-inicial.png"
     },
     {
+      "id": "gato-ninja-arma-shuriken-dia3",
+      "nome": "Shuriken",
+      "categoria": "arma",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-arma-shuriken-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-arma-shuriken-dia3.png"
+    },
+    {
       "id": "macaco-arqueiro-arma-arco_bom-dia2",
       "nome": "Arco Bom",
       "categoria": "arma",
@@ -2876,6 +3026,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-arma-arco_bom-dia2.png"
+    },
+    {
+      "id": "macaco-arqueiro-arma-arco_dark-dia3",
+      "nome": "Arco Dark",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-arma-arco_dark-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-arma-arco_dark-dia3.png"
     },
     {
       "id": "macaco-arqueiro-arma-arco_vagabundo-dia1",
@@ -2983,6 +3148,21 @@
       "thumb": "/assets/itens/thumbs/macaco-bardo-arma-viola_desafinada-dia1.png"
     },
     {
+      "id": "macaco-bardo-arma-violino_sombrio-dia3",
+      "nome": "Violino Sombrio",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-arma-violino_sombrio-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-arma-violino_sombrio-dia3.png"
+    },
+    {
       "id": "macaco-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -3026,6 +3206,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-arma-machado-dia3",
+      "nome": "Machado",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-arma-machado-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-arma-machado-dia3.png"
     },
     {
       "id": "macaco-mago-arma-cajado-dia2",
@@ -3073,6 +3268,21 @@
       "thumb": "/assets/itens/thumbs/macaco-mago-arma-varinha_furreca-dia1.png"
     },
     {
+      "id": "macaco-mago-arma-vassoura-dia3",
+      "nome": "Vassoura",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-arma-vassoura-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-arma-vassoura-dia3.png"
+    },
+    {
       "id": "macaco-ninja-arma-katana_decente-dia2",
       "nome": "Katana Decente",
       "categoria": "arma",
@@ -3118,6 +3328,21 @@
       "thumb": "/assets/itens/thumbs/macaco-ninja-arma-leques_katana-inicial.png"
     },
     {
+      "id": "macaco-ninja-arma-shuriken-dia3",
+      "nome": "Shuriken",
+      "categoria": "arma",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-arma-shuriken-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-arma-shuriken-dia3.png"
+    },
+    {
       "id": "raposa-arqueiro-arma-arco_bom-dia2",
       "nome": "Arco Bom",
       "categoria": "arma",
@@ -3131,6 +3356,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-arma-arco_bom-dia2.png"
+    },
+    {
+      "id": "raposa-arqueiro-arma-arco_dark-dia3",
+      "nome": "Arco Dark",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-arma-arco_dark-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-arma-arco_dark-dia3.png"
     },
     {
       "id": "raposa-arqueiro-arma-arco_vagabundo-dia1",
@@ -3238,6 +3478,21 @@
       "thumb": "/assets/itens/thumbs/raposa-bardo-arma-viola_desafinada-dia1.png"
     },
     {
+      "id": "raposa-bardo-arma-violino_sombrio-dia3",
+      "nome": "Violino Sombrio",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-arma-violino_sombrio-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-arma-violino_sombrio-dia3.png"
+    },
+    {
       "id": "raposa-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -3281,6 +3536,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-arma-machado-dia3",
+      "nome": "Machado",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-arma-machado-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-arma-machado-dia3.png"
     },
     {
       "id": "raposa-mago-arma-cajado-dia2",
@@ -3328,6 +3598,21 @@
       "thumb": "/assets/itens/thumbs/raposa-mago-arma-varinha_furreca-dia1.png"
     },
     {
+      "id": "raposa-mago-arma-vassoura-dia3",
+      "nome": "Vassoura",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-arma-vassoura-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-arma-vassoura-dia3.png"
+    },
+    {
       "id": "raposa-ninja-arma-katana_decente-dia2",
       "nome": "Katana Decente",
       "categoria": "arma",
@@ -3373,6 +3658,21 @@
       "thumb": "/assets/itens/thumbs/raposa-ninja-arma-leques_katana-inicial.png"
     },
     {
+      "id": "raposa-ninja-arma-shuriken-dia3",
+      "nome": "Shuriken",
+      "categoria": "arma",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-arma-shuriken-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-arma-shuriken-dia3.png"
+    },
+    {
       "id": "veado-arqueiro-arma-arco_bom-dia2",
       "nome": "Arco Bom",
       "categoria": "arma",
@@ -3386,6 +3686,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-arqueiro-arma-arco_bom-dia2.png"
+    },
+    {
+      "id": "veado-arqueiro-arma-arco_dark-dia3",
+      "nome": "Arco Dark",
+      "categoria": "arma",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-arma-arco_dark-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-arma-arco_dark-dia3.png"
     },
     {
       "id": "veado-arqueiro-arma-arco_vagabundo-dia1",
@@ -3493,6 +3808,21 @@
       "thumb": "/assets/itens/thumbs/veado-bardo-arma-viola_desafinada-dia1.png"
     },
     {
+      "id": "veado-bardo-arma-violino_sombrio-dia3",
+      "nome": "Violino Sombrio",
+      "categoria": "arma",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-arma-violino_sombrio-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-arma-violino_sombrio-dia3.png"
+    },
+    {
       "id": "veado-guerreiro-arma-espada_boa-dia2",
       "nome": "Espada Boa",
       "categoria": "arma",
@@ -3536,6 +3866,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-guerreiro-arma-key_blade-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-arma-machado-dia3",
+      "nome": "Machado",
+      "categoria": "arma",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-arma-machado-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-arma-machado-dia3.png"
     },
     {
       "id": "veado-mago-arma-cajado-dia2",
@@ -3583,6 +3928,21 @@
       "thumb": "/assets/itens/thumbs/veado-mago-arma-varinha_furreca-dia1.png"
     },
     {
+      "id": "veado-mago-arma-vassoura-dia3",
+      "nome": "Vassoura",
+      "categoria": "arma",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-arma-vassoura-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-arma-vassoura-dia3.png"
+    },
+    {
       "id": "veado-ninja-arma-katana_decente-dia2",
       "nome": "Katana Decente",
       "categoria": "arma",
@@ -3628,6 +3988,21 @@
       "thumb": "/assets/itens/thumbs/veado-ninja-arma-leques_katana-inicial.png"
     },
     {
+      "id": "veado-ninja-arma-shuriken-dia3",
+      "nome": "Shuriken",
+      "categoria": "arma",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-arma-shuriken-dia3.png",
+          "z": 70
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-arma-shuriken-dia3.png"
+    },
+    {
       "id": "cachorro-arqueiro-calca-calca-dia2",
       "nome": "Calça",
       "categoria": "calca",
@@ -3641,6 +4016,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-calca-calca-dia2.png"
+    },
+    {
+      "id": "cachorro-arqueiro-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-calca-calca_dark-dia3.png"
     },
     {
       "id": "cachorro-arqueiro-calca-short-dia1",
@@ -3673,6 +4063,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-bardo-calca-calca-dia2.png"
     },
     {
+      "id": "cachorro-bardo-calca-calca_suspensorio_e_cintos_dark-dia3",
+      "nome": "Calça Suspensório e Cintos Dark",
+      "categoria": "calca",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png"
+    },
+    {
       "id": "cachorro-bardo-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -3701,6 +4106,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-calca-armadura-dia2.png"
+    },
+    {
+      "id": "cachorro-guerreiro-calca-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "calca",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-calca-armadura_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-calca-armadura_dark-dia3.png"
     },
     {
       "id": "cachorro-guerreiro-calca-short-dia1",
@@ -3733,6 +4153,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-mago-calca-calca-dia2.png"
     },
     {
+      "id": "cachorro-mago-calca-saia_babados_dark-dia3",
+      "nome": "Saia Babados Dark",
+      "categoria": "calca",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-calca-saia_babados_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-calca-saia_babados_dark-dia3.png"
+    },
+    {
       "id": "cachorro-mago-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -3761,6 +4196,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-ninja-calca-calca-dia2.png"
+    },
+    {
+      "id": "cachorro-ninja-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-calca-calca_dark-dia3.png"
     },
     {
       "id": "cachorro-ninja-calca-short-dia1",
@@ -3793,6 +4243,21 @@
       "thumb": "/assets/itens/thumbs/gato-arqueiro-calca-calca-dia2.png"
     },
     {
+      "id": "gato-arqueiro-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-calca-calca_dark-dia3.png"
+    },
+    {
       "id": "gato-arqueiro-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -3821,6 +4286,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-bardo-calca-calca-dia2.png"
+    },
+    {
+      "id": "gato-bardo-calca-calca_suspensorio_e_cintos_dark-dia3",
+      "nome": "Calça Suspensório e Cintos Dark",
+      "categoria": "calca",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png"
     },
     {
       "id": "gato-bardo-calca-short-dia1",
@@ -3853,6 +4333,21 @@
       "thumb": "/assets/itens/thumbs/gato-guerreiro-calca-armadura-dia2.png"
     },
     {
+      "id": "gato-guerreiro-calca-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "calca",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-calca-armadura_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-calca-armadura_dark-dia3.png"
+    },
+    {
       "id": "gato-guerreiro-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -3881,6 +4376,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-mago-calca-calca-dia2.png"
+    },
+    {
+      "id": "gato-mago-calca-saia_babados_dark-dia3",
+      "nome": "Saia Babados Dark",
+      "categoria": "calca",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-calca-saia_babados_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-calca-saia_babados_dark-dia3.png"
     },
     {
       "id": "gato-mago-calca-short-dia1",
@@ -3913,6 +4423,21 @@
       "thumb": "/assets/itens/thumbs/gato-ninja-calca-calca-dia2.png"
     },
     {
+      "id": "gato-ninja-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-calca-calca_dark-dia3.png"
+    },
+    {
       "id": "gato-ninja-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -3941,6 +4466,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-calca-calca-dia2.png"
+    },
+    {
+      "id": "macaco-arqueiro-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-calca-calca_dark-dia3.png"
     },
     {
       "id": "macaco-arqueiro-calca-short-dia1",
@@ -3973,6 +4513,21 @@
       "thumb": "/assets/itens/thumbs/macaco-bardo-calca-calca-dia2.png"
     },
     {
+      "id": "macaco-bardo-calca-calca_suspensorio_e_cintos_dark-dia3",
+      "nome": "Calça Suspensório e Cintos Dark",
+      "categoria": "calca",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png"
+    },
+    {
       "id": "macaco-bardo-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -4001,6 +4556,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-calca-armadura-dia2.png"
+    },
+    {
+      "id": "macaco-guerreiro-calca-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "calca",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-calca-armadura_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-calca-armadura_dark-dia3.png"
     },
     {
       "id": "macaco-guerreiro-calca-short-dia1",
@@ -4033,6 +4603,21 @@
       "thumb": "/assets/itens/thumbs/macaco-mago-calca-calca-dia2.png"
     },
     {
+      "id": "macaco-mago-calca-saia_babados_dark-dia3",
+      "nome": "Saia Babados Dark",
+      "categoria": "calca",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-calca-saia_babados_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-calca-saia_babados_dark-dia3.png"
+    },
+    {
       "id": "macaco-mago-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -4061,6 +4646,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-ninja-calca-calca-dia2.png"
+    },
+    {
+      "id": "macaco-ninja-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-calca-calca_dark-dia3.png"
     },
     {
       "id": "macaco-ninja-calca-short-dia1",
@@ -4093,6 +4693,21 @@
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-calca-calca-dia2.png"
     },
     {
+      "id": "raposa-arqueiro-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-calca-calca_dark-dia3.png"
+    },
+    {
       "id": "raposa-arqueiro-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -4121,6 +4736,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-bardo-calca-calca-dia2.png"
+    },
+    {
+      "id": "raposa-bardo-calca-calca_suspensorio_e_cintos_dark-dia3",
+      "nome": "Calça Suspensório e Cintos Dark",
+      "categoria": "calca",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png"
     },
     {
       "id": "raposa-bardo-calca-short-dia1",
@@ -4153,6 +4783,21 @@
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-calca-armadura-dia2.png"
     },
     {
+      "id": "raposa-guerreiro-calca-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "calca",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-calca-armadura_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-calca-armadura_dark-dia3.png"
+    },
+    {
       "id": "raposa-guerreiro-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -4181,6 +4826,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-mago-calca-calca-dia2.png"
+    },
+    {
+      "id": "raposa-mago-calca-saia_babados_dark-dia3",
+      "nome": "Saia Babados Dark",
+      "categoria": "calca",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-calca-saia_babados_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-calca-saia_babados_dark-dia3.png"
     },
     {
       "id": "raposa-mago-calca-short-dia1",
@@ -4213,6 +4873,21 @@
       "thumb": "/assets/itens/thumbs/raposa-ninja-calca-calca-dia2.png"
     },
     {
+      "id": "raposa-ninja-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-calca-calca_dark-dia3.png"
+    },
+    {
       "id": "raposa-ninja-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -4241,6 +4916,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-arqueiro-calca-calca-dia2.png"
+    },
+    {
+      "id": "veado-arqueiro-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-calca-calca_dark-dia3.png"
     },
     {
       "id": "veado-arqueiro-calca-short-dia1",
@@ -4273,6 +4963,21 @@
       "thumb": "/assets/itens/thumbs/veado-bardo-calca-calca-dia2.png"
     },
     {
+      "id": "veado-bardo-calca-calca_suspensorio_e_cintos_dark-dia3",
+      "nome": "Calça Suspensório e Cintos Dark",
+      "categoria": "calca",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-calca-calca_suspensorio_e_cintos_dark-dia3.png"
+    },
+    {
       "id": "veado-bardo-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -4301,6 +5006,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-guerreiro-calca-armadura-dia2.png"
+    },
+    {
+      "id": "veado-guerreiro-calca-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "calca",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-calca-armadura_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-calca-armadura_dark-dia3.png"
     },
     {
       "id": "veado-guerreiro-calca-short-dia1",
@@ -4333,6 +5053,21 @@
       "thumb": "/assets/itens/thumbs/veado-mago-calca-calca-dia2.png"
     },
     {
+      "id": "veado-mago-calca-saia_babados_dark-dia3",
+      "nome": "Saia Babados Dark",
+      "categoria": "calca",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-calca-saia_babados_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-calca-saia_babados_dark-dia3.png"
+    },
+    {
       "id": "veado-mago-calca-short-dia1",
       "nome": "Short",
       "categoria": "calca",
@@ -4361,6 +5096,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-ninja-calca-calca-dia2.png"
+    },
+    {
+      "id": "veado-ninja-calca-calca_dark-dia3",
+      "nome": "Calça Dark",
+      "categoria": "calca",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-calca-calca_dark-dia3.png",
+          "z": 40
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-calca-calca_dark-dia3.png"
     },
     {
       "id": "veado-ninja-calca-short-dia1",
@@ -4393,6 +5143,36 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-calcado-botas-dia2.png"
     },
     {
+      "id": "cachorro-arqueiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-calcado-botas_dark-dia3.png"
+    },
+    {
+      "id": "cachorro-bardo-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "cachorro-bardo-calcado-sapatos-dia2",
       "nome": "Sapatos",
       "categoria": "calcado",
@@ -4423,6 +5203,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-calcado-botas-dia2.png"
     },
     {
+      "id": "cachorro-guerreiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "cachorro-mago-calcado-botas-dia2",
       "nome": "Botas",
       "categoria": "calcado",
@@ -4436,6 +5231,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-mago-calcado-botas-dia2.png"
+    },
+    {
+      "id": "cachorro-mago-calcado-sapatinho_magico_dark-dia3",
+      "nome": "Sapatinho Mágico Dark",
+      "categoria": "calcado",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-calcado-sapatinho_magico_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-calcado-sapatinho_magico_dark-dia3.png"
+    },
+    {
+      "id": "cachorro-ninja-calcado-geta_com_meia-dia3",
+      "nome": "Geta com Meia",
+      "categoria": "calcado",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-calcado-geta_com_meia-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-calcado-geta_com_meia-dia3.png"
     },
     {
       "id": "cachorro-ninja-calcado-sapatos-dia2",
@@ -4468,6 +5293,36 @@
       "thumb": "/assets/itens/thumbs/gato-arqueiro-calcado-botas-dia2.png"
     },
     {
+      "id": "gato-arqueiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-calcado-botas_dark-dia3.png"
+    },
+    {
+      "id": "gato-bardo-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "gato-bardo-calcado-sapatos-dia2",
       "nome": "Sapatos",
       "categoria": "calcado",
@@ -4498,6 +5353,21 @@
       "thumb": "/assets/itens/thumbs/gato-guerreiro-calcado-botas-dia2.png"
     },
     {
+      "id": "gato-guerreiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "gato-mago-calcado-botas-dia2",
       "nome": "Botas",
       "categoria": "calcado",
@@ -4511,6 +5381,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-mago-calcado-botas-dia2.png"
+    },
+    {
+      "id": "gato-mago-calcado-sapatinho_magico_dark-dia3",
+      "nome": "Sapatinho Mágico Dark",
+      "categoria": "calcado",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-calcado-sapatinho_magico_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-calcado-sapatinho_magico_dark-dia3.png"
+    },
+    {
+      "id": "gato-ninja-calcado-geta_com_meia-dia3",
+      "nome": "Geta com Meia",
+      "categoria": "calcado",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-calcado-geta_com_meia-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-calcado-geta_com_meia-dia3.png"
     },
     {
       "id": "gato-ninja-calcado-sapatos-dia2",
@@ -4543,6 +5443,36 @@
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-calcado-botas-dia2.png"
     },
     {
+      "id": "macaco-arqueiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-calcado-botas_dark-dia3.png"
+    },
+    {
+      "id": "macaco-bardo-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "macaco-bardo-calcado-sapatos-dia2",
       "nome": "Sapatos",
       "categoria": "calcado",
@@ -4573,6 +5503,21 @@
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-calcado-botas-dia2.png"
     },
     {
+      "id": "macaco-guerreiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "macaco-mago-calcado-botas-dia2",
       "nome": "Botas",
       "categoria": "calcado",
@@ -4586,6 +5531,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-mago-calcado-botas-dia2.png"
+    },
+    {
+      "id": "macaco-mago-calcado-sapatinho_magico_dark-dia3",
+      "nome": "Sapatinho Mágico Dark",
+      "categoria": "calcado",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-calcado-sapatinho_magico_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-calcado-sapatinho_magico_dark-dia3.png"
+    },
+    {
+      "id": "macaco-ninja-calcado-geta_com_meia-dia3",
+      "nome": "Geta com Meia",
+      "categoria": "calcado",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-calcado-geta_com_meia-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-calcado-geta_com_meia-dia3.png"
     },
     {
       "id": "macaco-ninja-calcado-sapatos-dia2",
@@ -4618,6 +5593,36 @@
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-calcado-botas-dia2.png"
     },
     {
+      "id": "raposa-arqueiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-calcado-botas_dark-dia3.png"
+    },
+    {
+      "id": "raposa-bardo-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "raposa-bardo-calcado-sapatos-dia2",
       "nome": "Sapatos",
       "categoria": "calcado",
@@ -4648,6 +5653,21 @@
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-calcado-botas-dia2.png"
     },
     {
+      "id": "raposa-guerreiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "raposa-mago-calcado-botas-dia2",
       "nome": "Botas",
       "categoria": "calcado",
@@ -4661,6 +5681,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-mago-calcado-botas-dia2.png"
+    },
+    {
+      "id": "raposa-mago-calcado-sapatinho_magico_dark-dia3",
+      "nome": "Sapatinho Mágico Dark",
+      "categoria": "calcado",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-calcado-sapatinho_magico_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-calcado-sapatinho_magico_dark-dia3.png"
+    },
+    {
+      "id": "raposa-ninja-calcado-geta_com_meia-dia3",
+      "nome": "Geta com Meia",
+      "categoria": "calcado",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-calcado-geta_com_meia-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-calcado-geta_com_meia-dia3.png"
     },
     {
       "id": "raposa-ninja-calcado-sapatos-dia2",
@@ -4693,6 +5743,36 @@
       "thumb": "/assets/itens/thumbs/veado-arqueiro-calcado-botas-dia2.png"
     },
     {
+      "id": "veado-arqueiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-calcado-botas_dark-dia3.png"
+    },
+    {
+      "id": "veado-bardo-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "veado-bardo-calcado-sapatos-dia2",
       "nome": "Sapatos",
       "categoria": "calcado",
@@ -4723,6 +5803,21 @@
       "thumb": "/assets/itens/thumbs/veado-guerreiro-calcado-botas-dia2.png"
     },
     {
+      "id": "veado-guerreiro-calcado-botas_dark-dia3",
+      "nome": "Botas Dark",
+      "categoria": "calcado",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-calcado-botas_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-calcado-botas_dark-dia3.png"
+    },
+    {
       "id": "veado-mago-calcado-botas-dia2",
       "nome": "Botas",
       "categoria": "calcado",
@@ -4736,6 +5831,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-calcado-botas-dia2.png"
+    },
+    {
+      "id": "veado-mago-calcado-sapatinho_magico_dark-dia3",
+      "nome": "Sapatinho Mágico Dark",
+      "categoria": "calcado",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-calcado-sapatinho_magico_dark-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-calcado-sapatinho_magico_dark-dia3.png"
+    },
+    {
+      "id": "veado-ninja-calcado-geta_com_meia-dia3",
+      "nome": "Geta com Meia",
+      "categoria": "calcado",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-calcado-geta_com_meia-dia3.png",
+          "z": 30
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-calcado-geta_com_meia-dia3.png"
     },
     {
       "id": "veado-ninja-calcado-sapatos-dia2",
@@ -4768,6 +5893,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-camisa-blusa-dia2.png"
     },
     {
+      "id": "cachorro-arqueiro-camisa-blusa_com_capuz_dark-dia3",
+      "nome": "Blusa com Capuz Dark",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-camisa-blusa_com_capuz_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
+    },
+    {
       "id": "cachorro-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -4796,6 +5936,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "cachorro-bardo-camisa-jaqueta_e_blusa_dark-dia3",
+      "nome": "Jaqueta e Blusa Dark",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-camisa-jaqueta_e_blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-camisa-jaqueta_e_blusa_dark-dia3.png"
     },
     {
       "id": "cachorro-bardo-camisa-tunica-dia1",
@@ -4828,6 +5983,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-camisa-armadura-dia2.png"
     },
     {
+      "id": "cachorro-guerreiro-camisa-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-camisa-armadura_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-camisa-armadura_dark-dia3.png"
+    },
+    {
       "id": "cachorro-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -4856,6 +6026,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-mago-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "cachorro-mago-camisa-blusa_babados_dark-dia3",
+      "nome": "Blusa Babados Dark",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-camisa-blusa_babados_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-camisa-blusa_babados_dark-dia3.png"
     },
     {
       "id": "cachorro-mago-camisa-tunica-dia1",
@@ -4888,6 +6073,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-ninja-camisa-blusa-dia2.png"
     },
     {
+      "id": "cachorro-ninja-camisa-blusa_dark-dia3",
+      "nome": "Blusa Dark",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-camisa-blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-camisa-blusa_dark-dia3.png"
+    },
+    {
       "id": "cachorro-ninja-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -4916,6 +6116,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-arqueiro-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "gato-arqueiro-camisa-blusa_com_capuz_dark-dia3",
+      "nome": "Blusa com Capuz Dark",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-camisa-blusa_com_capuz_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
     },
     {
       "id": "gato-arqueiro-camisa-tunica-dia1",
@@ -4948,6 +6163,21 @@
       "thumb": "/assets/itens/thumbs/gato-bardo-camisa-blusa-dia2.png"
     },
     {
+      "id": "gato-bardo-camisa-jaqueta_e_blusa_dark-dia3",
+      "nome": "Jaqueta e Blusa Dark",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-camisa-jaqueta_e_blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-camisa-jaqueta_e_blusa_dark-dia3.png"
+    },
+    {
       "id": "gato-bardo-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -4976,6 +6206,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-guerreiro-camisa-armadura-dia2.png"
+    },
+    {
+      "id": "gato-guerreiro-camisa-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-camisa-armadura_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-camisa-armadura_dark-dia3.png"
     },
     {
       "id": "gato-guerreiro-camisa-tunica-dia1",
@@ -5008,6 +6253,21 @@
       "thumb": "/assets/itens/thumbs/gato-mago-camisa-blusa-dia2.png"
     },
     {
+      "id": "gato-mago-camisa-blusa_babados_dark-dia3",
+      "nome": "Blusa Babados Dark",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-camisa-blusa_babados_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-camisa-blusa_babados_dark-dia3.png"
+    },
+    {
       "id": "gato-mago-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5036,6 +6296,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-ninja-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "gato-ninja-camisa-blusa_dark-dia3",
+      "nome": "Blusa Dark",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-camisa-blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-camisa-blusa_dark-dia3.png"
     },
     {
       "id": "gato-ninja-camisa-tunica-dia1",
@@ -5068,6 +6343,21 @@
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-camisa-blusa-dia2.png"
     },
     {
+      "id": "macaco-arqueiro-camisa-blusa_com_capuz_dark-dia3",
+      "nome": "Blusa com Capuz Dark",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-camisa-blusa_com_capuz_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
+    },
+    {
       "id": "macaco-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5096,6 +6386,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "macaco-bardo-camisa-jaqueta_e_blusa_dark-dia3",
+      "nome": "Jaqueta e Blusa Dark",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-camisa-jaqueta_e_blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-camisa-jaqueta_e_blusa_dark-dia3.png"
     },
     {
       "id": "macaco-bardo-camisa-tunica-dia1",
@@ -5128,6 +6433,21 @@
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-camisa-armadura-dia2.png"
     },
     {
+      "id": "macaco-guerreiro-camisa-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-camisa-armadura_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-camisa-armadura_dark-dia3.png"
+    },
+    {
       "id": "macaco-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5156,6 +6476,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-mago-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "macaco-mago-camisa-blusa_babados_dark-dia3",
+      "nome": "Blusa Babados Dark",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-camisa-blusa_babados_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-camisa-blusa_babados_dark-dia3.png"
     },
     {
       "id": "macaco-mago-camisa-tunica-dia1",
@@ -5188,6 +6523,21 @@
       "thumb": "/assets/itens/thumbs/macaco-ninja-camisa-blusa-dia2.png"
     },
     {
+      "id": "macaco-ninja-camisa-blusa_dark-dia3",
+      "nome": "Blusa Dark",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-camisa-blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-camisa-blusa_dark-dia3.png"
+    },
+    {
       "id": "macaco-ninja-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5216,6 +6566,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "raposa-arqueiro-camisa-blusa_com_capuz_dark-dia3",
+      "nome": "Blusa com Capuz Dark",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-camisa-blusa_com_capuz_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
     },
     {
       "id": "raposa-arqueiro-camisa-tunica-dia1",
@@ -5248,6 +6613,21 @@
       "thumb": "/assets/itens/thumbs/raposa-bardo-camisa-blusa-dia2.png"
     },
     {
+      "id": "raposa-bardo-camisa-jaqueta_e_blusa_dark-dia3",
+      "nome": "Jaqueta e Blusa Dark",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-camisa-jaqueta_e_blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-camisa-jaqueta_e_blusa_dark-dia3.png"
+    },
+    {
       "id": "raposa-bardo-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5276,6 +6656,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-camisa-armadura-dia2.png"
+    },
+    {
+      "id": "raposa-guerreiro-camisa-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-camisa-armadura_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-camisa-armadura_dark-dia3.png"
     },
     {
       "id": "raposa-guerreiro-camisa-tunica-dia1",
@@ -5308,6 +6703,21 @@
       "thumb": "/assets/itens/thumbs/raposa-mago-camisa-blusa-dia2.png"
     },
     {
+      "id": "raposa-mago-camisa-blusa_babados_dark-dia3",
+      "nome": "Blusa Babados Dark",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-camisa-blusa_babados_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-camisa-blusa_babados_dark-dia3.png"
+    },
+    {
       "id": "raposa-mago-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5336,6 +6746,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-ninja-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "raposa-ninja-camisa-blusa_dark-dia3",
+      "nome": "Blusa Dark",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-camisa-blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-camisa-blusa_dark-dia3.png"
     },
     {
       "id": "raposa-ninja-camisa-tunica-dia1",
@@ -5368,6 +6793,21 @@
       "thumb": "/assets/itens/thumbs/veado-arqueiro-camisa-blusa-dia2.png"
     },
     {
+      "id": "veado-arqueiro-camisa-blusa_com_capuz_dark-dia3",
+      "nome": "Blusa com Capuz Dark",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-camisa-blusa_com_capuz_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
+    },
+    {
       "id": "veado-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5396,6 +6836,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "veado-bardo-camisa-jaqueta_e_blusa_dark-dia3",
+      "nome": "Jaqueta e Blusa Dark",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-camisa-jaqueta_e_blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-camisa-jaqueta_e_blusa_dark-dia3.png"
     },
     {
       "id": "veado-bardo-camisa-tunica-dia1",
@@ -5428,6 +6883,21 @@
       "thumb": "/assets/itens/thumbs/veado-guerreiro-camisa-armadura-dia2.png"
     },
     {
+      "id": "veado-guerreiro-camisa-armadura_dark-dia3",
+      "nome": "Armadura Dark",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-camisa-armadura_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-camisa-armadura_dark-dia3.png"
+    },
+    {
       "id": "veado-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5456,6 +6926,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "veado-mago-camisa-blusa_babados_dark-dia3",
+      "nome": "Blusa Babados Dark",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-camisa-blusa_babados_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-camisa-blusa_babados_dark-dia3.png"
     },
     {
       "id": "veado-mago-camisa-tunica-dia1",
@@ -5488,6 +6973,21 @@
       "thumb": "/assets/itens/thumbs/veado-ninja-camisa-blusa-dia2.png"
     },
     {
+      "id": "veado-ninja-camisa-blusa_dark-dia3",
+      "nome": "Blusa Dark",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-camisa-blusa_dark-dia3.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-camisa-blusa_dark-dia3.png"
+    },
+    {
       "id": "veado-ninja-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5518,6 +7018,25 @@
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-capa-capa-dia2.png"
     },
     {
+      "id": "cachorro-guerreiro-capa-capa_dark-dia3",
+      "nome": "Capa Dark",
+      "categoria": "capa",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-capa-capa_dark-dia3-z10.png",
+          "z": 10
+        },
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-capa-capa_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-capa-capa_dark-dia3.png"
+    },
+    {
       "id": "cachorro-mago-capa-capa-dia2",
       "nome": "Capa",
       "categoria": "capa",
@@ -5537,6 +7056,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-mago-capa-capa-dia2.png"
     },
     {
+      "id": "cachorro-ninja-capa-ombreiras_e_katana_dark-dia3",
+      "nome": "Ombreiras e Katana Dark",
+      "categoria": "capa",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-capa-ombreiras_e_katana_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-capa-ombreiras_e_katana_dark-dia3.png"
+    },
+    {
       "id": "gato-guerreiro-capa-capa-dia2",
       "nome": "Capa",
       "categoria": "capa",
@@ -5550,6 +7084,25 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-guerreiro-capa-capa-dia2.png"
+    },
+    {
+      "id": "gato-guerreiro-capa-capa_dark-dia3",
+      "nome": "Capa Dark",
+      "categoria": "capa",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-capa-capa_dark-dia3-z10.png",
+          "z": 10
+        },
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-capa-capa_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-capa-capa_dark-dia3.png"
     },
     {
       "id": "gato-mago-capa-capa-dia2",
@@ -5571,6 +7124,21 @@
       "thumb": "/assets/itens/thumbs/gato-mago-capa-capa-dia2.png"
     },
     {
+      "id": "gato-ninja-capa-ombreiras_e_katana_dark-dia3",
+      "nome": "Ombreiras e Katana Dark",
+      "categoria": "capa",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-capa-ombreiras_e_katana_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-capa-ombreiras_e_katana_dark-dia3.png"
+    },
+    {
       "id": "macaco-guerreiro-capa-capa-dia2",
       "nome": "Capa",
       "categoria": "capa",
@@ -5584,6 +7152,25 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-capa-capa-dia2.png"
+    },
+    {
+      "id": "macaco-guerreiro-capa-capa_dark-dia3",
+      "nome": "Capa Dark",
+      "categoria": "capa",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-capa-capa_dark-dia3-z10.png",
+          "z": 10
+        },
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-capa-capa_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-capa-capa_dark-dia3.png"
     },
     {
       "id": "macaco-mago-capa-capa-dia2",
@@ -5605,6 +7192,21 @@
       "thumb": "/assets/itens/thumbs/macaco-mago-capa-capa-dia2.png"
     },
     {
+      "id": "macaco-ninja-capa-ombreiras_e_katana_dark-dia3",
+      "nome": "Ombreiras e Katana Dark",
+      "categoria": "capa",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-capa-ombreiras_e_katana_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-capa-ombreiras_e_katana_dark-dia3.png"
+    },
+    {
       "id": "raposa-guerreiro-capa-capa-dia2",
       "nome": "Capa",
       "categoria": "capa",
@@ -5618,6 +7220,25 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-capa-capa-dia2.png"
+    },
+    {
+      "id": "raposa-guerreiro-capa-capa_dark-dia3",
+      "nome": "Capa Dark",
+      "categoria": "capa",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-capa-capa_dark-dia3-z10.png",
+          "z": 10
+        },
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-capa-capa_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-capa-capa_dark-dia3.png"
     },
     {
       "id": "raposa-mago-capa-capa-dia2",
@@ -5639,6 +7260,21 @@
       "thumb": "/assets/itens/thumbs/raposa-mago-capa-capa-dia2.png"
     },
     {
+      "id": "raposa-ninja-capa-ombreiras_e_katana_dark-dia3",
+      "nome": "Ombreiras e Katana Dark",
+      "categoria": "capa",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-capa-ombreiras_e_katana_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-capa-ombreiras_e_katana_dark-dia3.png"
+    },
+    {
       "id": "veado-guerreiro-capa-capa-dia2",
       "nome": "Capa",
       "categoria": "capa",
@@ -5652,6 +7288,25 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-guerreiro-capa-capa-dia2.png"
+    },
+    {
+      "id": "veado-guerreiro-capa-capa_dark-dia3",
+      "nome": "Capa Dark",
+      "categoria": "capa",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-capa-capa_dark-dia3-z10.png",
+          "z": 10
+        },
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-capa-capa_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-capa-capa_dark-dia3.png"
     },
     {
       "id": "veado-mago-capa-capa-dia2",
@@ -5671,6 +7326,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-capa-capa-dia2.png"
+    },
+    {
+      "id": "veado-ninja-capa-ombreiras_e_katana_dark-dia3",
+      "nome": "Ombreiras e Katana Dark",
+      "categoria": "capa",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-capa-ombreiras_e_katana_dark-dia3-z60.png",
+          "z": 60
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-capa-ombreiras_e_katana_dark-dia3.png"
     },
     {
       "id": "cachorro-arqueiro-chapeu-cabeca_godzilla-inicial",
@@ -5808,6 +7478,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "cachorro-guerreiro-chapeu-elmo_dark-dia3",
+      "nome": "Elmo Dark",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-chapeu-elmo_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-chapeu-elmo_dark-dia3.png"
+    },
+    {
       "id": "cachorro-mago-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -5836,6 +7521,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "cachorro-mago-chapeu-chapeu_dark-dia3",
+      "nome": "Chapéu Dark",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-chapeu-chapeu_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-chapeu-chapeu_dark-dia3.png"
     },
     {
       "id": "cachorro-mago-chapeu-chapeu_luffy-inicial",
@@ -6078,6 +7778,21 @@
       "thumb": "/assets/itens/thumbs/gato-guerreiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "gato-guerreiro-chapeu-elmo_dark-dia3",
+      "nome": "Elmo Dark",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-chapeu-elmo_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-chapeu-elmo_dark-dia3.png"
+    },
+    {
       "id": "gato-mago-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -6106,6 +7821,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "gato-mago-chapeu-chapeu_dark-dia3",
+      "nome": "Chapéu Dark",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-chapeu-chapeu_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-chapeu-chapeu_dark-dia3.png"
     },
     {
       "id": "gato-mago-chapeu-chapeu_luffy-inicial",
@@ -6348,6 +8078,21 @@
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "macaco-guerreiro-chapeu-elmo_dark-dia3",
+      "nome": "Elmo Dark",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-chapeu-elmo_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-chapeu-elmo_dark-dia3.png"
+    },
+    {
       "id": "macaco-mago-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -6376,6 +8121,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "macaco-mago-chapeu-chapeu_dark-dia3",
+      "nome": "Chapéu Dark",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-chapeu-chapeu_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-chapeu-chapeu_dark-dia3.png"
     },
     {
       "id": "macaco-mago-chapeu-chapeu_luffy-inicial",
@@ -6618,6 +8378,21 @@
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "raposa-guerreiro-chapeu-elmo_dark-dia3",
+      "nome": "Elmo Dark",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-chapeu-elmo_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-chapeu-elmo_dark-dia3.png"
+    },
+    {
       "id": "raposa-mago-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -6646,6 +8421,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "raposa-mago-chapeu-chapeu_dark-dia3",
+      "nome": "Chapéu Dark",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-chapeu-chapeu_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-chapeu-chapeu_dark-dia3.png"
     },
     {
       "id": "raposa-mago-chapeu-chapeu_luffy-inicial",
@@ -6888,6 +8678,21 @@
       "thumb": "/assets/itens/thumbs/veado-guerreiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "veado-guerreiro-chapeu-elmo_dark-dia3",
+      "nome": "Elmo Dark",
+      "categoria": "chapeu",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-chapeu-elmo_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-chapeu-elmo_dark-dia3.png"
+    },
+    {
       "id": "veado-mago-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -6916,6 +8721,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-chapeu-chapeu-dia2.png"
+    },
+    {
+      "id": "veado-mago-chapeu-chapeu_dark-dia3",
+      "nome": "Chapéu Dark",
+      "categoria": "chapeu",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "dia3",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-chapeu-chapeu_dark-dia3.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-chapeu-chapeu_dark-dia3.png"
     },
     {
       "id": "veado-mago-chapeu-chapeu_luffy-inicial",

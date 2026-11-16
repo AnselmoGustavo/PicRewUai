@@ -104,6 +104,7 @@ Por **animal+classe** (5 × 5 = 25 combinações), todas com arte:
 - **1 corpo** (personagem pelado): `animal-classe.png`.
 - **Skin básica (dia 1):** camisa (túnica), calça (short), arma básica.
 - **Skin avançada (dia 2):** camisa, calça, calçado e arma; o **guerreiro** e o **mago** têm capa (duas camadas no mago) e o **mago** tem chapéu.
+- **Skin dark (dia 3):** arqueiro — blusa com capuz, calça, botas e arco dark; bardo — jaqueta e blusa, calça com suspensório e cintos, botas dark e violino sombrio; guerreiro — armadura dark (camisa + calça), capa dark (2 camadas), elmo dark, botas dark e machado; mago — blusa e saia de babados, sapatinho mágico, chapéu dark e vassoura; ninja — blusa e calça dark, geta com meia, ombreiras e katana dark (tipo capa, por cima) e shuriken.
 - **Acessórios avulsos (inicial)**, em todas as classes e ajustados a cada corpo: cachecol, girassol, laço, óculos de grau, óculos Squirtle, pokébola (acessório); cabeça de Godzilla, chapéu do Luffy, chapéu de maquinista (chapéu).
 - **Exclusivos por classe (inicial):** ninja — bandana, leques katana; arqueiro — besta twich, Megaman; bardo — guitarra Brook, guitarra Larinha; guerreiro — escudo do Link (tipo **escudo**, usado junto com a arma), key blade, diário; mago — varinha das varinhas, chapéu de bruxa (Witch Hat Atelier).
 
@@ -132,6 +133,8 @@ Em `Assets Finais/`: bordas (dia/noite/corte), name frame (dia/noite + preenchim
 A ilustradora manda uma pasta por combinação, `<Animal> - <Classe>` (ex.: `Gato - Bardo`), podendo ter subpastas. Nomes aceitos pelo organizador:
 - **Corpo:** `Gato - Bardo.png`, `gato-bardo.png`…
 - **Skin:** `gato-bardo-[adv|basico|tipo]-peça-dia.png` (ex.: `veado-ninja-adv-blusa-dia2.png`) — a peça é traduzida pela tabela `PECAS` (blusa → camisa, short → calça…).
+- **Capa em duas partes:** `…-capa_atras_dark-…` (z10) + `…-capa_frente_dark-…` (z60) viram a peça `capa_dark` com duas camadas. `armadura_calca_…` e `saia_…` vão para **calça**; tipo grudado no nome (`…-chapeu_dark-…`) também é aceito. Capa de uma camada do **guerreiro e do ninja** vai por cima (z60). O organizador **barra** peça com o mesmo nome de outra de outro dia (ex.: `blusa` dia 3 x `blusa` dia 2), porque bônus e código usam `classe/tipo/nome`.
+- **Já na convenção:** `gato-arqueiro-calcado-botas_dark-dia3.png` (tipo e nome usados como vieram; `vestimenta` vira calça ou camisa pelo nome; `_cima`/`_baixo` saem do nome). Nesse caso a pasta pode ter qualquer nome (ex.: `Arqueiro - Dark`): animal e classe saem do começo do nome de cada arquivo.
 - **Avulso com tipo na frente:** `acessorio pokebola Mescladas.PNG`, `arma besta twich.png` → dia `inicial`.
 - **Avulso conhecido sem tipo:** `bandana Mescladas.PNG` (tabela `AVULSOS`).
 

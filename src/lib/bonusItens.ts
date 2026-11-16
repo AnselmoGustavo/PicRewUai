@@ -118,5 +118,37 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "ninja/acessorio/laco": {},                 // Laco (inicial)
 
   // ---- ninja ----
+  "ninja/arma/shuriken": {},               // Shuriken (dia3)
+  "ninja/calca/calca_dark": {},            // Calça Dark (dia3)
+  "ninja/calcado/geta_com_meia": {},       // Geta com Meia (dia3)
+  "ninja/camisa/blusa_dark": {},           // Blusa Dark (dia3)
+  "ninja/capa/ombreiras_e_katana_dark": {}, // Ombreiras e Katana Dark (dia3)
   "ninja/acessorio/pokebola": {},          // Pokébola (inicial)
+
+  // ---- arqueiro ----
+  "arqueiro/arma/arco_dark": {},           // Arco Dark (dia3)
+  "arqueiro/calca/calca_dark": {},         // Calça Dark (dia3)
+  "arqueiro/calcado/botas_dark": {},       // Botas Dark (dia3)
+  "arqueiro/camisa/blusa_com_capuz_dark": {}, // Blusa Com Capuz Dark (dia3)
+
+  // ---- bardo ----
+  "bardo/arma/violino_sombrio": {},        // Violino Sombrio (dia3)
+  "bardo/calca/calca_suspensorio_e_cintos_dark": {}, // Calça Suspensório e Cintos Dark (dia3)
+  "bardo/calcado/botas_dark": {},          // Botas Dark (dia3)
+  "bardo/camisa/jaqueta_e_blusa_dark": {}, // Jaqueta e Blusa Dark (dia3)
+
+  // ---- guerreiro ----
+  "guerreiro/arma/machado": {},            // Machado (dia3)
+  "guerreiro/calca/armadura_dark": {},     // Armadura Dark (dia3)
+  "guerreiro/calcado/botas_dark": {},      // Botas Dark (dia3)
+  "guerreiro/camisa/armadura_dark": {},    // Armadura Dark (dia3)
+  "guerreiro/capa/capa_dark": {},          // Capa Dark (dia3)
+  "guerreiro/chapeu/elmo_dark": {},        // Elmo Dark (dia3)
+
+  // ---- mago ----
+  "mago/arma/vassoura": {},                // Vassoura (dia3)
+  "mago/calca/saia_babados_dark": {},      // Saia Babados Dark (dia3)
+  "mago/calcado/sapatinho_magico_dark": {}, // Sapatinho Mágico Dark (dia3)
+  "mago/camisa/blusa_babados_dark": {},    // Blusa Babados Dark (dia3)
+  "mago/chapeu/chapeu_dark": {},           // Chapéu Dark (dia3)
 };
