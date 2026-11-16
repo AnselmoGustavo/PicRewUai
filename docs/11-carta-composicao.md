@@ -16,7 +16,7 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 | Borda p/ corte | `Bordas/Borda pra corte.png` | 744 × 1039 | guia de corte (só no PDF) |
 | **Verso** | `verso-carta.jpeg` | 745 × 1040 | verso da carta (usado só no PDF de impressão, ajustado a 744 × 1039) |
 | Name Frame | `Name Frame/Frames novos/Name Frame {Dia,Noite} Title 1.png` | **744 × 1039** | dia / noite · **full-canvas** (banner + linha de título), traço escuro/claro |
-| Name Frame Preench. | — (removido) | — | agora o preenchimento do nome é **gerado por código** (ver abaixo) |
+| Name Frame Preench. | `public/assets/carta/name-preench-{dia,noite}.png` | 744 × 1039 | miolo do banner novo (gerado a partir do contorno do frame; o `Name Frame Preenchimento.png` antigo era do banner antigo e não encaixa). Dia = creme, noite = escuro |
 | Status Frame | `Status Completo/Status dia.png` · `noite.png` | 169 × 240 | dia / noite (ícones embutidos) |
 | Status Preench. | `Status Completo/Preenchimento Status.png` | 160 × 231 | semitransparente |
 | Ícones de status | `Status/{Vida,Força,Intelecto,Velocidade}.png` | 125 × 125 | uso na UI do app (na carta já vêm no frame) |
@@ -38,11 +38,13 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 
 ### Parte B — moldura da carta (overlay) · aplicada no preview e no export
 ```
+6.  Name Preenchimento [Dia|Noite]  (semitransparente, miolo do banner)
+6b. Título Preenchimento [Dia|Noite] (`titulo-preench-{tema}.png`, faixa de bordas suaves acima da linha do título)
 7.  Name Frame [Dia|Noite]   ← full-canvas em (0,0): banner + linha de título
 8.  Status Preenchimento     (semitransparente, centralizado no frame)
 9.  Status [Dia|Noite]
 10. Borda [Dia|Noite]
-11. Texto: Nome do personagem  (no banner; SEM preenchimento; cor acompanha o tema)
+11. Texto: Nome do personagem  (no banner, sobre o preenchimento; cor acompanha o tema)
 12. Texto: Título             (acima da linha de título; cor acompanha o tema)
 13. Textos: Status 1–4
 ```
@@ -67,15 +69,15 @@ Fonte da verdade das coordenadas: `src/lib/cartaLayout.json`.
 
 | Texto | X | Y | L | A | fontePx | cor |
 |-------|:-:|:-:|:-:|:-:|:-------:|-----|
-| Nome do personagem | 224 | 158 | 414 | 60 | 44 | **acompanha o tema** (escura no dia, clara na noite) |
-| Título | 205 | 246 | 330 | 34 | 26 | **acompanha o tema** (escura no dia, clara na noite) |
+| Nome do personagem | 204 | 157 | 436 | 64 | 56 | **acompanha o tema** (escura no dia, clara na noite) |
+| Título | 190 | 240 | 356 | 40 | 36 | **acompanha o tema** (escura no dia, clara na noite) |
 | Status 1 (Vida ❤️) | 607 | 781 | 35 | 45 | 34 | escura |
 | Status 2 (Força ⚔️) | 607 | 829 | 35 | 45 | 34 | escura |
 | Status 3 (Intelecto 📖) | 607 | 880 | 35 | 45 | 34 | escura |
 | Status 4 (Destreza ⚡) | 607 | 926 | 35 | 45 | 34 | escura |
 
 > Mapeamento Status 1–4 → Vida / Força / Intelecto / Destreza (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita o nome** e **escolhe o título** entre os liberados (padrão "Recruta"); o **status é calculado** de animal+classe+itens (`lib/status.ts`). O app desenha os três na carta (fonte Adam Script). Cada status vai até 9 (1 dígito).
-> **Sem preenchimento** atrás do nome nem do título (decisão de design). Ambos ficam direto sobre a ribbon/cenário, então a **cor acompanha o tema** (`corTexto` no dia, `corTextoClaro` na noite) para manter a legibilidade.
+> **Preenchimento atrás do nome** (desde 16/11/2026, após o 1º teste de impressão: nome e título ficaram pequenos e o nome sumia no cenário): o miolo do banner recebe `name-preench-{tema}.png` com `preenchOpacidade` — creme no dia, escuro na noite — e as fontes subiram (nome 44→56, título 26→36). O **título** ganhou uma faixa suave (`titulo-preench-{tema}.png`, mesma opacidade) acima da linha; a **cor acompanha o tema** (`corTexto` no dia, `corTextoClaro` + sombra na noite). Textos longos são comprimidos para caber na largura da caixa.
 
 > ✅ **Calibrado com os cenários reais (11/2026):** na moldura de **noite** (Floresta), nome, título e números de status são **claros com sombra escura** (`sombraNoite` em `cartaLayout.json`); na de **dia** (Montanhas), escuros sem sombra. Ver ADR-020.
 

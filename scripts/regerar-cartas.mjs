@@ -87,13 +87,19 @@ async function comporCarta({ animal, classe, cenario, selecao, nome, titulo, sta
     .sort((a, b) => a.z - b.z)
     .forEach((c) => ctx.drawImage(c.img, 0, 0, w, h));
 
-  const [nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+  const [namePreench, tituloPreench, nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+    loadImage(pub(`/assets/carta/name-preench-${tema}.png`)),
+    loadImage(pub(`/assets/carta/titulo-preench-${tema}.png`)),
     loadImage(pub(`/assets/carta/name-${tema}.png`)),
     loadImage(pub("/assets/carta/status-preench.png")),
     loadImage(pub(`/assets/carta/status-${tema}.png`)),
     loadImage(pub(`/assets/carta/borda-${tema}.png`)),
   ]);
   const { assets, textos, preenchOpacidade, corTexto, corTextoClaro, sombraNoite } = layout;
+  ctx.globalAlpha = preenchOpacidade;
+  ctx.drawImage(namePreench, 0, 0, w, h);
+  if (titulo) ctx.drawImage(tituloPreench, 0, 0, w, h);
+  ctx.globalAlpha = 1;
   ctx.drawImage(nameFrame, 0, 0, w, h);
   ctx.globalAlpha = preenchOpacidade;
   ctx.drawImage(

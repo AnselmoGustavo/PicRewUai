@@ -58,12 +58,14 @@ async function desenharFundo(ctx, tema, cenarioArquivo) {
 }
 
 async function gerar(slug, tema, nome, titulo, status, cenarioArquivo) {
-  const { assets, textos, preenchOpacidade, corTexto, corTextoClaro, card } =
+  const { assets, textos, preenchOpacidade, corTexto, corTextoClaro, card, sombraNoite } =
     layout;
   const canvas = createCanvas(card.w, card.h);
   const ctx = canvas.getContext("2d");
 
-  const [nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+  const [namePreench, tituloPreench, nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+    loadImage(p(`public/assets/carta/name-preench-${tema}.png`)),
+    loadImage(p(`public/assets/carta/titulo-preench-${tema}.png`)),
     loadImage(p(`public/assets/carta/name-${tema}.png`)),
     loadImage(p("public/assets/carta/status-preench.png")),
     loadImage(p(`public/assets/carta/status-${tema}.png`)),
@@ -72,7 +74,11 @@ async function gerar(slug, tema, nome, titulo, status, cenarioArquivo) {
 
   await desenharFundo(ctx, tema, cenarioArquivo);
 
-  // banner + linha de título (full-canvas)
+  // preenchimento do banner + banner e linha de título (full-canvas)
+  ctx.globalAlpha = preenchOpacidade;
+  ctx.drawImage(namePreench, 0, 0, card.w, card.h);
+  if (titulo) ctx.drawImage(tituloPreench, 0, 0, card.w, card.h);
+  ctx.globalAlpha = 1;
   ctx.drawImage(nameFrame, 0, 0, card.w, card.h);
 
   const spX =
@@ -89,21 +95,26 @@ async function gerar(slug, tema, nome, titulo, status, cenarioArquivo) {
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 
-  const corAdapt = tema === "noite" ? corTextoClaro : corTexto;
+  const noite = tema === "noite";
+  const corAdapt = noite ? corTextoClaro : corTexto;
+  if (noite) {
+    ctx.shadowColor = sombraNoite.cor;
+    ctx.shadowBlur = sombraNoite.blur;
+  }
 
   const n = textos.nome;
   ctx.fillStyle = corAdapt;
   ctx.font = `${n.fontePx}px AdamScript`;
-  ctx.fillText(nome, n.x + n.w / 2, n.y + n.h / 2);
+  ctx.fillText(nome, n.x + n.w / 2, n.y + n.h / 2, n.w);
 
   if (titulo) {
     const t = textos.titulo;
     ctx.fillStyle = corAdapt;
     ctx.font = `${t.fontePx}px AdamScript`;
-    ctx.fillText(titulo, t.x + t.w / 2, t.y + t.h / 2);
+    ctx.fillText(titulo, t.x + t.w / 2, t.y + t.h / 2, t.w);
   }
 
-  ctx.fillStyle = corTexto;
+  ctx.fillStyle = corAdapt;
   for (const s of textos.status) {
     ctx.font = `${s.fontePx}px AdamScript`;
     ctx.fillText(String(status[s.key]), s.x + s.w / 2, s.y + s.h / 2);
@@ -116,7 +127,7 @@ async function gerar(slug, tema, nome, titulo, status, cenarioArquivo) {
 
 const status = { vida: 9, forca: 7, intelecto: 5, destreza: 8 };
 // cenários reais (claros) + um exemplo noite com placeholder (sem cenário escuro ainda)
-await gerar("floresta", "dia", "Fulano", "o Bravo", status, "public/assets/cenarios/floresta.jpg");
+await gerar("floresta", "noite", "Fulano", "o Bravo", status, "public/assets/cenarios/floresta.jpg");
 await gerar("montanhas", "dia", "Selena", "a Montanhesa", status, "public/assets/cenarios/montanhas.jpg");
 await gerar("noite", "noite", "Dama da Lua", "Guardiã da Noite", status, null);
 console.log("pronto.");

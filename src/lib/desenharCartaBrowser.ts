@@ -173,7 +173,9 @@ export async function desenharCarta(
   // No editor do participante NÃO é mostrada — a carta é surpresa.
   if (!mostrarMoldura) return;
 
-  const [nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+  const [namePreench, tituloPreench, nameFrame, statusPreench, statusFrame, borda] = await Promise.all([
+    carregarImagem(`/assets/carta/name-preench-${tema}.png`),
+    carregarImagem(`/assets/carta/titulo-preench-${tema}.png`),
     carregarImagem(`/assets/carta/name-${tema}.png`),
     carregarImagem("/assets/carta/status-preench.png"),
     carregarImagem(`/assets/carta/status-${tema}.png`),
@@ -182,7 +184,11 @@ export async function desenharCarta(
 
   const { assets, textos, preenchOpacidade, corTexto, corTextoClaro, sombraNoite } = layout;
 
-  // banner + linha de título (full-canvas, em 0,0)
+  // preenchimento do banner (semitransparente) + banner e linha de título (full-canvas, em 0,0)
+  ctx.globalAlpha = preenchOpacidade;
+  ctx.drawImage(namePreench, 0, 0, w, h);
+  if (dados.titulo) ctx.drawImage(tituloPreench, 0, 0, w, h);
+  ctx.globalAlpha = 1;
   ctx.drawImage(nameFrame, 0, 0, w, h);
 
   // status: preenchimento CENTRALIZADO na moldura + moldura
