@@ -5998,6 +5998,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-camisa-armadura_dark-dia3.png"
     },
     {
+      "id": "cachorro-guerreiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "cachorro-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6041,6 +6056,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-mago-camisa-blusa_babados_dark-dia3.png"
+    },
+    {
+      "id": "cachorro-mago-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "cachorro-mago-camisa-tunica-dia1",
@@ -6223,6 +6253,21 @@
       "thumb": "/assets/itens/thumbs/gato-guerreiro-camisa-armadura_dark-dia3.png"
     },
     {
+      "id": "gato-guerreiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "gato-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6266,6 +6311,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-mago-camisa-blusa_babados_dark-dia3.png"
+    },
+    {
+      "id": "gato-mago-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "gato-mago-camisa-tunica-dia1",
@@ -6448,6 +6508,21 @@
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-camisa-armadura_dark-dia3.png"
     },
     {
+      "id": "macaco-guerreiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "macaco-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6491,6 +6566,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-mago-camisa-blusa_babados_dark-dia3.png"
+    },
+    {
+      "id": "macaco-mago-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "macaco-mago-camisa-tunica-dia1",
@@ -6673,6 +6763,21 @@
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-camisa-armadura_dark-dia3.png"
     },
     {
+      "id": "raposa-guerreiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "raposa-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6716,6 +6821,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-mago-camisa-blusa_babados_dark-dia3.png"
+    },
+    {
+      "id": "raposa-mago-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "raposa-mago-camisa-tunica-dia1",
@@ -6898,6 +7018,21 @@
       "thumb": "/assets/itens/thumbs/veado-guerreiro-camisa-armadura_dark-dia3.png"
     },
     {
+      "id": "veado-guerreiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "veado-guerreiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6941,6 +7076,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-camisa-blusa_babados_dark-dia3.png"
+    },
+    {
+      "id": "veado-mago-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "veado-mago-camisa-tunica-dia1",

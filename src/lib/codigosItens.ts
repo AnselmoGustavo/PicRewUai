@@ -136,6 +136,7 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "bardo/camisa/jaqueta_e_blusa_dark": "", // Jaqueta e Blusa Dark (hoje: dia3)
 
   // ---- guerreiro ----
+  "guerreiro/camisa/camisa_sao_paulo": "", // Camisa São Paulo (hoje: inicial)
   "guerreiro/arma/machado": "",            // Machado (hoje: dia3)
   "guerreiro/calca/armadura_dark": "",     // Armadura Dark (hoje: dia3)
   "guerreiro/calcado/botas_dark": "",      // Botas Dark (hoje: dia3)
@@ -144,6 +145,7 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "guerreiro/chapeu/elmo_dark": "",        // Elmo Dark (hoje: dia3)
 
   // ---- mago ----
+  "mago/camisa/camisa_sao_paulo": "",      // Camisa São Paulo (hoje: inicial)
   "mago/arma/vassoura": "",                // Vassoura (hoje: dia3)
   "mago/calca/saia_babados_dark": "",      // Saia Babados Dark (hoje: dia3)
   "mago/calcado/sapatinho_magico_dark": "", // Sapatinho Mágico Dark (hoje: dia3)

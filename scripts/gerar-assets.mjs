@@ -49,6 +49,7 @@ const GRAFIA = {
   magico: "mágico",
   oculos: "óculos",
   pokebola: "pokébola",
+  sao: "são",
   suspensorio: "suspensório",
   tunica: "túnica",
   twich: "twitch",

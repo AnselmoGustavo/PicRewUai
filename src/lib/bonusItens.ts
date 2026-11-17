@@ -138,6 +138,7 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "bardo/camisa/jaqueta_e_blusa_dark": {}, // Jaqueta e Blusa Dark (dia3)
 
   // ---- guerreiro ----
+  "guerreiro/camisa/camisa_sao_paulo": {}, // Camisa São Paulo (inicial)
   "guerreiro/arma/machado": {},            // Machado (dia3)
   "guerreiro/calca/armadura_dark": {},     // Armadura Dark (dia3)
   "guerreiro/calcado/botas_dark": {},      // Botas Dark (dia3)
@@ -146,6 +147,7 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "guerreiro/chapeu/elmo_dark": {},        // Elmo Dark (dia3)
 
   // ---- mago ----
+  "mago/camisa/camisa_sao_paulo": {},      // Camisa São Paulo (inicial)
   "mago/arma/vassoura": {},                // Vassoura (dia3)
   "mago/calca/saia_babados_dark": {},      // Saia Babados Dark (dia3)
   "mago/calcado/sapatinho_magico_dark": {}, // Sapatinho Mágico Dark (dia3)
