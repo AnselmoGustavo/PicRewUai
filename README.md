@@ -22,7 +22,7 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 | Animais | 5: macaco, raposa, gato, veado, cachorro |
 | Classes | 5: guerreiro, arqueiro, mago, bardo, ninja |
 | Tipos de item | camisa, calça, arma, escudo, calçado, capa, chapéu, acessório (**vários acessórios** ao mesmo tempo) |
-| Cenário | 3 fundos, 1 por dia (Floresta = noite, Montanhas = dia, 3º a definir) — define a moldura dia/noite |
+| Cenário | 3 fundos, 1 por dia (Floresta = noite, Montanhas = dia, Vila das Lanternas = noite) — define a moldura dia/noite |
 | Status | 4 atributos na carta (Vida, Força, Intelecto, Destreza), **calculados**: base + classe + raça + **bônus dos itens** |
 | Título | **Recruta** para todos; outros títulos liberados por **códigos** (`src/lib/titulos.ts`) |
 | Desbloqueio | Um campo só de códigos: **do dia** (itens + cenário), **de envio**, **de título** e **de item especial** |
@@ -83,7 +83,7 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 
 🟢 **No ar e em uso** — https://pic-rew-uai.vercel.app (deploy automático a cada push na `main`).
 
-- ✅ **Arte completa nas 25 combinações** (5 animais × 5 classes): corpo base + skin básica (dia 1) + skin avançada (dia 2) + acessórios avulsos (liberados desde o início) — **465 itens**. Toda peça existe para os 5 animais da classe.
+- ✅ **Arte completa nas 25 combinações** (5 animais × 5 classes): corpo base + skin básica (dia 1) + skin avançada (dia 2) + acessórios avulsos (liberados desde o início) — **590 itens** (+ skins dark do dia 3). Toda peça existe para os 5 animais da classe.
 - ✅ **Pipeline de assets**: a ilustradora manda pastas `<Animal> - <Classe>` em `Assets Prontos/itens/itens-para-formatacao/` → `npm run organizar` (simulação) / `npm run organizar -- --mover` → `npm run assets` (otimiza, gera miniaturas, o manifesto `src/lib/itens-gerados.json` e **acrescenta as peças novas** nos arquivos de bônus e de códigos). Ver [doc 04](docs/04-guia-de-assets.md).
 - ✅ **Editor**: animal → classe → abas (cenário + só os tipos de item que existem para aquele animal+classe + ficha). Preview ao vivo sem moldura (a carta é surpresa). Botão **Salvar progresso** (além do auto-save).
 - ✅ **Status** = base 2 + classe + raça + **bônus dos itens equipados** (`src/lib/bonusItens.ts`, teto 9). Mostrado na ficha e desenhado na carta.
@@ -96,4 +96,4 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 
 **Antes do evento (18/11):** tirar o botão "recomeçar (teste)", trocar os códigos de exemplo pelos reais (escondidos do bundle), apagar contas de teste no Supabase e abrir o painel do Supabase (pausa após 7 dias parado).
 
-**Arte pendente:** diário para arqueiro/bardo/mago/ninja (se for para todas as classes); 3º cenário.
+**Arte pendente:** diário para arqueiro/bardo/mago/ninja (se for para todas as classes).

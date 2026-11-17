@@ -129,5 +129,6 @@ const status = { vida: 9, forca: 7, intelecto: 5, destreza: 8 };
 // cenários reais (claros) + um exemplo noite com placeholder (sem cenário escuro ainda)
 await gerar("floresta", "noite", "Fulano", "o Bravo", status, "public/assets/cenarios/floresta.jpg");
 await gerar("montanhas", "dia", "Selena", "a Montanhesa", status, "public/assets/cenarios/montanhas.jpg");
+await gerar("vila", "noite", "Kaito", "o Guardião das Lanternas", status, "public/assets/cenarios/vila.jpg");
 await gerar("noite", "noite", "Dama da Lua", "Guardiã da Noite", status, null);
 console.log("pronto.");

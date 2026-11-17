@@ -33,8 +33,7 @@ export function baseDoPersonagem(
 export const CENARIOS: CenarioDef[] = [
   { id: "cen_floresta", nome: "Floresta", tema: "escuro", grupo: "dia1", arquivo: "/assets/cenarios/floresta.jpg" },
   { id: "cen_montanhas", nome: "Montanhas", tema: "claro", grupo: "dia2", arquivo: "/assets/cenarios/montanhas.jpg" },
-  // PLACEHOLDER (aguardando arte) — ajustar nome/tema/dia quando chegar:
-  { id: "cen_dia3", nome: "Cenário (dia 3)", tema: "claro", grupo: "dia3", cor: "#efe3c8" },
+  { id: "cen_dia3", nome: "Vila das Lanternas", tema: "escuro", grupo: "dia3", arquivo: "/assets/cenarios/vila.jpg" },
 ];
 
 // ---- helpers de consulta ----
