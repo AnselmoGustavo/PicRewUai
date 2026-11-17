@@ -113,7 +113,10 @@ export default function Editor({
     const partes: string[] = [];
     if (r.tipo === "mestre") partes.push("🔓 Tudo desbloqueado (mestre).");
     else if (r.tipo === "grupo" && r.grupo === "envio") partes.push("📨 Envio liberado! Quando terminar, é só enviar seu personagem.");
-    else if (r.tipo === "grupo") partes.push(`🔓 ${r.grupo.toUpperCase()} desbloqueado!`);
+    else if (r.tipo === "grupo") {
+      const cen = CENARIOS.find((c) => c.grupo === r.grupo);
+      partes.push(cen ? `🌄 Cenário ${cen.nome} desbloqueado!` : `🔓 ${r.grupo.toUpperCase()} desbloqueado!`);
+    }
     if (titulosNovos.length && r.tipo !== "mestre") {
       partes.push(`🏅 Novo título: ${titulosNovos.map((t) => `“${t}”`).join(", ")} — escolha na aba Ficha.`);
     }

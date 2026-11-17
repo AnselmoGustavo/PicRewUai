@@ -124,7 +124,8 @@ A tela inicial pede **criar conta / entrar** (usuário + senha). A conta é a id
 ## Sistema de códigos de desbloqueio
 
 - Cada **código** libera um **grupo** (`dia1`…`dia4`), igual para todos os participantes.
-- Há um **código de envio** (grupo `envio`, hoje `UAI-ENVIAR`): não libera itens, só o botão **Enviar personagem**. Divulgado no último dia, para ninguém enviar antes de ver todos os itens. O código mestre também libera.
+- **Desde 17/11/2026 todos os itens têm código próprio** (`codigosItens.ts`), então o código do dia, na prática, libera só o **cenário** do dia. A lista de todos os códigos fica em `codigos-evento.csv` (fora do Git).
+- Há um **código de envio** (grupo `envio`): não libera itens, só o botão **Enviar personagem**. Divulgado no último dia, para ninguém enviar antes de ver todos os itens. O código mestre também libera.
 - **Títulos** (`src/lib/titulos.ts`): o participante não digita o título. Todos começam com **"Recruta"** e escolhem, na aba Ficha, entre os títulos já desbloqueados. Cada título tem um `codigo` (pode ser compartilhado entre títulos, ou ser um código do dia). Títulos bloqueados ficam escondidos (só aparece quantos faltam). O mestre libera todos. Estado: `titulos: string[]` (desbloqueados) + `ficha.titulo`.
 - **Bônus dos itens** (`src/lib/bonusItens.ts`): cada item equipado soma status, chave `classe/tipo/nome` (vale para todos os animais). Status final = base 2 + classe + raça + itens, com teto `MAX_STATUS` (9, 1 dígito na carta). `npm run assets` avisa itens novos sem linha no arquivo.
 - **Códigos de itens** (`src/lib/codigosItens.ts`): chave `classe/tipo/nome` → código. Vazio = o item segue o dia; preenchido = o item **só** libera com esse código (ou o mestre). Estado: `itensLiberados: string[]`.

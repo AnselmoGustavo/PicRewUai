@@ -5,17 +5,18 @@ import type { GrupoDesbloqueio } from "./tipos";
 import { TITULOS } from "./titulos";
 import { CODIGOS_ITENS } from "./codigosItens";
 
-// Códigos de exemplo (placeholder) — definir os reais perto do evento.
+// Códigos REAIS do evento (gerados em 17/11/2026; lista completa em codigos-evento.csv).
+// Os itens têm código próprio (codigosItens.ts): o código do dia libera só o CENÁRIO do dia.
 const CODIGOS: Record<Exclude<GrupoDesbloqueio, "inicial">, string> = {
-  dia1: "UAI-DIA1",
-  dia2: "UAI-DIA2",
-  dia3: "UAI-DIA3",
-  dia4: "UAI-DIA4",
-  envio: "UAI-ENVIAR", // libera o botão de enviar a carta (divulgar no último dia)
+  dia1: "UAI-KGHW4",
+  dia2: "UAI-PM4NV",
+  dia3: "UAI-GAN3X",
+  dia4: "UAI-CWKMH",
+  envio: "UAI-PJNNE", // libera o botão de enviar a carta (divulgar no último dia)
 };
 
 // Código de staff que libera tudo (testes/suporte).
-const CODIGO_MESTRE = "UAI-MESTRE";
+const CODIGO_MESTRE = "UAI-7FHPQ";
 
 function normalizar(s: string): string {
   return s.trim().toUpperCase();
