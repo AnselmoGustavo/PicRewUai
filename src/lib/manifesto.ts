@@ -34,6 +34,7 @@ export const CENARIOS: CenarioDef[] = [
   { id: "cen_floresta", nome: "Floresta", tema: "escuro", grupo: "dia1", arquivo: "/assets/cenarios/floresta.jpg" },
   { id: "cen_montanhas", nome: "Montanhas", tema: "claro", grupo: "dia2", arquivo: "/assets/cenarios/montanhas.jpg" },
   { id: "cen_dia3", nome: "Vila das Lanternas", tema: "escuro", grupo: "dia3", arquivo: "/assets/cenarios/vila.jpg" },
+  { id: "cen_dia4", nome: "Pôr do Sol", tema: "claro", grupo: "dia4", arquivo: "/assets/cenarios/por-do-sol.jpg" },
 ];
 
 // ---- helpers de consulta ----

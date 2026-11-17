@@ -22,7 +22,7 @@ Além de montar o personagem, o app funciona como **ficha de personagem** e perm
 | Animais | 5: macaco, raposa, gato, veado, cachorro |
 | Classes | 5: guerreiro, arqueiro, mago, bardo, ninja |
 | Tipos de item | camisa, calça, arma, escudo, calçado, capa, chapéu, acessório (**vários acessórios** ao mesmo tempo) |
-| Cenário | 3 fundos, 1 por dia (Floresta = noite, Montanhas = dia, Vila das Lanternas = noite) — define a moldura dia/noite |
+| Cenário | 4 fundos, 1 por dia (Floresta = noite, Montanhas = dia, Vila das Lanternas = noite, Pôr do Sol = dia) — define a moldura dia/noite |
 | Status | 4 atributos na carta (Vida, Força, Intelecto, Destreza), **calculados**: base + classe + raça + **bônus dos itens** |
 | Título | **Recruta** para todos; outros títulos liberados por **códigos** (`src/lib/titulos.ts`) |
 | Desbloqueio | Um campo só de códigos: **do dia** (itens + cenário), **de envio**, **de título** e **de item especial** |

@@ -14,6 +14,7 @@ const MAPA = [
   { src: "Assets Prontos/Cenários/Dia 1 - Floresta.jpg.jpeg", dest: "public/assets/cenarios/floresta.jpg" },
   { src: "Assets Prontos/Cenários/Dia 2 - Montanhas.png", dest: "public/assets/cenarios/montanhas.jpg" },
   { src: "Assets Prontos/Cenários/Dia 3 - Vila das Lanternas.png", dest: "public/assets/cenarios/vila.jpg" },
+  { src: "Assets Prontos/Cenários/Dia 4 - Pôr do Sol.png", dest: "public/assets/cenarios/por-do-sol.jpg" },
 ];
 
 for (const { src, dest } of MAPA) {

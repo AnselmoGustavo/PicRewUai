@@ -80,7 +80,7 @@ Temos ~16 semanas até a entrega — folga confortável se começarmos a arte ce
 
 ## Dependências externas (não são código)
 
-- 🎨 **Arte** (ilustradora): ✅ corpos e itens das 25 combinações (590 itens, com as skins dark do dia 3); ✅ 3 cenários; ✅ molduras da carta e **verso** (`Assets Finais/verso-carta.jpeg`). Falta: diário nas outras classes (se for o caso).
+- 🎨 **Arte** (ilustradora): ✅ corpos e itens das 25 combinações (590 itens, com as skins dark do dia 3); ✅ 4 cenários (1 por dia); ✅ molduras da carta e **verso** (`Assets Finais/verso-carta.jpeg`). Falta: diário nas outras classes (se for o caso).
 - 🗂️ **Conteúdo**: itens (e cenário) que desbloqueiam em cada dia.
 - 🔑 **Códigos**: textos reais dos códigos do dia, de envio, de títulos (`titulos.ts`) e de itens especiais (`codigosItens.ts`) — trocar os de exemplo e esconder do bundle antes de 18/11.
 - 🖨️ **Gráfica**: ✅ aceita sem sangria; definir tamanho da folha e perfil de cor; rodar uma amostra cedo.

@@ -113,7 +113,7 @@ Por **animal+classe** (5 × 5 = 25 combinações), todas com arte:
 ### Cenários (fundos) — 3 no total
 - Imagens **opacas** que preenchem a carta atrás do personagem (otimizadas para 744 × 1039 com `npm run cenarios`).
 - Cada cenário é **claro** ou **escuro** → define se a carta usa a moldura **dia** ou **noite**.
-- Hoje: **Floresta** (dia 1, **escuro** → moldura noite), **Montanhas** (dia 2, claro → moldura dia), **Vila das Lanternas** (dia 3, **escuro** → moldura noite; original `Assets Prontos/Cenários/Dia 3 - Vila das Lanternas.png`). Cenário novo: coloque o original em `Assets Prontos/Cenários/`, acrescente em `scripts/otimizar-cenarios.mjs`, rode `npm run cenarios` e registre em `CENARIOS` (`src/lib/manifesto.ts`).
+- Hoje: **Floresta** (dia 1, **escuro** → moldura noite), **Montanhas** (dia 2, claro → moldura dia), **Vila das Lanternas** (dia 3, **escuro** → moldura noite; original `Assets Prontos/Cenários/Dia 3 - Vila das Lanternas.png`), **Pôr do Sol** (dia 4, claro → moldura dia). Cenário novo: coloque o original em `Assets Prontos/Cenários/`, acrescente em `scripts/otimizar-cenarios.mjs`, rode `npm run cenarios` e registre em `CENARIOS` (`src/lib/manifesto.ts`).
 
 ### Moldura da carta — ✅ já entregue
 Em `Assets Finais/`: bordas (dia/noite/corte), name frame (dia/noite + preenchimento), status (dia/noite + preenchimento). Composição documentada em [11](11-carta-composicao.md). **Nada a produzir aqui** (gráfica aceita sem sangria).

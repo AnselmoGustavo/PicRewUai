@@ -50,7 +50,7 @@ interface CenarioDef {
 }
 ```
 
-> **3 cenários no total, liberados 1 por dia** — o mesmo código do dia libera os itens **e** o cenário daquele dia.
+> **4 cenários no total (um por dia do evento), liberados 1 por dia** — o mesmo código do dia libera os itens **e** o cenário daquele dia.
 
 Exemplo de item no manifesto gerado:
 

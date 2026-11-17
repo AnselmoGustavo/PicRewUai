@@ -69,8 +69,8 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 ### ADR-009 — Cenários selecionáveis e dia/noite pelo cenário
 **Data:** 07/2026 · **Status:** Aceito
 **Contexto:** As cartas têm fundos ilustrados; a moldura tem versões dia (tinta escura) e noite (tinta branca).
-**Decisão:** O picrew inclui uma categoria de **cenário** (fundo opaco que preenche a carta). **3 cenários no total, liberados 1 por dia** (mesmo código do dia). Cada cenário é marcado `claro`/`escuro`, e isso **decide automaticamente** a moldura dia/noite — sem toggle manual nem detecção de brilho.
-**Consequências:** Adiciona uma categoria de arte (3 cenários). Simplifica a lógica de dia/noite (determinística). Ver [11](11-carta-composicao.md).
+**Decisão:** O picrew inclui uma categoria de **cenário** (fundo opaco que preenche a carta). **4 cenários no total (um por dia do evento), liberados 1 por dia** (mesmo código do dia). Cada cenário é marcado `claro`/`escuro`, e isso **decide automaticamente** a moldura dia/noite — sem toggle manual nem detecção de brilho.
+**Consequências:** Adiciona uma categoria de arte (4 cenários; eram 3, o 4º chegou em 17/11). Simplifica a lógica de dia/noite (determinística). Ver [11](11-carta-composicao.md).
 
 ---
 

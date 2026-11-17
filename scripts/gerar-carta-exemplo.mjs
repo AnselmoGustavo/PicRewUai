@@ -130,5 +130,6 @@ const status = { vida: 9, forca: 7, intelecto: 5, destreza: 8 };
 await gerar("floresta", "noite", "Fulano", "o Bravo", status, "public/assets/cenarios/floresta.jpg");
 await gerar("montanhas", "dia", "Selena", "a Montanhesa", status, "public/assets/cenarios/montanhas.jpg");
 await gerar("vila", "noite", "Kaito", "o Guardião das Lanternas", status, "public/assets/cenarios/vila.jpg");
+await gerar("por-do-sol", "dia", "Marina", "a Navegante do Crepúsculo", status, "public/assets/cenarios/por-do-sol.jpg");
 await gerar("noite", "noite", "Dama da Lua", "Guardiã da Noite", status, null);
 console.log("pronto.");
