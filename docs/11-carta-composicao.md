@@ -17,9 +17,9 @@ Especificação exata de como montar a carta a partir dos assets em `Assets Fina
 | **Verso** | `verso-carta.jpeg` | 745 × 1040 | verso da carta (usado só no PDF de impressão, ajustado a 744 × 1039) |
 | Name Frame | `Name Frame/Frames novos/Name Frame {Dia,Noite} Title 1.png` | **744 × 1039** | dia / noite · **full-canvas** (banner + linha de título), traço escuro/claro |
 | Name Frame Preench. | `public/assets/carta/name-preench-{dia,noite}.png` | 744 × 1039 | miolo do banner novo (gerado a partir do contorno do frame; o `Name Frame Preenchimento.png` antigo era do banner antigo e não encaixa). Dia = creme, noite = escuro |
-| Status Frame | `Status Completo/Status dia.png` · `noite.png` | 169 × 240 | dia / noite (ícones embutidos) |
+| Status Frame | `Status Completo/Status {dia,noite} (ícones novos).png` → `public/assets/carta/status-{dia,noite}.png` | 169 × 240 | dia / noite (ícones embutidos; **trocados em 18/11/2026** pelos ícones pixel-art de `Status/Novos/`, 42 px, centralizados na linha de cada número) |
 | Status Preench. | `Status Completo/Preenchimento Status.png` | 160 × 231 | semitransparente |
-| Ícones de status | `Status/{Vida,Força,Intelecto,Velocidade}.png` | 125 × 125 | uso na UI do app (na carta já vêm no frame) |
+| Ícones de status | `Status/Novos/{Vida,Força,Intelecto,Destreza}.png` (atuais, 32 × 32) · `Status/*.png` (antigos) | — | na carta já vêm embutidos no frame |
 
 > Os ícones dos 4 status **já estão embutidos** no "Status dia/noite". Os PNGs soltos em `Status/` servem para a **interface do app** (ex.: tela da ficha).
 
