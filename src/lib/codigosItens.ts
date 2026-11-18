@@ -186,4 +186,7 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "arqueiro/acessorio/estrela_2023": "UAI-T6Y47",    // Estrela 2023 (todas as classes)
   "arqueiro/acessorio/lampiao_2022": "UAI-EUJ6F",    // Lampião 2022 (todas as classes)
   "arqueiro/acessorio/lanterna_2025": "UAI-XWNJT",   // Lanterna 2025 (todas as classes)
+
+  // ---- bardo ----
+  "bardo/chapeu/boina_maneira": "UAI-HQDX7",        // Boina Maneira (dia2)
 };

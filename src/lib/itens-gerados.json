@@ -8888,6 +8888,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "cachorro-bardo-chapeu-boina_maneira-dia2",
+      "nome": "Boina Maneira",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "dia2",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-chapeu-boina_maneira-dia2.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-chapeu-boina_maneira-dia2.png"
+    },
+    {
       "id": "cachorro-bardo-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -9186,6 +9201,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-arqueiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "gato-bardo-chapeu-boina_maneira-dia2",
+      "nome": "Boina Maneira",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "dia2",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-chapeu-boina_maneira-dia2.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-chapeu-boina_maneira-dia2.png"
     },
     {
       "id": "gato-bardo-chapeu-cabeca_godzilla-inicial",
@@ -9488,6 +9518,21 @@
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "macaco-bardo-chapeu-boina_maneira-dia2",
+      "nome": "Boina Maneira",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "dia2",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-chapeu-boina_maneira-dia2.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-chapeu-boina_maneira-dia2.png"
+    },
+    {
       "id": "macaco-bardo-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -9788,6 +9833,21 @@
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-chapeu-chapeu_maquinista-inicial.png"
     },
     {
+      "id": "raposa-bardo-chapeu-boina_maneira-dia2",
+      "nome": "Boina Maneira",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "dia2",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-chapeu-boina_maneira-dia2.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-chapeu-boina_maneira-dia2.png"
+    },
+    {
       "id": "raposa-bardo-chapeu-cabeca_godzilla-inicial",
       "nome": "Cabeça Godzilla",
       "categoria": "chapeu",
@@ -10086,6 +10146,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-arqueiro-chapeu-chapeu_maquinista-inicial.png"
+    },
+    {
+      "id": "veado-bardo-chapeu-boina_maneira-dia2",
+      "nome": "Boina Maneira",
+      "categoria": "chapeu",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "dia2",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-chapeu-boina_maneira-dia2.png",
+          "z": 80
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-chapeu-boina_maneira-dia2.png"
     },
     {
       "id": "veado-bardo-chapeu-cabeca_godzilla-inicial",

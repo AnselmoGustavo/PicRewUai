@@ -182,4 +182,7 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "mago/calcado/sapatinho_magico_dark": { intelecto: 2, destreza: 1 }, // Sapatinho Mágico Dark (dia3)
   "mago/camisa/blusa_babados_dark": { vida: 2, intelecto: 1 },         // Blusa Babados Dark (dia3)
   "mago/chapeu/chapeu_dark": { vida: 1, intelecto: 2 },                // Chapéu Dark (dia3)
+
+  // ---- bardo ----
+  "bardo/chapeu/boina_maneira": { intelecto: 1, destreza: 1 },         // Boina Maneira (dia2)
 };
