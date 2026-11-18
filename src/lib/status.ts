@@ -7,8 +7,8 @@ import { BONUS_ITENS } from "./bonusItens";
 type Stat = keyof Status; // "vida" | "forca" | "intelecto" | "destreza"
 
 export const STATUS_BASE = 2;
-/** Teto de cada status na carta (a caixa do número cabe 1 dígito). */
-export const MAX_STATUS = 9;
+/** Teto de cada status na carta (18/11/2026: subiu de 9 para 15 — 2 dígitos cabem na moldura de status). */
+export const MAX_STATUS = 15;
 
 // Bônus por classe: +2 no principal, +1 no secundário.
 const BONUS_CLASSE: Record<Classe, Partial<Record<Stat, number>>> = {

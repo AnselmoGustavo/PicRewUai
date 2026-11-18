@@ -55,7 +55,7 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
   - **Título** — **escolhido** (não digitado) entre os títulos já liberados: todos começam com **Recruta**, os outros vêm de códigos (`src/lib/titulos.ts`). Títulos bloqueados ficam escondidos (só aparece quantos faltam). Vai na carta, abaixo do nome.
   - **Status** (somente leitura): **Vida ❤️, Força ⚔️, Intelecto 📖, Destreza ⚡** — **calculados** de `base 2 + classe + raça (animal) + bônus dos itens equipados`, não digitados. Ver `src/lib/status.ts`, `src/lib/bonusItens.ts` e [09](09-decisoes.md). A ficha mostra o bônus dos itens à parte, ex.: "6 (+2)".
 - O app **desenha nome, título e status (calculado) na carta** nas posições de [11](11-carta-composicao.md).
-- Cada status vai no máximo até **9** (1 dígito, cabe na caixa da carta).
+- Cada status vai no máximo até **15** (desde 18/11/2026; antes 9 — 2 dígitos cabem na caixa da carta).
 
 ### 7. Salvar
 - O progresso é salvo **automaticamente** (no aparelho e, logado, no servidor) a cada mudança.

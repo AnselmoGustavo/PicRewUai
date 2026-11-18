@@ -161,7 +161,7 @@ Decisões de arquitetura/produto e o porquê. Formato leve.
 
 ## Decisões (resolvidas com padrão, ajustável)
 
-- **Faixa dos status:** calculados, de **2 a 9** (1 dígito na caixa da carta; teto `MAX_STATUS`).
+- **Faixa dos status:** calculados, de **2 a 15** (teto `MAX_STATUS`; era 9 até 18/11/2026 — subiu para dar mais espaço aos bônus dos itens, e 2 dígitos cabem na caixa da carta).
 - **Layout do PDF de impressão:** ✅ **A4 retrato**, 3 × 3 cartas de 63 × 88 mm encostadas, marcas de corte na margem, verso intercalado e espelhado (borda longa). Feito no projeto **PrintingCardFormatter**.
 
 ## Decisões ainda em aberto

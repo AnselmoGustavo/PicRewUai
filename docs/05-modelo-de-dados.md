@@ -100,7 +100,7 @@ interface EstadoPersonagem {
 - Persistido automaticamente em `localStorage` a cada mudança (cache rápido/offline).
 - `inicial` está sempre desbloqueado.
 - Quando `enviado === true`, o editor entra em modo somente-leitura (envio é único e definitivo).
-- **Status é derivado** de `animal + classe + itens equipados` (`src/lib/status.ts`: base 2 + bônus de classe + bônus de raça + bônus dos itens, aditivo, teto 9), **não armazenado** nem editável. Exibido na ficha e desenhado na carta.
+- **Status é derivado** de `animal + classe + itens equipados` (`src/lib/status.ts`: base 2 + bônus de classe + bônus de raça + bônus dos itens, aditivo, teto 15), **não armazenado** nem editável. Exibido na ficha e desenhado na carta.
 
 ## Conta (usuário + senha) e sincronização — ADR-015
 

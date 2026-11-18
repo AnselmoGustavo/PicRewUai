@@ -76,7 +76,7 @@ Fonte da verdade das coordenadas: `src/lib/cartaLayout.json`.
 | Status 3 (Intelecto 📖) | 607 | 880 | 35 | 45 | 34 | escura |
 | Status 4 (Destreza ⚡) | 607 | 926 | 35 | 45 | 34 | escura |
 
-> Mapeamento Status 1–4 → Vida / Força / Intelecto / Destreza (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita o nome** e **escolhe o título** entre os liberados (padrão "Recruta"); o **status é calculado** de animal+classe+itens (`lib/status.ts`). O app desenha os três na carta (fonte Adam Script). Cada status vai até 9 (1 dígito).
+> Mapeamento Status 1–4 → Vida / Força / Intelecto / Destreza (ordem dos ícones no frame, cima → baixo) — ✅ confirmado. O participante **digita o nome** e **escolhe o título** entre os liberados (padrão "Recruta"); o **status é calculado** de animal+classe+itens (`lib/status.ts`). O app desenha os três na carta (fonte Adam Script). Cada status vai até 15 (2 dígitos cabem na caixa; conferido nos temas dia e noite).
 > **Preenchimento atrás do nome** (desde 16/11/2026, após o 1º teste de impressão: nome e título ficaram pequenos e o nome sumia no cenário): o miolo do banner recebe `name-preench-{tema}.png` com `preenchOpacidade` — creme no dia, escuro na noite — e as fontes subiram (nome 44→56, título 26→36). O **título** ganhou uma faixa suave (`titulo-preench-{tema}.png`, mesma opacidade) acima da linha; a **cor acompanha o tema** (`corTexto` no dia, `corTextoClaro` + sombra na noite). Textos longos são comprimidos para caber na largura da caixa.
 
 > ✅ **Calibrado com os cenários reais (11/2026):** na moldura de **noite** (Floresta), nome, título e números de status são **claros com sombra escura** (`sombraNoite` em `cartaLayout.json`); na de **dia** (Montanhas), escuros sem sombra. Ver ADR-020.
