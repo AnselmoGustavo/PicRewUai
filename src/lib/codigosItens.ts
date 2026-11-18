@@ -152,4 +152,38 @@ export const CODIGOS_ITENS: Record<string, string> = {
   "mago/calcado/sapatinho_magico_dark": "UAI-QKCUX", // Sapatinho Mágico Dark (dia3)
   "mago/camisa/blusa_babados_dark": "UAI-EAUA3",     // Blusa Babados Dark (dia3)
   "mago/chapeu/chapeu_dark": "UAI-PNW3G",            // Chapéu Dark (dia3)
+
+  // ---- bardo ----
+  "bardo/camisa/camisa_sao_paulo": "UAI-ME36T",      // Camisa São Paulo (inicial)
+
+  // ---- arqueiro ----
+  "arqueiro/camisa/camisa_sao_paulo": "UAI-EFR7D",   // Camisa São Paulo (inicial)
+
+  // ---- ninja ----
+  "ninja/camisa/camisa_sao_paulo": "UAI-GWCKR",      // Camisa São Paulo (inicial)
+
+  // ---- ninja ----
+  "ninja/acessorio/estrela_2023": "UAI-T6Y47",       // Estrela 2023 (todas as classes)
+  "ninja/acessorio/lampiao_2022": "UAI-EUJ6F",       // Lampião 2022 (todas as classes)
+  "ninja/acessorio/lanterna_2025": "UAI-XWNJT",      // Lanterna 2025 (todas as classes)
+
+  // ---- mago ----
+  "mago/acessorio/estrela_2023": "UAI-T6Y47",        // Estrela 2023 (todas as classes)
+  "mago/acessorio/lampiao_2022": "UAI-EUJ6F",        // Lampião 2022 (todas as classes)
+  "mago/acessorio/lanterna_2025": "UAI-XWNJT",       // Lanterna 2025 (todas as classes)
+
+  // ---- guerreiro ----
+  "guerreiro/acessorio/estrela_2023": "UAI-T6Y47",   // Estrela 2023 (todas as classes)
+  "guerreiro/acessorio/lampiao_2022": "UAI-EUJ6F",   // Lampião 2022 (todas as classes)
+  "guerreiro/acessorio/lanterna_2025": "UAI-XWNJT",  // Lanterna 2025 (todas as classes)
+
+  // ---- bardo ----
+  "bardo/acessorio/estrela_2023": "UAI-T6Y47",       // Estrela 2023 (todas as classes)
+  "bardo/acessorio/lampiao_2022": "UAI-EUJ6F",       // Lampião 2022 (todas as classes)
+  "bardo/acessorio/lanterna_2025": "UAI-XWNJT",      // Lanterna 2025 (todas as classes)
+
+  // ---- arqueiro ----
+  "arqueiro/acessorio/estrela_2023": "UAI-T6Y47",    // Estrela 2023 (todas as classes)
+  "arqueiro/acessorio/lampiao_2022": "UAI-EUJ6F",    // Lampião 2022 (todas as classes)
+  "arqueiro/acessorio/lanterna_2025": "UAI-XWNJT",   // Lanterna 2025 (todas as classes)
 };

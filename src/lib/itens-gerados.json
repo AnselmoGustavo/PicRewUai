@@ -43,6 +43,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "cachorro-arqueiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "cachorro-arqueiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -71,6 +86,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "cachorro-arqueiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "cachorro-arqueiro-acessorio-oculos_de_grau-inicial",
@@ -133,6 +178,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "cachorro-bardo-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "cachorro-bardo-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -161,6 +221,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "cachorro-bardo-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "cachorro-bardo-acessorio-oculos_de_grau-inicial",
@@ -238,6 +328,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-diario-inicial.png"
     },
     {
+      "id": "cachorro-guerreiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "cachorro-guerreiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -266,6 +371,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "cachorro-guerreiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-guerreiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-guerreiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "cachorro-guerreiro-acessorio-oculos_de_grau-inicial",
@@ -328,6 +463,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "cachorro-mago-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "cachorro-mago-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -356,6 +506,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "cachorro-mago-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-mago-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-mago-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "cachorro-mago-acessorio-oculos_de_grau-inicial",
@@ -418,6 +598,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "cachorro-ninja-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "cachorro-ninja-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -446,6 +641,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "cachorro-ninja-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "cachorro-ninja-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "cachorro-ninja-acessorio-oculos_de_grau-inicial",
@@ -508,6 +733,21 @@
       "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "gato-arqueiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "gato-arqueiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -536,6 +776,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "gato-arqueiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "gato-arqueiro-acessorio-oculos_de_grau-inicial",
@@ -598,6 +868,21 @@
       "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "gato-bardo-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "gato-bardo-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -626,6 +911,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "gato-bardo-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "gato-bardo-acessorio-oculos_de_grau-inicial",
@@ -703,6 +1018,21 @@
       "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-diario-inicial.png"
     },
     {
+      "id": "gato-guerreiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "gato-guerreiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -731,6 +1061,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "gato-guerreiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-guerreiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-guerreiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "gato-guerreiro-acessorio-oculos_de_grau-inicial",
@@ -793,6 +1153,21 @@
       "thumb": "/assets/itens/thumbs/gato-mago-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "gato-mago-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "gato-mago-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -821,6 +1196,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "gato-mago-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-mago-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-mago-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "gato-mago-acessorio-oculos_de_grau-inicial",
@@ -883,6 +1288,21 @@
       "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "gato-ninja-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "gato-ninja-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -911,6 +1331,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "gato-ninja-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "gato-ninja-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "gato-ninja-acessorio-oculos_de_grau-inicial",
@@ -973,6 +1423,21 @@
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "macaco-arqueiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "macaco-arqueiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1001,6 +1466,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "macaco-arqueiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "macaco-arqueiro-acessorio-oculos_de_grau-inicial",
@@ -1063,6 +1558,21 @@
       "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "macaco-bardo-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "macaco-bardo-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1091,6 +1601,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "macaco-bardo-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "macaco-bardo-acessorio-oculos_de_grau-inicial",
@@ -1168,6 +1708,21 @@
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-diario-inicial.png"
     },
     {
+      "id": "macaco-guerreiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "macaco-guerreiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1196,6 +1751,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "macaco-guerreiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-guerreiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-guerreiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "macaco-guerreiro-acessorio-oculos_de_grau-inicial",
@@ -1258,6 +1843,21 @@
       "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "macaco-mago-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "macaco-mago-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1286,6 +1886,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "macaco-mago-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-mago-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-mago-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "macaco-mago-acessorio-oculos_de_grau-inicial",
@@ -1348,6 +1978,21 @@
       "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "macaco-ninja-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "macaco-ninja-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1376,6 +2021,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "macaco-ninja-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "macaco-ninja-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "macaco-ninja-acessorio-oculos_de_grau-inicial",
@@ -1438,6 +2113,21 @@
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "raposa-arqueiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "raposa-arqueiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1466,6 +2156,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "raposa-arqueiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "raposa-arqueiro-acessorio-oculos_de_grau-inicial",
@@ -1528,6 +2248,21 @@
       "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "raposa-bardo-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "raposa-bardo-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1556,6 +2291,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "raposa-bardo-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "raposa-bardo-acessorio-oculos_de_grau-inicial",
@@ -1633,6 +2398,21 @@
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-diario-inicial.png"
     },
     {
+      "id": "raposa-guerreiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "raposa-guerreiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1661,6 +2441,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "raposa-guerreiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-guerreiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-guerreiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "raposa-guerreiro-acessorio-oculos_de_grau-inicial",
@@ -1723,6 +2533,21 @@
       "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "raposa-mago-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "raposa-mago-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1751,6 +2576,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "raposa-mago-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-mago-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-mago-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "raposa-mago-acessorio-oculos_de_grau-inicial",
@@ -1813,6 +2668,21 @@
       "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "raposa-ninja-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "raposa-ninja-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1841,6 +2711,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "raposa-ninja-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "raposa-ninja-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "raposa-ninja-acessorio-oculos_de_grau-inicial",
@@ -1903,6 +2803,21 @@
       "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "veado-arqueiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "veado-arqueiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -1931,6 +2846,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "veado-arqueiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "veado-arqueiro-acessorio-oculos_de_grau-inicial",
@@ -1993,6 +2938,21 @@
       "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "veado-bardo-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "veado-bardo-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -2021,6 +2981,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "veado-bardo-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "veado-bardo-acessorio-oculos_de_grau-inicial",
@@ -2098,6 +3088,21 @@
       "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-diario-inicial.png"
     },
     {
+      "id": "veado-guerreiro-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "veado-guerreiro-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -2126,6 +3131,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "veado-guerreiro-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "guerreiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-guerreiro-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-guerreiro-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "veado-guerreiro-acessorio-oculos_de_grau-inicial",
@@ -2188,6 +3223,21 @@
       "thumb": "/assets/itens/thumbs/veado-mago-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "veado-mago-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "veado-mago-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -2216,6 +3266,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-mago-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "veado-mago-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "mago",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-mago-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-mago-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "veado-mago-acessorio-oculos_de_grau-inicial",
@@ -2278,6 +3358,21 @@
       "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-cachecol-inicial.png"
     },
     {
+      "id": "veado-ninja-acessorio-estrela_2023-inicial",
+      "nome": "Estrela 2023",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-acessorio-estrela_2023-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-estrela_2023-inicial.png"
+    },
+    {
       "id": "veado-ninja-acessorio-girassol-inicial",
       "nome": "Girassol",
       "categoria": "acessorio",
@@ -2306,6 +3401,36 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-laco-inicial.png"
+    },
+    {
+      "id": "veado-ninja-acessorio-lampiao_2022-inicial",
+      "nome": "Lampião 2022",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-acessorio-lampiao_2022-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-lampiao_2022-inicial.png"
+    },
+    {
+      "id": "veado-ninja-acessorio-lanterna_2025-inicial",
+      "nome": "Lanterna 2025",
+      "categoria": "acessorio",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-acessorio-lanterna_2025-inicial-z5.png",
+          "z": 5
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-acessorio-lanterna_2025-inicial.png"
     },
     {
       "id": "veado-ninja-acessorio-oculos_de_grau-inicial",
@@ -5908,6 +7033,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
     },
     {
+      "id": "cachorro-arqueiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-arqueiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-arqueiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "cachorro-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -5936,6 +7076,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/cachorro-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "cachorro-bardo-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-bardo-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-bardo-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "cachorro-bardo-camisa-jaqueta_e_blusa_dark-dia3",
@@ -6118,6 +7273,21 @@
       "thumb": "/assets/itens/thumbs/cachorro-ninja-camisa-blusa_dark-dia3.png"
     },
     {
+      "id": "cachorro-ninja-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "cachorro",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/cachorro-ninja-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/cachorro-ninja-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "cachorro-ninja-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6163,6 +7333,21 @@
       "thumb": "/assets/itens/thumbs/gato-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
     },
     {
+      "id": "gato-arqueiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-arqueiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-arqueiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "gato-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6191,6 +7376,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/gato-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "gato-bardo-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-bardo-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-bardo-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "gato-bardo-camisa-jaqueta_e_blusa_dark-dia3",
@@ -6373,6 +7573,21 @@
       "thumb": "/assets/itens/thumbs/gato-ninja-camisa-blusa_dark-dia3.png"
     },
     {
+      "id": "gato-ninja-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "gato",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/gato-ninja-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/gato-ninja-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "gato-ninja-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6418,6 +7633,21 @@
       "thumb": "/assets/itens/thumbs/macaco-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
     },
     {
+      "id": "macaco-arqueiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-arqueiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-arqueiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "macaco-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6446,6 +7676,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/macaco-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "macaco-bardo-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-bardo-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-bardo-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "macaco-bardo-camisa-jaqueta_e_blusa_dark-dia3",
@@ -6628,6 +7873,21 @@
       "thumb": "/assets/itens/thumbs/macaco-ninja-camisa-blusa_dark-dia3.png"
     },
     {
+      "id": "macaco-ninja-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "macaco",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/macaco-ninja-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/macaco-ninja-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "macaco-ninja-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6673,6 +7933,21 @@
       "thumb": "/assets/itens/thumbs/raposa-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
     },
     {
+      "id": "raposa-arqueiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-arqueiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-arqueiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "raposa-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6701,6 +7976,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/raposa-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "raposa-bardo-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-bardo-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-bardo-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "raposa-bardo-camisa-jaqueta_e_blusa_dark-dia3",
@@ -6883,6 +8173,21 @@
       "thumb": "/assets/itens/thumbs/raposa-ninja-camisa-blusa_dark-dia3.png"
     },
     {
+      "id": "raposa-ninja-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "raposa",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/raposa-ninja-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/raposa-ninja-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "raposa-ninja-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6928,6 +8233,21 @@
       "thumb": "/assets/itens/thumbs/veado-arqueiro-camisa-blusa_com_capuz_dark-dia3.png"
     },
     {
+      "id": "veado-arqueiro-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "arqueiro",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-arqueiro-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-arqueiro-camisa-camisa_sao_paulo-inicial.png"
+    },
+    {
       "id": "veado-arqueiro-camisa-tunica-dia1",
       "nome": "Túnica",
       "categoria": "camisa",
@@ -6956,6 +8276,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-bardo-camisa-blusa-dia2.png"
+    },
+    {
+      "id": "veado-bardo-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "bardo",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-bardo-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-bardo-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "veado-bardo-camisa-jaqueta_e_blusa_dark-dia3",
@@ -7136,6 +8471,21 @@
         }
       ],
       "thumb": "/assets/itens/thumbs/veado-ninja-camisa-blusa_dark-dia3.png"
+    },
+    {
+      "id": "veado-ninja-camisa-camisa_sao_paulo-inicial",
+      "nome": "Camisa São Paulo",
+      "categoria": "camisa",
+      "classe": "ninja",
+      "animal": "veado",
+      "grupo": "inicial",
+      "camadas": [
+        {
+          "arquivo": "/assets/itens/veado-ninja-camisa-camisa_sao_paulo-inicial.png",
+          "z": 50
+        }
+      ],
+      "thumb": "/assets/itens/thumbs/veado-ninja-camisa-camisa_sao_paulo-inicial.png"
     },
     {
       "id": "veado-ninja-camisa-tunica-dia1",

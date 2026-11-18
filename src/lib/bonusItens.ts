@@ -118,6 +118,10 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "ninja/acessorio/laco": {},                 // Laco (inicial)
 
   // ---- ninja ----
+  "ninja/acessorio/estrela_2023": {},      // Estrela 2023 (inicial)
+  "ninja/acessorio/lampiao_2022": {},      // Lampião 2022 (inicial)
+  "ninja/acessorio/lanterna_2025": {},     // Lanterna 2025 (inicial)
+  "ninja/camisa/camisa_sao_paulo": {},     // Camisa São Paulo (inicial)
   "ninja/arma/shuriken": {},               // Shuriken (dia3)
   "ninja/calca/calca_dark": {},            // Calça Dark (dia3)
   "ninja/calcado/geta_com_meia": {},       // Geta com Meia (dia3)
@@ -126,18 +130,29 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "ninja/acessorio/pokebola": {},          // Pokébola (inicial)
 
   // ---- arqueiro ----
+  "arqueiro/acessorio/estrela_2023": {},   // Estrela 2023 (inicial)
+  "arqueiro/acessorio/lampiao_2022": {},   // Lampião 2022 (inicial)
+  "arqueiro/acessorio/lanterna_2025": {},  // Lanterna 2025 (inicial)
+  "arqueiro/camisa/camisa_sao_paulo": {},  // Camisa São Paulo (inicial)
   "arqueiro/arma/arco_dark": {},           // Arco Dark (dia3)
   "arqueiro/calca/calca_dark": {},         // Calça Dark (dia3)
   "arqueiro/calcado/botas_dark": {},       // Botas Dark (dia3)
   "arqueiro/camisa/blusa_com_capuz_dark": {}, // Blusa Com Capuz Dark (dia3)
 
   // ---- bardo ----
+  "bardo/acessorio/estrela_2023": {},      // Estrela 2023 (inicial)
+  "bardo/acessorio/lampiao_2022": {},      // Lampião 2022 (inicial)
+  "bardo/acessorio/lanterna_2025": {},     // Lanterna 2025 (inicial)
+  "bardo/camisa/camisa_sao_paulo": {},     // Camisa São Paulo (inicial)
   "bardo/arma/violino_sombrio": {},        // Violino Sombrio (dia3)
   "bardo/calca/calca_suspensorio_e_cintos_dark": {}, // Calça Suspensório e Cintos Dark (dia3)
   "bardo/calcado/botas_dark": {},          // Botas Dark (dia3)
   "bardo/camisa/jaqueta_e_blusa_dark": {}, // Jaqueta e Blusa Dark (dia3)
 
   // ---- guerreiro ----
+  "guerreiro/acessorio/estrela_2023": {},  // Estrela 2023 (inicial)
+  "guerreiro/acessorio/lampiao_2022": {},  // Lampião 2022 (inicial)
+  "guerreiro/acessorio/lanterna_2025": {}, // Lanterna 2025 (inicial)
   "guerreiro/camisa/camisa_sao_paulo": {}, // Camisa São Paulo (inicial)
   "guerreiro/arma/machado": {},            // Machado (dia3)
   "guerreiro/calca/armadura_dark": {},     // Armadura Dark (dia3)
@@ -147,6 +162,9 @@ export const BONUS_ITENS: Record<string, Partial<Status>> = {
   "guerreiro/chapeu/elmo_dark": {},        // Elmo Dark (dia3)
 
   // ---- mago ----
+  "mago/acessorio/estrela_2023": {},       // Estrela 2023 (inicial)
+  "mago/acessorio/lampiao_2022": {},       // Lampião 2022 (inicial)
+  "mago/acessorio/lanterna_2025": {},      // Lanterna 2025 (inicial)
   "mago/camisa/camisa_sao_paulo": {},      // Camisa São Paulo (inicial)
   "mago/arma/vassoura": {},                // Vassoura (dia3)
   "mago/calca/saia_babados_dark": {},      // Saia Babados Dark (dia3)

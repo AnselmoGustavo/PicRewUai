@@ -46,6 +46,7 @@ const GRAFIA = {
   chapeu: "chapéu",
   diario: "diário",
   laco: "laço",
+  lampiao: "lampião",
   magico: "mágico",
   oculos: "óculos",
   pokebola: "pokébola",

@@ -2,7 +2,7 @@
 
 > **Ilustradora:** Ana Beatriz — responsável por todos os assets dos personagens (corpo, roupas, acessórios, equipamentos) e possivelmente os cenários.
 
-> **Estado (12/11/2026):** arte entregue nas **25 combinações** (corpo + skin básica + skin avançada + acessórios avulsos) — **465 itens**. Novos lotes entram pelo fluxo de [Recebimento dos lotes](#recebimento-dos-lotes-fluxo-atual).
+> **Estado (17/11/2026):** arte entregue nas **25 combinações** (corpo + skin básica + skin avançada + skin dark + acessórios avulsos + Camisa São Paulo + 3 acessórios flutuantes) — **690 itens**. Novos lotes entram pelo fluxo de [Recebimento dos lotes](#recebimento-dos-lotes-fluxo-atual).
 
 > 🔄 **ATUALIZAÇÃO (ADR-016):** o modelo mudou de "itens universais" para **itens por animal+classe** — cada peça é desenhada já encaixada no corpo daquele animal (ex.: chapéu que respeita os chifres do veado). Validado com o Veado-Mago. Ver detalhes abaixo em **"Estrutura confirmada (Veado-Mago)"**. As partes sobre canvas fixo/transparência/nomenclatura seguem valendo; o que mudou é que a arte é **específica por combinação**, não compartilhada entre animais.
 
@@ -129,6 +129,8 @@ Em `Assets Finais/`: bordas (dia/noite/corte), name frame (dia/noite + preenchim
 - [ ] Peça de várias camadas: uma imagem por camada
 
 ## Recebimento dos lotes (fluxo atual)
+
+> **Peças "de todos"** (uma arte que serve para vários animais/classes, ex.: Camisa São Paulo por classe, ou os acessórios flutuantes Estrela 2023 / Lampião 2022 / Lanterna 2025, iguais nas 25 combinações) não passam pelo organizador: são copiadas direto para `Assets Prontos/itens/<tipo>/` com um arquivo por animal+classe. Os **acessórios flutuantes ficam atrás do personagem** (`-z5` no nome do arquivo, abaixo do corpo z20 e da capa de trás z10) e cada um tem **um código só** para todas as classes.
 
 A ilustradora manda uma pasta por combinação, `<Animal> - <Classe>` (ex.: `Gato - Bardo`), podendo ter subpastas. Nomes aceitos pelo organizador:
 - **Corpo:** `Gato - Bardo.png`, `gato-bardo.png`…
