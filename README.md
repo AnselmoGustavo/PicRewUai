@@ -64,7 +64,7 @@ npm run dev          # sobe o app em http://localhost:3000
 
 - Página inicial: `/` — logo sobre o fundo texturizado.
 - **Criar personagem: `/criar`** — fluxo animal → classe → editor (cenário, itens por categoria filtrados por classe, códigos de desbloqueio, ficha). Estado persiste no navegador.
-- Protótipo da carta (dev): `/poc-carta` — monta a carta com moldura + nome/status e alterna dia/noite.
+- Para ver a carta completa sem enviar: `npm run carta:exemplo` (gera PNGs em `docs/exemplos/`). A antiga página `/poc-carta` foi removida para não estragar a surpresa.
 
 > **Códigos reais do evento** (desde 17/11): cada **item** (por peça, vale para os 5 animais) e cada **título** tem código próprio; o código de cada **dia** libera só o **cenário** daquele dia; há ainda o de **envio** e o **mestre** (libera tudo). Lista completa em `codigos-evento.csv`; fonte da verdade em `src/lib/codigos.ts`, `titulos.ts` e `codigosItens.ts`.
 
@@ -76,6 +76,8 @@ npm run organizar        # simula a organização dos lotes da ilustradora (-- -
 npm run assets           # otimiza a arte, gera o manifesto e completa bônus/códigos dos itens
 npm run baixar-cartas    # baixa as cartas enviadas (Supabase) para cartas-baixadas/ + CSV
 npm run regerar-cartas   # regera cartas já enviadas (ver docs/12-deploy.md)
+npm run trocar-senha -- <usuario> <senha>   # suporte: troca a senha de quem esqueceu
+npm run destravar -- <usuario>              # suporte: apaga a carta enviada e a pessoa volta a editar
 npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação headless)
 ```
 
@@ -91,7 +93,7 @@ npm run carta:exemplo    # gera cartas de exemplo em docs/exemplos/ (validação
 - ✅ **Códigos**: do dia (libera o cenário), de envio (o botão Enviar fica bloqueado até lá), de título (`src/lib/titulos.ts`, 47 títulos) e de **item** (`src/lib/codigosItens.ts` — todos os itens têm código próprio).
 - ✅ **Envio surpresa**: a carta completa (moldura dia/noite conforme o cenário + nome + título + status) é composta **offscreen** e enviada. 1 envio por pessoa.
 - ✅ **Backend real (Supabase)**: contas (`usuarios`, senha pbkdf2), progresso (`progresso`) e cartas (tabela `cartas` + Storage privado `cartas/<usuario>.png`). Schema em [`supabase/schema.sql`](supabase/schema.sql); guia em [doc 12](docs/12-deploy.md). Sem as variáveis de ambiente, cai num mock local (`.dev-data/`, `envios/`).
-- ✅ **Gráfica**: `npm run baixar-cartas` baixa os PNGs + `cartas.csv`; o projeto irmão **PrintingCardFormatter** (`GerarPDFCartas.exe`) monta o PDF A4 (9 por folha, marcas de corte, verso intercalado).
+- ✅ **Gráfica**: `npm run baixar-cartas` baixa os PNGs + `cartas.csv`; o projeto irmão **PrintingCardFormatter** (`GerarPDFCartas.exe`) monta o PDF A4 (9 por folha, marcas de corte, linha de corte em cada carta, verso intercalado).
 - ✅ `npm run regerar-cartas` regera cartas já enviadas a partir do progresso salvo (usado quando a Floresta passou a ter moldura de noite).
 
 **Antes do evento (18/11):** tirar o botão "recomeçar (teste)", trocar os códigos de exemplo pelos reais (escondidos do bundle), apagar contas de teste no Supabase e abrir o painel do Supabase (pausa após 7 dias parado).

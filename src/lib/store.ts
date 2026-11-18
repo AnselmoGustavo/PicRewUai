@@ -116,6 +116,8 @@ interface Acoes {
     itensNovos: string[];
   };
   marcarEnviado: () => void;
+  /** A staff destravou (npm run destravar): volta a editar. */
+  desmarcarEnviado: () => void;
   resetar: () => void;
   /** Substitui o estado inteiro (carga do servidor). */
   carregarEstado: (e: EstadoPersonagem) => void;
@@ -201,6 +203,7 @@ export const usePersonagem = create<EstadoPersonagem & Acoes>()(
       },
 
       marcarEnviado: () => set({ enviado: true, atualizadoEm: agora() }),
+      desmarcarEnviado: () => set({ enviado: false, atualizadoEm: agora() }),
 
       resetar: () => set({ ...estadoInicial }),
 

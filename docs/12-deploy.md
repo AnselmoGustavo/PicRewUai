@@ -62,6 +62,15 @@ npm run regerar-cartas -- --todas                            # todas as cartas e
 npm run regerar-cartas -- --cenario cen_floresta --enviar   # SUBSTITUI no Storage (guarda as antigas em cartas-regeradas/antigas/)
 ```
 
+### Suporte durante o evento
+
+```bash
+npm run trocar-senha -- <usuario> <senha-nova>   # quem esqueceu a senha (progresso e carta continuam)
+npm run destravar -- <usuario>                   # quem enviou por engano: apaga a carta e volta a editar
+```
+
+`destravar` guarda uma cópia da carta apagada em `cartas-destravadas/` (fora do Git). A pessoa só precisa abrir o app de novo. Se você já tinha baixado as cartas, apague o PNG antigo dela de `cartas-baixadas/`.
+
 Usa o progresso salvo (itens, cenário) + nome, título e status gravados no envio. Quem usou "recomeçar" depois de enviar perdeu o progresso e não dá para regerar.
 
 ## Como os dados ficam guardados

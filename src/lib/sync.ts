@@ -45,6 +45,7 @@ export async function carregarProgressoRemoto(): Promise<ProgressoRemoto | null>
 export function useSyncProgresso(): boolean {
   const carregarEstado = usePersonagem((s) => s.carregarEstado);
   const marcarEnviado = usePersonagem((s) => s.marcarEnviado);
+  const desmarcarEnviado = usePersonagem((s) => s.desmarcarEnviado);
   const usuario = useSessao((s) => s.usuario);
   const [pronto, setPronto] = useState(false);
 
@@ -60,7 +61,9 @@ export function useSyncProgresso(): boolean {
       if (remoto && (remoto.atualizadoEm ?? 0) > (local.atualizadoEm ?? 0)) {
         carregarEstado(remoto);
       }
+      // o servidor manda: carta no banco = travado; sem carta (ex.: staff destravou) = volta a editar
       if (r?.enviado && !usePersonagem.getState().enviado) marcarEnviado();
+      if (r && !r.enviado && usePersonagem.getState().enviado) desmarcarEnviado();
       setPronto(true);
     })();
 
@@ -76,7 +79,7 @@ export function useSyncProgresso(): boolean {
       clearTimeout(t);
       unsub();
     };
-  }, [usuario, carregarEstado, marcarEnviado]);
+  }, [usuario, carregarEstado, marcarEnviado, desmarcarEnviado]);
 
   return pronto;
 }
