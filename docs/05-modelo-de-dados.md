@@ -124,6 +124,7 @@ A tela inicial pede **criar conta / entrar** (usuário + senha). A conta é a id
 ## Sistema de códigos de desbloqueio
 
 - Cada **código** libera um **grupo** (`dia1`…`dia4`), igual para todos os participantes.
+- **Desde 18/11/2026 o dia 1 é livre:** o cenário Floresta e a skin básica (túnica, short e arma básica de cada classe) ficam liberados desde o início, sem código (`GRUPOS_SEMPRE_LIBERADOS` em `manifesto.ts`); personagem novo já começa com a Floresta.
 - **Desde 17/11/2026 todos os itens têm código próprio** (`codigosItens.ts`), então o código do dia, na prática, libera só o **cenário** do dia. A lista de todos os códigos fica em `codigos-evento.csv` (na raiz do projeto).
 - Há um **código de envio** (grupo `envio`): não libera itens, só o botão **Enviar personagem**. Divulgado no último dia, para ninguém enviar antes de ver todos os itens. O código mestre também libera.
 - **Títulos** (`src/lib/titulos.ts`): o participante não digita o título. Todos começam com **"Recruta"** e escolhem, na aba Ficha, entre os títulos já desbloqueados. Cada título tem um `codigo` (pode ser compartilhado entre títulos, ou ser um código do dia). Títulos bloqueados ficam escondidos (só aparece quantos faltam). O mestre libera todos. Estado: `titulos: string[]` (desbloqueados) + `ficha.titulo`.

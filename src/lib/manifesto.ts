@@ -63,11 +63,14 @@ export function itemPorId(id: string | null): ItemDef | undefined {
   return ITENS.find((i) => i.id === id);
 }
 
+/** Grupos liberados desde o início, sem código (18/11/2026: o dia 1 — Floresta + skin básica — virou livre). */
+export const GRUPOS_SEMPRE_LIBERADOS: GrupoDesbloqueio[] = ["inicial", "dia1"];
+
 export function estaDesbloqueado(
   grupo: GrupoDesbloqueio,
   desbloqueios: GrupoDesbloqueio[],
 ): boolean {
-  return grupo === "inicial" || desbloqueios.includes(grupo);
+  return GRUPOS_SEMPRE_LIBERADOS.includes(grupo) || desbloqueios.includes(grupo);
 }
 
 /** "animal-classe-tipo-nome-dia" -> "classe/tipo/nome" (chave dos arquivos de bônus e de códigos). */

@@ -1,5 +1,4 @@
 ﻿tipo;nome;codigo
-dia/envio;Dia 1 (cenário Floresta);UAI-KGHW4
 dia/envio;Dia 2 (cenário Montanhas);UAI-PM4NV
 dia/envio;Dia 3 (cenário Vila das Lanternas);UAI-GAN3X
 dia/envio;Dia 4 (cenário Pôr do Sol);UAI-CWKMH
@@ -64,12 +63,9 @@ item;Cabeça Godzilla (arqueiro, inicial);UAI-6X4HE
 item;Chapéu Luffy (arqueiro, inicial);UAI-N3JNF
 item;Chapéu Maquinista (arqueiro, inicial);UAI-DEHKP
 item;Arco Bom (arqueiro, dia2);UAI-YPYXY
-item;Arco Vagabundo (arqueiro, dia1);UAI-VW3KE
 item;Calça (arqueiro, dia2);UAI-RU6UA
-item;Short (arqueiro, dia1);UAI-9WMXK
 item;Botas (arqueiro, dia2);UAI-DEMH7
 item;Blusa (arqueiro, dia2);UAI-YTD7M
-item;Túnica (arqueiro, dia1);UAI-9WJQM
 item;Cachecol (bardo, inicial);UAI-PMNE4
 item;Girassol (bardo, inicial);UAI-QN7MY
 item;Laço (bardo, inicial);UAI-3UPYP
@@ -82,12 +78,9 @@ item;Cabeça Godzilla (bardo, inicial);UAI-33M3W
 item;Chapéu Luffy (bardo, inicial);UAI-X3VEV
 item;Chapéu Maquinista (bardo, inicial);UAI-VCQXM
 item;Alaúde (bardo, dia2);UAI-M4Y4F
-item;Viola Desafinada (bardo, dia1);UAI-GKFMA
 item;Calça (bardo, dia2);UAI-F6V3F
-item;Short (bardo, dia1);UAI-PVCTY
 item;Sapatos (bardo, dia2);UAI-HACAK
 item;Blusa (bardo, dia2);UAI-R4JAH
-item;Túnica (bardo, dia1);UAI-VDGA4
 item;Cachecol (guerreiro, inicial);UAI-HFETP
 item;Diário (guerreiro, inicial);UAI-797XY
 item;Girassol (guerreiro, inicial);UAI-PVXTX
@@ -101,12 +94,9 @@ item;Cabeça Godzilla (guerreiro, inicial);UAI-F7V7Q
 item;Chapéu Luffy (guerreiro, inicial);UAI-EJ6KD
 item;Chapéu Maquinista (guerreiro, inicial);UAI-C4KX6
 item;Espada Boa (guerreiro, dia2);UAI-NR44Y
-item;Espada Madeira (guerreiro, dia1);UAI-QM9K4
 item;Armadura (guerreiro, dia2);UAI-YDUVH
-item;Short (guerreiro, dia1);UAI-DVRWP
 item;Botas (guerreiro, dia2);UAI-M9NAF
 item;Armadura (guerreiro, dia2);UAI-CFHKG
-item;Túnica (guerreiro, dia1);UAI-FCTRA
 item;Capa (guerreiro, dia2);UAI-WFJ7P
 item;Cachecol (mago, inicial);UAI-474AJ
 item;Girassol (mago, inicial);UAI-QAQJU
@@ -120,25 +110,19 @@ item;Chapéu Luffy (mago, inicial);UAI-UR9AP
 item;Chapéu Maquinista (mago, inicial);UAI-MHAVU
 item;Witch Hat Atelier (mago, inicial);UAI-NJYQU
 item;Cajado (mago, dia2);UAI-EW7T9
-item;Varinha Furreca (mago, dia1);UAI-FNVK3
 item;Calça (mago, dia2);UAI-JH47M
-item;Short (mago, dia1);UAI-UGY64
 item;Botas (mago, dia2);UAI-6DNQP
 item;Blusa (mago, dia2);UAI-CJ9RX
-item;Túnica (mago, dia1);UAI-QCHEW
 item;Capa (mago, dia2);UAI-6RMCG
 item;Chapéu (mago, dia2);UAI-VR6MU
 item;Cachecol (ninja, inicial);UAI-MMQPX
 item;Óculos de Grau (ninja, inicial);UAI-PAARE
 item;Óculos Squirtle (ninja, inicial);UAI-3JKGY
-item;Katana de Treino (ninja, dia1);UAI-MG4TH
 item;Katana Decente (ninja, dia2);UAI-EJKTN
 item;Leques Katana (ninja, inicial);UAI-FQAVC
 item;Calça (ninja, dia2);UAI-3E9QN
-item;Short (ninja, dia1);UAI-FECET
 item;Sapatos (ninja, dia2);UAI-FNYGT
 item;Blusa (ninja, dia2);UAI-PYFXQ
-item;Túnica (ninja, dia1);UAI-G497C
 item;Bandana (ninja, inicial);UAI-U4XUJ
 item;Cabeça Godzilla (ninja, inicial);UAI-VX6CJ
 item;Chapéu Luffy (ninja, inicial);UAI-U447K

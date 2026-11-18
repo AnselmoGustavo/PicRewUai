@@ -85,7 +85,7 @@ const estadoInicial: EstadoPersonagem = {
   versao: VERSAO,
   animal: null,
   classe: null,
-  cenario: null,
+  cenario: "cen_floresta", // dia 1 — sempre liberado
   selecao: selecaoVazia(),
   ficha: {
     nomePersonagem: "",

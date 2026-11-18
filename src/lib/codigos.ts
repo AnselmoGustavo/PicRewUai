@@ -8,7 +8,7 @@ import { CODIGOS_ITENS } from "./codigosItens";
 // Códigos REAIS do evento (gerados em 17/11/2026; lista completa em codigos-evento.csv).
 // Os itens têm código próprio (codigosItens.ts): o código do dia libera só o CENÁRIO do dia.
 const CODIGOS: Record<Exclude<GrupoDesbloqueio, "inicial">, string> = {
-  dia1: "UAI-KGHW4",
+  dia1: "", // sem código: o dia 1 (Floresta + skin básica) é liberado desde o início
   dia2: "UAI-PM4NV",
   dia3: "UAI-GAN3X",
   dia4: "UAI-CWKMH",
