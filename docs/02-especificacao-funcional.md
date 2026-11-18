@@ -60,11 +60,12 @@ Início → Escolher animal → Escolher classe → Editor (picrew) ⇄ Ficha
 ### 7. Salvar
 - O progresso é salvo **automaticamente** (no aparelho e, logado, no servidor) a cada mudança.
 - Botão **💾 Salvar progresso** força o envio ao servidor e confirma com o horário ("✓ Progresso salvo às 13:05").
+- Na criação da conta a pessoa informa também o **apelido** (como é conhecida no evento; salvo na tabela `usuarios` e exportado no `cartas.csv`).
 - A mesma conta (usuário + senha) abre o personagem em qualquer aparelho. *(O antigo "código de backup" foi substituído pela conta — ADR-015.)*
 
 ### 8. Enviar personagem 🎁 (a carta é surpresa)
 - Botão **Enviar** — do ponto de vista do participante, ele está enviando **o personagem** (a palavra "carta" **não aparece**).
-- **Envio é único e definitivo.** A confirmação deixa isso claro ("Este é o envio final do seu personagem e **não poderá ser alterado**. Deseja continuar?").
+- **Envio é único e definitivo.** Depois do envio o app mostra só "Personagem enviado!" — em qualquer aparelho, pois quem decide é o servidor (tabela `cartas`) — e não aceita mais alterações. A confirmação deixa isso claro ("Este é o envio final do seu personagem e **não poderá ser alterado**. Deseja continuar?").
 - Ao confirmar, mostra **sucesso** imediatamente e o editor **trava** (estado somente-leitura / tela de agradecimento). Não é possível reenviar.
 - **Por trás, sem UI:** o app monta a carta de TCG (personagem + moldura + nome + status desenhados) e envia a **imagem** para os organizadores (ver [06](06-exportacao-carta.md)).
 - **Nada da carta é exibido ou baixado** no aparelho do participante — a carta impressa é a surpresa entregue depois.

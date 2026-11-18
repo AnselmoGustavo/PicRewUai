@@ -35,6 +35,9 @@ create table if not exists public.cartas (
   enviado_em       timestamptz not null default now()
 );
 
+-- Apelido (como a pessoa é conhecida no evento), pedido na criação da conta. Adicionado em 18/11/2026.
+alter table public.usuarios add column if not exists apelido text;
+
 alter table public.usuarios  enable row level security;
 alter table public.progresso enable row level security;
 alter table public.cartas    enable row level security;

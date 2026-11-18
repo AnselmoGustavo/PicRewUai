@@ -29,6 +29,12 @@ if (!res.ok) {
 }
 const cartas = await res.json();
 
+// apelidos (coluna criada em 18/11/2026; se ainda não existir no banco, fica em branco)
+const apelidos = {};
+const ru = await fetch(`${URL_SUPA}/rest/v1/usuarios?select=usuario,apelido`, { headers: h });
+if (ru.ok) for (const u of await ru.json()) apelidos[u.usuario] = u.apelido ?? "";
+else console.log("(sem a coluna apelido no banco ainda — rode o supabase/schema.sql)");
+
 const DEST = "cartas-baixadas";
 mkdirSync(DEST, { recursive: true });
 
@@ -48,10 +54,10 @@ for (const c of cartas) {
 
 const csv = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
 const linhas = [
-  "usuario,nome_personagem,titulo,animal,classe,cenario,vida,forca,intelecto,destreza,enviado_em,arquivo",
+  "usuario,apelido,nome_personagem,titulo,animal,classe,cenario,vida,forca,intelecto,destreza,enviado_em,arquivo",
   ...cartas.map((c) =>
     [
-      c.usuario, c.nome_personagem, c.titulo, c.animal, c.classe, c.cenario,
+      c.usuario, apelidos[c.usuario], c.nome_personagem, c.titulo, c.animal, c.classe, c.cenario,
       c.status?.vida, c.status?.forca, c.status?.intelecto, c.status?.destreza,
       c.enviado_em, c.arquivo,
     ].map(csv).join(","),

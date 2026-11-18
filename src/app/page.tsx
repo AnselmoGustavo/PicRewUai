@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSessao } from "@/lib/sessao";
 import { entrar, registrar, sair } from "@/lib/auth";
+import { usePersonagem } from "@/lib/store";
 
 export default function Home() {
   const [montado, setMontado] = useState(false);
   const usuario = useSessao((s) => s.usuario);
+  const enviado = usePersonagem((s) => s.enviado);
 
   useEffect(() => setMontado(true), []);
 
@@ -34,7 +36,7 @@ export default function Home() {
           <p style={{ margin: 0, color: "var(--cor-texto-suave)" }}>
             Olá, <strong style={{ color: "var(--cor-primaria)" }}>{usuario}</strong>!
           </p>
-          <Link href="/criar" className="botao">Criar / continuar personagem</Link>
+          <Link href="/criar" className="botao">{enviado ? "Personagem enviado ✓" : "Criar / continuar personagem"}</Link>
           <button onClick={() => sair()} style={linkBtn}>sair</button>
         </div>
       ) : (
@@ -48,6 +50,7 @@ function FormAuth() {
   const [modo, setModo] = useState<"entrar" | "registrar">("entrar");
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
+  const [apelido, setApelido] = useState("");
   const [erro, setErro] = useState<string | null>(null);
   const [carregando, setCarregando] = useState(false);
 
@@ -56,7 +59,7 @@ function FormAuth() {
     if (carregando) return;
     setErro(null);
     setCarregando(true);
-    const r = modo === "entrar" ? await entrar(usuario, senha) : await registrar(usuario, senha);
+    const r = modo === "entrar" ? await entrar(usuario, senha) : await registrar(usuario, senha, apelido);
     setCarregando(false);
     if (!r.ok) setErro(r.erro);
     // sucesso → a sessão muda e a Home re-renderiza para o estado logado
@@ -71,6 +74,15 @@ function FormAuth() {
         Crie uma conta para salvar seu personagem durante o evento.
       </p>
 
+      {modo === "registrar" && (
+        <input
+          value={apelido}
+          onChange={(e) => setApelido(e.target.value)}
+          placeholder="Apelido (como te chamam no evento)"
+          maxLength={30}
+          style={inp}
+        />
+      )}
       <input
         value={usuario}
         onChange={(e) => setUsuario(e.target.value)}
@@ -89,7 +101,7 @@ function FormAuth() {
 
       {erro && <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--cor-acento)" }}>{erro}</p>}
 
-      <button type="submit" className="botao" disabled={carregando || !usuario || !senha}>
+      <button type="submit" className="botao" disabled={carregando || !usuario || !senha || (modo === "registrar" && !apelido.trim())}>
         {carregando ? "…" : modo === "entrar" ? "Entrar" : "Criar conta"}
       </button>
 

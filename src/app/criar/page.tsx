@@ -21,9 +21,10 @@ export default function CriarPage() {
   const classe = usePersonagem((s) => s.classe);
   const setAnimal = usePersonagem((s) => s.setAnimal);
   const setClasse = usePersonagem((s) => s.setClasse);
+  const enviado = usePersonagem((s) => s.enviado);
 
-  // sincronização de progresso (por usuário logado)
-  useSyncProgresso();
+  // sincronização de progresso (por usuário logado); `sincronizado` = já perguntou ao servidor se a carta foi enviada
+  const sincronizado = useSyncProgresso();
 
   // guarda de hidratação (o estado vem do localStorage no cliente)
   useEffect(() => {
@@ -40,8 +41,24 @@ export default function CriarPage() {
     if (montado && !usuario) router.replace("/");
   }, [montado, usuario, router]);
 
-  if (!montado || !usuario) {
+  if (!montado || !usuario || (!sincronizado && !enviado)) {
     return <Centro><p style={{ color: "var(--cor-texto-suave)" }}>Carregando…</p></Centro>;
+  }
+
+  // depois do envio o personagem fica travado: só a tela final, em qualquer aparelho
+  if (enviado) {
+    return (
+      <Centro>
+        <div className="superficie" style={{ padding: "2rem 1.5rem", maxWidth: 420, textAlign: "center", display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <div style={{ fontSize: "3rem" }}>🎉</div>
+          <h1 style={{ margin: 0, color: "var(--cor-primaria)", fontSize: "1.4rem" }}>Personagem enviado!</h1>
+          <p style={{ margin: 0, color: "var(--cor-texto-suave)" }}>
+            Prontinho — recebemos seu personagem. Uma surpresa te espera no evento! ✨
+          </p>
+          <Link href="/" style={{ color: "var(--cor-primaria)", fontSize: "0.9rem" }}>voltar ao início</Link>
+        </div>
+      </Centro>
+    );
   }
 
   return (

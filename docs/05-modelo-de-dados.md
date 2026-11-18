@@ -114,7 +114,7 @@ A tela inicial pede **criar conta / entrar** (usuário + senha). A conta é a id
 
 ```ts
 // tabelas Supabase (produção):
-// usuarios:  usuario (text, PK) · hash · salt · token · criado_em
+// usuarios:  usuario (text, PK) · apelido (pedido no cadastro, desde 18/11) · hash · salt · token · criado_em
 // progresso: usuario (text, PK) · estado (jsonb) · atualizado_em (timestamptz)
 ```
 

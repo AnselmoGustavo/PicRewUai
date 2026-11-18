@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { salvarProgresso, carregarProgresso } from "@/lib/progressoServidor";
+import { salvarProgresso, carregarProgresso, cartaJaEnviada } from "@/lib/progressoServidor";
 import { validarToken } from "@/lib/authServidor";
 
 export const runtime = "nodejs";
@@ -15,8 +15,8 @@ export async function GET(req: Request) {
     return NextResponse.json({ ok: false, erro: "não autorizado" }, { status: 401 });
   }
   try {
-    const estado = await carregarProgresso(usuario);
-    return NextResponse.json({ ok: true, estado });
+    const [estado, enviado] = await Promise.all([carregarProgresso(usuario), cartaJaEnviada(usuario)]);
+    return NextResponse.json({ ok: true, estado, enviado });
   } catch (e) {
     return NextResponse.json({ ok: false, erro: String(e) }, { status: 500 });
   }
@@ -33,6 +33,10 @@ export async function POST(req: Request) {
     }
     if (!(await validarToken(usuario, token))) {
       return NextResponse.json({ ok: false, erro: "não autorizado" }, { status: 401 });
+    }
+    // depois do envio o personagem fica travado: não aceita mais alterações
+    if (await cartaJaEnviada(usuario)) {
+      return NextResponse.json({ ok: false, erro: "personagem já enviado", enviado: true }, { status: 409 });
     }
     await salvarProgresso(usuario, estado);
     return NextResponse.json({ ok: true });

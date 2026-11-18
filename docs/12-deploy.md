@@ -68,7 +68,8 @@ Usa o progresso salvo (itens, cenário) + nome, título e status gravados no env
 
 | O quê | Onde | Observação |
 |-------|------|------------|
-| Conta | tabela `usuarios` | senha com hash pbkdf2 (nunca em texto); token estável → mesma conta em vários aparelhos |
+| Conta | tabela `usuarios` | apelido (pedido no cadastro) + senha com hash pbkdf2 (nunca em texto); token estável → mesma conta em vários aparelhos |
+| Envio | tabela `cartas` | depois do envio o personagem fica **travado**: o app só mostra "Personagem enviado" (em qualquer aparelho) e o servidor recusa salvar progresso novo |
 | Personagem em edição | tabela `progresso` (`estado` jsonb) | salvo automaticamente a cada mudança, enquanto logado |
 | Carta final | Storage `cartas/<usuario>.png` + tabela `cartas` | **1 envio por usuário**; reenviar não sobrescreve (responde "já enviado") |
 

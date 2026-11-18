@@ -10,6 +10,7 @@ import { usandoSupabase, selecionar, inserir } from "./supabaseServidor";
 const DIR = resolve(process.cwd(), ".dev-data", "usuarios");
 
 type UsuarioArmazenado = {
+  apelido?: string;
   hash: string;
   salt: string;
   token: string;
@@ -22,6 +23,14 @@ export function normalizarUsuario(u: string): string {
 
 export function usuarioValido(u: string): boolean {
   return /^[a-z0-9_]{3,20}$/.test(normalizarUsuario(u));
+}
+
+export function normalizarApelido(a: unknown): string {
+  return typeof a === "string" ? a.trim().replace(/\s+/g, " ") : "";
+}
+
+export function apelidoValido(a: string): boolean {
+  return a.length >= 1 && a.length <= 30;
 }
 
 export function senhaValida(s: unknown): s is string {
@@ -59,6 +68,7 @@ async function gravar(usuario: string, dados: UsuarioArmazenado): Promise<boolea
   if (usandoSupabase) {
     const status = await inserir("usuarios", {
       usuario,
+      apelido: dados.apelido,
       hash: dados.hash,
       salt: dados.salt,
       token: dados.token,
@@ -75,8 +85,14 @@ export type ResultadoAuth =
   | { ok: true; usuario: string; token: string }
   | { ok: false; erro: string };
 
-export async function registrar(usuarioRaw: string, senha: unknown): Promise<ResultadoAuth> {
+export async function registrar(
+  usuarioRaw: string,
+  senha: unknown,
+  apelidoRaw: unknown,
+): Promise<ResultadoAuth> {
   const usuario = normalizarUsuario(usuarioRaw ?? "");
+  const apelido = normalizarApelido(apelidoRaw);
+  if (!apelidoValido(apelido)) return { ok: false, erro: "Informe seu apelido (até 30 caracteres)." };
   if (!usuarioValido(usuario))
     return { ok: false, erro: "Usuário inválido (3–20 caracteres: letras, números ou _)." };
   if (!senhaValida(senha)) return { ok: false, erro: "Senha muito curta (mínimo 4)." };
@@ -85,6 +101,7 @@ export async function registrar(usuarioRaw: string, senha: unknown): Promise<Res
   const salt = randomBytes(16).toString("hex");
   const token = randomBytes(24).toString("hex");
   const criado = await gravar(usuario, {
+    apelido,
     hash: hashSenha(senha, salt),
     salt,
     token,

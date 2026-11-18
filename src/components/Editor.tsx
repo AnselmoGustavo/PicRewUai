@@ -53,7 +53,6 @@ export default function Editor({
   const aplicarCodigo = usePersonagem((s) => s.aplicarCodigo);
   const enviado = usePersonagem((s) => s.enviado);
   const marcarEnviado = usePersonagem((s) => s.marcarEnviado);
-  const resetar = usePersonagem((s) => s.resetar);
   const usuario = useSessao((s) => s.usuario);
   const token = useSessao((s) => s.token);
 
@@ -85,9 +84,6 @@ export default function Editor({
         <p style={{ margin: 0, color: "var(--cor-texto-suave)" }}>
           Prontinho — recebemos seu personagem. Uma surpresa te espera no evento! ✨
         </p>
-        <button onClick={() => { if (confirm("Isto é só para testes: apagar o personagem e recomeçar?")) resetar(); }} style={linkBtn}>
-          recomeçar (teste)
-        </button>
       </div>
     );
   }

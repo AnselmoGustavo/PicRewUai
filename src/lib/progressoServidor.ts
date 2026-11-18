@@ -31,6 +31,22 @@ export async function salvarProgresso(usuario: string, estado: unknown): Promise
   await writeFile(resolve(DIR, `${u}.json`), JSON.stringify(estado));
 }
 
+/** true se o usuário já enviou a carta (envio único — depois disso o personagem fica travado). */
+export async function cartaJaEnviada(usuario: string): Promise<boolean> {
+  const u = sanitizar(usuario);
+  if (!u) return false;
+  if (usandoSupabase) {
+    const linhas = await selecionar<{ usuario: string }>("cartas", `usuario=eq.${u}&select=usuario`);
+    return linhas.length > 0;
+  }
+  try {
+    await readFile(resolve(process.cwd(), "envios", `${u}.png`));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export async function carregarProgresso(usuario: string): Promise<unknown | null> {
   const u = sanitizar(usuario);
   if (!u) return null;

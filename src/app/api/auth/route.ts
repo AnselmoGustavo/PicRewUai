@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     if (!usuario) {
       return NextResponse.json({ ok: false, erro: "Informe o usuário." }, { status: 400 });
     }
-    const r = acao === "registrar" ? await registrar(usuario, senha) : acao === "entrar" ? await entrar(usuario, senha) : null;
+    const r = acao === "registrar" ? await registrar(usuario, senha, body?.apelido) : acao === "entrar" ? await entrar(usuario, senha) : null;
     if (!r) return NextResponse.json({ ok: false, erro: "Ação inválida." }, { status: 400 });
     return NextResponse.json(r, { status: r.ok ? 200 : 400 });
   } catch (e) {
