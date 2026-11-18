@@ -66,7 +66,7 @@ npm run dev          # sobe o app em http://localhost:3000
 - **Criar personagem: `/criar`** — fluxo animal → classe → editor (cenário, itens por categoria filtrados por classe, códigos de desbloqueio, ficha). Estado persiste no navegador.
 - Protótipo da carta (dev): `/poc-carta` — monta a carta com moldura + nome/status e alterna dia/noite.
 
-> **Códigos reais do evento** (desde 17/11): cada **item** (por peça, vale para os 5 animais) e cada **título** tem código próprio; o código de cada **dia** libera só o **cenário** daquele dia; há ainda o de **envio** e o **mestre** (libera tudo). Lista completa em `codigos-evento.csv` (fora do Git — gerar/guardar à parte); fonte da verdade em `src/lib/codigos.ts`, `titulos.ts` e `codigosItens.ts`.
+> **Códigos reais do evento** (desde 17/11): cada **item** (por peça, vale para os 5 animais) e cada **título** tem código próprio; o código de cada **dia** libera só o **cenário** daquele dia; há ainda o de **envio** e o **mestre** (libera tudo). Lista completa em `codigos-evento.csv`; fonte da verdade em `src/lib/codigos.ts`, `titulos.ts` e `codigosItens.ts`.
 
 Outros comandos:
 
