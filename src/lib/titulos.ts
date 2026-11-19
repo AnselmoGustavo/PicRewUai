@@ -65,4 +65,5 @@ export const TITULOS: { titulo: string; codigo: string }[] = [
   { titulo: "67", codigo: "UAI-NUF94" },
   { titulo: "Invencível", codigo: "UAI-UYK7A" },
   { titulo: "Emocionante", codigo: "UAI-TMPMK" },
+  { titulo: "Herói Lendário", codigo: "UAI-VGJBW" },
 ];
