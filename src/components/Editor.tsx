@@ -344,10 +344,10 @@ export default function Editor({
               ? "Não foi possível salvar agora (sem internet?). Suas escolhas ficam neste aparelho; tente de novo."
               : "Seu progresso também é salvo automaticamente."}
         </p>
-        <hr style={{ border: "none", borderTop: "1px solid var(--cor-borda)", width: "100%", margin: "0.25rem 0" }} />
-        {/* o botão de enviar só aparece depois que o código de envio é digitado */}
-        {envioLiberado ? (
+        {/* o botão de enviar só aparece depois que o código de envio é digitado (antes disso, nada) */}
+        {envioLiberado && (
           <>
+            <hr style={{ border: "none", borderTop: "1px solid var(--cor-borda)", width: "100%", margin: "0.25rem 0" }} />
             <button
               onClick={enviar}
               disabled={!podeEnviar || enviando}
@@ -368,10 +368,6 @@ export default function Editor({
               O envio é único e definitivo.
             </p>
           </>
-        ) : (
-          <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--cor-texto-suave)" }}>
-            🔒 O envio será liberado com um código no último dia do evento. Até lá, monte seu personagem com calma!
-          </p>
         )}
       </div>
     </div>
