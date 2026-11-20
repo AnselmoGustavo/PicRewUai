@@ -345,27 +345,34 @@ export default function Editor({
               : "Seu progresso também é salvo automaticamente."}
         </p>
         <hr style={{ border: "none", borderTop: "1px solid var(--cor-borda)", width: "100%", margin: "0.25rem 0" }} />
-        <button
-          onClick={enviar}
-          disabled={!podeEnviar || enviando}
-          className="botao"
-          style={{ background: "var(--cor-secundaria)", color: "var(--cor-texto)", fontSize: "1.05rem", padding: "0.9rem", opacity: !podeEnviar || enviando ? 0.55 : 1 }}
-        >
-          {enviando ? "Enviando…" : "Enviar personagem"}
-        </button>
-        {!podeEnviar && (
+        {/* o botão de enviar só aparece depois que o código de envio é digitado */}
+        {envioLiberado ? (
+          <>
+            <button
+              onClick={enviar}
+              disabled={!podeEnviar || enviando}
+              className="botao"
+              style={{ background: "var(--cor-secundaria)", color: "var(--cor-texto)", fontSize: "1.05rem", padding: "0.9rem", opacity: !podeEnviar || enviando ? 0.55 : 1 }}
+            >
+              {enviando ? "Enviando…" : "Enviar personagem"}
+            </button>
+            {!podeEnviar && (
+              <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--cor-texto-suave)" }}>
+                Escolha um cenário e preencha o nome (aba Ficha) para enviar.
+              </p>
+            )}
+            {erroEnvio && (
+              <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--cor-acento)" }}>{erroEnvio}</p>
+            )}
+            <p style={{ margin: 0, fontSize: "0.72rem", color: "var(--cor-texto-suave)" }}>
+              O envio é único e definitivo.
+            </p>
+          </>
+        ) : (
           <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--cor-texto-suave)" }}>
-            {!envioLiberado
-              ? "🔒 O envio será liberado com um código no último dia do evento. Até lá, monte seu personagem com calma!"
-              : "Escolha um cenário e preencha o nome (aba Ficha) para enviar."}
+            🔒 O envio será liberado com um código no último dia do evento. Até lá, monte seu personagem com calma!
           </p>
         )}
-        {erroEnvio && (
-          <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--cor-acento)" }}>{erroEnvio}</p>
-        )}
-        <p style={{ margin: 0, fontSize: "0.72rem", color: "var(--cor-texto-suave)" }}>
-          O envio é único e definitivo.
-        </p>
       </div>
     </div>
   );
